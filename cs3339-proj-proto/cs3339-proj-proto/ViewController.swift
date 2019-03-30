@@ -24,6 +24,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func reset(_ sender: Any) {
+        imageView.image = nil
+    }
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         dragged = false
         if let touch = touches.first {

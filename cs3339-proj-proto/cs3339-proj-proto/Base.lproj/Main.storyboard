@@ -18,16 +18,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tap and drag to draw" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IkX-Ue-aW1">
+                                <rect key="frame" x="128" y="69" width="158" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="dZA-6P-NNZ"/>
+                                    <constraint firstAttribute="width" constant="158" id="zEk-wE-Z95"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNm-kf-9cd">
+                                <rect key="frame" x="187.5" y="788" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="31g-LJ-3wJ"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dcJ-s9-egr">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ZNm-kf-9cd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="37Q-Xz-3jS"/>
                             <constraint firstItem="dcJ-s9-egr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4ER-rl-h3f"/>
+                            <constraint firstItem="IkX-Ue-aW1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="HkO-V7-q90"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dcJ-s9-egr" secondAttribute="bottom" id="JOo-cx-Das"/>
                             <constraint firstItem="dcJ-s9-egr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RrW-Z1-lDR"/>
                             <constraint firstItem="dcJ-s9-egr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ikS-Zj-76g"/>
+                            <constraint firstItem="IkX-Ue-aW1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="o5V-Qr-NaE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZNm-kf-9cd" secondAttribute="bottom" constant="44" id="t8o-TE-Z2o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
