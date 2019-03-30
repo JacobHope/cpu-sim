@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Pulsator
 
 class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var touchPoint: UIView!
 
     var lastPoint = CGPoint.zero
     var red: CGFloat = 0.0
@@ -22,6 +24,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
+        let pulsator = Pulsator()
+        pulsator.numPulse = 3
+        pulsator.radius = 50.0
+        pulsator.backgroundColor = UIColor.lightGray.cgColor
+        pulsator.animationDuration = 3
+        pulsator.pulseInterval = 0.1
+        pulsator.repeatCount = Float(INT32_MAX)
+
+        touchPoint.layer.addSublayer(pulsator)
+
+        pulsator.start()
     }
 
     @IBAction func reset(_ sender: Any) {
