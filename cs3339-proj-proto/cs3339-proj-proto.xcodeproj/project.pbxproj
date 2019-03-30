@@ -13,6 +13,8 @@
 		044A3A77224F33D50058CD8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044A3A76224F33D50058CD8E /* Assets.xcassets */; };
 		044A3A7A224F33D50058CD8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044A3A78224F33D50058CD8E /* LaunchScreen.storyboard */; };
 		044E56BB224F5F4F003DAD21 /* Pulsator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044E56BA224F5F4F003DAD21 /* Pulsator.framework */; };
+		044E56BE224FFAA1003DAD21 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56BD224FFAA0003DAD21 /* BaseViewController.swift */; };
+		044E56C02250030F003DAD21 /* TouchPointStateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56BF2250030F003DAD21 /* TouchPointStateEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		044A3A7B224F33D50058CD8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044A3A81224F399D0058CD8E /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		044E56BA224F5F4F003DAD21 /* Pulsator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pulsator.framework; path = Carthage/Build/iOS/Pulsator.framework; sourceTree = "<group>"; };
+		044E56BD224FFAA0003DAD21 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		044E56BF2250030F003DAD21 /* TouchPointStateEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPointStateEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				044A3A78224F33D50058CD8E /* LaunchScreen.storyboard */,
 				044A3A7B224F33D50058CD8E /* Info.plist */,
 				044A3A81224F399D0058CD8E /* README.txt */,
+				044E56BD224FFAA0003DAD21 /* BaseViewController.swift */,
+				044E56BF2250030F003DAD21 /* TouchPointStateEnum.swift */,
 			);
 			path = "cs3339-proj-proto";
 			sourceTree = "<group>";
@@ -174,6 +180,8 @@
 			files = (
 				044A3A72224F33D30058CD8E /* ViewController.swift in Sources */,
 				044A3A70224F33D30058CD8E /* AppDelegate.swift in Sources */,
+				044E56BE224FFAA1003DAD21 /* BaseViewController.swift in Sources */,
+				044E56C02250030F003DAD21 /* TouchPointStateEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

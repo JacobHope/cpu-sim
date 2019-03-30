@@ -36,7 +36,15 @@
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="31g-LJ-3wJ"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMx-ih-xEu" userLabel="TouchPoint">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MuV-TE-J68" userLabel="StartTouchPoint">
+                                <rect key="frame" x="100" y="144" width="25" height="25"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="DB1-pE-CmG"/>
+                                    <constraint firstAttribute="width" constant="25" id="uPS-45-ega"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMx-ih-xEu" userLabel="EndTouchPoint">
                                 <rect key="frame" x="339" y="637" width="25" height="25"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -55,7 +63,9 @@
                             <constraint firstItem="IkX-Ue-aW1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="HkO-V7-q90"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dcJ-s9-egr" secondAttribute="bottom" id="JOo-cx-Das"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aMx-ih-xEu" secondAttribute="trailing" constant="50" id="O49-Ue-UAW"/>
+                            <constraint firstItem="MuV-TE-J68" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="QmP-vw-7u2"/>
                             <constraint firstItem="dcJ-s9-egr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RrW-Z1-lDR"/>
+                            <constraint firstItem="MuV-TE-J68" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="btd-5Q-etO"/>
                             <constraint firstItem="dcJ-s9-egr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ikS-Zj-76g"/>
                             <constraint firstItem="IkX-Ue-aW1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="o5V-Qr-NaE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aMx-ih-xEu" secondAttribute="bottom" constant="200" id="pqV-P5-2OZ"/>
@@ -65,7 +75,8 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="dcJ-s9-egr" id="JVJ-rA-YGR"/>
-                        <outlet property="touchPoint" destination="aMx-ih-xEu" id="dXR-DG-rHh"/>
+                        <outlet property="startTouchPoint" destination="MuV-TE-J68" id="ENC-Mf-ZNC"/>
+                        <outlet property="endTouchPoint" destination="aMx-ih-xEu" id="dXR-DG-rHh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
