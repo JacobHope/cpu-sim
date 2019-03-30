@@ -57,11 +57,14 @@ class ViewController: UIViewController {
 
             lastPoint = currentPoint
 
-            let hitView = view.hitTest(
-                    CGPoint(
-                            x: touch.location(in: view).x + touchPoint.frame.width / 2,
+            // Detect if touch is inside touchPoint
+            guard let hitView = view.hitTest(
+                    CGPoint(x: touch.location(in: view).x + touchPoint.frame.width / 2,
                             y: touch.location(in: view).y + touchPoint.frame.height / 2),
                     with: event)
+                    else {
+                return
+            }
 
             if (hitView == touchPoint) {
                 print("MOVED \(hitView)")
@@ -72,11 +75,14 @@ class ViewController: UIViewController {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
 
-            let hitView = view.hitTest(
-                    CGPoint(
-                            x: touch.location(in: view).x + touchPoint.frame.width / 2,
+            // Detect if touch is inside touchPoint
+            guard let hitView = view.hitTest(
+                    CGPoint(x: touch.location(in: view).x + touchPoint.frame.width / 2,
                             y: touch.location(in: view).y + touchPoint.frame.height / 2),
                     with: event)
+                    else {
+                return
+            }
 
             if (hitView == touchPoint) {
                 print("ENDED \(hitView)")
