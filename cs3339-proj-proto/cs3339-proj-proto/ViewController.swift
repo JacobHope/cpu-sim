@@ -27,7 +27,7 @@ class ViewController: UIViewController {
 
         let pulsator = Pulsator()
         pulsator.numPulse = 3
-        pulsator.radius = 50.0
+        pulsator.radius = touchPoint.frame.width
         pulsator.backgroundColor = UIColor.lightGray.cgColor
         pulsator.animationDuration = 3
         pulsator.pulseInterval = 0.1
@@ -56,12 +56,31 @@ class ViewController: UIViewController {
             drawLineFrom(fromPoint: lastPoint, toPoint: currentPoint)
 
             lastPoint = currentPoint
+
+            let hitView = view.hitTest(
+                    CGPoint(
+                            x: touch.location(in: view).x + touchPoint.frame.width / 2,
+                            y: touch.location(in: view).y + touchPoint.frame.height / 2),
+                    with: event)
+
+            if (hitView == touchPoint) {
+                print("MOVED \(hitView)")
+            }
         }
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if !dragged {
-            drawLineFrom(fromPoint: lastPoint, toPoint: lastPoint)
+        if let touch = touches.first {
+
+            let hitView = view.hitTest(
+                    CGPoint(
+                            x: touch.location(in: view).x + touchPoint.frame.width / 2,
+                            y: touch.location(in: view).y + touchPoint.frame.height / 2),
+                    with: event)
+
+            if (hitView == touchPoint) {
+                print("ENDED \(hitView)")
+            }
         }
     }
 
