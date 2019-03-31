@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="cs3339_proj_proto" customModuleProvider="target">
+            <connections>
+                <outlet property="endTouchPointView1" destination="wCL-VQ-ghJ" id="Hzd-TG-t0Z"/>
+                <outlet property="endTouchPointView2" destination="NvY-8v-14Z" id="wAR-pl-yo2"/>
+                <outlet property="imageView" destination="qz5-2V-wcl" id="zXS-FW-fcz"/>
+                <outlet property="startTouchPointView" destination="nwN-la-WA3" id="McX-ty-I5o"/>
+                <outlet property="view" destination="1I4-sn-VT7" id="zUJ-ps-a4F"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1I4-sn-VT7">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tap and drag to draw" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="apF-RQ-EZf">
+                    <rect key="frame" x="128" y="69" width="158" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="158" id="bex-uh-9hy"/>
+                        <constraint firstAttribute="height" constant="20" id="jb1-cz-ZIB"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtM-oG-sdk">
+                    <rect key="frame" x="187.5" y="788" width="39" height="30"/>
+                    <state key="normal" title="Reset"/>
+                    <connections>
+                        <action selector="reset:" destination="-1" eventType="touchUpInside" id="Bh3-2H-2sh"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwN-la-WA3" userLabel="StartTouchPointView" customClass="TouchPointView" customModule="cs3339_proj_proto" customModuleProvider="target">
+                    <rect key="frame" x="100" y="144" width="25" height="25"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="VJF-2F-aPm"/>
+                        <constraint firstAttribute="width" constant="25" id="vsw-hO-Zcc"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCL-VQ-ghJ" userLabel="EndTouchPointView1" customClass="TouchPointView" customModule="cs3339_proj_proto" customModuleProvider="target">
+                    <rect key="frame" x="339" y="637" width="25" height="25"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="Zuh-OE-OUc"/>
+                        <constraint firstAttribute="height" constant="25" id="geU-xa-6GB"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NvY-8v-14Z" userLabel="EndTouchPointView2" customClass="TouchPointView" customModule="cs3339_proj_proto" customModuleProvider="target">
+                    <rect key="frame" x="50" y="637" width="25" height="25"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="MeW-Tl-Gd0"/>
+                        <constraint firstAttribute="width" constant="25" id="dze-j7-Rni"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qz5-2V-wcl">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qz5-2V-wcl" firstAttribute="top" secondItem="gfa-Lf-gnP" secondAttribute="top" id="0rp-2N-P4b"/>
+                <constraint firstItem="qz5-2V-wcl" firstAttribute="leading" secondItem="gfa-Lf-gnP" secondAttribute="leading" id="2iS-AW-Kam"/>
+                <constraint firstItem="gfa-Lf-gnP" firstAttribute="trailing" secondItem="wCL-VQ-ghJ" secondAttribute="trailing" constant="50" id="34f-i2-3da"/>
+                <constraint firstItem="qz5-2V-wcl" firstAttribute="trailing" secondItem="gfa-Lf-gnP" secondAttribute="trailing" id="5nY-5r-oS5"/>
+                <constraint firstItem="UtM-oG-sdk" firstAttribute="centerX" secondItem="gfa-Lf-gnP" secondAttribute="centerX" id="9YE-mL-uCf"/>
+                <constraint firstItem="apF-RQ-EZf" firstAttribute="centerX" secondItem="gfa-Lf-gnP" secondAttribute="centerX" id="CLl-ne-z2D"/>
+                <constraint firstItem="gfa-Lf-gnP" firstAttribute="bottom" secondItem="wCL-VQ-ghJ" secondAttribute="bottom" constant="200" id="EsO-84-IiP"/>
+                <constraint firstItem="gfa-Lf-gnP" firstAttribute="bottom" secondItem="NvY-8v-14Z" secondAttribute="bottom" constant="200" id="OGX-G5-nf7"/>
+                <constraint firstItem="apF-RQ-EZf" firstAttribute="top" secondItem="gfa-Lf-gnP" secondAttribute="top" constant="25" id="OnD-za-8Bq"/>
+                <constraint firstItem="nwN-la-WA3" firstAttribute="top" secondItem="gfa-Lf-gnP" secondAttribute="top" constant="100" id="PtX-K1-gFS"/>
+                <constraint firstItem="gfa-Lf-gnP" firstAttribute="bottom" secondItem="UtM-oG-sdk" secondAttribute="bottom" constant="44" id="eFy-TK-sUd"/>
+                <constraint firstItem="NvY-8v-14Z" firstAttribute="leading" secondItem="gfa-Lf-gnP" secondAttribute="leading" constant="50" id="pfO-b1-s0f"/>
+                <constraint firstItem="nwN-la-WA3" firstAttribute="leading" secondItem="gfa-Lf-gnP" secondAttribute="leading" constant="100" id="vDh-QA-hdV"/>
+                <constraint firstItem="gfa-Lf-gnP" firstAttribute="bottom" secondItem="qz5-2V-wcl" secondAttribute="bottom" id="ykl-mz-fZL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="gfa-Lf-gnP"/>
+        </view>
+    </objects>
+</document>

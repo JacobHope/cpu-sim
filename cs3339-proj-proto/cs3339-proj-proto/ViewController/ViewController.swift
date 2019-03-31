@@ -14,9 +14,9 @@ class ViewController: BaseViewController {
     // MARK: IBOutlets
 
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var endTouchPoint: TouchPointView!
-    @IBOutlet weak var endTouchPoint2: TouchPointView!
-    @IBOutlet weak var startTouchPoint: TouchPointView!
+    @IBOutlet weak var startTouchPointView: TouchPointView!
+    @IBOutlet weak var endTouchPointView1: TouchPointView!
+    @IBOutlet weak var endTouchPointView2: TouchPointView!
 
     // MARK: UIKit
 
@@ -28,8 +28,8 @@ class ViewController: BaseViewController {
         imageViewBase = imageView
 
         // Keep track of TouchPointViews
-        startTouchPoints = [startTouchPoint]
-        endTouchPoints = [endTouchPoint, endTouchPoint2]
+        startTouchPoints = [startTouchPointView]
+        endTouchPoints = [endTouchPointView1, endTouchPointView2]
         
         // Setup TouchPointViews
         setupTouchPointViews()

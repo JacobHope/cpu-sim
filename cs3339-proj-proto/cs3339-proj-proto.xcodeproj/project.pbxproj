@@ -7,32 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042E2F522250784900B81AD3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E2F512250784900B81AD3 /* BaseViewController.swift */; };
 		044A3A70224F33D30058CD8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A3A6F224F33D30058CD8E /* AppDelegate.swift */; };
 		044A3A72224F33D30058CD8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A3A71224F33D30058CD8E /* ViewController.swift */; };
-		044A3A75224F33D30058CD8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044A3A73224F33D30058CD8E /* Main.storyboard */; };
 		044A3A77224F33D50058CD8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044A3A76224F33D50058CD8E /* Assets.xcassets */; };
 		044A3A7A224F33D50058CD8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044A3A78224F33D50058CD8E /* LaunchScreen.storyboard */; };
 		044E56BB224F5F4F003DAD21 /* Pulsator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044E56BA224F5F4F003DAD21 /* Pulsator.framework */; };
-		044E56BE224FFAA1003DAD21 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56BD224FFAA0003DAD21 /* BaseViewController.swift */; };
 		044E56C02250030F003DAD21 /* TouchPointStateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56BF2250030F003DAD21 /* TouchPointStateEnum.swift */; };
 		044E56C2225060C8003DAD21 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56C1225060C8003DAD21 /* Extensions.swift */; };
 		044E56C4225062B9003DAD21 /* TouchPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56C3225062B9003DAD21 /* TouchPointView.swift */; };
+		044E56C622506962003DAD21 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56C522506962003DAD21 /* Coordinator.swift */; };
+		044E56C822506AEA003DAD21 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56C722506AEA003DAD21 /* StoryboardInstantiable.swift */; };
+		044E56CA22506C47003DAD21 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044E56C922506C47003DAD21 /* ViewController.xib */; };
+		044E56CC22506E77003DAD21 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56CB22506E77003DAD21 /* ApplicationCoordinator.swift */; };
+		044E56CE22506FAC003DAD21 /* ViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56CD22506FAC003DAD21 /* ViewControllerCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042E2F512250784900B81AD3 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = "cs3339-proj-proto/BaseViewController.swift"; sourceTree = SOURCE_ROOT; };
 		044A3A6C224F33D30058CD8E /* cs3339-proj-proto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cs3339-proj-proto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		044A3A6F224F33D30058CD8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044A3A71224F33D30058CD8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		044A3A74224F33D30058CD8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		044A3A76224F33D50058CD8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		044A3A79224F33D50058CD8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		044A3A7B224F33D50058CD8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044A3A81224F399D0058CD8E /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		044E56BA224F5F4F003DAD21 /* Pulsator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pulsator.framework; path = Carthage/Build/iOS/Pulsator.framework; sourceTree = "<group>"; };
-		044E56BD224FFAA0003DAD21 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		044E56BF2250030F003DAD21 /* TouchPointStateEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPointStateEnum.swift; sourceTree = "<group>"; };
 		044E56C1225060C8003DAD21 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		044E56C3225062B9003DAD21 /* TouchPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPointView.swift; sourceTree = "<group>"; };
+		044E56C522506962003DAD21 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		044E56C722506AEA003DAD21 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		044E56C922506C47003DAD21 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		044E56CB22506E77003DAD21 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		044E56CD22506FAC003DAD21 /* ViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +75,18 @@
 		044A3A6E224F33D30058CD8E /* cs3339-proj-proto */ = {
 			isa = PBXGroup;
 			children = (
-				044A3A6F224F33D30058CD8E /* AppDelegate.swift */,
-				044A3A76224F33D50058CD8E /* Assets.xcassets */,
-				044E56BD224FFAA0003DAD21 /* BaseViewController.swift */,
-				044E56C1225060C8003DAD21 /* Extensions.swift */,
+				044E56D02250717E003DAD21 /* ViewController */,
+				044E56CF22507176003DAD21 /* Coordinator */,
 				044A3A7B224F33D50058CD8E /* Info.plist */,
-				044A3A78224F33D50058CD8E /* LaunchScreen.storyboard */,
-				044A3A73224F33D30058CD8E /* Main.storyboard */,
-				044A3A81224F399D0058CD8E /* README.txt */,
+				044A3A6F224F33D30058CD8E /* AppDelegate.swift */,
+				044E56C1225060C8003DAD21 /* Extensions.swift */,
+				044E56C722506AEA003DAD21 /* StoryboardInstantiable.swift */,
 				044E56BF2250030F003DAD21 /* TouchPointStateEnum.swift */,
 				044E56C3225062B9003DAD21 /* TouchPointView.swift */,
-				044A3A71224F33D30058CD8E /* ViewController.swift */,
+				044A3A81224F399D0058CD8E /* README.txt */,
+				044A3A76224F33D50058CD8E /* Assets.xcassets */,
+				044E56C922506C47003DAD21 /* ViewController.xib */,
+				044A3A78224F33D50058CD8E /* LaunchScreen.storyboard */,
 			);
 			path = "cs3339-proj-proto";
 			sourceTree = "<group>";
@@ -88,6 +97,25 @@
 				044E56BA224F5F4F003DAD21 /* Pulsator.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		044E56CF22507176003DAD21 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				044E56CB22506E77003DAD21 /* ApplicationCoordinator.swift */,
+				044E56C522506962003DAD21 /* Coordinator.swift */,
+				044E56CD22506FAC003DAD21 /* ViewControllerCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		044E56D02250717E003DAD21 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				042E2F512250784900B81AD3 /* BaseViewController.swift */,
+				044A3A71224F33D30058CD8E /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +179,7 @@
 			files = (
 				044A3A7A224F33D50058CD8E /* LaunchScreen.storyboard in Resources */,
 				044A3A77224F33D50058CD8E /* Assets.xcassets in Resources */,
-				044A3A75224F33D30058CD8E /* Main.storyboard in Resources */,
+				044E56CA22506C47003DAD21 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,24 +214,20 @@
 			files = (
 				044E56C2225060C8003DAD21 /* Extensions.swift in Sources */,
 				044E56C4225062B9003DAD21 /* TouchPointView.swift in Sources */,
+				042E2F522250784900B81AD3 /* BaseViewController.swift in Sources */,
 				044A3A72224F33D30058CD8E /* ViewController.swift in Sources */,
 				044A3A70224F33D30058CD8E /* AppDelegate.swift in Sources */,
-				044E56BE224FFAA1003DAD21 /* BaseViewController.swift in Sources */,
+				044E56CE22506FAC003DAD21 /* ViewControllerCoordinator.swift in Sources */,
+				044E56CC22506E77003DAD21 /* ApplicationCoordinator.swift in Sources */,
 				044E56C02250030F003DAD21 /* TouchPointStateEnum.swift in Sources */,
+				044E56C822506AEA003DAD21 /* StoryboardInstantiable.swift in Sources */,
+				044E56C622506962003DAD21 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		044A3A73224F33D30058CD8E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				044A3A74224F33D30058CD8E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		044A3A78224F33D50058CD8E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
