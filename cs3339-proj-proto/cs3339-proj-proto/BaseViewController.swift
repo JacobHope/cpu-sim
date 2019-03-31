@@ -14,14 +14,17 @@ class BaseViewController: UIViewController {
     var lastPoint = CGPoint.zero
 
     var imageViewBase: UIImageView?
-    var endTouchPointBase: UIView?
-    var startTouchPointBase: UIView?
+
+    var startTouchPoints: [TouchPointView] = []
+    var endTouchPoints: [TouchPointView] = []
 
     var red: CGFloat = 0.0
     var green: CGFloat = 0.0
     var blue: CGFloat = 0.0
     var brushWidth: CGFloat = 3.0
     var opacity: CGFloat = 1.0
+
+    // MARK: UIKit
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
@@ -31,9 +34,7 @@ class BaseViewController: UIViewController {
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
 
-        if (imageViewBase == nil
-            || endTouchPointBase == nil
-            || startTouchPointBase == nil) {
+        if (imageViewBase == nil) {
             return
         }
 
@@ -43,45 +44,45 @@ class BaseViewController: UIViewController {
 
             lastPoint = currentPoint
 
-            // Detect if touch is inside touchPoint
-            guard let touchPointHitView = view.hitTest(
-                    CGPoint(x: touch.location(in: view).x + endTouchPointBase!.frame.width / 2,
-                            y: touch.location(in: view).y + endTouchPointBase!.frame.height / 2),
-                    with: event)
-                    else {
-                return
-            }
-
-            if (touchPointHitView == endTouchPointBase) {
-                print("MOVED \(touchPointHitView)")
-            }
+//            // Detect if touch is inside touchPoint
+//            guard let touchPointHitView = view.hitTest(
+//                    CGPoint(x: touch.location(in: view).x + endTouchPointBase!.frame.width / 2,
+//                            y: touch.location(in: view).y + endTouchPointBase!.frame.height / 2),
+//                    with: event)
+//                    else {
+//                return
+//            }
+//
+//            if (touchPointHitView == endTouchPointBase) {
+//                print("MOVED \(touchPointHitView)")
+//            }
         }
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 
-        if (imageViewBase == nil
-                || endTouchPointBase == nil
-                || startTouchPointBase == nil) {
+        if (imageViewBase == nil) {
             return
         }
 
         if let touch = touches.first {
 
-            // Detect if touch is inside touchPoint
-            guard let hitView = view.hitTest(
-                    CGPoint(x: touch.location(in: view).x + endTouchPointBase!.frame.width / 2,
-                            y: touch.location(in: view).y + endTouchPointBase!.frame.height / 2),
-                    with: event)
-                    else {
-                return
-            }
-
-            if (hitView == endTouchPointBase) {
-                print("ENDED \(hitView)")
-            }
+//            // Detect if touch is inside touchPoint
+//            guard let hitView = view.hitTest(
+//                    CGPoint(x: touch.location(in: view).x + endTouchPointBase!.frame.width / 2,
+//                            y: touch.location(in: view).y + endTouchPointBase!.frame.height / 2),
+//                    with: event)
+//                    else {
+//                return
+//            }
+//
+//            if (hitView == endTouchPointBase) {
+//                print("ENDED \(hitView)")
+//            }
         }
     }
+
+    // MARK: Drawing
 
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
 
@@ -118,16 +119,18 @@ class BaseViewController: UIViewController {
         imageViewBase!.alpha = opacity
         UIGraphicsEndImageContext()
     }
-    
-    func createPulsator(radius: CGFloat) -> Pulsator {
-        let pulsator = Pulsator()
-        pulsator.numPulse = 3
-        pulsator.radius = radius
-        pulsator.backgroundColor = UIColor.blue.cgColor
-        pulsator.animationDuration = 3
-        pulsator.pulseInterval = 0.1
-        pulsator.repeatCount = Float(INT32_MAX)
-            
-        return pulsator
+
+    // MARK: Initialization
+
+    func setupTouchPointViews() {
+        // Setup start TouchPointViews
+        startTouchPoints.forEach { view in
+            view.setup()
+        }
+
+        // Setup end TouchPointViews
+        endTouchPoints.forEach { view in
+            view.setup()
+        }
     }
 }

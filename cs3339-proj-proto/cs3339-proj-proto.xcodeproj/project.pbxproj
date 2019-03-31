@@ -15,6 +15,8 @@
 		044E56BB224F5F4F003DAD21 /* Pulsator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044E56BA224F5F4F003DAD21 /* Pulsator.framework */; };
 		044E56BE224FFAA1003DAD21 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56BD224FFAA0003DAD21 /* BaseViewController.swift */; };
 		044E56C02250030F003DAD21 /* TouchPointStateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56BF2250030F003DAD21 /* TouchPointStateEnum.swift */; };
+		044E56C2225060C8003DAD21 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56C1225060C8003DAD21 /* Extensions.swift */; };
+		044E56C4225062B9003DAD21 /* TouchPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56C3225062B9003DAD21 /* TouchPointView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		044E56BA224F5F4F003DAD21 /* Pulsator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pulsator.framework; path = Carthage/Build/iOS/Pulsator.framework; sourceTree = "<group>"; };
 		044E56BD224FFAA0003DAD21 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		044E56BF2250030F003DAD21 /* TouchPointStateEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPointStateEnum.swift; sourceTree = "<group>"; };
+		044E56C1225060C8003DAD21 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		044E56C3225062B9003DAD21 /* TouchPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPointView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +68,16 @@
 			isa = PBXGroup;
 			children = (
 				044A3A6F224F33D30058CD8E /* AppDelegate.swift */,
-				044A3A71224F33D30058CD8E /* ViewController.swift */,
-				044A3A73224F33D30058CD8E /* Main.storyboard */,
 				044A3A76224F33D50058CD8E /* Assets.xcassets */,
-				044A3A78224F33D50058CD8E /* LaunchScreen.storyboard */,
-				044A3A7B224F33D50058CD8E /* Info.plist */,
-				044A3A81224F399D0058CD8E /* README.txt */,
 				044E56BD224FFAA0003DAD21 /* BaseViewController.swift */,
+				044E56C1225060C8003DAD21 /* Extensions.swift */,
+				044A3A7B224F33D50058CD8E /* Info.plist */,
+				044A3A78224F33D50058CD8E /* LaunchScreen.storyboard */,
+				044A3A73224F33D30058CD8E /* Main.storyboard */,
+				044A3A81224F399D0058CD8E /* README.txt */,
 				044E56BF2250030F003DAD21 /* TouchPointStateEnum.swift */,
+				044E56C3225062B9003DAD21 /* TouchPointView.swift */,
+				044A3A71224F33D30058CD8E /* ViewController.swift */,
 			);
 			path = "cs3339-proj-proto";
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044E56C2225060C8003DAD21 /* Extensions.swift in Sources */,
+				044E56C4225062B9003DAD21 /* TouchPointView.swift in Sources */,
 				044A3A72224F33D30058CD8E /* ViewController.swift in Sources */,
 				044A3A70224F33D30058CD8E /* AppDelegate.swift in Sources */,
 				044E56BE224FFAA1003DAD21 /* BaseViewController.swift in Sources */,

@@ -10,28 +10,32 @@ import UIKit
 import Pulsator
 
 class ViewController: BaseViewController {
+
+    // MARK: IBOutlets
+
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var endTouchPoint: UIView!
-    @IBOutlet weak var startTouchPoint: UIView!
+    @IBOutlet weak var endTouchPoint: TouchPointView!
+    @IBOutlet weak var endTouchPoint2: TouchPointView!
+    @IBOutlet weak var startTouchPoint: TouchPointView!
+
+    // MARK: UIKit
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        // Setup startPoint
-        let startPointPulsator = createPulsator(radius: startTouchPoint.frame.width)
-        startTouchPoint.layer.addSublayer(startPointPulsator)
-        startPointPulsator.start()
-
-        // Setup touchPoint
-        let endTouchPointPulsator = createPulsator(radius: endTouchPoint.frame.width)
-        endTouchPoint.layer.addSublayer(endTouchPointPulsator)
-        endTouchPointPulsator.start()
-
+        // Assign imageView to baseImageView so BaseViewController handles drawing
         imageViewBase = imageView
-        endTouchPointBase = endTouchPoint
-        startTouchPointBase = startTouchPoint
+
+        // Keep track of TouchPointViews
+        startTouchPoints = [startTouchPoint]
+        endTouchPoints = [endTouchPoint, endTouchPoint2]
+        
+        // Setup TouchPointViews
+        setupTouchPointViews()
     }
+
+    // MARK: IBActions
 
     @IBAction func reset(_ sender: Any) {
         imageView.image = nil

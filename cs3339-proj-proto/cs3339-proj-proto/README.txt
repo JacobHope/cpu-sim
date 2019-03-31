@@ -17,3 +17,7 @@ This project uses Carthage:
         Then go to
             Xcode > Preferences > Locations
         and set the command line tools location
+
+Style Guides:
+
+    https://nshipster.com/swift-documentation/
