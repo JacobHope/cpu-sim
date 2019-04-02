@@ -11,6 +11,8 @@ import Pulsator
 
 class TouchPointView: UIView {
     var pulsator: Pulsator?
+    
+    @IBInspectable var name: String = "touchPoint"
 
     func setup() {
         // Generate a Pulsator instance

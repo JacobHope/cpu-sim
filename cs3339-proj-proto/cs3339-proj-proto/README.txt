@@ -26,3 +26,7 @@ Coordinator Pattern:
 
     https://www.hackingwithswift.com/articles/71/how-to-use-the-coordinator-pattern-in-ios-apps
     https://www.raywenderlich.com/158-coordinator-tutorial-for-ios-getting-started
+
+Reference:
+
+    https://nshipster.com/ibinspectable-ibdesignable/

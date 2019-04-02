@@ -49,6 +49,9 @@
                         <constraint firstAttribute="height" constant="25" id="VJF-2F-aPm"/>
                         <constraint firstAttribute="width" constant="25" id="vsw-hO-Zcc"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="startTouchPoint"/>
+                    </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCL-VQ-ghJ" userLabel="EndTouchPointView1" customClass="TouchPointView" customModule="cs3339_proj_proto" customModuleProvider="target">
                     <rect key="frame" x="339" y="687" width="25" height="25"/>
