@@ -43,7 +43,7 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwN-la-WA3" userLabel="StartTouchPointView" customClass="TouchPointView" customModule="cs3339_proj_proto" customModuleProvider="target">
-                    <rect key="frame" x="100" y="144" width="25" height="25"/>
+                    <rect key="frame" x="100" y="440.5" width="25" height="25"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="VJF-2F-aPm"/>
@@ -51,7 +51,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCL-VQ-ghJ" userLabel="EndTouchPointView1" customClass="TouchPointView" customModule="cs3339_proj_proto" customModuleProvider="target">
-                    <rect key="frame" x="339" y="637" width="25" height="25"/>
+                    <rect key="frame" x="339" y="687" width="25" height="25"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="25" id="Zuh-OE-OUc"/>
@@ -59,7 +59,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NvY-8v-14Z" userLabel="EndTouchPointView2" customClass="TouchPointView" customModule="cs3339_proj_proto" customModuleProvider="target">
-                    <rect key="frame" x="50" y="637" width="25" height="25"/>
+                    <rect key="frame" x="339" y="194" width="25" height="25"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="MeW-Tl-Gd0"/>
@@ -76,14 +76,14 @@
                 <constraint firstItem="qz5-2V-wcl" firstAttribute="leading" secondItem="gfa-Lf-gnP" secondAttribute="leading" id="2iS-AW-Kam"/>
                 <constraint firstItem="gfa-Lf-gnP" firstAttribute="trailing" secondItem="wCL-VQ-ghJ" secondAttribute="trailing" constant="50" id="34f-i2-3da"/>
                 <constraint firstItem="qz5-2V-wcl" firstAttribute="trailing" secondItem="gfa-Lf-gnP" secondAttribute="trailing" id="5nY-5r-oS5"/>
+                <constraint firstItem="NvY-8v-14Z" firstAttribute="top" secondItem="gfa-Lf-gnP" secondAttribute="top" constant="150" id="7ry-XZ-8Uh"/>
                 <constraint firstItem="UtM-oG-sdk" firstAttribute="centerX" secondItem="gfa-Lf-gnP" secondAttribute="centerX" id="9YE-mL-uCf"/>
                 <constraint firstItem="apF-RQ-EZf" firstAttribute="centerX" secondItem="gfa-Lf-gnP" secondAttribute="centerX" id="CLl-ne-z2D"/>
-                <constraint firstItem="gfa-Lf-gnP" firstAttribute="bottom" secondItem="wCL-VQ-ghJ" secondAttribute="bottom" constant="200" id="EsO-84-IiP"/>
-                <constraint firstItem="gfa-Lf-gnP" firstAttribute="bottom" secondItem="NvY-8v-14Z" secondAttribute="bottom" constant="200" id="OGX-G5-nf7"/>
+                <constraint firstItem="gfa-Lf-gnP" firstAttribute="bottom" secondItem="wCL-VQ-ghJ" secondAttribute="bottom" constant="150" id="EsO-84-IiP"/>
+                <constraint firstItem="nwN-la-WA3" firstAttribute="centerY" secondItem="gfa-Lf-gnP" secondAttribute="centerY" id="M1f-76-iRg"/>
                 <constraint firstItem="apF-RQ-EZf" firstAttribute="top" secondItem="gfa-Lf-gnP" secondAttribute="top" constant="25" id="OnD-za-8Bq"/>
-                <constraint firstItem="nwN-la-WA3" firstAttribute="top" secondItem="gfa-Lf-gnP" secondAttribute="top" constant="100" id="PtX-K1-gFS"/>
                 <constraint firstItem="gfa-Lf-gnP" firstAttribute="bottom" secondItem="UtM-oG-sdk" secondAttribute="bottom" constant="44" id="eFy-TK-sUd"/>
-                <constraint firstItem="NvY-8v-14Z" firstAttribute="leading" secondItem="gfa-Lf-gnP" secondAttribute="leading" constant="50" id="pfO-b1-s0f"/>
+                <constraint firstItem="gfa-Lf-gnP" firstAttribute="trailing" secondItem="NvY-8v-14Z" secondAttribute="trailing" constant="50" id="jCK-ta-HQq"/>
                 <constraint firstItem="nwN-la-WA3" firstAttribute="leading" secondItem="gfa-Lf-gnP" secondAttribute="leading" constant="100" id="vDh-QA-hdV"/>
                 <constraint firstItem="gfa-Lf-gnP" firstAttribute="bottom" secondItem="qz5-2V-wcl" secondAttribute="bottom" id="ykl-mz-fZL"/>
             </constraints>
