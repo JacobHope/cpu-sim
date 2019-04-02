@@ -18,8 +18,17 @@ class ViewControllerCoordinator: Coordinator {
     
     func start() {
         let viewController = ViewController(nibName: "ViewController", bundle: nil)
+        viewController.delegate = self
         presenter.pushViewController(viewController, animated: true)
         
         self.viewController = viewController
+    }
+}
+
+extension ViewControllerCoordinator: ViewControllerDelegate {
+    func onTouchPointEntered(_ touchPointView: TouchPointView) {
+        if (touchPointView.name == "startTouchPoint") {
+            print("onTouchPointEntered startTouchPoint")
+        }
     }
 }

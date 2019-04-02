@@ -9,7 +9,13 @@
 import UIKit
 import Pulsator
 
+protocol ViewControllerDelegate: class {
+    func onTouchPointBegan(_ touchPointView: TouchPointView)
+}
+
 class BaseViewController: UIViewController {
+    weak var delegate: ViewControllerDelegate?
+
     var firstPoint = CGPoint.zero
     var lastPoint = CGPoint.zero
 
@@ -29,6 +35,21 @@ class BaseViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             lastPoint = touch.location(in: self.view)
+            firstPoint = lastPoint
+
+            startTouchPoints.forEach { view in
+                guard let hitView = view.hitTest(
+                        CGPoint(x: touch.location(in: view).x + view.frame.width / 2,
+                                y: touch.location(in: view).y + view.frame.height / 2),
+                        with: event)
+                        else {
+                    return
+                }
+
+                if (hitView == view) {
+                    delegate?.onTouchPointBegan(view)
+                }
+            }
         }
     }
 
@@ -43,19 +64,6 @@ class BaseViewController: UIViewController {
             drawLineFrom(fromPoint: lastPoint, toPoint: currentPoint)
 
             lastPoint = currentPoint
-
-//            // Detect if touch is inside touchPoint
-//            guard let touchPointHitView = view.hitTest(
-//                    CGPoint(x: touch.location(in: view).x + endTouchPointBase!.frame.width / 2,
-//                            y: touch.location(in: view).y + endTouchPointBase!.frame.height / 2),
-//                    with: event)
-//                    else {
-//                return
-//            }
-//
-//            if (touchPointHitView == endTouchPointBase) {
-//                print("MOVED \(touchPointHitView)")
-//            }
         }
     }
 
@@ -66,19 +74,6 @@ class BaseViewController: UIViewController {
         }
 
         if let touch = touches.first {
-
-//            // Detect if touch is inside touchPoint
-//            guard let hitView = view.hitTest(
-//                    CGPoint(x: touch.location(in: view).x + endTouchPointBase!.frame.width / 2,
-//                            y: touch.location(in: view).y + endTouchPointBase!.frame.height / 2),
-//                    with: event)
-//                    else {
-//                return
-//            }
-//
-//            if (hitView == endTouchPointBase) {
-//                print("ENDED \(hitView)")
-//            }
         }
     }
 
