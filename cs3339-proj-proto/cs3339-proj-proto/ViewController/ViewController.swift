@@ -27,11 +27,8 @@ class ViewController: BaseViewController {
         // Assign imageView to baseImageView so BaseViewController handles drawing
         imageViewBase = imageView
 
-        // Keep track of TouchPointViews
-        startTouchPoints = [startTouchPointView]
-        endTouchPoints = [endTouchPointView1, endTouchPointView2]
-        
         // Setup TouchPointViews
+        touchPoints = [startTouchPointView, endTouchPointView1, endTouchPointView2]
         setupTouchPointViews()
     }
 

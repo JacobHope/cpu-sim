@@ -60,6 +60,9 @@
                         <constraint firstAttribute="width" constant="25" id="Zuh-OE-OUc"/>
                         <constraint firstAttribute="height" constant="25" id="geU-xa-6GB"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="endTouchPoint1"/>
+                    </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NvY-8v-14Z" userLabel="EndTouchPointView2" customClass="TouchPointView" customModule="cs3339_proj_proto" customModuleProvider="target">
                     <rect key="frame" x="339" y="194" width="25" height="25"/>
@@ -68,6 +71,9 @@
                         <constraint firstAttribute="height" constant="25" id="MeW-Tl-Gd0"/>
                         <constraint firstAttribute="width" constant="25" id="dze-j7-Rni"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="endTouchPoint2"/>
+                    </userDefinedRuntimeAttributes>
                 </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qz5-2V-wcl">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>

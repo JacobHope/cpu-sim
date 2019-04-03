@@ -26,7 +26,7 @@ class ViewControllerCoordinator: Coordinator {
 }
 
 extension ViewControllerCoordinator: ViewControllerDelegate {
-    func onTouchPointEntered(_ touchPointView: TouchPointView) {
+    func onTouchPointBegan(_ touchPointView: TouchPointView) {
         if (touchPointView.name == "startTouchPoint") {
             print("onTouchPointEntered startTouchPoint")
         }

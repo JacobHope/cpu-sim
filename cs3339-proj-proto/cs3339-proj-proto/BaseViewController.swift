@@ -20,9 +20,7 @@ class BaseViewController: UIViewController {
     var lastPoint = CGPoint.zero
 
     var imageViewBase: UIImageView?
-
-    var startTouchPoints: [TouchPointView] = []
-    var endTouchPoints: [TouchPointView] = []
+    var touchPoints: [TouchPointView] = []
 
     var red: CGFloat = 0.0
     var green: CGFloat = 0.0
@@ -37,7 +35,7 @@ class BaseViewController: UIViewController {
             lastPoint = touch.location(in: self.view)
             firstPoint = lastPoint
 
-            startTouchPoints.forEach { view in
+            touchPoints.forEach { view in
                 guard let hitView = view.hitTest(
                         CGPoint(x: touch.location(in: view).x + view.frame.width / 2,
                                 y: touch.location(in: view).y + view.frame.height / 2),
@@ -119,12 +117,7 @@ class BaseViewController: UIViewController {
 
     func setupTouchPointViews() {
         // Setup start TouchPointViews
-        startTouchPoints.forEach { view in
-            view.setup()
-        }
-
-        // Setup end TouchPointViews
-        endTouchPoints.forEach { view in
+        touchPoints.forEach { view in
             view.setup()
         }
     }
