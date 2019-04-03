@@ -12,10 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="cs3339_proj_proto" customModuleProvider="target">
             <connections>
-                <outlet property="endTouchPointView1" destination="wCL-VQ-ghJ" id="Hzd-TG-t0Z"/>
-                <outlet property="endTouchPointView2" destination="NvY-8v-14Z" id="wAR-pl-yo2"/>
+                <outlet property="endTouchPoint1" destination="wCL-VQ-ghJ" id="Hzd-TG-t0Z"/>
+                <outlet property="endTouchPoint2" destination="NvY-8v-14Z" id="wAR-pl-yo2"/>
                 <outlet property="imageView" destination="qz5-2V-wcl" id="zXS-FW-fcz"/>
-                <outlet property="startTouchPointView" destination="nwN-la-WA3" id="McX-ty-I5o"/>
+                <outlet property="startTouchPoint" destination="nwN-la-WA3" id="McX-ty-I5o"/>
                 <outlet property="view" destination="1I4-sn-VT7" id="zUJ-ps-a4F"/>
             </connections>
         </placeholder>

@@ -8,27 +8,109 @@
 
 import UIKit
 
+enum StartState {
+    case startPoint1Started
+    case noneStarted
+}
+
+enum EndState {
+    case endPoint1Reached
+    case endPoint2Reached
+    case noneReached
+}
+
 class ViewControllerCoordinator: Coordinator {
     private let presenter: UINavigationController
     private var viewController: ViewController?
-    
+
+    private var startState: StartState = StartState.noneStarted
+    private var endState: EndState = EndState.noneReached
+
     init(presenter: UINavigationController) {
         self.presenter = presenter
     }
-    
+
     func start() {
         let viewController = ViewController(nibName: "ViewController", bundle: nil)
         viewController.delegate = self
         presenter.pushViewController(viewController, animated: true)
-        
+
         self.viewController = viewController
+    }
+
+    func clearDrawing() {
+        viewController?.imageView.image = nil
+    }
+
+    func ignoreTouchInput() {
+        UIApplication.shared.beginIgnoringInteractionEvents()
+    }
+
+    func resumeTouchInput() {
+        UIApplication.shared.endIgnoringInteractionEvents()
+    }
+
+    func resetState() {
+        startState = StartState.noneStarted
+        endState = EndState.noneReached
     }
 }
 
 extension ViewControllerCoordinator: ViewControllerDelegate {
-    func onTouchPointBegan(_ touchPointView: TouchPointView) {
-        if (touchPointView.name == "startTouchPoint") {
-            print("onTouchPointEntered startTouchPoint")
+    func onTouchPointBegan(_ touchPoint: TouchPointView) {
+        if (touchPoint.name == "startTouchPoint") {
+            print("onTouchPointBegan startTouchPoint")
+
+            self.startState = StartState.startPoint1Started
         }
+    }
+
+    func onTouchPointMoved(_ touchPoint: TouchPointView) {
+        switch touchPoint.name {
+        case "endTouchPoint1":
+            print("onTouchPointMoved endTouchPoint1")
+
+            if (self.startState == StartState.startPoint1Started) {
+                // Change endTouchPoint1 to dark red color...
+                touchPoint.pulsator?.backgroundColor = UIColor(red: 0.667, green: 0, blue: 0, alpha: 1.0).cgColor
+
+                // ...then change back to blue color after 2 seconds
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    touchPoint.pulsator?.backgroundColor = UIColor.blue.cgColor
+                }
+            }
+
+            self.ignoreTouchInput()
+            self.clearDrawing()
+            break;
+        case "endTouchPoint2":
+            print("onTouchPointMoved endTouchPoint2")
+
+            if (self.startState == StartState.startPoint1Started) {
+                // Change endTouchPoint2 to green color...
+                touchPoint.pulsator?.backgroundColor = UIColor.green.cgColor
+
+                // ...then stop pulsating after 2 seconds
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    touchPoint.pulsator?.stop()
+                }
+            }
+
+            self.ignoreTouchInput()
+            self.clearDrawing()
+            break;
+        default:
+            // Do nothing
+            break;
+        }
+    }
+
+    func onTouchesEnded() {
+        self.resetState()
+    }
+
+    func onTouchesCancelled() {
+        self.resumeTouchInput()
+        self.resetState()
     }
 }

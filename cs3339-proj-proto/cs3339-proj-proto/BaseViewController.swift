@@ -10,7 +10,10 @@ import UIKit
 import Pulsator
 
 protocol ViewControllerDelegate: class {
-    func onTouchPointBegan(_ touchPointView: TouchPointView)
+    func onTouchPointBegan(_ touchPoint: TouchPointView)
+    func onTouchPointMoved(_ touchPoint: TouchPointView)
+    func onTouchesEnded()
+    func onTouchesCancelled()
 }
 
 class BaseViewController: UIViewController {
@@ -35,17 +38,9 @@ class BaseViewController: UIViewController {
             lastPoint = touch.location(in: self.view)
             firstPoint = lastPoint
 
-            touchPoints.forEach { view in
-                guard let hitView = view.hitTest(
-                        CGPoint(x: touch.location(in: view).x + view.frame.width / 2,
-                                y: touch.location(in: view).y + view.frame.height / 2),
-                        with: event)
-                        else {
-                    return
-                }
-
-                if (hitView == view) {
-                    delegate?.onTouchPointBegan(view)
+            touchPoints.forEach { touchPoint in
+                if (touchPoint == touchPoint.hitTest(touch, event: event)) {
+                    delegate?.onTouchPointBegan(touchPoint)
                 }
             }
         }
@@ -62,17 +57,21 @@ class BaseViewController: UIViewController {
             drawLineFrom(fromPoint: lastPoint, toPoint: currentPoint)
 
             lastPoint = currentPoint
+
+            touchPoints.forEach { touchPoint in
+                if (touchPoint == touchPoint.hitTest(touch, event: event)) {
+                    delegate?.onTouchPointMoved(touchPoint)
+                }
+            }
         }
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        delegate?.onTouchesEnded()
+    }
 
-        if (imageViewBase == nil) {
-            return
-        }
-
-        if let touch = touches.first {
-        }
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        delegate?.onTouchesCancelled()
     }
 
     // MARK: Drawing
@@ -117,8 +116,10 @@ class BaseViewController: UIViewController {
 
     func setupTouchPointViews() {
         // Setup start TouchPointViews
-        touchPoints.forEach { view in
-            view.setup()
+        touchPoints.forEach { touchPoint in
+            touchPoint.setup()
         }
     }
+
+
 }

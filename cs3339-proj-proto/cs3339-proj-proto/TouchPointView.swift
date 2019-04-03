@@ -11,7 +11,7 @@ import Pulsator
 
 class TouchPointView: UIView {
     var pulsator: Pulsator?
-    
+
     @IBInspectable var name: String = "touchPoint"
 
     func setup() {
@@ -26,5 +26,16 @@ class TouchPointView: UIView {
 
         // Keep track of pulsator in order to change color, toggle off, etc
         self.pulsator = pulsator
+    }
+
+    func hitTest(_ touch: UITouch, event: UIEvent?) -> UIView? {
+        guard let hitView = self.hitTest(
+                CGPoint(x: touch.location(in: self).x + self.frame.width / 2,
+                        y: touch.location(in: self).y + self.frame.height / 2),
+                with: event)
+                else {
+            return nil
+        }
+        return hitView
     }
 }
