@@ -18,18 +18,19 @@ class ViewController: BaseViewController {
     @IBOutlet weak var endTouchPoint1: TouchPointView!
     @IBOutlet weak var endTouchPoint2: TouchPointView!
 
+    var touchPoints: [TouchPointView] = []
+
     // MARK: UIKit
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        // Assign imageView to baseImageView so BaseViewController handles drawing
-        imageViewBase = imageView
-
         // Setup TouchPointViews
         touchPoints = [startTouchPoint, endTouchPoint1, endTouchPoint2]
-        setupTouchPointViews()
+        touchPoints.forEach { touchPoint in
+            touchPoint.setup()
+        }
     }
 
     // MARK: IBActions
