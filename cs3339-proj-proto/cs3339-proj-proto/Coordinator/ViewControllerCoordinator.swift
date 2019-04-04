@@ -87,16 +87,20 @@ class ViewControllerCoordinator: Coordinator {
         context.move(to: CGPoint(x: fromPoint.x, y: fromPoint.y))
         context.addLine(to: CGPoint(x: toPoint.x, y: toPoint.y))
 
-        context.setLineCap(CGLineCap.butt)
-        context.setLineWidth(brushWidth)
-        context.setStrokeColor(red: red, green: green, blue: blue, alpha: 1.0)
-        context.setBlendMode(CGBlendMode.normal)
+        context.setLineCap(LineAttributes.lineCap)
+        context.setLineWidth(LineAttributes.brushWidth)
+        context.setStrokeColor(
+                red: LineAttributes.red,
+                green: LineAttributes.green,
+                blue: LineAttributes.blue,
+                alpha: LineAttributes.alpha)
+        context.setBlendMode(LineAttributes.blendMode)
 
         // Draw the line
         context.strokePath()
 
         self.viewController?.imageView.image = UIGraphicsGetImageFromCurrentImageContext()
-        self.viewController?.imageView.alpha = opacity
+        self.viewController?.imageView.alpha = LineAttributes.opacity
         UIGraphicsEndImageContext()
     }
 }

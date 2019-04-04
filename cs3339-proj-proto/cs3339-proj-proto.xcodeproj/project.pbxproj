@@ -20,6 +20,7 @@
 		044E56CA22506C47003DAD21 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044E56C922506C47003DAD21 /* ViewController.xib */; };
 		044E56CC22506E77003DAD21 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56CB22506E77003DAD21 /* ApplicationCoordinator.swift */; };
 		044E56CE22506FAC003DAD21 /* ViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56CD22506FAC003DAD21 /* ViewControllerCoordinator.swift */; };
+		04A897AD22559F7200811A59 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A897AC22559F7200811A59 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		044E56C922506C47003DAD21 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		044E56CB22506E77003DAD21 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		044E56CD22506FAC003DAD21 /* ViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCoordinator.swift; sourceTree = "<group>"; };
+		04A897AC22559F7200811A59 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,17 +75,18 @@
 		044A3A6E224F33D30058CD8E /* cs3339-proj-proto */ = {
 			isa = PBXGroup;
 			children = (
-				044E56D02250717E003DAD21 /* ViewController */,
-				044E56CF22507176003DAD21 /* Coordinator */,
 				044A3A7B224F33D50058CD8E /* Info.plist */,
 				044A3A6F224F33D30058CD8E /* AppDelegate.swift */,
+				04A897AC22559F7200811A59 /* Constants.swift */,
 				044E56C1225060C8003DAD21 /* Extensions.swift */,
 				044E56C722506AEA003DAD21 /* StoryboardInstantiable.swift */,
 				044E56C3225062B9003DAD21 /* TouchPointView.swift */,
 				044A3A81224F399D0058CD8E /* README.txt */,
 				044A3A76224F33D50058CD8E /* Assets.xcassets */,
 				044E56C922506C47003DAD21 /* ViewController.xib */,
+				044E56CF22507176003DAD21 /* Coordinator */,
 				044A3A78224F33D50058CD8E /* LaunchScreen.storyboard */,
+				044E56D02250717E003DAD21 /* ViewController */,
 			);
 			path = "cs3339-proj-proto";
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				042E2F522250784900B81AD3 /* BaseViewController.swift in Sources */,
 				044A3A72224F33D30058CD8E /* ViewController.swift in Sources */,
 				044A3A70224F33D30058CD8E /* AppDelegate.swift in Sources */,
+				04A897AD22559F7200811A59 /* Constants.swift in Sources */,
 				044E56CE22506FAC003DAD21 /* ViewControllerCoordinator.swift in Sources */,
 				044E56CC22506E77003DAD21 /* ApplicationCoordinator.swift in Sources */,
 				044E56C822506AEA003DAD21 /* StoryboardInstantiable.swift in Sources */,
