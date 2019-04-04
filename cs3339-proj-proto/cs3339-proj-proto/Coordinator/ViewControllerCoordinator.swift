@@ -139,7 +139,7 @@ extension ViewControllerCoordinator: ViewControllerDelegate {
 
                         if (self.startState == StartState.startPoint1Started) {
                             // Change endTouchPoint1 to dark red color...
-                            touchPoint.pulsator?.backgroundColor = UIColor(red: 0.667, green: 0, blue: 0, alpha: 1.0).cgColor
+                            touchPoint.pulsator?.backgroundColor = UIColor.darkRed.cgColor
 
                             // ...then change back to blue color after 2 seconds
                             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

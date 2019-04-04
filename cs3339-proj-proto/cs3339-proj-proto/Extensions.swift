@@ -39,3 +39,9 @@ extension Pulsator {
         return pulsator
     }
 }
+
+// MARK: UIColor
+
+extension UIColor {
+    static let darkRed = UIColor(red: 0.667, green: 0, blue: 0, alpha: 1.0)
+}
