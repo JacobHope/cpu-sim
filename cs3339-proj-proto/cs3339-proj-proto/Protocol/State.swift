@@ -11,7 +11,7 @@ import UIKit
 protocol State {
     func resetState()
     func handleTouchesBegan(_ touches: Set<UITouch>, with event: UIEvent?, inViewController viewController: ViewController)
-    func handleTouchesMove(_ touches: Set<UITouch>, with event: UIEvent?, inViewController viewController: ViewController, withDrawing drawingService: Drawing)
+    func handleTouchesMoved(_ touches: Set<UITouch>, with event: UIEvent?, inViewController viewController: ViewController, withDrawing drawingService: Drawing)
     func handleTouchesEnded()
     func handleTouchesCancelled(withDrawing drawingService: Drawing)
 }

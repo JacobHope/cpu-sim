@@ -8,12 +8,12 @@
 
 import UIKit
 
-enum StartState {
+private enum StartState {
     case startPoint1Started
     case noneStarted
 }
 
-enum EndState {
+private enum EndState {
     case endPoint1Reached
     case endPoint2Reached
     case noneReached
@@ -23,15 +23,18 @@ class StateService: State {
     private var startState: StartState = StartState.noneStarted
     private var endState: EndState = EndState.noneReached
 
-    var firstPoint = CGPoint.zero
-    var lastPoint = CGPoint.zero
+    private var firstPoint = CGPoint.zero
+    private var lastPoint = CGPoint.zero
 
     func resetState() {
         startState = StartState.noneStarted
         endState = EndState.noneReached
     }
 
-    func onCorrect(_ touchPoint: TouchPointView, inViewController viewController: ViewController) {
+    private func onCorrect(
+            _ touchPoint: TouchPointView,
+            inViewController viewController: ViewController) {
+
         // Change touch point to green color...
         touchPoint.pulsator?.backgroundColor = UIColor.green.cgColor
 
@@ -52,7 +55,7 @@ class StateService: State {
         }
     }
 
-    func onIncorrect(_ touchPoint: TouchPointView) {
+    private func onIncorrect(_ touchPoint: TouchPointView) {
         // Change endTouchPoint1 to dark red color...
         touchPoint.pulsator?.backgroundColor = UIColor.darkRed.cgColor
 
@@ -62,9 +65,11 @@ class StateService: State {
         }
     }
 
-    //
+    func handleTouchesBegan(
+            _ touches: Set<UITouch>,
+            with event: UIEvent?,
+            inViewController viewController: ViewController) {
 
-    func handleTouchesBegan(_ touches: Set<UITouch>, with event: UIEvent?, inViewController viewController: ViewController) {
         if let touch = touches.first {
             lastPoint = touch.location(in: viewController.view)
             firstPoint = lastPoint
@@ -72,8 +77,6 @@ class StateService: State {
             viewController.touchPoints.forEach { touchPoint in
                 if (touchPoint == touchPoint.hitTest(touch, event: event)) {
                     if (touchPoint.name == "startTouchPoint") {
-                        print("onTouchPointBegan startTouchPoint")
-
                         self.startState = StartState.startPoint1Started
                     }
                 }
@@ -81,8 +84,11 @@ class StateService: State {
         }
     }
 
-    func handleTouchesMove(_ touches: Set<UITouch>, with event: UIEvent?, inViewController viewController: ViewController, withDrawing drawingService: Drawing) {
-
+    func handleTouchesMoved(
+            _ touches: Set<UITouch>,
+            with event: UIEvent?,
+            inViewController viewController: ViewController,
+            withDrawing drawingService: Drawing) {
 
         if let touch = touches.first {
             let currentPoint = touch.location(in: viewController.view)
@@ -97,8 +103,6 @@ class StateService: State {
                 if (touchPoint == touchPoint.hitTest(touch, event: event)) {
                     switch touchPoint.name {
                     case "endTouchPoint1":
-                        print("onTouchPointMoved endTouchPoint1")
-
                         if (self.startState == StartState.startPoint1Started) {
                             self.onIncorrect(touchPoint)
                         }
@@ -107,8 +111,6 @@ class StateService: State {
                         drawingService.clearDrawing(inViewController: viewController)
                         break;
                     case "endTouchPoint2":
-                        print("onTouchPointMoved endTouchPoint2")
-
                         if (self.startState == StartState.startPoint1Started) {
                             self.onCorrect(touchPoint, inViewController: viewController)
                         }

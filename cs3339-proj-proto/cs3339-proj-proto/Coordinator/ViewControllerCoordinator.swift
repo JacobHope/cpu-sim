@@ -48,7 +48,7 @@ extension ViewControllerCoordinator: ViewControllerDelegate {
             return
         }
 
-        stateService.handleTouchesMove(
+        stateService.handleTouchesMoved(
                 touches,
                 with: event,
                 inViewController: self.viewController!,

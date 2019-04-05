@@ -10,7 +10,10 @@ import UIKit
 
 class DrawingService: Drawing {
 
-    func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint, inViewController viewController: ViewController) {
+    func drawLineFrom(
+            fromPoint: CGPoint,
+            toPoint: CGPoint,
+            inViewController viewController: ViewController) {
 
         UIGraphicsBeginImageContext(viewController.view.frame.size)
 
