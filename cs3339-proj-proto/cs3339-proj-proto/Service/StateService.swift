@@ -105,18 +105,16 @@ class StateService: State {
                     case "endTouchPoint1":
                         if (self.startState == StartState.startPoint1Started) {
                             self.onIncorrect(touchPoint)
+                            drawingService.ignoreTouchInput()
+                            drawingService.clearDrawing(inViewController: viewController)
                         }
-
-                        drawingService.ignoreTouchInput()
-                        drawingService.clearDrawing(inViewController: viewController)
                         break;
                     case "endTouchPoint2":
                         if (self.startState == StartState.startPoint1Started) {
                             self.onCorrect(touchPoint, inViewController: viewController)
+                            drawingService.ignoreTouchInput()
+                            drawingService.clearDrawing(inViewController: viewController)
                         }
-
-                        drawingService.ignoreTouchInput()
-                        drawingService.clearDrawing(inViewController: viewController)
                         break;
 
                     default:
