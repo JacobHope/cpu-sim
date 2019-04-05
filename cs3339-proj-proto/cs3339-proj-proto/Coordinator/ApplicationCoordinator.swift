@@ -20,7 +20,9 @@ class ApplicationCoordinator: Coordinator {
 
         viewControllerCoordinator = ViewControllerCoordinator(
                 presenter: rootViewController,
-                drawingService: DrawingService())
+                drawingService: DrawingService(),
+                stateService: StateService()
+        )
     }
 
     func start() {
