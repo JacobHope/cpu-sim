@@ -22,6 +22,7 @@ enum EndState {
 class ViewControllerCoordinator: Coordinator {
     private let presenter: UINavigationController
     private var viewController: ViewController?
+    private let drawingService: Drawing
 
     private var startState: StartState = StartState.noneStarted
     private var endState: EndState = EndState.noneReached
@@ -29,14 +30,10 @@ class ViewControllerCoordinator: Coordinator {
     var firstPoint = CGPoint.zero
     var lastPoint = CGPoint.zero
 
-    var red: CGFloat = 0.0
-    var green: CGFloat = 0.0
-    var blue: CGFloat = 0.0
-    var brushWidth: CGFloat = 3.0
-    var opacity: CGFloat = 1.0
-
-    init(presenter: UINavigationController) {
+    init(presenter: UINavigationController,
+         drawingService: Drawing) {
         self.presenter = presenter
+        self.drawingService = drawingService
     }
 
     func start() {
@@ -47,61 +44,40 @@ class ViewControllerCoordinator: Coordinator {
         self.viewController = viewController
     }
 
-    func clearDrawing() {
-        viewController?.imageView.image = nil
-    }
-
-    func ignoreTouchInput() {
-        UIApplication.shared.beginIgnoringInteractionEvents()
-    }
-
-    func resumeTouchInput() {
-        UIApplication.shared.endIgnoringInteractionEvents()
-    }
-
     func resetState() {
         startState = StartState.noneStarted
         endState = EndState.noneReached
     }
 
-    func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
+    func onCorrect(_ touchPoint: TouchPointView) {
+        // Change touch point to green color...
+        touchPoint.pulsator?.backgroundColor = UIColor.green.cgColor
 
-        if (self.viewController == nil) {
-            return
+        // ...then stop pulsating after 2 seconds
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            touchPoint.pulsator?.stop()
+
+            switch touchPoint.name {
+            case "endTouchPoint2":
+                UIView.animate(withDuration: 1.0, animations: {
+                    self.viewController?.line1.isHidden = false
+                })
+
+                break;
+            default:
+                break;
+            }
         }
+    }
 
-        UIGraphicsBeginImageContext((self.viewController?.view.frame.size)!)
+    func onIncorrect(_ touchPoint: TouchPointView) {
+        // Change endTouchPoint1 to dark red color...
+        touchPoint.pulsator?.backgroundColor = UIColor.darkRed.cgColor
 
-        // Get the graphics context. If it doesn't exist, then return
-        guard let context = UIGraphicsGetCurrentContext() else {
-            return
+        // ...then change back to blue color after 2 seconds
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            touchPoint.pulsator?.backgroundColor = UIColor.blue.cgColor
         }
-
-        self.viewController?.imageView.image?.draw(
-                in: CGRect(
-                        x: 0,
-                        y: 0,
-                        width: (self.viewController?.view.frame.size.width)!,
-                        height: (self.viewController?.view.frame.size.height)!))
-
-        context.move(to: CGPoint(x: fromPoint.x, y: fromPoint.y))
-        context.addLine(to: CGPoint(x: toPoint.x, y: toPoint.y))
-
-        context.setLineCap(LineAttributes.lineCap)
-        context.setLineWidth(LineAttributes.brushWidth)
-        context.setStrokeColor(
-                red: LineAttributes.red,
-                green: LineAttributes.green,
-                blue: LineAttributes.blue,
-                alpha: LineAttributes.alpha)
-        context.setBlendMode(LineAttributes.blendMode)
-
-        // Draw the line
-        context.strokePath()
-
-        self.viewController?.imageView.image = UIGraphicsGetImageFromCurrentImageContext()
-        self.viewController?.imageView.alpha = LineAttributes.opacity
-        UIGraphicsEndImageContext()
     }
 }
 
@@ -131,7 +107,10 @@ extension ViewControllerCoordinator: ViewControllerDelegate {
 
         if let touch = touches.first {
             let currentPoint = touch.location(in: self.viewController?.view)
-            drawLineFrom(fromPoint: self.lastPoint, toPoint: currentPoint)
+            drawingService.drawLineFrom(
+                    fromPoint: self.lastPoint,
+                    toPoint: currentPoint,
+                    inViewController: self.viewController!)
 
             lastPoint = currentPoint
 
@@ -142,33 +121,21 @@ extension ViewControllerCoordinator: ViewControllerDelegate {
                         print("onTouchPointMoved endTouchPoint1")
 
                         if (self.startState == StartState.startPoint1Started) {
-                            // Change endTouchPoint1 to dark red color...
-                            touchPoint.pulsator?.backgroundColor = UIColor.darkRed.cgColor
-
-                            // ...then change back to blue color after 2 seconds
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                touchPoint.pulsator?.backgroundColor = UIColor.blue.cgColor
-                            }
+                            self.onIncorrect(touchPoint)
                         }
 
-                        self.ignoreTouchInput()
-                        self.clearDrawing()
+                        drawingService.ignoreTouchInput()
+                        drawingService.clearDrawing(inViewController: self.viewController!)
                         break;
                     case "endTouchPoint2":
                         print("onTouchPointMoved endTouchPoint2")
 
                         if (self.startState == StartState.startPoint1Started) {
-                            // Change endTouchPoint2 to green color...
-                            touchPoint.pulsator?.backgroundColor = UIColor.green.cgColor
-
-                            // ...then stop pulsating after 2 seconds
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                touchPoint.pulsator?.stop()
-                            }
+                            self.onCorrect(touchPoint)
                         }
 
-                        self.ignoreTouchInput()
-                        self.clearDrawing()
+                        drawingService.ignoreTouchInput()
+                        drawingService.clearDrawing(inViewController: self.viewController!)
                         break;
 
                     default:
@@ -185,7 +152,7 @@ extension ViewControllerCoordinator: ViewControllerDelegate {
     }
 
     func onTouchesCancelled() {
-        self.resumeTouchInput()
+        drawingService.resumeTouchInput()
         self.resetState()
     }
 }

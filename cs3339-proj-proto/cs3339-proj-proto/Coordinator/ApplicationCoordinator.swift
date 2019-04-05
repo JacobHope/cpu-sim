@@ -12,15 +12,17 @@ class ApplicationCoordinator: Coordinator {
     let window: UIWindow
     let rootViewController: UINavigationController
     let viewControllerCoordinator: ViewControllerCoordinator
-    
+
     init(window: UIWindow) {
         self.window = window
         rootViewController = UINavigationController()
         rootViewController.navigationBar.isHidden = true
-        
-        viewControllerCoordinator = ViewControllerCoordinator(presenter: rootViewController)
+
+        viewControllerCoordinator = ViewControllerCoordinator(
+                presenter: rootViewController,
+                drawingService: DrawingService())
     }
-    
+
     func start() {
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()

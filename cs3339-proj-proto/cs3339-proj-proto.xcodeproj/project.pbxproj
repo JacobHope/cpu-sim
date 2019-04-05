@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		042E2F522250784900B81AD3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E2F512250784900B81AD3 /* BaseViewController.swift */; };
+		043254902256D8F7006FCE57 /* DrawingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432548F2256D8F7006FCE57 /* DrawingService.swift */; };
+		043254922256DA1D006FCE57 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043254912256DA1D006FCE57 /* Drawing.swift */; };
 		044A3A70224F33D30058CD8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A3A6F224F33D30058CD8E /* AppDelegate.swift */; };
 		044A3A72224F33D30058CD8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A3A71224F33D30058CD8E /* ViewController.swift */; };
 		044A3A77224F33D50058CD8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044A3A76224F33D50058CD8E /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		042E2F512250784900B81AD3 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = "cs3339-proj-proto/BaseViewController.swift"; sourceTree = SOURCE_ROOT; };
+		0432548F2256D8F7006FCE57 /* DrawingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingService.swift; sourceTree = "<group>"; };
+		043254912256DA1D006FCE57 /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
 		044A3A6C224F33D30058CD8E /* cs3339-proj-proto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cs3339-proj-proto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		044A3A6F224F33D30058CD8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044A3A71224F33D30058CD8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0432548E2256D8E6006FCE57 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0432548F2256D8F7006FCE57 /* DrawingService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		044A3A63224F33D30058CD8E = {
 			isa = PBXGroup;
 			children = (
@@ -79,13 +91,14 @@
 				044A3A6F224F33D30058CD8E /* AppDelegate.swift */,
 				04A897AC22559F7200811A59 /* Constants.swift */,
 				044E56C1225060C8003DAD21 /* Extensions.swift */,
-				044E56C722506AEA003DAD21 /* StoryboardInstantiable.swift */,
 				044E56C3225062B9003DAD21 /* TouchPointView.swift */,
 				044A3A81224F399D0058CD8E /* README.txt */,
 				044A3A76224F33D50058CD8E /* Assets.xcassets */,
 				044E56C922506C47003DAD21 /* ViewController.xib */,
 				044E56CF22507176003DAD21 /* Coordinator */,
 				044A3A78224F33D50058CD8E /* LaunchScreen.storyboard */,
+				04A897AE2255AE7B00811A59 /* Protocol */,
+				0432548E2256D8E6006FCE57 /* Service */,
 				044E56D02250717E003DAD21 /* ViewController */,
 			);
 			path = "cs3339-proj-proto";
@@ -103,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				044E56CB22506E77003DAD21 /* ApplicationCoordinator.swift */,
-				044E56C522506962003DAD21 /* Coordinator.swift */,
 				044E56CD22506FAC003DAD21 /* ViewControllerCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -116,6 +128,16 @@
 				044A3A71224F33D30058CD8E /* ViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		04A897AE2255AE7B00811A59 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				044E56C522506962003DAD21 /* Coordinator.swift */,
+				044E56C722506AEA003DAD21 /* StoryboardInstantiable.swift */,
+				043254912256DA1D006FCE57 /* Drawing.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,12 +235,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				044E56C2225060C8003DAD21 /* Extensions.swift in Sources */,
+				043254902256D8F7006FCE57 /* DrawingService.swift in Sources */,
 				044E56C4225062B9003DAD21 /* TouchPointView.swift in Sources */,
 				042E2F522250784900B81AD3 /* BaseViewController.swift in Sources */,
 				044A3A72224F33D30058CD8E /* ViewController.swift in Sources */,
 				044A3A70224F33D30058CD8E /* AppDelegate.swift in Sources */,
 				04A897AD22559F7200811A59 /* Constants.swift in Sources */,
 				044E56CE22506FAC003DAD21 /* ViewControllerCoordinator.swift in Sources */,
+				043254922256DA1D006FCE57 /* Drawing.swift in Sources */,
 				044E56CC22506E77003DAD21 /* ApplicationCoordinator.swift in Sources */,
 				044E56C822506AEA003DAD21 /* StoryboardInstantiable.swift in Sources */,
 				044E56C622506962003DAD21 /* Coordinator.swift in Sources */,
