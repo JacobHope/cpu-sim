@@ -9,8 +9,13 @@
 import UIKit
 
 protocol Drawing {
-    func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint, inViewController viewController: ViewController)
-    func clearDrawing(inViewController viewController: ViewController)
+    func drawLineFrom(
+            fromPoint: CGPoint,
+            toPoint: CGPoint,
+            imageView: UIImageView,
+            view: UIView)
+
+    func clearDrawing(imageView: UIImageView)
     func ignoreTouchInput()
     func resumeTouchInput()
 }

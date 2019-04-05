@@ -33,7 +33,7 @@ class StateService: State {
 
     private func onCorrect(
             _ touchPoint: TouchPointView,
-            inViewController viewController: ViewController) {
+            lines: [UIView]) {
 
         // Change touch point to green color...
         touchPoint.pulsator?.backgroundColor = UIColor.green.cgColor
@@ -45,7 +45,8 @@ class StateService: State {
             switch touchPoint.name {
             case "endTouchPoint2":
                 UIView.animate(withDuration: 1.0, animations: {
-                    viewController.line1.isHidden = false
+                    // todo
+//                    lines[0].isHidden = false
                 })
 
                 break;
@@ -68,13 +69,14 @@ class StateService: State {
     func handleTouchesBegan(
             _ touches: Set<UITouch>,
             with event: UIEvent?,
-            inViewController viewController: ViewController) {
+            touchPoints: [TouchPointView],
+            view: UIView) {
 
         if let touch = touches.first {
-            lastPoint = touch.location(in: viewController.view)
+            lastPoint = touch.location(in: view)
             firstPoint = lastPoint
 
-            viewController.touchPoints.forEach { touchPoint in
+            touchPoints.forEach { touchPoint in
                 if (touchPoint == touchPoint.hitTest(touch, event: event)) {
                     if (touchPoint.name == "startTouchPoint") {
                         self.startState = StartState.startPoint1Started
@@ -87,33 +89,37 @@ class StateService: State {
     func handleTouchesMoved(
             _ touches: Set<UITouch>,
             with event: UIEvent?,
-            inViewController viewController: ViewController,
-            withDrawing drawingService: Drawing) {
+            imageView: UIImageView,
+            view: UIView,
+            withDrawing drawingService: Drawing,
+            touchPoints: [TouchPointView],
+            lines: [UIView]) {
 
         if let touch = touches.first {
-            let currentPoint = touch.location(in: viewController.view)
+            let currentPoint = touch.location(in: view)
             drawingService.drawLineFrom(
                     fromPoint: self.lastPoint,
                     toPoint: currentPoint,
-                    inViewController: viewController)
+                    imageView: imageView,
+                    view: view)
 
             lastPoint = currentPoint
 
-            viewController.touchPoints.forEach { touchPoint in
+            touchPoints.forEach { touchPoint in
                 if (touchPoint == touchPoint.hitTest(touch, event: event)) {
                     switch touchPoint.name {
                     case "endTouchPoint1":
                         if (self.startState == StartState.startPoint1Started) {
                             self.onIncorrect(touchPoint)
                             drawingService.ignoreTouchInput()
-                            drawingService.clearDrawing(inViewController: viewController)
+                            drawingService.clearDrawing(imageView: imageView)
                         }
                         break;
                     case "endTouchPoint2":
                         if (self.startState == StartState.startPoint1Started) {
-                            self.onCorrect(touchPoint, inViewController: viewController)
+                            self.onCorrect(touchPoint, lines: lines)
                             drawingService.ignoreTouchInput()
-                            drawingService.clearDrawing(inViewController: viewController)
+                            drawingService.clearDrawing(imageView: imageView)
                         }
                         break;
 

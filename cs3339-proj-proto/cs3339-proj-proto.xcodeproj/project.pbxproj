@@ -141,10 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				044E56C522506962003DAD21 /* Coordinator.swift */,
-				044E56C722506AEA003DAD21 /* StoryboardInstantiable.swift */,
 				043254912256DA1D006FCE57 /* Drawing.swift */,
-				043254932256DE0A006FCE57 /* ViewControllerDelegate.swift */,
 				043254972256DEFA006FCE57 /* State.swift */,
+				044E56C722506AEA003DAD21 /* StoryboardInstantiable.swift */,
+				043254932256DE0A006FCE57 /* ViewControllerDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";

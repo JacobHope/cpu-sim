@@ -40,7 +40,9 @@ extension ViewControllerCoordinator: ViewControllerDelegate {
         stateService.handleTouchesBegan(
                 touches,
                 with: event,
-                inViewController: self.viewController!)
+                touchPoints: self.viewController!.touchPoints,
+                view: self.viewController!.view)
+
     }
 
     func onTouchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -51,8 +53,11 @@ extension ViewControllerCoordinator: ViewControllerDelegate {
         stateService.handleTouchesMoved(
                 touches,
                 with: event,
-                inViewController: self.viewController!,
-                withDrawing: drawingService)
+                imageView: self.viewController!.imageView,
+                view: self.viewController!.view,
+                withDrawing: drawingService,
+                touchPoints: self.viewController!.touchPoints,
+                lines: [])
     }
 
     func onTouchesEnded() {
@@ -68,6 +73,6 @@ extension ViewControllerCoordinator: ViewControllerDelegate {
         if (self.viewController == nil) {
             return
         }
-        drawingService.clearDrawing(inViewController: self.viewController!)
+        drawingService.clearDrawing(imageView: self.viewController!.imageView)
     }
 }
