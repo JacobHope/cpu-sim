@@ -36,6 +36,6 @@ class ViewController: BaseViewController {
     // MARK: IBActions
 
     @IBAction func reset(_ sender: Any) {
-        imageView.image = nil
+        delegate?.clearDrawing()
     }
 }

@@ -155,4 +155,11 @@ extension ViewControllerCoordinator: ViewControllerDelegate {
         drawingService.resumeTouchInput()
         self.resetState()
     }
+
+    func clearDrawing() {
+        if (self.viewController == nil) {
+            return
+        }
+        drawingService.clearDrawing(inViewController: self.viewController!)
+    }
 }

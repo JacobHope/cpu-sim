@@ -10,6 +10,7 @@
 		042E2F522250784900B81AD3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E2F512250784900B81AD3 /* BaseViewController.swift */; };
 		043254902256D8F7006FCE57 /* DrawingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432548F2256D8F7006FCE57 /* DrawingService.swift */; };
 		043254922256DA1D006FCE57 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043254912256DA1D006FCE57 /* Drawing.swift */; };
+		043254942256DE0A006FCE57 /* ViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043254932256DE0A006FCE57 /* ViewControllerDelegate.swift */; };
 		044A3A70224F33D30058CD8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A3A6F224F33D30058CD8E /* AppDelegate.swift */; };
 		044A3A72224F33D30058CD8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A3A71224F33D30058CD8E /* ViewController.swift */; };
 		044A3A77224F33D50058CD8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044A3A76224F33D50058CD8E /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		042E2F512250784900B81AD3 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = "cs3339-proj-proto/BaseViewController.swift"; sourceTree = SOURCE_ROOT; };
 		0432548F2256D8F7006FCE57 /* DrawingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingService.swift; sourceTree = "<group>"; };
 		043254912256DA1D006FCE57 /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
+		043254932256DE0A006FCE57 /* ViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDelegate.swift; sourceTree = "<group>"; };
 		044A3A6C224F33D30058CD8E /* cs3339-proj-proto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cs3339-proj-proto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		044A3A6F224F33D30058CD8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044A3A71224F33D30058CD8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				044E56C522506962003DAD21 /* Coordinator.swift */,
 				044E56C722506AEA003DAD21 /* StoryboardInstantiable.swift */,
 				043254912256DA1D006FCE57 /* Drawing.swift */,
+				043254932256DE0A006FCE57 /* ViewControllerDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				044A3A70224F33D30058CD8E /* AppDelegate.swift in Sources */,
 				04A897AD22559F7200811A59 /* Constants.swift in Sources */,
 				044E56CE22506FAC003DAD21 /* ViewControllerCoordinator.swift in Sources */,
+				043254942256DE0A006FCE57 /* ViewControllerDelegate.swift in Sources */,
 				043254922256DA1D006FCE57 /* Drawing.swift in Sources */,
 				044E56CC22506E77003DAD21 /* ApplicationCoordinator.swift in Sources */,
 				044E56C822506AEA003DAD21 /* StoryboardInstantiable.swift in Sources */,

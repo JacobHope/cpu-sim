@@ -9,13 +9,6 @@
 import UIKit
 import Pulsator
 
-protocol ViewControllerDelegate: class {
-    func onTouchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
-    func onTouchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
-    func onTouchesEnded()
-    func onTouchesCancelled()
-}
-
 class BaseViewController: UIViewController {
     weak var delegate: ViewControllerDelegate?
 
