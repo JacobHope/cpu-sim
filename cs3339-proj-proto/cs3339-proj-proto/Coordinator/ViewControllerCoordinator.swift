@@ -57,7 +57,7 @@ extension ViewControllerCoordinator: ViewControllerDelegate {
                 view: self.viewController!.view,
                 withDrawing: drawingService,
                 touchPoints: self.viewController!.touchPoints,
-                lines: [])
+                lines: self.viewController!.lines)
     }
 
     func onTouchesEnded() {

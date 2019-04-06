@@ -18,7 +18,12 @@ class ViewController: BaseViewController {
     @IBOutlet weak var endTouchPoint1: TouchPointView!
     @IBOutlet weak var endTouchPoint2: TouchPointView!
 
+    @IBOutlet weak var line21: LineView!
+    @IBOutlet weak var line22: LineView!
+    @IBOutlet weak var line23: LineView!
+
     var touchPoints: [TouchPointView] = []
+    var lines: [LineView] = []
 
     // MARK: UIKit
 
@@ -30,6 +35,11 @@ class ViewController: BaseViewController {
         touchPoints = [startTouchPoint, endTouchPoint1, endTouchPoint2]
         touchPoints.forEach { touchPoint in
             touchPoint.setup()
+        }
+        
+        lines = [line21, line22, line23]
+        lines.forEach { line in
+            line.setup()
         }
     }
 

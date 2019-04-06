@@ -1,1 +1,3 @@
 github "shu223/Pulsator"
+github "mxcl/PromiseKit"
+github "PromiseKit/UIKit"
