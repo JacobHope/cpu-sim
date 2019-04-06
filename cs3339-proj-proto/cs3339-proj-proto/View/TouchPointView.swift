@@ -11,6 +11,7 @@ import Pulsator
 
 class TouchPointView: UIView {
     var pulsator: Pulsator?
+    var dot: CAShapeLayer?
 
     @IBInspectable var name: String = "touchPoint"
 
@@ -26,6 +27,16 @@ class TouchPointView: UIView {
 
         // Keep track of pulsator in order to change color, toggle off, etc
         self.pulsator = pulsator
+
+        // Setup dot
+        dot = CAShapeLayer.generateDotWith(
+                x: -4.75,
+                y: -4.75,
+                radius: 10,
+                color: UIColor.blue.cgColor)
+
+        // Render dot
+        self.layer.addSublayer(dot!)
     }
 
     func hitTest(_ touch: UITouch, event: UIEvent?) -> UIView? {
@@ -37,5 +48,27 @@ class TouchPointView: UIView {
             return nil
         }
         return hitView
+    }
+
+    func setCorrect() {
+        // Change pulsator to green color
+        pulsator?.backgroundColor = UIColor.green.cgColor
+
+        // Remove previous dot
+        dot?.removeFromSuperlayer()
+
+        // Generate green dot
+        dot = CAShapeLayer.generateDotWith(
+                x: -4.75,
+                y: -4.75,
+                radius: 10,
+                color: UIColor.green.cgColor)
+
+        // Render green dot
+        self.layer.addSublayer(dot!)
+    }
+
+    func stop() {
+        pulsator?.stop()
     }
 }

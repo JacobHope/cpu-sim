@@ -37,12 +37,12 @@ class StateService: State {
             _ touchPoint: TouchPointView,
             lines: [LineView]) {
 
-        // Change touch point to green color...
-        touchPoint.pulsator?.backgroundColor = UIColor.green.cgColor
+        // Set touch point correct...
+        touchPoint.setCorrect()
 
         // ...then stop pulsating after 2 seconds
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            touchPoint.pulsator?.stop()
+            touchPoint.stop()
 
             switch touchPoint.name {
             case "endTouchPoint2":
@@ -52,7 +52,7 @@ class StateService: State {
                 for line in lines {
                     if (line.endPointName == "endTouchPoint2") {
                         animate = animate.then {
-                            UIView.animate(.promise, duration: 0.5) {
+                            UIView.animate(.promise, duration: 0.75) {
                                 line.alpha = 1.0
                             }.asVoid()
                         }
@@ -67,7 +67,7 @@ class StateService: State {
     }
 
     private func onIncorrect(_ touchPoint: TouchPointView) {
-        // Change endTouchPoint1 to dark red color...
+        // Change touch point to dark red color...
         touchPoint.pulsator?.backgroundColor = UIColor.darkRed.cgColor
 
         // ...then change back to blue color after 2 seconds
