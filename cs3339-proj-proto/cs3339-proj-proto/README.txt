@@ -29,6 +29,8 @@ https://www.hackingwithswift.com/articles/71/how-to-use-the-coordinator-pattern-
 
 PromiseKit
 
+    https://github.com/mxcl/PromiseKit
+    https://github.com/mxcl/PromiseKit/blob/master/Documentation/Appendix.md
     https://github.com/mxcl/PromiseKit/blob/master/Documentation/CommonPatterns.md
 
 Reference:
