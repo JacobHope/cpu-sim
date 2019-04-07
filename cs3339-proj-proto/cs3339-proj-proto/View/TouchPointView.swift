@@ -12,10 +12,13 @@ import Pulsator
 class TouchPointView: UIView {
     var pulsator: Pulsator?
     var dot: CAShapeLayer?
+    var dotModel: DotModel?
 
     @IBInspectable var name: String = "touchPoint"
 
-    func setup() {
+    func setupWith(_ dotModel: DotModel) {
+        self.dotModel = dotModel
+
         // Generate a Pulsator instance
         let pulsator = Pulsator.generatePulsator(radius: self.frame.width, backgroundColor: UIColor.blue.cgColor)
 
@@ -30,9 +33,7 @@ class TouchPointView: UIView {
 
         // Setup dot
         dot = CAShapeLayer.generateDotWith(
-                x: -4.75,
-                y: -4.75,
-                radius: 10,
+                self.dotModel!,
                 color: UIColor.blue.cgColor)
 
         // Render dot
@@ -59,9 +60,7 @@ class TouchPointView: UIView {
 
         // Generate green dot
         dot = CAShapeLayer.generateDotWith(
-                x: -4.75,
-                y: -4.75,
-                radius: 10,
+                self.dotModel!,
                 color: UIColor.green.cgColor)
 
         // Render green dot
@@ -77,9 +76,7 @@ class TouchPointView: UIView {
 
         // Generate dark red dot
         dot = CAShapeLayer.generateDotWith(
-                x: -4.75,
-                y: -4.75,
-                radius: 10,
+                self.dotModel!,
                 color: UIColor.darkRed.cgColor)
 
         // Render dark red dot
@@ -95,9 +92,7 @@ class TouchPointView: UIView {
 
         // Generate blue dot
         dot = CAShapeLayer.generateDotWith(
-                x: -4.75,
-                y: -4.75,
-                radius: 10,
+                self.dotModel!,
                 color: UIColor.blue.cgColor)
 
         // Render blue dot

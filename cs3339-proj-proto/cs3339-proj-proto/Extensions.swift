@@ -42,18 +42,16 @@ extension UIColor {
 
 extension CAShapeLayer {
     static func generateDotWith(
-            x: CGFloat,
-            y: CGFloat,
-            radius: CGFloat,
+            _ model: DotModel,
             color: CGColor) -> CAShapeLayer {
 
         let dot = CAShapeLayer()
         dot.path = UIBezierPath(
                 ovalIn: CGRect(
-                        x: x,
-                        y: y,
-                        width: radius,
-                        height: radius)).cgPath
+                        x: model.x,
+                        y: model.y,
+                        width: model.radius,
+                        height: model.radius)).cgPath
         dot.fillColor = color
         return dot
     }

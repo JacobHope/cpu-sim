@@ -14,4 +14,5 @@ protocol ViewControllerDelegate: class {
     func onTouchesEnded()
     func onTouchesCancelled()
     func clearDrawing()
+    func setup()
 }

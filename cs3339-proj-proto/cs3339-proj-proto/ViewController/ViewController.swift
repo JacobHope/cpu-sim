@@ -33,14 +33,9 @@ class ViewController: BaseViewController {
 
         // Setup TouchPointViews
         touchPoints = [startTouchPoint, endTouchPoint1, endTouchPoint2]
-        touchPoints.forEach { touchPoint in
-            touchPoint.setup()
-        }
-        
         lines = [line21, line22, line23]
-        lines.forEach { line in
-            line.setup()
-        }
+
+        delegate?.setup()
     }
 
     // MARK: IBActions

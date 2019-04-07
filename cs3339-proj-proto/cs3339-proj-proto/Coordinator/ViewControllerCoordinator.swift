@@ -75,4 +75,18 @@ extension ViewControllerCoordinator: ViewControllerDelegate {
         }
         drawingService.clearDrawing(imageView: self.viewController!.imageView)
     }
+
+    func setup() {
+        self.viewController?.touchPoints.forEach { touchPoint in
+            touchPoint.setupWith(
+                    DotModel(
+                            x: -4.75,
+                            y: -4.75,
+                            radius: 10.0))
+        }
+
+        self.viewController?.lines.forEach { line in
+            line.setup()
+        }
+    }
 }
