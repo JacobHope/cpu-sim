@@ -67,12 +67,12 @@ class StateService: State {
     }
 
     private func onIncorrect(_ touchPoint: TouchPointView) {
-        // Change touch point to dark red color...
-        touchPoint.pulsator?.backgroundColor = UIColor.darkRed.cgColor
+        // Set touch point incorrect...
+        touchPoint.setIncorrect()
 
-        // ...then change back to blue color after 2 seconds
+        // ...then reset after 2 seconds
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            touchPoint.pulsator?.backgroundColor = UIColor.blue.cgColor
+            touchPoint.reset()
         }
     }
 

@@ -68,6 +68,42 @@ class TouchPointView: UIView {
         self.layer.addSublayer(dot!)
     }
 
+    func setIncorrect() {
+        // Change pulsator to dark red color
+        pulsator?.backgroundColor = UIColor.darkRed.cgColor
+
+        // Remove previous dot
+        dot?.removeFromSuperlayer()
+
+        // Generate dark red dot
+        dot = CAShapeLayer.generateDotWith(
+                x: -4.75,
+                y: -4.75,
+                radius: 10,
+                color: UIColor.darkRed.cgColor)
+
+        // Render dark red dot
+        self.layer.addSublayer(dot!)
+    }
+
+    func reset() {
+        // Change pulsator to blue color
+        pulsator?.backgroundColor = UIColor.blue.cgColor
+
+        // Remove previous dot
+        dot?.removeFromSuperlayer()
+
+        // Generate blue dot
+        dot = CAShapeLayer.generateDotWith(
+                x: -4.75,
+                y: -4.75,
+                radius: 10,
+                color: UIColor.blue.cgColor)
+
+        // Render blue dot
+        self.layer.addSublayer(dot!)
+    }
+
     func stop() {
         pulsator?.stop()
     }
