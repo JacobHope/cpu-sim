@@ -1,1 +1,3 @@
-github "shu223/Pulsator"
+github "shu223/Pulsator" ~> 0.5.3
+github "mxcl/PromiseKit" ~> 6.8.4
+github "PromiseKit/UIKit" ~> 3.1.0

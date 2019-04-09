@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import PromiseKit
+import PMKUIKit
 
 private enum StartState {
     case startPoint1Started
@@ -33,21 +35,29 @@ class StateService: State {
 
     private func onCorrect(
             _ touchPoint: TouchPointView,
-            lines: [UIView]) {
+            lines: [LineView]) {
 
-        // Change touch point to green color...
-        touchPoint.pulsator?.backgroundColor = UIColor.green.cgColor
+        // Set touch point correct...
+        touchPoint.setCorrect()
 
         // ...then stop pulsating after 2 seconds
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            touchPoint.pulsator?.stop()
+            touchPoint.stop()
 
             switch touchPoint.name {
             case "endTouchPoint2":
-                UIView.animate(withDuration: 1.0, animations: {
-                    // todo
-//                    lines[0].isHidden = false
-                })
+
+                // Animate each line in sequence
+                var animate = Guarantee()
+                for line in lines {
+                    if (line.endPointName == "endTouchPoint2") {
+                        animate = animate.then {
+                            UIView.animate(.promise, duration: 0.75) {
+                                line.alpha = 1.0
+                            }.asVoid()
+                        }
+                    }
+                }
 
                 break;
             default:
@@ -57,12 +67,12 @@ class StateService: State {
     }
 
     private func onIncorrect(_ touchPoint: TouchPointView) {
-        // Change endTouchPoint1 to dark red color...
-        touchPoint.pulsator?.backgroundColor = UIColor.darkRed.cgColor
+        // Set touch point incorrect...
+        touchPoint.setIncorrect()
 
-        // ...then change back to blue color after 2 seconds
+        // ...then reset after 2 seconds
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            touchPoint.pulsator?.backgroundColor = UIColor.blue.cgColor
+            touchPoint.reset()
         }
     }
 
@@ -93,7 +103,7 @@ class StateService: State {
             view: UIView,
             withDrawing drawingService: Drawing,
             touchPoints: [TouchPointView],
-            lines: [UIView]) {
+            lines: [LineView]) {
 
         if let touch = touches.first {
             let currentPoint = touch.location(in: view)

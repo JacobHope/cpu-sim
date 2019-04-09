@@ -9,21 +9,17 @@
 import UIKit
 import Pulsator
 
-// MARK: StoryboardInstantiable
-
 extension StoryboardInstantiable where Self: UIViewController {
     static var defaultfilesName: String {
         return NSStringFromClass(Self.self).components(separatedBy: ".").last!
     }
-    
+
     static func instantiateViewController(_ bundle: Bundle? = nil) -> Self {
         let fileName = defaultFileName
         let sb = UIStoryboard(name: fileName, bundle: bundle)
         return sb.instantiateInitialViewController() as! Self
     }
 }
-
-// MARK: Pulsator
 
 extension Pulsator {
     static func generatePulsator(radius: CGFloat,
@@ -40,8 +36,23 @@ extension Pulsator {
     }
 }
 
-// MARK: UIColor
-
 extension UIColor {
     static let darkRed = UIColor(red: 0.667, green: 0, blue: 0, alpha: 1.0)
+}
+
+extension CAShapeLayer {
+    static func generateDotWith(
+            _ model: DotModel,
+            color: CGColor) -> CAShapeLayer {
+
+        let dot = CAShapeLayer()
+        dot.path = UIBezierPath(
+                ovalIn: CGRect(
+                        x: model.x,
+                        y: model.y,
+                        width: model.radius,
+                        height: model.radius)).cgPath
+        dot.fillColor = color
+        return dot
+    }
 }

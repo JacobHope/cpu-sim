@@ -13,6 +13,7 @@
 		043254942256DE0A006FCE57 /* ViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043254932256DE0A006FCE57 /* ViewControllerDelegate.swift */; };
 		043254962256DEEB006FCE57 /* StateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043254952256DEEB006FCE57 /* StateService.swift */; };
 		043254982256DEFA006FCE57 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043254972256DEFA006FCE57 /* State.swift */; };
+		0435707222589C49000040CF /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435707122589C49000040CF /* LineView.swift */; };
 		044A3A70224F33D30058CD8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A3A6F224F33D30058CD8E /* AppDelegate.swift */; };
 		044A3A72224F33D30058CD8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A3A71224F33D30058CD8E /* ViewController.swift */; };
 		044A3A77224F33D50058CD8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044A3A76224F33D50058CD8E /* Assets.xcassets */; };
@@ -25,6 +26,9 @@
 		044E56CA22506C47003DAD21 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044E56C922506C47003DAD21 /* ViewController.xib */; };
 		044E56CC22506E77003DAD21 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56CB22506E77003DAD21 /* ApplicationCoordinator.swift */; };
 		044E56CE22506FAC003DAD21 /* ViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E56CD22506FAC003DAD21 /* ViewControllerCoordinator.swift */; };
+		0496EB8422589FB200C5B0A1 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0496EB8322589FB200C5B0A1 /* PromiseKit.framework */; };
+		0496EB862258A21700C5B0A1 /* PMKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0496EB852258A21700C5B0A1 /* PMKUIKit.framework */; };
+		0496EB89225A47FE00C5B0A1 /* DotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496EB88225A47FE00C5B0A1 /* DotModel.swift */; };
 		04A897AD22559F7200811A59 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A897AC22559F7200811A59 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +39,7 @@
 		043254932256DE0A006FCE57 /* ViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDelegate.swift; sourceTree = "<group>"; };
 		043254952256DEEB006FCE57 /* StateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateService.swift; sourceTree = "<group>"; };
 		043254972256DEFA006FCE57 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		0435707122589C49000040CF /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		044A3A6C224F33D30058CD8E /* cs3339-proj-proto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cs3339-proj-proto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		044A3A6F224F33D30058CD8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044A3A71224F33D30058CD8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +55,9 @@
 		044E56C922506C47003DAD21 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		044E56CB22506E77003DAD21 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		044E56CD22506FAC003DAD21 /* ViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCoordinator.swift; sourceTree = "<group>"; };
+		0496EB8322589FB200C5B0A1 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		0496EB852258A21700C5B0A1 /* PMKUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKUIKit.framework; path = Carthage/Build/iOS/PMKUIKit.framework; sourceTree = "<group>"; };
+		0496EB88225A47FE00C5B0A1 /* DotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotModel.swift; sourceTree = "<group>"; };
 		04A897AC22559F7200811A59 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0496EB862258A21700C5B0A1 /* PMKUIKit.framework in Frameworks */,
+				0496EB8422589FB200C5B0A1 /* PromiseKit.framework in Frameworks */,
 				044E56BB224F5F4F003DAD21 /* Pulsator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +82,15 @@
 				043254952256DEEB006FCE57 /* StateService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		0435707022589C17000040CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				044E56C3225062B9003DAD21 /* TouchPointView.swift */,
+				0435707122589C49000040CF /* LineView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		044A3A63224F33D30058CD8E = {
@@ -98,14 +117,15 @@
 				044A3A6F224F33D30058CD8E /* AppDelegate.swift */,
 				04A897AC22559F7200811A59 /* Constants.swift */,
 				044E56C1225060C8003DAD21 /* Extensions.swift */,
-				044E56C3225062B9003DAD21 /* TouchPointView.swift */,
 				044A3A81224F399D0058CD8E /* README.txt */,
 				044A3A76224F33D50058CD8E /* Assets.xcassets */,
 				044E56C922506C47003DAD21 /* ViewController.xib */,
 				044E56CF22507176003DAD21 /* Coordinator */,
 				044A3A78224F33D50058CD8E /* LaunchScreen.storyboard */,
+				0496EB87225A456700C5B0A1 /* Model */,
 				04A897AE2255AE7B00811A59 /* Protocol */,
 				0432548E2256D8E6006FCE57 /* Service */,
+				0435707022589C17000040CF /* View */,
 				044E56D02250717E003DAD21 /* ViewController */,
 			);
 			path = "cs3339-proj-proto";
@@ -114,6 +134,8 @@
 		044E56B9224F5F4F003DAD21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0496EB852258A21700C5B0A1 /* PMKUIKit.framework */,
+				0496EB8322589FB200C5B0A1 /* PromiseKit.framework */,
 				044E56BA224F5F4F003DAD21 /* Pulsator.framework */,
 			);
 			name = Frameworks;
@@ -135,6 +157,14 @@
 				044A3A71224F33D30058CD8E /* ViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0496EB87225A456700C5B0A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0496EB88225A47FE00C5B0A1 /* DotModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		04A897AE2255AE7B00811A59 /* Protocol */ = {
@@ -226,11 +256,15 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Pulsator.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PMKUIKit.framework",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pulsator.framework",
+				"$(DERIVED_FILE_DIR)/PromiseKit.framework",
+				"$(DERIVED_FILE_DIR)/PMKUIKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -253,8 +287,10 @@
 				043254962256DEEB006FCE57 /* StateService.swift in Sources */,
 				043254982256DEFA006FCE57 /* State.swift in Sources */,
 				044E56CE22506FAC003DAD21 /* ViewControllerCoordinator.swift in Sources */,
+				0496EB89225A47FE00C5B0A1 /* DotModel.swift in Sources */,
 				043254942256DE0A006FCE57 /* ViewControllerDelegate.swift in Sources */,
 				043254922256DA1D006FCE57 /* Drawing.swift in Sources */,
+				0435707222589C49000040CF /* LineView.swift in Sources */,
 				044E56CC22506E77003DAD21 /* ApplicationCoordinator.swift in Sources */,
 				044E56C822506AEA003DAD21 /* StoryboardInstantiable.swift in Sources */,
 				044E56C622506962003DAD21 /* Coordinator.swift in Sources */,

@@ -57,7 +57,7 @@ extension ViewControllerCoordinator: ViewControllerDelegate {
                 view: self.viewController!.view,
                 withDrawing: drawingService,
                 touchPoints: self.viewController!.touchPoints,
-                lines: [])
+                lines: self.viewController!.lines)
     }
 
     func onTouchesEnded() {
@@ -74,5 +74,19 @@ extension ViewControllerCoordinator: ViewControllerDelegate {
             return
         }
         drawingService.clearDrawing(imageView: self.viewController!.imageView)
+    }
+
+    func setup() {
+        self.viewController?.touchPoints.forEach { touchPoint in
+            touchPoint.setupWith(
+                    DotModel(
+                            x: -4.75,
+                            y: -4.75,
+                            radius: 10.0))
+        }
+
+        self.viewController?.lines.forEach { line in
+            line.setup()
+        }
     }
 }
