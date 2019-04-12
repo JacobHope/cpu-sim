@@ -232,13 +232,6 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		305A00C7224D7DDF008D2A6F /* Other */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
 		30DBC85C224D7BB700FDF861 = {
 			isa = PBXGroup;
 			children = (
@@ -246,7 +239,6 @@
 				30DBC87A224D7BB800FDF861 /* Info.plist */,
 				04D3F77A22602460002C80B6 /* README.txt */,
 				30DBC875224D7BB800FDF861 /* Assets.xcassets */,
-				305A00C7224D7DDF008D2A6F /* Other */,
 				30DBC882224D7BB800FDF861 /* CPUSimTests */,
 				30DBC88D224D7BB800FDF861 /* CPUSimUITests */,
 				30DBC866224D7BB700FDF861 /* Products */,
