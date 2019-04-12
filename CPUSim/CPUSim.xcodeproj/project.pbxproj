@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04D3F77B22602461002C80B6 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 04D3F77A22602460002C80B6 /* README.txt */; };
+		04D3F78022602530002C80B6 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F77F22602530002C80B6 /* Drawing.swift */; };
+		04D3F78222602533002C80B6 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F78122602533002C80B6 /* State.swift */; };
+		04D3F78F2260265B002C80B6 /* TouchPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F78E2260265B002C80B6 /* TouchPointView.swift */; };
+		04D3F7912260265F002C80B6 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7902260265F002C80B6 /* LineView.swift */; };
+		04D3F7932260269A002C80B6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7922260269A002C80B6 /* BaseViewController.swift */; };
+		04D3F79822602A06002C80B6 /* Pulsator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D3F79522602A06002C80B6 /* Pulsator.framework */; };
+		04D3F79922602A06002C80B6 /* PMKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D3F79622602A06002C80B6 /* PMKUIKit.framework */; };
+		04D3F79A22602A06002C80B6 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D3F79722602A06002C80B6 /* PromiseKit.framework */; };
+		04D3F7A1226036A7002C80B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A0226036A7002C80B6 /* Constants.swift */; };
+		04D3F7A3226036AE002C80B6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A2226036AE002C80B6 /* Extensions.swift */; };
+		04D3F7A522603701002C80B6 /* DotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A422603701002C80B6 /* DotModel.swift */; };
+		04D3F7A72260372D002C80B6 /* ViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A62260372D002C80B6 /* ViewControllerDelegate.swift */; };
+		04D3F7AA2260376D002C80B6 /* DrawingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A82260376D002C80B6 /* DrawingService.swift */; };
+		04D3F7AB2260376D002C80B6 /* StateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A92260376D002C80B6 /* StateService.swift */; };
 		3007E7352256E46E0021DB6D /* FetchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007E7342256E46E0021DB6D /* FetchViewController.swift */; };
 		3007E739225716660021DB6D /* DecodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007E738225716660021DB6D /* DecodeViewController.swift */; };
 		3007E73B225716750021DB6D /* ExecuteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007E73A225716750021DB6D /* ExecuteViewController.swift */; };
@@ -51,6 +66,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04D3F77A22602460002C80B6 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		04D3F77F22602530002C80B6 /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
+		04D3F78122602533002C80B6 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		04D3F78E2260265B002C80B6 /* TouchPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPointView.swift; sourceTree = "<group>"; };
+		04D3F7902260265F002C80B6 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		04D3F7922260269A002C80B6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		04D3F79522602A06002C80B6 /* Pulsator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pulsator.framework; path = Carthage/Build/iOS/Pulsator.framework; sourceTree = "<group>"; };
+		04D3F79622602A06002C80B6 /* PMKUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKUIKit.framework; path = Carthage/Build/iOS/PMKUIKit.framework; sourceTree = "<group>"; };
+		04D3F79722602A06002C80B6 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		04D3F7A0226036A7002C80B6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		04D3F7A2226036AE002C80B6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		04D3F7A422603701002C80B6 /* DotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotModel.swift; sourceTree = "<group>"; };
+		04D3F7A62260372D002C80B6 /* ViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerDelegate.swift; sourceTree = "<group>"; };
+		04D3F7A82260376D002C80B6 /* DrawingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingService.swift; sourceTree = "<group>"; };
+		04D3F7A92260376D002C80B6 /* StateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateService.swift; sourceTree = "<group>"; };
 		3007E7342256E46E0021DB6D /* FetchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchViewController.swift; sourceTree = "<group>"; };
 		3007E738225716660021DB6D /* DecodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeViewController.swift; sourceTree = "<group>"; };
 		3007E73A225716750021DB6D /* ExecuteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +118,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D3F79822602A06002C80B6 /* Pulsator.framework in Frameworks */,
+				04D3F79922602A06002C80B6 /* PMKUIKit.framework in Frameworks */,
+				04D3F79A22602A06002C80B6 /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,9 +141,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3007E740225720130021DB6D /* Views */ = {
+		04D3F77C226024A1002C80B6 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				04D3F77F22602530002C80B6 /* Drawing.swift */,
+				04D3F78122602533002C80B6 /* State.swift */,
+				04D3F7A62260372D002C80B6 /* ViewControllerDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		04D3F785226025D0002C80B6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				04D3F7A82260376D002C80B6 /* DrawingService.swift */,
+				04D3F7A92260376D002C80B6 /* StateService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		04D3F79422602A06002C80B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04D3F79622602A06002C80B6 /* PMKUIKit.framework */,
+				04D3F79722602A06002C80B6 /* PromiseKit.framework */,
+				04D3F79522602A06002C80B6 /* Pulsator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3007E740225720130021DB6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04D3F7902260265F002C80B6 /* LineView.swift */,
+				04D3F78E2260265B002C80B6 /* TouchPointView.swift */,
 				305A00D722516AA3008D2A6F /* MenuView.xib */,
 				3007E7422257F83D0021DB6D /* FetchView.xib */,
 				3007E7442257F8490021DB6D /* DecodeView.xib */,
@@ -118,34 +182,36 @@
 				3007E7482257F86A0021DB6D /* MemoryAccessView.xib */,
 				3007E74A2257F87A0021DB6D /* WriteBackView.xib */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
-		3007E741225720510021DB6D /* Models */ = {
+		3007E741225720510021DB6D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04D3F7A422603701002C80B6 /* DotModel.swift */,
 				305A00CF224D8095008D2A6F /* Services.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		305A00C4224D7CBD008D2A6F /* Coordinators */ = {
+		305A00C4224D7CBD008D2A6F /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				305A00C9224D7E4E008D2A6F /* Coordinator.swift */,
-				305A00CB224D7F4F008D2A6F /* RootViewCoordinator.swift */,
 				305A00CD224D7FB0008D2A6F /* AppCoordinator.swift */,
+				305A00CB224D7F4F008D2A6F /* RootViewCoordinator.swift */,
 				305A00D922518506008D2A6F /* ALUCoordinator.swift */,
+				305A00DF22518534008D2A6F /* BranchCoordinator.swift */,
 				305A00DB22518518008D2A6F /* LoadCoordinator.swift */,
 				305A00DD22518526008D2A6F /* StoreCoordinator.swift */,
-				305A00DF22518534008D2A6F /* BranchCoordinator.swift */,
 			);
-			path = Coordinators;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		305A00C5224D7D09008D2A6F /* Controllers */ = {
+		305A00C5224D7D09008D2A6F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				04D3F7922260269A002C80B6 /* BaseViewController.swift */,
 				305A00D1224D8202008D2A6F /* MenuViewController.swift */,
 				3007E7342256E46E0021DB6D /* FetchViewController.swift */,
 				3007E738225716660021DB6D /* DecodeViewController.swift */,
@@ -153,13 +219,15 @@
 				3007E73C225716870021DB6D /* MemoryAccessViewController.swift */,
 				3007E73E225716960021DB6D /* WriteBackViewController.swift */,
 			);
-			path = Controllers;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		305A00C6224D7D1B008D2A6F /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				30DBC868224D7BB700FDF861 /* AppDelegate.swift */,
+				04D3F7A0226036A7002C80B6 /* Constants.swift */,
+				04D3F7A2226036AE002C80B6 /* Extensions.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -175,10 +243,14 @@
 			isa = PBXGroup;
 			children = (
 				30DBC867224D7BB700FDF861 /* CPUSim */,
+				30DBC87A224D7BB800FDF861 /* Info.plist */,
+				04D3F77A22602460002C80B6 /* README.txt */,
+				30DBC875224D7BB800FDF861 /* Assets.xcassets */,
 				305A00C7224D7DDF008D2A6F /* Other */,
 				30DBC882224D7BB800FDF861 /* CPUSimTests */,
 				30DBC88D224D7BB800FDF861 /* CPUSimUITests */,
 				30DBC866224D7BB700FDF861 /* Products */,
+				04D3F79422602A06002C80B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,13 +267,13 @@
 		30DBC867224D7BB700FDF861 /* CPUSim */ = {
 			isa = PBXGroup;
 			children = (
+				305A00C4224D7CBD008D2A6F /* Coordinator */,
 				305A00C6224D7D1B008D2A6F /* Core */,
-				305A00C4224D7CBD008D2A6F /* Coordinators */,
-				3007E741225720510021DB6D /* Models */,
-				3007E740225720130021DB6D /* Views */,
-				305A00C5224D7D09008D2A6F /* Controllers */,
-				30DBC875224D7BB800FDF861 /* Assets.xcassets */,
-				30DBC87A224D7BB800FDF861 /* Info.plist */,
+				3007E741225720510021DB6D /* Model */,
+				04D3F77C226024A1002C80B6 /* Protocol */,
+				04D3F785226025D0002C80B6 /* Service */,
+				3007E740225720130021DB6D /* View */,
+				305A00C5224D7D09008D2A6F /* ViewController */,
 			);
 			path = CPUSim;
 			sourceTree = "<group>";
@@ -234,6 +306,7 @@
 				30DBC861224D7BB700FDF861 /* Sources */,
 				30DBC862224D7BB700FDF861 /* Frameworks */,
 				30DBC863224D7BB700FDF861 /* Resources */,
+				04D3F79B22602A0D002C80B6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -334,6 +407,7 @@
 				3007E74B2257F87A0021DB6D /* WriteBackView.xib in Resources */,
 				305A00D822516AA3008D2A6F /* MenuView.xib in Resources */,
 				30DBC876224D7BB800FDF861 /* Assets.xcassets in Resources */,
+				04D3F77B22602461002C80B6 /* README.txt in Resources */,
 				3007E7472257F8540021DB6D /* ExecuteView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,14 +428,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04D3F79B22602A0D002C80B6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Pulsator.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PMKUIKit.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pulsator.framework",
+				"$(DERIVED_FILE_DIR)/PromiseKit.framework",
+				"$(DERIVED_FILE_DIR)/PMKUIKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		30DBC861224D7BB700FDF861 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D3F7A1226036A7002C80B6 /* Constants.swift in Sources */,
+				04D3F7AB2260376D002C80B6 /* StateService.swift in Sources */,
 				305A00CE224D7FB0008D2A6F /* AppCoordinator.swift in Sources */,
 				305A00DC22518518008D2A6F /* LoadCoordinator.swift in Sources */,
+				04D3F78F2260265B002C80B6 /* TouchPointView.swift in Sources */,
 				3007E73D225716870021DB6D /* MemoryAccessViewController.swift in Sources */,
+				04D3F7A522603701002C80B6 /* DotModel.swift in Sources */,
+				04D3F78222602533002C80B6 /* State.swift in Sources */,
 				305A00CA224D7E4E008D2A6F /* Coordinator.swift in Sources */,
 				305A00D0224D8095008D2A6F /* Services.swift in Sources */,
 				3007E73F225716960021DB6D /* WriteBackViewController.swift in Sources */,
@@ -370,8 +475,14 @@
 				305A00DA22518506008D2A6F /* ALUCoordinator.swift in Sources */,
 				3007E73B225716750021DB6D /* ExecuteViewController.swift in Sources */,
 				3007E7352256E46E0021DB6D /* FetchViewController.swift in Sources */,
+				04D3F78022602530002C80B6 /* Drawing.swift in Sources */,
 				30DBC869224D7BB700FDF861 /* AppDelegate.swift in Sources */,
 				305A00E022518534008D2A6F /* BranchCoordinator.swift in Sources */,
+				04D3F7A3226036AE002C80B6 /* Extensions.swift in Sources */,
+				04D3F7A72260372D002C80B6 /* ViewControllerDelegate.swift in Sources */,
+				04D3F7932260269A002C80B6 /* BaseViewController.swift in Sources */,
+				04D3F7AA2260376D002C80B6 /* DrawingService.swift in Sources */,
+				04D3F7912260265F002C80B6 /* LineView.swift in Sources */,
 				305A00DE22518526008D2A6F /* StoreCoordinator.swift in Sources */,
 				305A00D2224D8202008D2A6F /* MenuViewController.swift in Sources */,
 			);
@@ -531,6 +642,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9A94X7A3M9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CPUSim/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -549,6 +664,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9A94X7A3M9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CPUSim/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
