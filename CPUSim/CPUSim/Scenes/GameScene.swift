@@ -89,31 +89,31 @@ class GameScene: SKScene {
 }
 
 /*   func start() {
- let aluFetchViewController = ALUFetchViewController(services: self.services)
+ let aluFetchViewController = ALUFetchViewController()
  aluFetchViewController.delegate = self
  self.navigationController.viewControllers = [aluFetchViewController]
  }
  
  func showALUDecodeViewController() {
- let aluDecodeViewController = ALUDecodeViewController(services: self.services)
+ let aluDecodeViewController = ALUDecodeViewController()
  aluDecodeViewController.delegate = self
  self.navigationController.pushViewController(aluDecodeViewController, animated: true)
  }
  
  func showALUExecuteViewController() {
- let aluExecuteViewController = ALUExecuteViewController(services: self.services)
+ let aluExecuteViewController = ALUExecuteViewController()
  aluExecuteViewController.delegate = self
  self.navigationController.pushViewController(aluExecuteViewController, animated: true)
  }
  
  func showALUMemoryAccessViewController() {
- let aluMemoryAccessViewController = ALUMemoryAccessViewController(services: self.services)
+ let aluMemoryAccessViewController = ALUMemoryAccessViewController()
  aluMemoryAccessViewController.delegate = self
  self.navigationController.pushViewController(aluMemoryAccessViewController, animated: true)
  }
  
  func showALUWriteBackViewController() {
- let aluWriteBackViewController = ALUWriteBackViewController(services: self.services)
+ let aluWriteBackViewController = ALUWriteBackViewController()
  aluWriteBackViewController.delegate = self
  self.navigationController.pushViewController(aluWriteBackViewController, animated: true)
  }

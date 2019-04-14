@@ -22,7 +22,6 @@ class ALUCoordinator: RootViewCoordinator {
     
     // MARK: Properties
     
-    let services: Services
     var childCoordinators: [Coordinator] = []
     var rootViewController: UIViewController {
         return self.navigationController
@@ -34,10 +33,16 @@ class ALUCoordinator: RootViewCoordinator {
         return navigationController
     }()
     
+    private let drawingService: Drawing
+    private let fetchStateService: State
+    private var fetchViewController: FetchViewController?
+    
     // MARK: Init
     
-    init(services: Services) {
-        self.services = services
+    init(drawingService: Drawing,
+         fetchStateService: State) {
+        self.drawingService = drawingService
+        self.fetchStateService = fetchStateService
     }
     
     // MARK: Functions
@@ -47,31 +52,32 @@ class ALUCoordinator: RootViewCoordinator {
     }
     
     func showFetchViewController() {
-        let fetchViewController = FetchViewController(services: self.services)
-        fetchViewController.delegate = self
+        let fetchViewController = FetchViewController()
+        fetchViewController.fetchViewControllerDelegate = self
         self.navigationController.viewControllers = [fetchViewController]
+        self.fetchViewController = fetchViewController
     }
     
     func showDecodeViewController() {
-         let decodeViewController = DecodeViewController(services: self.services)
+         let decodeViewController = DecodeViewController()
          decodeViewController.delegate = self
          self.navigationController.pushViewController(decodeViewController, animated: true)
     }
      
     func showExecuteViewController() {
-         let executeViewController = ExecuteViewController(services: self.services)
+         let executeViewController = ExecuteViewController()
          executeViewController.delegate = self
          self.navigationController.pushViewController(executeViewController, animated: true)
     }
      
     func showMemoryAccessViewController() {
-         let memoryAccessViewController = MemoryAccessViewController(services: self.services)
+         let memoryAccessViewController = MemoryAccessViewController()
          memoryAccessViewController.delegate = self
          self.navigationController.pushViewController(memoryAccessViewController, animated: true)
     }
      
     func showWriteBackViewController() {
-         let writeBackViewController = WriteBackViewController(services: self.services)
+         let writeBackViewController = WriteBackViewController()
          writeBackViewController.delegate = self
          self.navigationController.pushViewController(writeBackViewController, animated: true)
     }
@@ -94,9 +100,67 @@ extension ALUCoordinator: FetchViewControllerDelegate {
     func fetchViewController(_ fetchViewController: FetchViewController) {
         //self.showDecodeViewController()
     }
+    
+    func onTouchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if (self.fetchViewController == nil) {
+            return
+        }
+        
+        fetchStateService.handleTouchesBegan(
+            touches,
+            with: event,
+            touchPoints: self.fetchViewController!.touchPoints,
+            view: self.fetchViewController!.view)
+        
+    }
+    
+    func onTouchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if (self.fetchViewController == nil) {
+            return
+        }
+        
+        fetchStateService.handleTouchesMoved(
+            touches,
+            with: event,
+            imageView: self.fetchViewController!.drawingImageView,
+            view: self.fetchViewController!.view,
+            withDrawing: drawingService,
+            touchPoints: self.fetchViewController!.touchPoints,
+            lines: self.fetchViewController!.lines)
+    }
+    
+    func onTouchesEnded() {
+        fetchStateService.resetState()
+    }
+    
+    func onTouchesCancelled() {
+        drawingService.resumeTouchInput()
+        fetchStateService.resetState()
+    }
+    
+    func clearDrawing() {
+        if (self.fetchViewController == nil) {
+            return
+        }
+        drawingService.clearDrawing(imageView: self.fetchViewController!.drawingImageView)
+    }
+    
+    func setup() {
+        self.fetchViewController?.touchPoints.forEach { touchPoint in
+            touchPoint.setupWith(
+                DotModel(
+                    x: -4.75,
+                    y: -4.75,
+                    radius: 10.0))
+        }
+        
+        self.fetchViewController?.lines.forEach { line in
+            line.setup()
+        }
+    }
 }
 
-// MARK: DecodeControllerDelegate
+// MARK: DecodeViewControllerDelegate
 extension ALUCoordinator: DecodeViewControllerDelegate {
     func decodeViewControllerDidSwipeLeft(_ decodeViewController: DecodeViewController) {
         self.navigationController.popViewController(animated: true)
@@ -112,7 +176,7 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
     
 }
 
-// MARK: ExecuteControllerDelegate
+// MARK: ExecuteViewControllerDelegate
 extension ALUCoordinator: ExecuteViewControllerDelegate {
     func executeViewControllerDidSwipeLeft(_ executeViewController: ExecuteViewController) {
         self.navigationController.popViewController(animated: true)
@@ -129,7 +193,7 @@ extension ALUCoordinator: ExecuteViewControllerDelegate {
     
 }
 
-// MARK: MemoryAccessControllerDelegate
+// MARK: MemoryAccessViewControllerDelegate
 extension ALUCoordinator: MemoryAccessViewControllerDelegate {
     func memoryAccessViewControllerDidSwipeLeft(_ memoryAccessViewController: MemoryAccessViewController) {
         self.navigationController.popViewController(animated: true)
@@ -146,7 +210,7 @@ extension ALUCoordinator: MemoryAccessViewControllerDelegate {
     
 }
 
-// MARK: WriteBackControllerDelegate
+// MARK: WriteBackViewControllerDelegate
 extension ALUCoordinator: WriteBackViewControllerDelegate {
     func writeBackViewControllerDidSwipeLeft(_ writeBackViewController: WriteBackViewController) {
         self.navigationController.popViewController(animated: true)

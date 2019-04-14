@@ -49,7 +49,7 @@ class AppCoordinator: RootViewCoordinator {
     
     /// Creates a new MenuViewController and places it into the navigation controller
     private func showMenuViewController() {
-        let menuViewController = MenuViewController(services: self.services)
+        let menuViewController = MenuViewController()
         menuViewController.delegate = self
         self.navigationController.viewControllers = [menuViewController]
     }
@@ -58,7 +58,7 @@ class AppCoordinator: RootViewCoordinator {
 // MARK: - MenuViewControllerDelegate
 extension AppCoordinator: MenuViewControllerDelegate {
     func menuViewControllerDidTapALUButton(menuViewController: MenuViewController) {
-        let aluCoordinator = ALUCoordinator(services: self.services)
+        let aluCoordinator = ALUCoordinator(drawingService: DrawingService(), fetchStateService: StateService())
         aluCoordinator.delegate = self
         aluCoordinator.start()
         self.addChildCoordinator(aluCoordinator)
@@ -67,7 +67,7 @@ extension AppCoordinator: MenuViewControllerDelegate {
     }
     
     func menuViewControllerDidTapLoadButton(menuViewController: MenuViewController) {
-        let loadCoordinator = LoadCoordinator(services: self.services)
+        let loadCoordinator = LoadCoordinator()
         loadCoordinator.delegate = self
         loadCoordinator.start()
         self.addChildCoordinator(loadCoordinator)
@@ -76,7 +76,7 @@ extension AppCoordinator: MenuViewControllerDelegate {
     }
     
     func menuViewControllerDidTapStoreButton(menuViewController: MenuViewController) {
-        let storeCoordinator = StoreCoordinator(services: self.services)
+        let storeCoordinator = StoreCoordinator()
         storeCoordinator.delegate = self
         storeCoordinator.start()
         self.addChildCoordinator(storeCoordinator)
@@ -85,7 +85,7 @@ extension AppCoordinator: MenuViewControllerDelegate {
     }
     
     func menuViewControllerDidTapBranchButton(menuViewController: MenuViewController) {
-        let branchCoordinator = BranchCoordinator(services: self.services)
+        let branchCoordinator = BranchCoordinator()
         branchCoordinator.delegate = self
         branchCoordinator.start()
         self.addChildCoordinator(branchCoordinator)

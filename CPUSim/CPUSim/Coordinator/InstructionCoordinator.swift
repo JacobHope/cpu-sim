@@ -47,31 +47,31 @@
 //    // MARK: Functions
 //    
 //    func start() {
-//        let fetchViewController = FetchViewController(services: self.services)
+//        let fetchViewController = FetchViewController()
 //        fetchViewController.delegate = self
 //        self.navigationController.viewControllers = [fetchViewController]
 //    }
 //    
 //    func showDecodeViewController() {
-//         let decodeViewController = DecodeViewController(services: self.services)
+//         let decodeViewController = DecodeViewController()
 //         decodeViewController.delegate = self
 //         self.navigationController.pushViewController(decodeViewController, animated: true)
 //    }
 //     
 //    func showExecuteViewController() {
-//         let executeViewController = ExecuteViewController(services: self.services)
+//         let executeViewController = ExecuteViewController()
 //         executeViewController.delegate = self
 //         self.navigationController.pushViewController(executeViewController, animated: true)
 //    }
 //     
 //    func showMemoryAccessViewController() {
-//         let memoryAccessViewController = MemoryAccessViewController(services: self.services)
+//         let memoryAccessViewController = MemoryAccessViewController()
 //         memoryAccessViewController.delegate = self
 //         self.navigationController.pushViewController(memoryAccessViewController, animated: true)
 //    }
 //     
 //    func showWriteBackViewController() {
-//         let writeBackViewController = WriteBackViewController(services: self.services)
+//         let writeBackViewController = WriteBackViewController()
 //         writeBackViewController.delegate = self
 //         self.navigationController.pushViewController(writeBackViewController, animated: true)
 //    }

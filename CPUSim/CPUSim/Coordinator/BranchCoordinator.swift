@@ -22,7 +22,6 @@ class BranchCoordinator: RootViewCoordinator {
     
     // MARK: Properties
     
-    let services: Services
     var childCoordinators: [Coordinator] = []
     var rootViewController: UIViewController {
         return self.navigationController
@@ -36,8 +35,7 @@ class BranchCoordinator: RootViewCoordinator {
     
     // MARK: Init
     
-    init(services: Services) {
-        self.services = services
+    init() {
     }
     
     // MARK: Functions
@@ -47,31 +45,31 @@ class BranchCoordinator: RootViewCoordinator {
     }
     
     func showFetchViewController() {
-        let fetchViewController = FetchViewController(services: self.services)
-        fetchViewController.delegate = self
+        let fetchViewController = FetchViewController()
+        fetchViewController.fetchViewControllerDelegate = self
         self.navigationController.viewControllers = [fetchViewController]
     }
     
     func showDecodeViewController() {
-        let decodeViewController = DecodeViewController(services: self.services)
+        let decodeViewController = DecodeViewController()
         decodeViewController.delegate = self
         self.navigationController.pushViewController(decodeViewController, animated: true)
     }
     
     func showExecuteViewController() {
-        let executeViewController = ExecuteViewController(services: self.services)
+        let executeViewController = ExecuteViewController()
         executeViewController.delegate = self
         self.navigationController.pushViewController(executeViewController, animated: true)
     }
     
     func showMemoryAccessViewController() {
-        let memoryAccessViewController = MemoryAccessViewController(services: self.services)
+        let memoryAccessViewController = MemoryAccessViewController()
         memoryAccessViewController.delegate = self
         self.navigationController.pushViewController(memoryAccessViewController, animated: true)
     }
     
     func showWriteBackViewController() {
-        let writeBackViewController = WriteBackViewController(services: self.services)
+        let writeBackViewController = WriteBackViewController()
         writeBackViewController.delegate = self
         self.navigationController.pushViewController(writeBackViewController, animated: true)
     }
@@ -92,6 +90,30 @@ extension BranchCoordinator: FetchViewControllerDelegate {
     }
     
     func fetchViewController(_ fetchViewController: FetchViewController) {
+    }
+    
+    func onTouchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+    }
+    
+    func onTouchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+    }
+    
+    func onTouchesEnded() {
+        
+    }
+    
+    func onTouchesCancelled() {
+        
+    }
+    
+    func clearDrawing() {
+        
+    }
+    
+    func setup() {
+        
     }
 }
 

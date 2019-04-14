@@ -53,7 +53,7 @@
 //    // MARK: Functions
 //
 //    func start() {
-//        let simulationViewController = SimulationViewController(services: self.services)
+//        let simulationViewController = SimulationViewController()
 //        simulationViewController.delegate = self
 //        self.navigationController.viewControllers = [simulationViewController]
 //    }

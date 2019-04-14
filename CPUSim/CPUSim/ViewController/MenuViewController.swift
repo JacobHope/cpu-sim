@@ -19,7 +19,6 @@ public protocol MenuViewControllerDelegate: class {
 public class MenuViewController: UIViewController {
     
     // MARK: Properties
-    private let services: Services
     public weak var delegate: MenuViewControllerDelegate?
     
     @IBOutlet var MenuView: UIView!
@@ -29,8 +28,7 @@ public class MenuViewController: UIViewController {
     @IBOutlet weak var branchButton: UIButton!
     
     // MARK: Init
-    public init(services: Services) {
-        self.services = services
+    public init() {
         super.init(nibName: "MenuView", bundle: nil)
     }
     

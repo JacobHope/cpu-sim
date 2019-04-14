@@ -20,7 +20,6 @@ public class WriteBackViewController: UIViewController {
     // MARK: Properties
     @IBOutlet var WriteBackView: UIView!
     
-    private let services: Services
     public weak var delegate: WriteBackViewControllerDelegate?
     
     //MARK: Properties - Navigation Bar Items
@@ -31,8 +30,7 @@ public class WriteBackViewController: UIViewController {
     }()
     
     // MARK: Init
-    public init(services: Services) {
-        self.services = services
+    public init() {
         super.init(nibName: "WriteBackView", bundle: nil)
         
         self.title = "Write Back"

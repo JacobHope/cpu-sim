@@ -19,14 +19,12 @@ public class DecodeViewController: UIViewController {
     // MARK: Properties
      @IBOutlet var DecodeView: UIView!
     
-    private let services: Services
     public weak var delegate: DecodeViewControllerDelegate?
     
     //MARK: Properties - Navigation Bar Items
     
     // MARK: Init
-    public init(services: Services) {
-        self.services = services
+    public init() {
         super.init(nibName: "DecodeView", bundle: nil)
         
         self.title = "Decode"

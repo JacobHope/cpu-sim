@@ -9,7 +9,6 @@
 import Foundation
 
 public protocol Coordinator: class {
-    var services: Services { get }
     var childCoordinators: [Coordinator] { get set }
 }
 

@@ -20,12 +20,10 @@ public class ExecuteViewController: UIViewController {
     // MARK: Properties
     @IBOutlet var ExecuteView: UIView!
     
-    private let services: Services
     public weak var delegate: ExecuteViewControllerDelegate?
     
     // MARK: Init
-    public init(services: Services) {
-        self.services = services
+    public init() {
         super.init(nibName: "ExecuteView", bundle: nil)
         
         self.title = "Execute"

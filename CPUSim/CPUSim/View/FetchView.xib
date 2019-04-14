@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,22 +13,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FetchViewController" customModule="CPUSim" customModuleProvider="target">
             <connections>
                 <outlet property="FetchView" destination="iN0-l3-epB" id="ud9-r8-EUu"/>
+                <outlet property="drawingImageView" destination="FMO-9m-4SJ" id="R4K-CE-rVk"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kie-3E-8ce"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Scq-pV-vHR" userLabel="ContainerView">
-                    <rect key="frame" x="62.5" y="93.5" width="250" height="500"/>
+                    <rect key="frame" x="82" y="203" width="250" height="500"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGG-i3-PCC" userLabel="MUXView">
                             <rect key="frame" x="125" y="0.0" width="30" height="100"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mux-shape" translatesAutoresizingMaskIntoConstraints="NO" id="vv6-5C-770">
-                                    <rect key="frame" x="-10.5" y="-15" width="51" height="130"/>
+                                    <rect key="frame" x="-10.333333333333343" y="-15" width="51" height="130"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -40,8 +41,18 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="d4k-8m-uvU"/>
                         </view>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pgy-ma-IM0">
+                            <rect key="frame" x="107.66666666666666" y="260" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="egs-wu-nsf"/>
+                                <constraint firstAttribute="height" constant="20" id="hyE-zc-3uH"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="for-eX-Teq" userLabel="ALUView">
-                            <rect key="frame" x="172.5" y="170" width="75" height="125"/>
+                            <rect key="frame" x="172.66666666666666" y="170" width="75" height="125"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ALU-shape" translatesAutoresizingMaskIntoConstraints="NO" id="uo3-me-2kv" userLabel="ALUImageView">
                                     <rect key="frame" x="0.0" y="0.0" width="75" height="125"/>
@@ -130,9 +141,11 @@
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="for-eX-Teq" firstAttribute="centerX" secondItem="dbV-2J-98q" secondAttribute="centerX" constant="35" id="2Or-JA-0RT"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="top" secondItem="EGG-i3-PCC" secondAttribute="bottom" constant="200" id="EKB-0G-Llt"/>
+                        <constraint firstItem="for-eX-Teq" firstAttribute="leading" secondItem="pgy-ma-IM0" secondAttribute="trailing" constant="45" id="PLr-g0-pmL"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="centerY" secondItem="AW2-Nm-Iy0" secondAttribute="centerY" id="PRD-kK-msM"/>
                         <constraint firstItem="CPF-4s-pLG" firstAttribute="bottom" secondItem="AW2-Nm-Iy0" secondAttribute="bottom" constant="50" id="QtB-2L-abr"/>
                         <constraint firstItem="EGG-i3-PCC" firstAttribute="leading" secondItem="dbV-2J-98q" secondAttribute="leading" constant="25" id="g1g-mc-uzt"/>
@@ -140,15 +153,23 @@
                         <constraint firstAttribute="height" constant="500" id="l6G-iU-cdn"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="top" secondItem="for-eX-Teq" secondAttribute="bottom" constant="5" id="mnL-OQ-Pfe"/>
                         <constraint firstAttribute="width" constant="250" id="p1t-3p-uwC"/>
+                        <constraint firstItem="dbV-2J-98q" firstAttribute="top" secondItem="pgy-ma-IM0" secondAttribute="bottom" constant="20" id="svP-Mo-CD4"/>
                         <constraint firstItem="AW2-Nm-Iy0" firstAttribute="leading" secondItem="CPF-4s-pLG" secondAttribute="leading" constant="25" id="t8N-fY-3Lu"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="CPF-4s-pLG"/>
                 </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FMO-9m-4SJ" userLabel="DrawingImageView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Scq-pV-vHR" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="XYw-zv-Pxm"/>
+                <constraint firstItem="FMO-9m-4SJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="dHD-u4-ydO"/>
                 <constraint firstItem="Scq-pV-vHR" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="flZ-N9-RfV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FMO-9m-4SJ" secondAttribute="trailing" id="qpE-Ng-CM5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FMO-9m-4SJ" secondAttribute="bottom" id="s1z-gF-BEe"/>
+                <constraint firstItem="FMO-9m-4SJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sX1-qU-QTp"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>

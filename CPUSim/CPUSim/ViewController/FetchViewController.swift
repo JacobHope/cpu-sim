@@ -9,19 +9,22 @@
 import Foundation
 import UIKit
 
-public protocol FetchViewControllerDelegate: class {
+protocol FetchViewControllerDelegate: ViewControllerDelegate {
     func fetchViewControllerDidSwipeLeft(_ fetchViewController: FetchViewController)
     func fetchViewControllerDidSwipeRight(_ fetchViewController: FetchViewController)
     func fetchViewControllerDidTapClose(_ fetchViewController: FetchViewController)
     func fetchViewController(_ fetchViewController: FetchViewController)
 }
 
-public class FetchViewController: UIViewController {
+class FetchViewController: BaseViewController {
     // MARK: Properties
     @IBOutlet var FetchView: UIView!
+    @IBOutlet weak var drawingImageView: UIImageView!
     
-    private let services: Services
-    public weak var delegate: FetchViewControllerDelegate?
+    public weak var fetchViewControllerDelegate: FetchViewControllerDelegate?
+    
+    var touchPoints: [TouchPointView] = []
+    var lines: [LineView] = []
     
     lazy var closeBarButtonItem: UIBarButtonItem = {
         let closeBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(self.closeButtonTapped))
@@ -29,8 +32,7 @@ public class FetchViewController: UIViewController {
     }()
     
     // MARK: Init
-    public init(services: Services) {
-        self.services = services
+    public init() {
         super.init(nibName: "FetchView", bundle: nil)
         
         self.title = "Fetch"
@@ -45,26 +47,37 @@ public class FetchViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swiped(_:)))
+        leftSwipe.cancelsTouchesInView = false
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swiped(_:)))
-        
+        rightSwipe.cancelsTouchesInView = false
+
         leftSwipe.direction = .left
         rightSwipe.direction = .right
-        
+
         view.addGestureRecognizer(leftSwipe)
         view.addGestureRecognizer(rightSwipe)
+        
+        // Setup TouchPointViews
+        
+        // Setup lines
+        
+        fetchViewControllerDelegate?.setup()
+        
+        // Set BaseViewController delegate
+        delegate = fetchViewControllerDelegate
     }
     
     @objc private func closeButtonTapped(sender: UIBarButtonItem) {
-        self.delegate?.fetchViewControllerDidTapClose(self)
+        self.fetchViewControllerDelegate?.fetchViewControllerDidTapClose(self)
     }
     
     @objc func swiped(_ sender:UISwipeGestureRecognizer) {
         if (sender.direction == .left) {
-            self.delegate?.fetchViewControllerDidSwipeRight(self)
+            self.fetchViewControllerDelegate?.fetchViewControllerDidSwipeRight(self)
         }
-        
+
         if (sender.direction == .right) {
-             self.delegate?.fetchViewControllerDidSwipeLeft(self)
+             self.fetchViewControllerDelegate?.fetchViewControllerDidSwipeLeft(self)
         }
     }
 }

@@ -19,12 +19,10 @@ public class MemoryAccessViewController: UIViewController {
     // MARK: Properties
     @IBOutlet var MemoryAccessView: UIView!
     
-    private let services: Services
     public weak var delegate: MemoryAccessViewControllerDelegate?
     
     // MARK: Init
-    public init(services: Services) {
-        self.services = services
+    public init() {
         super.init(nibName: "MemoryAccessView", bundle: nil)
         
         self.title = "Memory Access"
