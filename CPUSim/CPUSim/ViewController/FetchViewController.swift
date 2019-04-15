@@ -20,11 +20,16 @@ class FetchViewController: BaseViewController {
     // MARK: Properties
     @IBOutlet var FetchView: UIView!
     @IBOutlet weak var drawingImageView: UIImageView!
+    @IBOutlet weak var ifMuxToPc1: LineView!
+    @IBOutlet weak var ifMuxToPc2: LineView!
+    @IBOutlet weak var ifMuxToPc3: LineView!
+    @IBOutlet weak var ifMuxToPcStart: TouchPointView!
+    @IBOutlet weak var ifMuxToPcEnd: TouchPointView!
     
     public weak var fetchViewControllerDelegate: FetchViewControllerDelegate?
     
     var touchPoints: [TouchPointView] = []
-    var lines: [LineView] = []
+    var lines: [String: [LineView]] = [:]
     
     lazy var closeBarButtonItem: UIBarButtonItem = {
         let closeBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(self.closeButtonTapped))
@@ -58,9 +63,12 @@ class FetchViewController: BaseViewController {
         view.addGestureRecognizer(rightSwipe)
         
         // Setup TouchPointViews
+        touchPoints = [ifMuxToPcStart, ifMuxToPcEnd]
         
         // Setup lines
+        lines["ifMuxToPc"] = [ifMuxToPc1, ifMuxToPc2, ifMuxToPc3]
         
+        // Finish setting up
         fetchViewControllerDelegate?.setup()
         
         // Set BaseViewController delegate

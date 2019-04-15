@@ -105,12 +105,12 @@ extension ALUCoordinator: FetchViewControllerDelegate {
         if (self.fetchViewController == nil) {
             return
         }
-        
+
         fetchStateService.handleTouchesBegan(
             touches,
             with: event,
             touchPoints: self.fetchViewController!.touchPoints,
-            view: self.fetchViewController!.view)
+            view: self.fetchViewController!.drawingImageView)
         
     }
     
@@ -118,12 +118,13 @@ extension ALUCoordinator: FetchViewControllerDelegate {
         if (self.fetchViewController == nil) {
             return
         }
-        
+
+        // todo: pass in only drawingImageView
         fetchStateService.handleTouchesMoved(
             touches,
             with: event,
             imageView: self.fetchViewController!.drawingImageView,
-            view: self.fetchViewController!.view,
+            view: self.fetchViewController!.drawingImageView,
             withDrawing: drawingService,
             touchPoints: self.fetchViewController!.touchPoints,
             lines: self.fetchViewController!.lines)
@@ -154,8 +155,10 @@ extension ALUCoordinator: FetchViewControllerDelegate {
                     radius: 10.0))
         }
         
-        self.fetchViewController?.lines.forEach { line in
-            line.setup()
+        for (_, v) in self.fetchViewController!.lines {
+            v.forEach { line in
+                line.setup()
+            }
         }
     }
 }

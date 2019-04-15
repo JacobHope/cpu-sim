@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LineView: UIView {
+class LineView: UIImageView {
     @IBInspectable var endPointName: String = "endTouchPoint"
     
     func setup() {

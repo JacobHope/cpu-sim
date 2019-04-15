@@ -24,7 +24,7 @@ protocol State {
             view: UIView,
             withDrawing drawingService: Drawing,
             touchPoints: [TouchPointView],
-            lines: [LineView])
+            lines: [String: [LineView]])
 
     func handleTouchesEnded()
     func handleTouchesCancelled(withDrawing drawingService: Drawing)
