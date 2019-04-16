@@ -9,24 +9,38 @@
 import Foundation
 import UIKit
 
-protocol FetchViewControllerDelegate: ViewControllerDelegate {
+public protocol FetchViewControllerDelegate: class {
+    //MARK: Base Delegate Functions
+    func fetchViewControllerOnTouchesBegan(_ fetchViewController: FetchViewController, _ touches: Set<UITouch>, with event: UIEvent?)
+    func fetchViewControllerOnTouchesMoved(_ fetchViewController: FetchViewController, _ touches: Set<UITouch>, with event: UIEvent?)
+    func fetchViewControllerOnTouchesEnded(_ fetchViewController: FetchViewController)
+    func fetchViewControllerOnTouchesCancelled(_ fetchViewController: FetchViewController)
+    func fetchViewControllerClearDrawing(_ fetchViewController: FetchViewController)
+    func fetchViewControllerSetup()
+    
     func fetchViewControllerDidSwipeLeft(_ fetchViewController: FetchViewController)
     func fetchViewControllerDidSwipeRight(_ fetchViewController: FetchViewController)
-    func fetchViewControllerDidTapClose(_ fetchViewController: FetchViewController)
+    
+    //MARK: Specific Fetch View Delegate Functions
     func fetchViewController(_ fetchViewController: FetchViewController)
+    func fetchViewControllerDidTapClose(_ fetchViewController: FetchViewController)
 }
 
-class FetchViewController: BaseViewController {
+public class FetchViewController: UIViewController {
     // MARK: Properties
     @IBOutlet var FetchView: UIView!
-    @IBOutlet weak var drawingImageView: UIImageView!
+    @IBOutlet weak var drawingImageView: UIImageView! {
+        get {
+            return self.drawingImageView
+        }
+    }
     @IBOutlet weak var ifMuxToPc1: LineView!
     @IBOutlet weak var ifMuxToPc2: LineView!
     @IBOutlet weak var ifMuxToPc3: LineView!
     @IBOutlet weak var ifMuxToPcStart: TouchPointView!
     @IBOutlet weak var ifMuxToPcEnd: TouchPointView!
     
-    public weak var fetchViewControllerDelegate: FetchViewControllerDelegate?
+    public weak var delegate: FetchViewControllerDelegate?
     
     var touchPoints: [TouchPointView] = []
     var lines: [String: [LineView]] = [:]
@@ -71,23 +85,39 @@ class FetchViewController: BaseViewController {
         lines["ifMuxToPc"] = [ifMuxToPc1, ifMuxToPc2, ifMuxToPc3]
         
         // Finish setting up
-        fetchViewControllerDelegate?.setup()
+        delegate?.setup()
         
         // Set BaseViewController delegate
-        delegate = fetchViewControllerDelegate
+        baseViewControllerDelegate = delegate
     }
     
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        baseViewControllerDelegate?.onTouchesBegan(touches, with: event)
+//    }
+//
+//    @objc func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        baseViewControllerDelegate?.onTouchesMoved(touches, with: event)
+//    }
+//
+//    @objc func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        baseViewControllerDelegate?.onTouchesEnded()
+//    }
+//
+//    @objc func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        baseViewControllerDelegate?.onTouchesCancelled()
+//    }
+    
     @objc private func closeButtonTapped(sender: UIBarButtonItem) {
-        self.fetchViewControllerDelegate?.fetchViewControllerDidTapClose(self)
+        self.delegate?.fetchViewControllerDidTapClose(self)
     }
     
     @objc func swiped(_ sender:UISwipeGestureRecognizer) {
         if (sender.direction == .left) {
-            self.fetchViewControllerDelegate?.fetchViewControllerDidSwipeRight(self)
+            self.delegate?.fetchViewControllerDidSwipeRight(self)
         }
 
         if (sender.direction == .right) {
-             self.fetchViewControllerDelegate?.fetchViewControllerDidSwipeLeft(self)
+             self.delegate?.fetchViewControllerDidSwipeLeft(self)
         }
     }
 }

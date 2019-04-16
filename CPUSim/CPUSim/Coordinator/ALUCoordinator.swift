@@ -35,7 +35,7 @@ class ALUCoordinator: RootViewCoordinator {
     
     private let drawingService: Drawing
     private let fetchStateService: State
-    private var fetchViewController: FetchViewController?
+    //private var fetchViewController: FetchViewController?
     
     // MARK: Init
     
@@ -53,9 +53,9 @@ class ALUCoordinator: RootViewCoordinator {
     
     func showFetchViewController() {
         let fetchViewController = FetchViewController()
-        fetchViewController.fetchViewControllerDelegate = self
+        fetchViewController.delegate = self
         self.navigationController.viewControllers = [fetchViewController]
-        self.fetchViewController = fetchViewController
+        //self.fetchViewController = fetchViewController
     }
     
     func showDecodeViewController() {
@@ -83,8 +83,73 @@ class ALUCoordinator: RootViewCoordinator {
     }
 }
 
+
 // MARK: FetchViewControllerDelegate
+
 extension ALUCoordinator: FetchViewControllerDelegate {
+    func fetchViewControllerSetup() {
+        <#code#>
+    }
+    
+    func fetchViewControllerOnTouchesBegan(_ fetchViewController: FetchViewController, _ touches: Set<UITouch>, with event: UIEvent?) {
+        drawingService.clearDrawing(
+            imageView: fetchViewController.drawingImageView)
+        
+        fetchStateService.handleTouchesBegan(
+            touches,
+            with: event,
+            touchPoints: self.fetchViewController.touchPoints,
+            view: self.fetchViewController.drawingImageView)
+    }
+    
+    func fetchViewControllerOnTouchesMoved(_ fetchViewController: FetchViewController, _ touches: Set<UITouch>, with event: UIEvent?) {
+        if (self.fetchViewController == nil) {
+            return
+        }
+        
+        // todo: pass in only drawingImageView
+        fetchStateService.handleTouchesMoved(
+            touches,
+            with: event,
+            imageView: self.fetchViewController!.drawingImageView,
+            view: self.fetchViewController!.drawingImageView,
+            withDrawing: drawingService,
+            touchPoints: self.fetchViewController!.touchPoints,
+            lines: self.fetchViewController!.lines)
+    }
+    
+    func fetchViewControllerOnTouchesEnded(_ fetchViewController: FetchViewController) {
+        fetchStateService.resetState()
+    }
+    
+    func fetchViewControllerOnTouchesCancelled(_ fetchViewController: FetchViewController) {
+        drawingService.resumeTouchInput()
+        fetchStateService.resetState()
+    }
+    
+    func fetchViewControllerClearDrawing(_ fetchViewController: FetchViewController) {
+        if (self.fetchViewController == nil) {
+            return
+        }
+        drawingService.clearDrawing(imageView: self.fetchViewController!.drawingImageView)
+    }
+    
+    func fetchViewControllerSetup(_ fetchViewController: FetchViewController) {
+        self.fetchViewController?.touchPoints.forEach { touchPoint in
+            touchPoint.setupWith(
+                DotModel(
+                    x: -4.75,
+                    y: -4.75,
+                    radius: 10.0))
+        }
+        
+        for (_, v) in self.fetchViewController!.lines {
+            v.forEach { line in
+                line.setup()
+            }
+        }
+    }
+    
     func fetchViewControllerDidSwipeLeft(_ fetchViewController: FetchViewController) {
         if (!fetchStateService.isDrawing) {
             self.navigationController.popViewController(animated: true)
@@ -104,73 +169,10 @@ extension ALUCoordinator: FetchViewControllerDelegate {
     func fetchViewController(_ fetchViewController: FetchViewController) {
         //self.showDecodeViewController()
     }
-    
-    func onTouchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if (self.fetchViewController == nil) {
-            return
-        }
-
-        drawingService.clearDrawing(
-            imageView: self.fetchViewController!.drawingImageView)
-        
-        fetchStateService.handleTouchesBegan(
-            touches,
-            with: event,
-            touchPoints: self.fetchViewController!.touchPoints,
-            view: self.fetchViewController!.drawingImageView)
-        
-    }
-    
-    func onTouchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if (self.fetchViewController == nil) {
-            return
-        }
-
-        // todo: pass in only drawingImageView
-        fetchStateService.handleTouchesMoved(
-            touches,
-            with: event,
-            imageView: self.fetchViewController!.drawingImageView,
-            view: self.fetchViewController!.drawingImageView,
-            withDrawing: drawingService,
-            touchPoints: self.fetchViewController!.touchPoints,
-            lines: self.fetchViewController!.lines)
-    }
-    
-    func onTouchesEnded() {
-        fetchStateService.resetState()
-    }
-    
-    func onTouchesCancelled() {
-        drawingService.resumeTouchInput()
-        fetchStateService.resetState()
-    }
-    
-    func clearDrawing() {
-        if (self.fetchViewController == nil) {
-            return
-        }
-        drawingService.clearDrawing(imageView: self.fetchViewController!.drawingImageView)
-    }
-    
-    func setup() {
-        self.fetchViewController?.touchPoints.forEach { touchPoint in
-            touchPoint.setupWith(
-                DotModel(
-                    x: -4.75,
-                    y: -4.75,
-                    radius: 10.0))
-        }
-        
-        for (_, v) in self.fetchViewController!.lines {
-            v.forEach { line in
-                line.setup()
-            }
-        }
-    }
 }
 
 // MARK: DecodeViewControllerDelegate
+
 extension ALUCoordinator: DecodeViewControllerDelegate {
     func decodeViewControllerDidSwipeLeft(_ decodeViewController: DecodeViewController) {
         self.navigationController.popViewController(animated: true)
@@ -199,6 +201,7 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
 }
 
 // MARK: ExecuteViewControllerDelegate
+
 extension ALUCoordinator: ExecuteViewControllerDelegate {
     func executeViewControllerDidSwipeLeft(_ executeViewController: ExecuteViewController) {
         self.navigationController.popViewController(animated: true)
@@ -216,6 +219,7 @@ extension ALUCoordinator: ExecuteViewControllerDelegate {
 }
 
 // MARK: MemoryAccessViewControllerDelegate
+
 extension ALUCoordinator: MemoryAccessViewControllerDelegate {
     func memoryAccessViewControllerDidSwipeLeft(_ memoryAccessViewController: MemoryAccessViewController) {
         self.navigationController.popViewController(animated: true)
@@ -233,6 +237,7 @@ extension ALUCoordinator: MemoryAccessViewControllerDelegate {
 }
 
 // MARK: WriteBackViewControllerDelegate
+
 extension ALUCoordinator: WriteBackViewControllerDelegate {
     func writeBackViewControllerDidSwipeLeft(_ writeBackViewController: WriteBackViewController) {
         self.navigationController.popViewController(animated: true)

@@ -15,11 +15,11 @@ public protocol DecodeViewControllerDelegate: class {
     func decodeViewController(_ decodeViewController: DecodeViewController)
 }
 
-public class DecodeViewController: UIViewController {
+class DecodeViewController: UIViewController {
     // MARK: Properties
      @IBOutlet var DecodeView: UIView!
     
-    public weak var delegate: DecodeViewControllerDelegate?
+    weak var delegate: DecodeViewControllerDelegate?
     
     //MARK: Properties - Navigation Bar Items
     
