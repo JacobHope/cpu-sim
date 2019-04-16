@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-public protocol FetchViewControllerDelegate: class {
-    //MARK: Base Delegate Functions
+protocol FetchViewControllerDelegate: class {
+    //MARK: - Base Delegate Functions
     func fetchViewControllerOnTouchesBegan(_ fetchViewController: FetchViewController, _ touches: Set<UITouch>, with event: UIEvent?)
     func fetchViewControllerOnTouchesMoved(_ fetchViewController: FetchViewController, _ touches: Set<UITouch>, with event: UIEvent?)
     func fetchViewControllerOnTouchesEnded(_ fetchViewController: FetchViewController)
@@ -26,7 +26,7 @@ public protocol FetchViewControllerDelegate: class {
     func fetchViewControllerDidTapClose(_ fetchViewController: FetchViewController)
 }
 
-public class FetchViewController: UIViewController {
+class FetchViewController: UIViewController {
     // MARK: Properties
     @IBOutlet var FetchView: UIView!
     @IBOutlet weak var drawingImageView: UIImageView!
