@@ -107,11 +107,9 @@ class StateService: State {
             touchPoints.forEach { touchPoint in
                 if (touchPoint == touchPoint.hitTest(touch, event: event)) {
                     if (touchPoint.name == "ifMuxToPcStart") {
-                        print("! 1")
                         self.startState = StartState.ifMuxToPcStartStarted
                     }
                     if (touchPoint.name == "ifMuxToPcEnd") {
-                        print("! 2")
                         self.startState = StartState.ifMuxToPcEndStarted
                     }
                 }
@@ -130,7 +128,6 @@ class StateService: State {
 
         if let touch = touches.first {
             let currentPoint = touch.location(in: view)
-            print(currentPoint)
             drawingService.drawLineFrom(
                     fromPoint: self.lastPoint,
                     toPoint: currentPoint,
