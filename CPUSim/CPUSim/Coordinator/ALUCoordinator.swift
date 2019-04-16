@@ -86,11 +86,15 @@ class ALUCoordinator: RootViewCoordinator {
 // MARK: FetchViewControllerDelegate
 extension ALUCoordinator: FetchViewControllerDelegate {
     func fetchViewControllerDidSwipeLeft(_ fetchViewController: FetchViewController) {
-        self.navigationController.popViewController(animated: true)
+        if (!fetchStateService.isDrawing) {
+            self.navigationController.popViewController(animated: true)
+        }
     }
     
     func fetchViewControllerDidSwipeRight(_ fetchViewController: FetchViewController) {
-        self.showDecodeViewController()
+        if (!fetchStateService.isDrawing) {
+            self.showDecodeViewController()
+        }
     }
     
     func fetchViewControllerDidTapClose(_ fetchViewController: FetchViewController) {
@@ -106,6 +110,9 @@ extension ALUCoordinator: FetchViewControllerDelegate {
             return
         }
 
+        drawingService.clearDrawing(
+            imageView: self.fetchViewController!.drawingImageView)
+        
         fetchStateService.handleTouchesBegan(
             touches,
             with: event,
@@ -167,6 +174,18 @@ extension ALUCoordinator: FetchViewControllerDelegate {
 extension ALUCoordinator: DecodeViewControllerDelegate {
     func decodeViewControllerDidSwipeLeft(_ decodeViewController: DecodeViewController) {
         self.navigationController.popViewController(animated: true)
+        
+        // Reset the top view controller
+        guard let tvc = self.navigationController.topViewController else {
+            return
+        }
+        switch tvc.nibName {
+        case "FetchView":
+            (tvc as! FetchViewController).delegate?.setup()
+            break;
+        default:
+            break;
+        }
     }
     
     func decodeViewControllerDidSwipeRight(_ decodeViewController: DecodeViewController) {

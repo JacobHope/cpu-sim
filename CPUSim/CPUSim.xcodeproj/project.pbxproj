@@ -21,7 +21,7 @@
 		04D3F7A522603701002C80B6 /* DotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A422603701002C80B6 /* DotModel.swift */; };
 		04D3F7A72260372D002C80B6 /* ViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A62260372D002C80B6 /* ViewControllerDelegate.swift */; };
 		04D3F7AA2260376D002C80B6 /* DrawingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A82260376D002C80B6 /* DrawingService.swift */; };
-		04D3F7AB2260376D002C80B6 /* StateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A92260376D002C80B6 /* StateService.swift */; };
+		04D3F7AB2260376D002C80B6 /* ALUFetchStateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A92260376D002C80B6 /* ALUFetchStateService.swift */; };
 		3007E7352256E46E0021DB6D /* FetchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007E7342256E46E0021DB6D /* FetchViewController.swift */; };
 		3007E739225716660021DB6D /* DecodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007E738225716660021DB6D /* DecodeViewController.swift */; };
 		3007E73B225716750021DB6D /* ExecuteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007E73A225716750021DB6D /* ExecuteViewController.swift */; };
@@ -80,7 +80,7 @@
 		04D3F7A422603701002C80B6 /* DotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotModel.swift; sourceTree = "<group>"; };
 		04D3F7A62260372D002C80B6 /* ViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerDelegate.swift; sourceTree = "<group>"; };
 		04D3F7A82260376D002C80B6 /* DrawingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingService.swift; sourceTree = "<group>"; };
-		04D3F7A92260376D002C80B6 /* StateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateService.swift; sourceTree = "<group>"; };
+		04D3F7A92260376D002C80B6 /* ALUFetchStateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALUFetchStateService.swift; sourceTree = "<group>"; };
 		3007E7342256E46E0021DB6D /* FetchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchViewController.swift; sourceTree = "<group>"; };
 		3007E738225716660021DB6D /* DecodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeViewController.swift; sourceTree = "<group>"; };
 		3007E73A225716750021DB6D /* ExecuteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteViewController.swift; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				04D3F7A82260376D002C80B6 /* DrawingService.swift */,
-				04D3F7A92260376D002C80B6 /* StateService.swift */,
+				04D3F7A92260376D002C80B6 /* ALUFetchStateService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -452,7 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04D3F7A1226036A7002C80B6 /* Constants.swift in Sources */,
-				04D3F7AB2260376D002C80B6 /* StateService.swift in Sources */,
+				04D3F7AB2260376D002C80B6 /* ALUFetchStateService.swift in Sources */,
 				305A00CE224D7FB0008D2A6F /* AppCoordinator.swift in Sources */,
 				305A00DC22518518008D2A6F /* LoadCoordinator.swift in Sources */,
 				04D3F78F2260265B002C80B6 /* TouchPointView.swift in Sources */,

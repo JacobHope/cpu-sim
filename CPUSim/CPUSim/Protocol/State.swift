@@ -9,6 +9,8 @@
 import UIKit
 
 protocol State {
+    var isDrawing: Bool { get }
+
     func resetState()
 
     func handleTouchesBegan(

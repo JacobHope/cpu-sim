@@ -9,7 +9,6 @@
 import UIKit
 
 class DrawingService: Drawing {
-
     func drawLineFrom(
             fromPoint: CGPoint,
             toPoint: CGPoint,
