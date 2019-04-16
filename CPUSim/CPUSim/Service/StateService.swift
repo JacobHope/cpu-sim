@@ -39,16 +39,38 @@ class StateService: State {
     // todo: pass in name of endPoint
     // todo: hide appropriate touch points based on name of endPoints
     private func onCorrect(
-            _ touchPoint: TouchPointView,
+            _ touchPoints: [TouchPointView],
+            touchPointName: String,
             lines: [LineView]) {
 
         // Set touch point correct...
-        touchPoint.setCorrect()
+        switch touchPointName {
+        case "ifMuxToPcEnd":
+            touchPoints.forEach { tp in
+                if (tp.name == "ifMuxToPcEnd") {
+                    tp.setCorrect()
+                }
+            }
+            break;
+        default:
+            break;
+        }
 
         // ...then stop pulsating after 2 seconds
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            touchPoint.stop()
-
+            // Hide touch points
+            switch touchPointName {
+            case "ifMuxToPcEnd":
+                touchPoints.forEach { tp in
+                    if (tp.name == "ifMuxToPcEnd"
+                            || tp.name == "ifMuxToPcStart") {
+                        tp.isHidden = true
+                    }
+                }
+                break;
+            default:
+                break;
+            }
 
             // Animate each line in sequence
             var animate = Guarantee()
@@ -58,15 +80,6 @@ class StateService: State {
                         line.alpha = 1.0
                     }.asVoid()
                 }
-            }
-
-            switch touchPoint.name {
-            case "ifMuxToPcEnd":
-                // Hide the touchPoints
-
-                break;
-            default:
-                break;
             }
         }
     }
@@ -138,7 +151,10 @@ class StateService: State {
                         break;
                     case "ifMuxToPcEnd":
                         if (self.startState == StartState.ifMuxToPcStartStarted) {
-                            self.onCorrect(touchPoint, lines: lines["ifMuxToPc"]!)
+                            self.onCorrect(
+                                    touchPoints,
+                                    touchPointName: "ifMuxToPcEnd",
+                                    lines: lines["ifMuxToPc"]!)
                             drawingService.ignoreTouchInput()
                             drawingService.clearDrawing(imageView: imageView)
                         }
