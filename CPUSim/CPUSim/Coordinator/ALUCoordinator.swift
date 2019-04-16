@@ -175,13 +175,33 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
     func decodeViewControllerDidSwipeLeft(_ decodeViewController: DecodeViewController) {
         self.navigationController.popViewController(animated: true)
         
-        // Reset the top view controller
         guard let tvc = self.navigationController.topViewController else {
             return
         }
         switch tvc.nibName {
         case "FetchView":
-            (tvc as! FetchViewController).delegate?.setup()
+            // Reset pulsation animation
+            let fvc: FetchViewController = tvc as! FetchViewController
+            fvc.touchPoints.forEach { tp in
+                for (k,v) in fetchStateService.correctnessMap {
+                    if (k == "ifMuxToPc" && v == false) {
+                        if (tp.name == "ifMuxToPcStart") {
+                            tp.setupWith(
+                                DotModel(
+                                    x: -4.75,
+                                    y: -4.75,
+                                    radius: 10.0))
+                        }
+                        if (tp.name == "ifMuxToPcEnd") {
+                            tp.setupWith(
+                                DotModel(
+                                    x: -4.75,
+                                    y: -4.75,
+                                    radius: 10.0))
+                        }
+                    }
+                }
+            }
             break;
         default:
             break;
