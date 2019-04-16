@@ -86,12 +86,14 @@ class ALUCoordinator: RootViewCoordinator {
 // MARK: FetchViewControllerDelegate
 extension ALUCoordinator: FetchViewControllerDelegate {
     func fetchViewControllerDidSwipeLeft(_ fetchViewController: FetchViewController) {
-        self.navigationController.popViewController(animated: true)
+        if (!fetchStateService.isDrawing) {
+            self.navigationController.popViewController(animated: true)
+        }
     }
     
     func fetchViewControllerDidSwipeRight(_ fetchViewController: FetchViewController) {
         if (!fetchStateService.isDrawing) {
-        self.showDecodeViewController()
+            self.showDecodeViewController()
         }
     }
     

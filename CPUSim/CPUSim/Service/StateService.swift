@@ -24,6 +24,7 @@ private enum EndState {
 }
 
 class StateService: State {
+    var isDrawing: Bool = false
     private var touchStartedInTouchPoint: Bool = false
 
     private var startState: StartState = StartState.noneStarted
@@ -36,11 +37,9 @@ class StateService: State {
         startState = StartState.noneStarted
         endState = EndState.noneReached
         touchStartedInTouchPoint = false
+        isDrawing = false
     }
 
-    // todo: pass in all touch points
-    // todo: pass in name of endPoint
-    // todo: hide appropriate touch points based on name of endPoints
     private func onCorrect(
             _ touchPoints: [TouchPointView],
             touchPointName: String,
@@ -118,6 +117,7 @@ class StateService: State {
             }
 
             if (touchStartedInTouchPoint) {
+                isDrawing = true
                 lastPoint = touch.location(in: view)
                 firstPoint = lastPoint
             }
