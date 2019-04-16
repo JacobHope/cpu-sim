@@ -631,7 +631,6 @@
 		30DBC894224D7BB800FDF861 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9A94X7A3M9;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -653,7 +652,6 @@
 		30DBC895224D7BB800FDF861 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9A94X7A3M9;
 				FRAMEWORK_SEARCH_PATHS = (

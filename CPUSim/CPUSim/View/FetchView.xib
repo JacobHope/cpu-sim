@@ -108,7 +108,7 @@
                                         <constraint firstAttribute="width" constant="100" id="bCh-ND-DqW"/>
                                         <constraint firstAttribute="height" constant="50" id="wms-WS-Ue4"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Read Address" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Mh-2t-whc" userLabel="Read Address">
