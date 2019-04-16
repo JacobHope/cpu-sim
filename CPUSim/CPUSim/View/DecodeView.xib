@@ -79,7 +79,7 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="IM-shape" translatesAutoresizingMaskIntoConstraints="NO" id="ceb-rQ-jKa" userLabel="IDImageView">
                             <rect key="frame" x="91" y="162" width="234" height="247"/>
                         </imageView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Read Address 1" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTT-yo-hWV" userLabel="ReadAddress1TextView">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Read Address 1" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTT-yo-hWV" userLabel="ReadAddress1TextView">
                             <rect key="frame" x="98" y="204" width="110" height="28"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -88,7 +88,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Read Address 2" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfg-Vc-YP3" userLabel="ReadAddress2TextView">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Read Address 2" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfg-Vc-YP3" userLabel="ReadAddress2TextView">
                             <rect key="frame" x="98" y="240" width="115" height="28"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -98,13 +98,13 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Write Address" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPG-HP-Eui" userLabel="WriteAddressTextView">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Write Address" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPG-HP-Eui" userLabel="WriteAddressTextView">
                             <rect key="frame" x="98" y="334" width="110" height="28"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Write Data" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZD-Qk-SIz" userLabel="WriteDataTextView">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Write Data" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZD-Qk-SIz" userLabel="WriteDataTextView">
                             <rect key="frame" x="98" y="370" width="110" height="27"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -113,15 +113,15 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Read Data 1" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUH-hj-aKo" userLabel="ReadData1TextView">
-                            <rect key="frame" x="250" y="240" width="67" height="44"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Read Data 1" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUH-hj-aKo" userLabel="ReadData1TextView">
+                            <rect key="frame" x="250" y="240" width="67" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Read Data 2" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMb-2v-ZlL" userLabel="ReadData2TextView">
-                            <rect key="frame" x="250" y="318" width="67" height="44"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Read Data 2" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMb-2v-ZlL" userLabel="ReadData2TextView">
+                            <rect key="frame" x="250" y="318" width="67" height="52"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -133,8 +133,8 @@
                                 <constraint firstAttribute="height" constant="111" id="NPd-YX-VD0"/>
                             </constraints>
                         </imageView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Sign Extend" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAx-Pn-v9Y" userLabel="SignExtendTextView">
-                            <rect key="frame" x="129" y="485" width="66" height="46"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Sign Extend" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAx-Pn-v9Y" userLabel="SignExtendTextView">
+                            <rect key="frame" x="129" y="485" width="66" height="55"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
