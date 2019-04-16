@@ -26,39 +26,122 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byp-Ai-w6D" userLabel="ContainerView">
-                    <rect key="frame" x="82" y="203" width="250" height="500"/>
+                    <rect key="frame" x="44.5" y="151" width="325" height="594"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="IM-shape" translatesAutoresizingMaskIntoConstraints="NO" id="ceb-rQ-jKa">
-                            <rect key="frame" x="82" y="162" width="168" height="176"/>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ue9-kT-HXp" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="74.5" y="217" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <viewLayoutGuide key="safeArea" id="XXl-4M-esa"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rZJ-G7-xK5" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="83.5" y="345" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <viewLayoutGuide key="safeArea" id="fpD-pU-UcA"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rkZ-NO-e8M" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="83.5" y="378" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <viewLayoutGuide key="safeArea" id="UHb-rw-QWi"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jIG-oU-fmi" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="38.5" y="345" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <viewLayoutGuide key="safeArea" id="MkH-Tb-PZG"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bph-3I-oKR" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="97.5" y="506" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <viewLayoutGuide key="safeArea" id="cuY-eD-0Ql"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SZf-74-ITZ" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="74.5" y="250" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <viewLayoutGuide key="safeArea" id="909-kZ-VgI"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h9l-k6-s2h" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="202.5" y="506" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <viewLayoutGuide key="safeArea" id="KKr-EY-MxV"/>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="mux-shape" translatesAutoresizingMaskIntoConstraints="NO" id="KJL-7M-WQD" userLabel="MuxImageView">
+                            <rect key="frame" x="-8" y="296" width="49" height="104"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="e57-Hf-yTg"/>
+                            </constraints>
                         </imageView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Read Address 1" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hTT-yo-hWV" userLabel="ReadAddress1TextView">
-                            <rect key="frame" x="92" y="172" width="110" height="28"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        </textView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="mux-shape" translatesAutoresizingMaskIntoConstraints="NO" id="KJL-7M-WQD">
-                            <rect key="frame" x="0.0" y="232" width="40" height="92"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="IM-shape" translatesAutoresizingMaskIntoConstraints="NO" id="ceb-rQ-jKa" userLabel="IDImageView">
+                            <rect key="frame" x="91" y="162" width="234" height="247"/>
                         </imageView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Write Address" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iPG-HP-Eui" userLabel="WriteAddressTextView">
-                            <rect key="frame" x="92" y="264" width="110" height="28"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Read Address 1" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hTT-yo-hWV" userLabel="ReadAddress1TextView">
+                            <rect key="frame" x="98" y="204" width="110" height="28"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="OcQ-Gf-3nM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Read Address 2" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yfg-Vc-YP3" userLabel="ReadAddress2TextView">
+                            <rect key="frame" x="98" y="240" width="115" height="28"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="115" id="69b-vL-NmK"/>
+                                <constraint firstAttribute="height" constant="28" id="Awd-yL-CPC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write Address" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iPG-HP-Eui" userLabel="WriteAddressTextView">
+                            <rect key="frame" x="98" y="334" width="110" height="28"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write Data" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wZD-Qk-SIz" userLabel="WriteDataTextView">
+                            <rect key="frame" x="98" y="370" width="110" height="27"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="27" id="ZZk-ag-ljS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Read Data 1" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RUH-hj-aKo" userLabel="ReadData1TextView">
+                            <rect key="frame" x="250" y="240" width="67" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Write Data" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wZD-Qk-SIz" userLabel="WriteData">
-                            <rect key="frame" x="92" y="300" width="110" height="27"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Read Data 2" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dMb-2v-ZlL" userLabel="ReadData2TextView">
+                            <rect key="frame" x="250" y="318" width="67" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Read Address 2" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yfg-Vc-YP3" userLabel="ReadAddress2TextView">
-                            <rect key="frame" x="92" y="208" width="115" height="28"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-extend-shape" translatesAutoresizingMaskIntoConstraints="NO" id="jv7-b6-6Or" userLabel="SignExtendImageView">
+                            <rect key="frame" x="58" y="453" width="209" height="111"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="111" id="NPd-YX-VD0"/>
+                            </constraints>
+                        </imageView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Sign Extend" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LAx-Pn-v9Y" userLabel="SignExtendTextView">
+                            <rect key="frame" x="129" y="485" width="66" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Register File" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iTh-NT-L6F" userLabel="RegisterFileTextView">
+                            <rect key="frame" x="143" y="170" width="129" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -67,27 +150,50 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="500" id="DwF-lW-W9Q"/>
-                        <constraint firstAttribute="width" constant="250" id="XN0-zC-KNt"/>
+                        <constraint firstItem="iPG-HP-Eui" firstAttribute="top" secondItem="Yfg-Vc-YP3" secondAttribute="bottom" constant="66" id="044-7Z-wd4"/>
+                        <constraint firstItem="iPG-HP-Eui" firstAttribute="trailing" secondItem="wZD-Qk-SIz" secondAttribute="trailing" id="1KG-Lo-Wr2"/>
+                        <constraint firstItem="KJL-7M-WQD" firstAttribute="leading" secondItem="byp-Ai-w6D" secondAttribute="leading" constant="-8" id="7UX-gt-45n"/>
+                        <constraint firstAttribute="height" constant="594" id="DwF-lW-W9Q"/>
+                        <constraint firstItem="hTT-yo-hWV" firstAttribute="leading" secondItem="J8h-pv-fDy" secondAttribute="leading" constant="98" id="JdI-Uv-MY0"/>
+                        <constraint firstItem="hTT-yo-hWV" firstAttribute="trailing" secondItem="iPG-HP-Eui" secondAttribute="trailing" id="MbD-5k-0lq"/>
+                        <constraint firstItem="ceb-rQ-jKa" firstAttribute="centerY" secondItem="byp-Ai-w6D" secondAttribute="centerY" constant="-11.5" id="MjO-2I-yh4"/>
+                        <constraint firstItem="KJL-7M-WQD" firstAttribute="centerY" secondItem="iPG-HP-Eui" secondAttribute="centerY" id="PQm-Ph-3k6"/>
+                        <constraint firstAttribute="trailing" secondItem="ceb-rQ-jKa" secondAttribute="trailing" id="Sjx-LW-JwJ"/>
+                        <constraint firstItem="jv7-b6-6Or" firstAttribute="bottom" secondItem="byp-Ai-w6D" secondAttribute="bottomMargin" constant="-22" id="WDv-cu-rrv"/>
+                        <constraint firstItem="Yfg-Vc-YP3" firstAttribute="top" secondItem="hTT-yo-hWV" secondAttribute="bottom" constant="8" symbolic="YES" id="WdP-5n-tOx"/>
+                        <constraint firstAttribute="width" constant="325" id="XN0-zC-KNt"/>
+                        <constraint firstItem="ceb-rQ-jKa" firstAttribute="top" secondItem="J8h-pv-fDy" secondAttribute="top" constant="162" id="a8F-AY-V1u"/>
+                        <constraint firstItem="ceb-rQ-jKa" firstAttribute="leading" secondItem="KJL-7M-WQD" secondAttribute="trailing" constant="50" id="bNf-K4-TRN"/>
+                        <constraint firstItem="jv7-b6-6Or" firstAttribute="centerX" secondItem="byp-Ai-w6D" secondAttribute="centerX" id="cEu-Di-w0R"/>
+                        <constraint firstItem="iPG-HP-Eui" firstAttribute="leading" secondItem="wZD-Qk-SIz" secondAttribute="leading" id="cJH-wX-SER"/>
+                        <constraint firstItem="Yfg-Vc-YP3" firstAttribute="leading" secondItem="iPG-HP-Eui" secondAttribute="leading" id="e9N-2i-uTf"/>
+                        <constraint firstItem="jv7-b6-6Or" firstAttribute="top" secondItem="wZD-Qk-SIz" secondAttribute="bottom" constant="56" id="eK4-YM-iUV"/>
+                        <constraint firstItem="wZD-Qk-SIz" firstAttribute="top" secondItem="iPG-HP-Eui" secondAttribute="bottom" constant="8" symbolic="YES" id="frg-MM-2EB"/>
+                        <constraint firstItem="jv7-b6-6Or" firstAttribute="top" secondItem="KJL-7M-WQD" secondAttribute="bottom" constant="53" id="hYz-3K-D6N"/>
+                        <constraint firstItem="hTT-yo-hWV" firstAttribute="leading" secondItem="Yfg-Vc-YP3" secondAttribute="leading" id="oiI-0U-6nK"/>
+                        <constraint firstItem="hTT-yo-hWV" firstAttribute="top" secondItem="J8h-pv-fDy" secondAttribute="top" constant="204" id="rGd-KR-PwU"/>
+                        <constraint firstItem="jv7-b6-6Or" firstAttribute="leading" secondItem="J8h-pv-fDy" secondAttribute="leading" constant="58" id="s8k-5K-YpF"/>
+                        <constraint firstItem="J8h-pv-fDy" firstAttribute="trailing" secondItem="hTT-yo-hWV" secondAttribute="trailing" constant="117" id="w5S-Tf-HWk"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="J8h-pv-fDy"/>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sign-extend-shape" translatesAutoresizingMaskIntoConstraints="NO" id="jv7-b6-6Or">
-                    <rect key="frame" x="103" y="592" width="209" height="111"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Sign Extend" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g7Z-bn-Url" userLabel="Sign Extend Text View">
-                    <rect key="frame" x="176" y="626" width="63" height="43"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w8K-zf-JNe" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                    <rect key="frame" x="369" y="405" width="25" height="25"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
+                    <viewLayoutGuide key="safeArea" id="fO3-Du-WLV"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Am7-qJ-SHf" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                    <rect key="frame" x="369" y="485" width="25" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="H87-Tu-Clt"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="byp-Ai-w6D" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="H90-hE-xP5"/>
-                <constraint firstItem="byp-Ai-w6D" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="vX9-gk-m1F"/>
+                <constraint firstItem="byp-Ai-w6D" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-5" id="vX9-gk-m1F"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
