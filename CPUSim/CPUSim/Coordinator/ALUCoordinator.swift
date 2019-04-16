@@ -90,7 +90,9 @@ extension ALUCoordinator: FetchViewControllerDelegate {
     }
     
     func fetchViewControllerDidSwipeRight(_ fetchViewController: FetchViewController) {
+        if (!fetchStateService.isDrawing) {
         self.showDecodeViewController()
+        }
     }
     
     func fetchViewControllerDidTapClose(_ fetchViewController: FetchViewController) {
@@ -106,6 +108,9 @@ extension ALUCoordinator: FetchViewControllerDelegate {
             return
         }
 
+        drawingService.clearDrawing(
+            imageView: self.fetchViewController!.drawingImageView)
+        
         fetchStateService.handleTouchesBegan(
             touches,
             with: event,

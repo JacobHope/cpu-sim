@@ -24,6 +24,8 @@ private enum EndState {
 }
 
 class StateService: State {
+    private var touchStartedInTouchPoint: Bool = false
+
     private var startState: StartState = StartState.noneStarted
     private var endState: EndState = EndState.noneReached
 
@@ -33,6 +35,7 @@ class StateService: State {
     func resetState() {
         startState = StartState.noneStarted
         endState = EndState.noneReached
+        touchStartedInTouchPoint = false
     }
 
     // todo: pass in all touch points
@@ -101,18 +104,22 @@ class StateService: State {
             view: UIView) {
 
         if let touch = touches.first {
-            lastPoint = touch.location(in: view)
-            firstPoint = lastPoint
-
             touchPoints.forEach { touchPoint in
                 if (touchPoint == touchPoint.hitTest(touch, event: event)) {
                     if (touchPoint.name == "ifMuxToPcStart") {
                         self.startState = StartState.ifMuxToPcStartStarted
+                        touchStartedInTouchPoint = true
                     }
                     if (touchPoint.name == "ifMuxToPcEnd") {
                         self.startState = StartState.ifMuxToPcEndStarted
+                        touchStartedInTouchPoint = true
                     }
                 }
+            }
+
+            if (touchStartedInTouchPoint) {
+                lastPoint = touch.location(in: view)
+                firstPoint = lastPoint
             }
         }
     }
@@ -126,40 +133,42 @@ class StateService: State {
             touchPoints: [TouchPointView],
             lines: [String: [LineView]]) {
 
-        if let touch = touches.first {
-            let currentPoint = touch.location(in: view)
-            drawingService.drawLineFrom(
-                    fromPoint: self.lastPoint,
-                    toPoint: currentPoint,
-                    imageView: imageView,
-                    view: view)
+        if (touchStartedInTouchPoint) {
+            if let touch = touches.first {
+                let currentPoint = touch.location(in: view)
+                drawingService.drawLineFrom(
+                        fromPoint: self.lastPoint,
+                        toPoint: currentPoint,
+                        imageView: imageView,
+                        view: view)
 
-            lastPoint = currentPoint
+                lastPoint = currentPoint
 
-            touchPoints.forEach { touchPoint in
-                if (touchPoint == touchPoint.hitTest(touch, event: event)) {
-                    switch touchPoint.name {
-                    case "ifMuxToPcStart":  // Anything ending at a start point is incorrect
-                        if (startState != StartState.ifMuxToPcStartStarted) {
-                            self.onIncorrect(touchPoint)
-                            drawingService.ignoreTouchInput()
-                            drawingService.clearDrawing(imageView: imageView)
+                touchPoints.forEach { touchPoint in
+                    if (touchPoint == touchPoint.hitTest(touch, event: event)) {
+                        switch touchPoint.name {
+                        case "ifMuxToPcStart":  // Anything ending at a start point is incorrect
+                            if (startState != StartState.ifMuxToPcStartStarted) {
+                                self.onIncorrect(touchPoint)
+                                drawingService.ignoreTouchInput()
+                                drawingService.clearDrawing(imageView: imageView)
+                            }
+                            break;
+                        case "ifMuxToPcEnd":
+                            if (self.startState == StartState.ifMuxToPcStartStarted) {
+                                self.onCorrect(
+                                        touchPoints,
+                                        touchPointName: "ifMuxToPcEnd",
+                                        lines: lines["ifMuxToPc"]!)
+                                drawingService.ignoreTouchInput()
+                                drawingService.clearDrawing(imageView: imageView)
+                            }
+                            break;
+
+                        default:
+                            // Do nothing
+                            break;
                         }
-                        break;
-                    case "ifMuxToPcEnd":
-                        if (self.startState == StartState.ifMuxToPcStartStarted) {
-                            self.onCorrect(
-                                    touchPoints,
-                                    touchPointName: "ifMuxToPcEnd",
-                                    lines: lines["ifMuxToPc"]!)
-                            drawingService.ignoreTouchInput()
-                            drawingService.clearDrawing(imageView: imageView)
-                        }
-                        break;
-
-                    default:
-                        // Do nothing
-                        break;
                     }
                 }
             }
