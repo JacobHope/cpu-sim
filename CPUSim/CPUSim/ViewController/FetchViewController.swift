@@ -16,7 +16,7 @@ public protocol FetchViewControllerDelegate: class {
     func fetchViewControllerOnTouchesEnded(_ fetchViewController: FetchViewController)
     func fetchViewControllerOnTouchesCancelled(_ fetchViewController: FetchViewController)
     func fetchViewControllerClearDrawing(_ fetchViewController: FetchViewController)
-    func fetchViewControllerSetup()
+    func fetchViewControllerSetup(_ fetchViewController: FetchViewController)
     
     func fetchViewControllerDidSwipeLeft(_ fetchViewController: FetchViewController)
     func fetchViewControllerDidSwipeRight(_ fetchViewController: FetchViewController)
@@ -29,11 +29,7 @@ public protocol FetchViewControllerDelegate: class {
 public class FetchViewController: UIViewController {
     // MARK: Properties
     @IBOutlet var FetchView: UIView!
-    @IBOutlet weak var drawingImageView: UIImageView! {
-        get {
-            return self.drawingImageView
-        }
-    }
+    @IBOutlet weak var drawingImageView: UIImageView!
     @IBOutlet weak var ifMuxToPc1: LineView!
     @IBOutlet weak var ifMuxToPc2: LineView!
     @IBOutlet weak var ifMuxToPc3: LineView!
@@ -78,34 +74,35 @@ public class FetchViewController: UIViewController {
         
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
+        // Finish setting up
+        setup()
+    }
+    
+    private func setup() {
         // Setup TouchPointViews
         touchPoints = [ifMuxToPcStart, ifMuxToPcEnd]
         
         // Setup lines
         lines["ifMuxToPc"] = [ifMuxToPc1, ifMuxToPc2, ifMuxToPc3]
         
-        // Finish setting up
-        delegate?.setup()
-        
-        // Set BaseViewController delegate
-        baseViewControllerDelegate = delegate
+        self.delegate?.fetchViewControllerSetup(self)
     }
     
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        baseViewControllerDelegate?.onTouchesBegan(touches, with: event)
-//    }
-//
-//    @objc func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        baseViewControllerDelegate?.onTouchesMoved(touches, with: event)
-//    }
-//
-//    @objc func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        baseViewControllerDelegate?.onTouchesEnded()
-//    }
-//
-//    @objc func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        baseViewControllerDelegate?.onTouchesCancelled()
-//    }
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.delegate?.fetchViewControllerOnTouchesBegan(self, touches, with: event)
+    }
+
+    override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.delegate?.fetchViewControllerOnTouchesMoved(self, touches, with: event)
+    }
+
+    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.delegate?.fetchViewControllerOnTouchesEnded(self)
+    }
+
+    override public func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.delegate?.fetchViewControllerOnTouchesCancelled(self)
+    }
     
     @objc private func closeButtonTapped(sender: UIBarButtonItem) {
         self.delegate?.fetchViewControllerDidTapClose(self)

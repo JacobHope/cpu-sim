@@ -15,7 +15,7 @@ public protocol DecodeViewControllerDelegate: class {
     func decodeViewController(_ decodeViewController: DecodeViewController)
 }
 
-class DecodeViewController: UIViewController {
+public class DecodeViewController: UIViewController {
     // MARK: Properties
      @IBOutlet var DecodeView: UIView!
     

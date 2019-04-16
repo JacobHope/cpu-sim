@@ -87,9 +87,6 @@ class ALUCoordinator: RootViewCoordinator {
 // MARK: FetchViewControllerDelegate
 
 extension ALUCoordinator: FetchViewControllerDelegate {
-    func fetchViewControllerSetup() {
-        <#code#>
-    }
     
     func fetchViewControllerOnTouchesBegan(_ fetchViewController: FetchViewController, _ touches: Set<UITouch>, with event: UIEvent?) {
         drawingService.clearDrawing(
@@ -98,24 +95,20 @@ extension ALUCoordinator: FetchViewControllerDelegate {
         fetchStateService.handleTouchesBegan(
             touches,
             with: event,
-            touchPoints: self.fetchViewController.touchPoints,
-            view: self.fetchViewController.drawingImageView)
+            touchPoints: fetchViewController.touchPoints,
+            view: fetchViewController.drawingImageView)
     }
     
     func fetchViewControllerOnTouchesMoved(_ fetchViewController: FetchViewController, _ touches: Set<UITouch>, with event: UIEvent?) {
-        if (self.fetchViewController == nil) {
-            return
-        }
-        
         // todo: pass in only drawingImageView
         fetchStateService.handleTouchesMoved(
             touches,
             with: event,
-            imageView: self.fetchViewController!.drawingImageView,
-            view: self.fetchViewController!.drawingImageView,
+            imageView: fetchViewController.drawingImageView,
+            view: fetchViewController.drawingImageView,
             withDrawing: drawingService,
-            touchPoints: self.fetchViewController!.touchPoints,
-            lines: self.fetchViewController!.lines)
+            touchPoints: fetchViewController.touchPoints,
+            lines: fetchViewController.lines)
     }
     
     func fetchViewControllerOnTouchesEnded(_ fetchViewController: FetchViewController) {
@@ -128,14 +121,11 @@ extension ALUCoordinator: FetchViewControllerDelegate {
     }
     
     func fetchViewControllerClearDrawing(_ fetchViewController: FetchViewController) {
-        if (self.fetchViewController == nil) {
-            return
-        }
-        drawingService.clearDrawing(imageView: self.fetchViewController!.drawingImageView)
+        drawingService.clearDrawing(imageView: fetchViewController.drawingImageView)
     }
     
     func fetchViewControllerSetup(_ fetchViewController: FetchViewController) {
-        self.fetchViewController?.touchPoints.forEach { touchPoint in
+        fetchViewController.touchPoints.forEach { touchPoint in
             touchPoint.setupWith(
                 DotModel(
                     x: -4.75,
@@ -143,7 +133,7 @@ extension ALUCoordinator: FetchViewControllerDelegate {
                     radius: 10.0))
         }
         
-        for (_, v) in self.fetchViewController!.lines {
+        for (_, v) in fetchViewController.lines {
             v.forEach { line in
                 line.setup()
             }
@@ -176,18 +166,6 @@ extension ALUCoordinator: FetchViewControllerDelegate {
 extension ALUCoordinator: DecodeViewControllerDelegate {
     func decodeViewControllerDidSwipeLeft(_ decodeViewController: DecodeViewController) {
         self.navigationController.popViewController(animated: true)
-        
-        // Reset the top view controller
-        guard let tvc = self.navigationController.topViewController else {
-            return
-        }
-        switch tvc.nibName {
-        case "FetchView":
-            (tvc as! FetchViewController).delegate?.setup()
-            break;
-        default:
-            break;
-        }
     }
     
     func decodeViewControllerDidSwipeRight(_ decodeViewController: DecodeViewController) {
