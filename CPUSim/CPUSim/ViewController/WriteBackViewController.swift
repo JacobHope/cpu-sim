@@ -53,6 +53,8 @@ public class WriteBackViewController: UIViewController {
         
         view.addGestureRecognizer(leftSwipe)
         view.addGestureRecognizer(rightSwipe)
+        
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     
     @objc private func doneButtonTapped(sender: UIBarButtonItem) {

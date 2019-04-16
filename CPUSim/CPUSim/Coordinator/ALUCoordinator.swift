@@ -174,6 +174,18 @@ extension ALUCoordinator: FetchViewControllerDelegate {
 extension ALUCoordinator: DecodeViewControllerDelegate {
     func decodeViewControllerDidSwipeLeft(_ decodeViewController: DecodeViewController) {
         self.navigationController.popViewController(animated: true)
+        
+        // Reset the top view controller
+        guard let tvc = self.navigationController.topViewController else {
+            return
+        }
+        switch tvc.nibName {
+        case "FetchView":
+            (tvc as! FetchViewController).delegate?.setup()
+            break;
+        default:
+            break;
+        }
     }
     
     func decodeViewControllerDidSwipeRight(_ decodeViewController: DecodeViewController) {

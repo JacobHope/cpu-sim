@@ -62,6 +62,8 @@ class FetchViewController: BaseViewController {
         view.addGestureRecognizer(leftSwipe)
         view.addGestureRecognizer(rightSwipe)
         
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        
         // Setup TouchPointViews
         touchPoints = [ifMuxToPcStart, ifMuxToPcEnd]
         

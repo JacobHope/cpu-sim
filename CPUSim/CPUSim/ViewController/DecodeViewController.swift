@@ -45,6 +45,8 @@ public class DecodeViewController: UIViewController {
         
         view.addGestureRecognizer(leftSwipe)
         view.addGestureRecognizer(rightSwipe)
+        
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     
     @objc private func swiped(_ sender:UISwipeGestureRecognizer) {
