@@ -58,7 +58,7 @@ class AppCoordinator: RootViewCoordinator {
 // MARK: - MenuViewControllerDelegate
 extension AppCoordinator: MenuViewControllerDelegate {
     func menuViewControllerDidTapALUButton(menuViewController: MenuViewController) {
-        let aluCoordinator = ALUCoordinator(drawingService: DrawingService(), fetchStateService: StateService())
+        let aluCoordinator = ALUCoordinator(drawingService: DrawingService(), fetchStateService: ALUFetchStateService())
         aluCoordinator.delegate = self
         aluCoordinator.start()
         self.addChildCoordinator(aluCoordinator)

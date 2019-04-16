@@ -1,5 +1,5 @@
 //
-//  StateService.swift
+//  ALUFetchStateService.swift
 //  cs3339-proj-proto
 //
 //  Created by Connor Reid on 4/4/19.
@@ -23,7 +23,7 @@ private enum EndState {
     case noneReached
 }
 
-class StateService: State {
+class ALUFetchStateService: State {
     var isDrawing: Bool = false
     private var touchStartedInTouchPoint: Bool = false
 
