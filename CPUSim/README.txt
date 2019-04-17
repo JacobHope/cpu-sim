@@ -32,6 +32,10 @@ PromiseKit
     https://github.com/mxcl/PromiseKit
     https://github.com/mxcl/PromiseKit/blob/master/Documentation/Appendix.md
     https://github.com/mxcl/PromiseKit/blob/master/Documentation/CommonPatterns.md
+    
+.gitignore:
+
+    https://github.com/github/gitignore/blob/master/Swift.gitignore
 
 Reference:
 
