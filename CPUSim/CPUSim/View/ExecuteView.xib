@@ -21,16 +21,164 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Execute" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uS-ef-ks9">
-                    <rect key="frame" x="142" y="425" width="130" height="46"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dea-TN-36l" userLabel="DrawingImageView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v6p-O1-9ZS" userLabel="ContainerView">
+                    <rect key="frame" x="57" y="112" width="312" height="675"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9zP-Lg-ybn" userLabel="TouchPointView" customClass="TouchPointVIew" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="176" y="354" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zdo-a2-3QM" userLabel="TouchPointView" customClass="TouchPointVIew" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="291" y="423" width="25" height="25"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CQ6-SB-OnQ" userLabel="TouchPointView" customClass="TouchPointVIew" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="176" y="492" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1EB-61-6jc" userLabel="TouchPointView" customClass="TouchPointVIew" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="184" y="169" width="25" height="25"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W0q-q6-mV1" userLabel="TouchPointView" customClass="TouchPointVIew" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="184" y="51" width="25" height="25"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="11G-OL-5TD" userLabel="TouchPointView" customClass="TouchPointVIew" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="291" y="111" width="25" height="25"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OvW-dJ-Zqo" userLabel="TouchPointView" customClass="TouchPointVIew" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="169" width="22" height="25"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DLY-BF-Yml" userLabel="TouchPointView" customClass="TouchPointVIew" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="8" y="171" width="25" height="25"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W7Q-nI-fsr" userLabel="TouchPointView" customClass="TouchPointVIew" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="60" y="491" width="25" height="25"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZfT-k3-paZ" userLabel="TouchPointView" customClass="TouchPointVIew" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="527" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zS-7r-alY" userLabel="TouchPointView" customClass="TouchPointVIew" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="473" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="ALU" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ND2-7m-8Xl" userLabel="ALUTextView">
+                            <rect key="frame" x="224" y="403" width="46" height="37"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="Dn9-gm-nIL"/>
+                                <constraint firstAttribute="width" constant="46" id="yDX-MU-52T"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Add" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKJ-GE-bZb" userLabel="AddTextView">
+                            <rect key="frame" x="237" y="91" width="46" height="36"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="z18-Wx-cGL"/>
+                                <constraint firstAttribute="width" constant="46" id="zMx-Fb-mWu"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="ovf" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLM-s6-7b9" userLabel="ovfTextView">
+                            <rect key="frame" x="197" y="264" width="46" height="36"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="wdB-Nq-RP1"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Shift Left 2" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gr-mh-X5t" userLabel="ShiftLeft2TextView">
+                            <rect key="frame" x="49" y="144" width="47" height="45"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="mux-shape" translatesAutoresizingMaskIntoConstraints="NO" id="XSO-F0-xi7" userLabel="muxImageView">
+                            <rect key="frame" x="8" y="447" width="44" height="113"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="113" id="Aex-8h-36Q"/>
+                                <constraint firstAttribute="width" constant="44" id="q4b-Rm-fvX"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ALU-shape" translatesAutoresizingMaskIntoConstraints="NO" id="f1T-gE-DOf" userLabel="ALUImageView">
+                            <rect key="frame" x="184" y="308" width="99" height="227"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="ALU-shape" translatesAutoresizingMaskIntoConstraints="NO" id="zu9-Y4-tJB" userLabel="AddImageView">
+                            <rect key="frame" x="203" y="24" width="89" height="170"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="sign-extend-shape" translatesAutoresizingMaskIntoConstraints="NO" id="g1d-Au-mci" userLabel="ShiftLeft2ImageView">
+                            <rect key="frame" x="41" y="119" width="63" height="95"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="63" id="AvI-XJ-C2e"/>
+                                <constraint firstAttribute="height" constant="95" id="zlG-yZ-ESj"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="yLM-s6-7b9" firstAttribute="top" secondItem="1EB-61-6jc" secondAttribute="bottom" constant="69" id="4qY-Am-lYy"/>
+                        <constraint firstItem="AD9-7d-Zax" firstAttribute="bottom" secondItem="ND2-7m-8Xl" secondAttribute="bottom" constant="235" id="AmV-4L-40F"/>
+                        <constraint firstItem="8gr-mh-X5t" firstAttribute="leading" secondItem="DLY-BF-Yml" secondAttribute="trailing" constant="16" id="Ecw-w3-TsH"/>
+                        <constraint firstItem="g1d-Au-mci" firstAttribute="leading" secondItem="v6p-O1-9ZS" secondAttribute="leading" constant="41" id="Evq-Xl-RPw"/>
+                        <constraint firstItem="XSO-F0-xi7" firstAttribute="leading" secondItem="DLY-BF-Yml" secondAttribute="leading" id="HR6-3f-ZPf"/>
+                        <constraint firstItem="f1T-gE-DOf" firstAttribute="leading" secondItem="1EB-61-6jc" secondAttribute="leading" id="LcK-PI-RdU"/>
+                        <constraint firstItem="Zdo-a2-3QM" firstAttribute="leading" secondItem="ND2-7m-8Xl" secondAttribute="trailing" constant="21" id="NHV-lL-88b"/>
+                        <constraint firstItem="XSO-F0-xi7" firstAttribute="centerY" secondItem="W7Q-nI-fsr" secondAttribute="centerY" id="NTw-PC-OQH"/>
+                        <constraint firstItem="g1d-Au-mci" firstAttribute="top" secondItem="AD9-7d-Zax" secondAttribute="top" constant="119" id="PCg-mc-GrO"/>
+                        <constraint firstItem="zu9-Y4-tJB" firstAttribute="top" secondItem="AD9-7d-Zax" secondAttribute="top" constant="24" id="Q6y-Zd-Je1"/>
+                        <constraint firstItem="g1d-Au-mci" firstAttribute="centerX" secondItem="W7Q-nI-fsr" secondAttribute="centerX" id="QVY-bK-Cba"/>
+                        <constraint firstItem="AD9-7d-Zax" firstAttribute="bottom" secondItem="f1T-gE-DOf" secondAttribute="bottom" constant="140" id="T1D-rS-vne"/>
+                        <constraint firstItem="g1d-Au-mci" firstAttribute="leading" secondItem="DLY-BF-Yml" secondAttribute="trailing" constant="8" id="U5W-Pz-rLB"/>
+                        <constraint firstItem="ND2-7m-8Xl" firstAttribute="centerY" secondItem="f1T-gE-DOf" secondAttribute="centerY" id="WHn-gr-4nr"/>
+                        <constraint firstItem="zu9-Y4-tJB" firstAttribute="centerX" secondItem="ND2-7m-8Xl" secondAttribute="centerX" id="YRc-aI-hk8"/>
+                        <constraint firstItem="AD9-7d-Zax" firstAttribute="bottom" secondItem="XSO-F0-xi7" secondAttribute="bottom" constant="115" id="Zxy-D8-Xbv"/>
+                        <constraint firstItem="zu9-Y4-tJB" firstAttribute="bottom" secondItem="OvW-dJ-Zqo" secondAttribute="bottom" id="bR1-zf-qO4"/>
+                        <constraint firstItem="tKJ-GE-bZb" firstAttribute="centerY" secondItem="zu9-Y4-tJB" secondAttribute="centerY" id="bzu-LX-do1"/>
+                        <constraint firstItem="11G-OL-5TD" firstAttribute="leading" secondItem="tKJ-GE-bZb" secondAttribute="trailing" constant="8" symbolic="YES" id="cea-Zw-ulO"/>
+                        <constraint firstItem="zu9-Y4-tJB" firstAttribute="bottom" secondItem="1EB-61-6jc" secondAttribute="bottom" id="des-W0-5Cc"/>
+                        <constraint firstItem="8gr-mh-X5t" firstAttribute="top" secondItem="AD9-7d-Zax" secondAttribute="top" constant="144" id="du9-QP-dcg"/>
+                        <constraint firstItem="ND2-7m-8Xl" firstAttribute="leading" secondItem="AD9-7d-Zax" secondAttribute="leading" constant="224" id="f2l-SF-1qF"/>
+                        <constraint firstItem="yLM-s6-7b9" firstAttribute="leading" secondItem="AD9-7d-Zax" secondAttribute="leading" constant="197" id="hMD-Hz-tjC"/>
+                        <constraint firstItem="OvW-dJ-Zqo" firstAttribute="leading" secondItem="g1d-Au-mci" secondAttribute="trailing" constant="8" symbolic="YES" id="iAp-lK-7bx"/>
+                        <constraint firstItem="tKJ-GE-bZb" firstAttribute="trailing" secondItem="f1T-gE-DOf" secondAttribute="trailing" id="n0K-f7-Pl5"/>
+                        <constraint firstItem="g1d-Au-mci" firstAttribute="centerY" secondItem="8gr-mh-X5t" secondAttribute="centerY" id="p9q-OB-0y1"/>
+                        <constraint firstItem="XSO-F0-xi7" firstAttribute="leading" secondItem="v6p-O1-9ZS" secondAttribute="leadingMargin" id="pN1-ql-pUP"/>
+                        <constraint firstItem="f1T-gE-DOf" firstAttribute="leading" secondItem="W0q-q6-mV1" secondAttribute="leading" id="qwm-9S-Jvc"/>
+                        <constraint firstItem="zu9-Y4-tJB" firstAttribute="leading" secondItem="OvW-dJ-Zqo" secondAttribute="trailing" constant="68" id="rmh-tA-DbZ"/>
+                        <constraint firstItem="tKJ-GE-bZb" firstAttribute="top" secondItem="AD9-7d-Zax" secondAttribute="top" constant="91" id="sCB-yJ-48p"/>
+                        <constraint firstItem="W7Q-nI-fsr" firstAttribute="leading" secondItem="XSO-F0-xi7" secondAttribute="trailing" constant="8" symbolic="YES" id="sGg-IK-nmp"/>
+                        <constraint firstItem="AD9-7d-Zax" firstAttribute="trailing" secondItem="zu9-Y4-tJB" secondAttribute="trailing" constant="20" id="tZW-WJ-taG"/>
+                        <constraint firstItem="f1T-gE-DOf" firstAttribute="top" secondItem="yLM-s6-7b9" secondAttribute="bottom" constant="8" symbolic="YES" id="tkb-jU-y2k"/>
+                        <constraint firstItem="g1d-Au-mci" firstAttribute="centerX" secondItem="8gr-mh-X5t" secondAttribute="centerX" id="ub6-vP-DTa"/>
+                        <constraint firstItem="AD9-7d-Zax" firstAttribute="trailing" secondItem="yLM-s6-7b9" secondAttribute="trailing" constant="69" id="vfT-Mn-bnc"/>
+                        <constraint firstItem="g1d-Au-mci" firstAttribute="leading" secondItem="DLY-BF-Yml" secondAttribute="trailing" constant="8" symbolic="YES" id="wlh-yC-kwM"/>
+                        <constraint firstItem="Zdo-a2-3QM" firstAttribute="leading" secondItem="f1T-gE-DOf" secondAttribute="trailing" constant="8" symbolic="YES" id="zF6-qC-AaH"/>
+                        <constraint firstItem="f1T-gE-DOf" firstAttribute="leading" secondItem="W7Q-nI-fsr" secondAttribute="trailing" constant="99" id="zRb-Bm-WUN"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="AD9-7d-Zax"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="v6p-O1-9ZS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="68" id="1HM-q7-zgo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="v6p-O1-9ZS" secondAttribute="trailing" constant="45" id="LcA-xq-gXB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="v6p-O1-9ZS" secondAttribute="bottom" constant="75" id="XzD-bf-3Tc"/>
+                <constraint firstItem="v6p-O1-9ZS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="57" id="o9I-ah-ROs"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="141.96428571428569"/>
         </view>
     </objects>
+    <resources>
+        <image name="ALU-shape" width="88" height="199"/>
+        <image name="mux-shape" width="51" height="130"/>
+        <image name="sign-extend-shape" width="100" height="150"/>
+    </resources>
 </document>
