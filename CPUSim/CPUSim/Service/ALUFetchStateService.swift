@@ -25,6 +25,9 @@ private enum EndState {
 
 class ALUFetchStateService: State {
     var isDrawing: Bool = false
+    
+    var correctnessMap: [String : Bool] = ["ifMuxToPc":false]
+    
     private var touchStartedInTouchPoint: Bool = false
 
     private var startState: StartState = StartState.noneStarted
@@ -48,6 +51,7 @@ class ALUFetchStateService: State {
         // Set touch point correct...
         switch touchPointName {
         case "ifMuxToPcEnd":
+            correctnessMap["ifMuxToPc"] = true
             touchPoints.forEach { tp in
                 if (tp.name == "ifMuxToPcEnd") {
                     tp.setCorrect()

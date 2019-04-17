@@ -10,6 +10,7 @@ import UIKit
 
 protocol State {
     var isDrawing: Bool { get }
+    var correctnessMap: [String : Bool] { get }
 
     func resetState()
 
