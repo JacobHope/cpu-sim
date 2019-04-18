@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftEventBus
 
 protocol ALUCoordinatorDelegate: class {
     func aluCoordinatorDidRequestCancel(aluCoordinator: ALUCoordinator)
@@ -125,6 +126,30 @@ extension ALUCoordinator: FetchViewControllerDelegate {
     }
     
     func fetchViewControllerSetup(_ fetchViewController: FetchViewController) {
+        // Setup ProgressView
+        fetchViewController.progressView.progress = 0.0
+        fetchViewController.progressView.progressTintColor = UIColor.green
+        
+        // Setup event subscribers
+        SwiftEventBus.onMainThread(fetchViewController, name: Events.aluFetchOnCorrect) { result in
+            let progress: Float = result?.object as! Float
+            fetchViewController.progressView.setProgress(progress, animated: true)
+        }
+        
+        // Setup TouchPointViews
+        fetchViewController.touchPoints = [
+            fetchViewController.ifMuxToPcStart,
+            fetchViewController.ifMuxToPcEnd,
+            fetchViewController.ifPcToAluStart
+        ]
+        
+        // Setup lines
+        fetchViewController.lines["ifMuxToPc"] = [
+            fetchViewController.ifMuxToPc1,
+            fetchViewController.ifMuxToPc2,
+            fetchViewController.ifMuxToPc3
+        ]
+        
         fetchViewController.touchPoints.forEach { touchPoint in
             touchPoint.setupWith(DotModel.defaultDotModel())
         }

@@ -9,6 +9,7 @@
 import UIKit
 import PromiseKit
 import PMKUIKit
+import SwiftEventBus
 
 // todo: rename StateService to ALUFetchStateService
 private enum StartState {
@@ -90,6 +91,9 @@ class ALUFetchStateService: State {
                 }
             }
         }
+        
+        // Post event...
+        SwiftEventBus.post(Events.aluFetchOnCorrect, sender: determineProgress())
     }
 
     private func onIncorrect(_ touchPoint: TouchPointView) {
@@ -100,6 +104,16 @@ class ALUFetchStateService: State {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             touchPoint.reset()
         }
+    }
+    
+    private func determineProgress() -> Float {
+        var progress: Int = 0
+        for (_,v) in correctnessMap {
+            if (v == true) {
+                progress += 1
+            }
+        }
+        return 1 / progress == 0 ? 1 : Float(progress)
     }
 
     func handleTouchesBegan(

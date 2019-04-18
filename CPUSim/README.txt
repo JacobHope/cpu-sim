@@ -40,3 +40,7 @@ PromiseKit
 Reference:
 
     https://nshipster.com/ibinspectable-ibdesignable/
+
+SwiftEventBus
+
+    https://github.com/cesarferreira/SwiftEventBus

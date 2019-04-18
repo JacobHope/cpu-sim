@@ -31,6 +31,9 @@ class FetchViewController: UIViewController {
     @IBOutlet var FetchView: UIView!
     @IBOutlet weak var drawingImageView: UIImageView!
     
+    // MARK: ProgressView
+    @IBOutlet weak var progressView: UIProgressView!
+    
     // MARK: IFMUXToPC
     @IBOutlet weak var ifMuxToPc1: LineView!
     @IBOutlet weak var ifMuxToPc2: LineView!
@@ -81,20 +84,6 @@ class FetchViewController: UIViewController {
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
         // Finish setting up
-        setup()
-    }
-    
-    private func setup() {
-        // Setup TouchPointViews
-        touchPoints = [
-            ifMuxToPcStart,
-            ifMuxToPcEnd,
-            ifPcToAluStart
-        ]
-        
-        // Setup lines
-        lines["ifMuxToPc"] = [ifMuxToPc1, ifMuxToPc2, ifMuxToPc3]
-        
         self.delegate?.fetchViewControllerSetup(self)
     }
     

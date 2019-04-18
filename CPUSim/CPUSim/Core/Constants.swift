@@ -18,3 +18,7 @@ struct LineAttributes {
     static let lineCap: CGLineCap = CGLineCap.butt
     static let blendMode: CGBlendMode = CGBlendMode.normal
 }
+
+struct Events {
+    static let aluFetchOnCorrect: String = "aluFetchOnCorrect"
+}

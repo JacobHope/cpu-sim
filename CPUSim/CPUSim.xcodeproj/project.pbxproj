@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04869A622268FAB00037B827 /* SwiftEventBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04869A612268FAB00037B827 /* SwiftEventBus.framework */; };
 		04D3F77B22602461002C80B6 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 04D3F77A22602460002C80B6 /* README.txt */; };
 		04D3F78022602530002C80B6 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F77F22602530002C80B6 /* Drawing.swift */; };
 		04D3F78222602533002C80B6 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F78122602533002C80B6 /* State.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04869A612268FAB00037B827 /* SwiftEventBus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftEventBus.framework; path = Carthage/Build/iOS/SwiftEventBus.framework; sourceTree = "<group>"; };
 		04D3F77A22602460002C80B6 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		04D3F77F22602530002C80B6 /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
 		04D3F78122602533002C80B6 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04869A622268FAB00037B827 /* SwiftEventBus.framework in Frameworks */,
 				04D3F79822602A06002C80B6 /* Pulsator.framework in Frameworks */,
 				04D3F79922602A06002C80B6 /* PMKUIKit.framework in Frameworks */,
 				04D3F79A22602A06002C80B6 /* PromiseKit.framework in Frameworks */,
@@ -158,6 +161,7 @@
 		04D3F79422602A06002C80B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04869A612268FAB00037B827 /* SwiftEventBus.framework */,
 				04D3F79622602A06002C80B6 /* PMKUIKit.framework */,
 				04D3F79722602A06002C80B6 /* PromiseKit.framework */,
 				04D3F79522602A06002C80B6 /* Pulsator.framework */,
@@ -426,6 +430,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Pulsator.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PMKUIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftEventBus.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -433,6 +438,7 @@
 				"$(DERIVED_FILE_DIR)/Pulsator.framework",
 				"$(DERIVED_FILE_DIR)/PromiseKit.framework",
 				"$(DERIVED_FILE_DIR)/PMKUIKit.framework",
+				"$(DERIVED_FILE_DIR)/SwiftEventBus.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
