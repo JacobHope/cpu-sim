@@ -10,23 +10,25 @@ import UIKit
 import Pulsator
 
 class BaseViewController: UIViewController {
-    weak var delegate: ViewControllerDelegate?
+    public weak var baseViewControllerDelegate: BaseViewControllerDelegate?
 
     // MARK: UIKit
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        delegate?.onTouchesBegan(touches, with: event)
+        baseViewControllerDelegate?.onTouchesBegan(touches, with: event)
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        delegate?.onTouchesMoved(touches, with: event)
+        baseViewControllerDelegate?.onTouchesMoved(touches, with: event)
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        delegate?.onTouchesEnded()
+        baseViewControllerDelegate?.onTouchesEnded()
     }
 
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        delegate?.onTouchesCancelled()
+        baseViewControllerDelegate?.onTouchesCancelled()
     }
+    
+    // TODO add swipe left and right
 }
