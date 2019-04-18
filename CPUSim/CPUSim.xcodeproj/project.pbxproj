@@ -12,14 +12,12 @@
 		04D3F78222602533002C80B6 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F78122602533002C80B6 /* State.swift */; };
 		04D3F78F2260265B002C80B6 /* TouchPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F78E2260265B002C80B6 /* TouchPointView.swift */; };
 		04D3F7912260265F002C80B6 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7902260265F002C80B6 /* LineView.swift */; };
-		04D3F7932260269A002C80B6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7922260269A002C80B6 /* BaseViewController.swift */; };
 		04D3F79822602A06002C80B6 /* Pulsator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D3F79522602A06002C80B6 /* Pulsator.framework */; };
 		04D3F79922602A06002C80B6 /* PMKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D3F79622602A06002C80B6 /* PMKUIKit.framework */; };
 		04D3F79A22602A06002C80B6 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D3F79722602A06002C80B6 /* PromiseKit.framework */; };
 		04D3F7A1226036A7002C80B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A0226036A7002C80B6 /* Constants.swift */; };
 		04D3F7A3226036AE002C80B6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A2226036AE002C80B6 /* Extensions.swift */; };
 		04D3F7A522603701002C80B6 /* DotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A422603701002C80B6 /* DotModel.swift */; };
-		04D3F7A72260372D002C80B6 /* BaseViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A62260372D002C80B6 /* BaseViewControllerDelegate.swift */; };
 		04D3F7AA2260376D002C80B6 /* DrawingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A82260376D002C80B6 /* DrawingService.swift */; };
 		04D3F7AB2260376D002C80B6 /* ALUFetchStateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A92260376D002C80B6 /* ALUFetchStateService.swift */; };
 		3007E7352256E46E0021DB6D /* FetchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007E7342256E46E0021DB6D /* FetchViewController.swift */; };
@@ -71,14 +69,12 @@
 		04D3F78122602533002C80B6 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		04D3F78E2260265B002C80B6 /* TouchPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPointView.swift; sourceTree = "<group>"; };
 		04D3F7902260265F002C80B6 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
-		04D3F7922260269A002C80B6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		04D3F79522602A06002C80B6 /* Pulsator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pulsator.framework; path = Carthage/Build/iOS/Pulsator.framework; sourceTree = "<group>"; };
 		04D3F79622602A06002C80B6 /* PMKUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKUIKit.framework; path = Carthage/Build/iOS/PMKUIKit.framework; sourceTree = "<group>"; };
 		04D3F79722602A06002C80B6 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		04D3F7A0226036A7002C80B6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04D3F7A2226036AE002C80B6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		04D3F7A422603701002C80B6 /* DotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotModel.swift; sourceTree = "<group>"; };
-		04D3F7A62260372D002C80B6 /* BaseViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerDelegate.swift; sourceTree = "<group>"; };
 		04D3F7A82260376D002C80B6 /* DrawingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingService.swift; sourceTree = "<group>"; };
 		04D3F7A92260376D002C80B6 /* ALUFetchStateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALUFetchStateService.swift; sourceTree = "<group>"; };
 		3007E7342256E46E0021DB6D /* FetchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchViewController.swift; sourceTree = "<group>"; };
@@ -146,7 +142,6 @@
 			children = (
 				04D3F77F22602530002C80B6 /* Drawing.swift */,
 				04D3F78122602533002C80B6 /* State.swift */,
-				04D3F7A62260372D002C80B6 /* BaseViewControllerDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -211,7 +206,6 @@
 		305A00C5224D7D09008D2A6F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				04D3F7922260269A002C80B6 /* BaseViewController.swift */,
 				305A00D1224D8202008D2A6F /* MenuViewController.swift */,
 				3007E7342256E46E0021DB6D /* FetchViewController.swift */,
 				3007E738225716660021DB6D /* DecodeViewController.swift */,
@@ -471,8 +465,6 @@
 				30DBC869224D7BB700FDF861 /* AppDelegate.swift in Sources */,
 				305A00E022518534008D2A6F /* BranchCoordinator.swift in Sources */,
 				04D3F7A3226036AE002C80B6 /* Extensions.swift in Sources */,
-				04D3F7A72260372D002C80B6 /* BaseViewControllerDelegate.swift in Sources */,
-				04D3F7932260269A002C80B6 /* BaseViewController.swift in Sources */,
 				04D3F7AA2260376D002C80B6 /* DrawingService.swift in Sources */,
 				04D3F7912260265F002C80B6 /* LineView.swift in Sources */,
 				305A00DE22518526008D2A6F /* StoreCoordinator.swift in Sources */,
