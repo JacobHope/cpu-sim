@@ -44,3 +44,12 @@ extension CAShapeLayer {
         return dot
     }
 }
+
+extension DotModel {
+    static func defaultDotModel() -> DotModel {
+        return DotModel(
+            x: -4.75,
+            y: -4.75,
+            radius: 10.0)
+    }
+}
