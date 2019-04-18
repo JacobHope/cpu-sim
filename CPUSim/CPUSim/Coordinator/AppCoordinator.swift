@@ -67,30 +67,30 @@ extension AppCoordinator: MenuViewControllerDelegate {
     }
     
     func menuViewControllerDidTapLoadButton(menuViewController: MenuViewController) {
-        let loadCoordinator = LoadCoordinator()
-        loadCoordinator.delegate = self
-        loadCoordinator.start()
-        self.addChildCoordinator(loadCoordinator)
-        self.rootViewController.present(loadCoordinator.rootViewController,
-                                        animated: true, completion: nil)
+//        let loadCoordinator = LoadCoordinator()
+//        loadCoordinator.delegate = self
+//        loadCoordinator.start()
+//        self.addChildCoordinator(loadCoordinator)
+//        self.rootViewController.present(loadCoordinator.rootViewController,
+//                                        animated: true, completion: nil)
     }
     
     func menuViewControllerDidTapStoreButton(menuViewController: MenuViewController) {
-        let storeCoordinator = StoreCoordinator()
-        storeCoordinator.delegate = self
-        storeCoordinator.start()
-        self.addChildCoordinator(storeCoordinator)
-        self.rootViewController.present(storeCoordinator.rootViewController,
-                                        animated: true, completion: nil)
+//        let storeCoordinator = StoreCoordinator()
+//        storeCoordinator.delegate = self
+//        storeCoordinator.start()
+//        self.addChildCoordinator(storeCoordinator)
+//        self.rootViewController.present(storeCoordinator.rootViewController,
+//                                        animated: true, completion: nil)
     }
     
     func menuViewControllerDidTapBranchButton(menuViewController: MenuViewController) {
-        let branchCoordinator = BranchCoordinator()
-        branchCoordinator.delegate = self
-        branchCoordinator.start()
-        self.addChildCoordinator(branchCoordinator)
-        self.rootViewController.present(branchCoordinator.rootViewController,
-                                        animated: true, completion: nil)
+//        let branchCoordinator = BranchCoordinator()
+//        branchCoordinator.delegate = self
+//        branchCoordinator.start()
+//        self.addChildCoordinator(branchCoordinator)
+//        self.rootViewController.present(branchCoordinator.rootViewController,
+//                                        animated: true, completion: nil)
     }
 }
 
@@ -105,37 +105,37 @@ extension AppCoordinator: ALUCoordinatorDelegate {
     }
 }
 
-// MARK: LoadCoordinatorDelegate
-extension AppCoordinator: LoadCoordinatorDelegate {
-    func loadCoordinatorDidRequestCancel(loadCoordinator: LoadCoordinator) {
-        loadCoordinator.rootViewController.dismiss(animated: true)
-        self.removeChildCoordinator(loadCoordinator)
-    }
-    
-    func loadCoordinator(loadCoordinator: LoadCoordinator, payload: LoadCoordinatorPayload) {
-        
-    }
-}
-
-// MARK: StoreCoordinatorDelegate
-extension AppCoordinator: StoreCoordinatorDelegate {
-    func storeCoordinatorDidRequestCancel(storeCoordinator: StoreCoordinator) {
-        storeCoordinator.rootViewController.dismiss(animated: true)
-        self.removeChildCoordinator(storeCoordinator)
-    }
-    
-    func storeCoordinator(storeCoordinator: StoreCoordinator, payload: StoreCoordinatorPayload) {
-        
-    }
-}
-
-// MARK: BranchCoordinatorDelegate
-extension AppCoordinator: BranchCoordinatorDelegate {
-    func branchCoordinatorDidRequestCancel(branchCoordinator: BranchCoordinator) {
-        branchCoordinator.rootViewController.dismiss(animated: true)
-        self.removeChildCoordinator(branchCoordinator)
-    }
-    
-    func branchCoordinator(aluCoordinator: BranchCoordinator, payload: BranchCoordinatorPayload) {
-    }
-}
+//// MARK: LoadCoordinatorDelegate
+//extension AppCoordinator: LoadCoordinatorDelegate {
+//    func loadCoordinatorDidRequestCancel(loadCoordinator: LoadCoordinator) {
+//        loadCoordinator.rootViewController.dismiss(animated: true)
+//        self.removeChildCoordinator(loadCoordinator)
+//    }
+//
+//    func loadCoordinator(loadCoordinator: LoadCoordinator, payload: LoadCoordinatorPayload) {
+//
+//    }
+//}
+//
+//// MARK: StoreCoordinatorDelegate
+//extension AppCoordinator: StoreCoordinatorDelegate {
+//    func storeCoordinatorDidRequestCancel(storeCoordinator: StoreCoordinator) {
+//        storeCoordinator.rootViewController.dismiss(animated: true)
+//        self.removeChildCoordinator(storeCoordinator)
+//    }
+//
+//    func storeCoordinator(storeCoordinator: StoreCoordinator, payload: StoreCoordinatorPayload) {
+//
+//    }
+//}
+//
+//// MARK: BranchCoordinatorDelegate
+//extension AppCoordinator: BranchCoordinatorDelegate {
+//    func branchCoordinatorDidRequestCancel(branchCoordinator: BranchCoordinator) {
+//        branchCoordinator.rootViewController.dismiss(animated: true)
+//        self.removeChildCoordinator(branchCoordinator)
+//    }
+//
+//    func branchCoordinator(aluCoordinator: BranchCoordinator, payload: BranchCoordinatorPayload) {
+//    }
+//}

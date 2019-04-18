@@ -8,11 +8,13 @@
 
 import UIKit
 
-protocol ViewControllerDelegate: class {
+
+@objc internal protocol BaseViewControllerDelegate: class {
     func onTouchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     func onTouchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
     func onTouchesEnded()
     func onTouchesCancelled()
     func clearDrawing()
     func setup()
+    //TODO add left and right swipe
 }
