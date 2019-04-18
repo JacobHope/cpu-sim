@@ -16,6 +16,7 @@ private enum StartState {
     case ifMuxToPcStartStarted
     case ifMuxToPcEndStarted
     case ifPcToAluStartStarted
+    case ifPcToAluEndStarted
     case noneStarted
 }
 
@@ -23,13 +24,17 @@ private enum EndState {
     case ifMuxToPcStartEnded
     case ifMuxToPcEndEnded
     case ifPcToAluStartEnded
+    case ifPcToAluEndEnded
     case noneReached
 }
 
 class ALUFetchStateService: State {
     var isDrawing: Bool = false
 
-    var correctnessMap: [String: Bool] = ["ifMuxToPc": false]
+    var correctnessMap: [String: Bool] = [
+        "ifMuxToPc": false,
+        "ifPcToAlu": false
+    ]
 
     private var touchStartedInTouchPoint: Bool = false
 
@@ -61,6 +66,13 @@ class ALUFetchStateService: State {
                 }
             }
             break;
+        case "ifPcToAluEnd":
+            correctnessMap["ifPcToAlu"] = true
+            touchPoints.forEach { tp in
+                if (tp.name == "ifPcToAluEnd") {
+                    tp.setCorrect()
+                }
+            }
         default:
             break;
         }
@@ -73,6 +85,14 @@ class ALUFetchStateService: State {
                 touchPoints.forEach { tp in
                     if (tp.name == "ifMuxToPcEnd"
                             || tp.name == "ifMuxToPcStart") {
+                        tp.isHidden = true
+                    }
+                }
+                break;
+            case "ifPcToAluEnd":
+                touchPoints.forEach { tp in
+                    if (tp.name == "ifPcToAluEnd"
+                        || tp.name == "ifPcToAluStart") {
                         tp.isHidden = true
                     }
                 }
@@ -107,13 +127,14 @@ class ALUFetchStateService: State {
     }
     
     private func determineProgress() -> Float {
-        var progress: Int = 0
+        var progress: Float = 0
+        let total: Float = correctnessMap.count == 0 ? 1 : Float(correctnessMap.count)
         for (_,v) in correctnessMap {
             if (v == true) {
                 progress += 1
             }
         }
-        return 1 / progress == 0 ? 1 : Float(progress)
+        return progress / total
     }
 
     func handleTouchesBegan(
@@ -134,6 +155,9 @@ class ALUFetchStateService: State {
                         break;
                     case "ifPcToAluStart":
                         self.startState = StartState.ifPcToAluStartStarted
+                        break;
+                    case "ifPcToAluEnd":
+                        self.startState = StartState.ifPcToAluEndStarted
                         break;
                     default:
                         break;
@@ -201,7 +225,20 @@ class ALUFetchStateService: State {
                                 drawingService.clearDrawing(imageView: imageView)
                             }
                             break;
-
+                        case "ifPcToAluEnd":
+                            if (self.startState == StartState.ifPcToAluStartStarted) {
+                                self.onCorrect(
+                                    touchPoints,
+                                    touchPointName: "ifPcToAluEnd",
+                                    lines: [])  // TODO
+                                drawingService.ignoreTouchInput()
+                                drawingService.clearDrawing(imageView: imageView)
+                            } else if (startState != StartState.ifPcToAluEndStarted) {
+                                self.onIncorrect(touchPoint)
+                                drawingService.ignoreTouchInput()
+                                drawingService.clearDrawing(imageView: imageView)
+                            }
+                            break;
                         default:
                             // Do nothing
                             break;

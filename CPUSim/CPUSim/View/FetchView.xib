@@ -19,6 +19,7 @@
                 <outlet property="ifMuxToPc3" destination="AuM-jR-Qn6" id="4VX-P8-0NK"/>
                 <outlet property="ifMuxToPcEnd" destination="dNN-yI-McE" id="PdE-rZ-ALn"/>
                 <outlet property="ifMuxToPcStart" destination="KFG-zM-5az" id="AYg-0e-a3O"/>
+                <outlet property="ifPcToAluEnd" destination="LBU-qu-OBc" id="vsL-H7-XvN"/>
                 <outlet property="ifPcToAluStart" destination="xRj-cF-dEu" id="qfC-yi-eeM"/>
                 <outlet property="progressView" destination="CHI-mm-lzq" id="pxR-j0-6v9"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kie-3E-8ce"/>
@@ -105,6 +106,18 @@
                                 <constraint firstItem="uo3-me-2kv" firstAttribute="bottom" secondItem="pgh-1q-s3P" secondAttribute="bottom" id="jaR-tc-exW"/>
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="pgh-1q-s3P"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LBU-qu-OBc" userLabel="IfPcToAluEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="159.5" y="270" width="25" height="25"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="AqN-kn-kas"/>
+                                <constraint firstAttribute="width" constant="25" id="dMd-Zj-Tv1"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="QpO-1J-JrV"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="name" value="ifPcToAluEnd"/>
+                            </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbV-2J-98q" userLabel="IMView">
                             <rect key="frame" x="100" y="375" width="150" height="150"/>
@@ -215,6 +228,7 @@
                     <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="for-eX-Teq" firstAttribute="centerX" secondItem="dbV-2J-98q" secondAttribute="centerX" constant="35" id="2Or-JA-0RT"/>
+                        <constraint firstItem="LBU-qu-OBc" firstAttribute="centerY" secondItem="for-eX-Teq" secondAttribute="centerY" constant="-25" id="C45-Fs-iKZ"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="top" secondItem="EGG-i3-PCC" secondAttribute="bottom" constant="200" id="EKB-0G-Llt"/>
                         <constraint firstItem="KFG-zM-5az" firstAttribute="centerY" secondItem="EGG-i3-PCC" secondAttribute="centerY" constant="12" id="FuN-yx-hfr"/>
                         <constraint firstItem="mH3-QT-mPq" firstAttribute="leading" secondItem="875-NL-wgn" secondAttribute="leading" id="KTc-Bi-Qat"/>
@@ -228,6 +242,7 @@
                         <constraint firstItem="AuM-jR-Qn6" firstAttribute="top" secondItem="mH3-QT-mPq" secondAttribute="bottom" constant="-10" id="SMf-Ga-pdy"/>
                         <constraint firstItem="CPF-4s-pLG" firstAttribute="trailing" secondItem="CHI-mm-lzq" secondAttribute="trailing" id="SgR-p5-q2V"/>
                         <constraint firstItem="AW2-Nm-Iy0" firstAttribute="leading" secondItem="AuM-jR-Qn6" secondAttribute="trailing" id="Uze-1f-1c6"/>
+                        <constraint firstItem="for-eX-Teq" firstAttribute="leading" secondItem="LBU-qu-OBc" secondAttribute="trailing" constant="-12" id="VLX-1t-hcv"/>
                         <constraint firstItem="xRj-cF-dEu" firstAttribute="leading" secondItem="AW2-Nm-Iy0" secondAttribute="trailing" constant="12" id="WMZ-OP-LB5"/>
                         <constraint firstItem="dNN-yI-McE" firstAttribute="leading" secondItem="AW2-Nm-Iy0" secondAttribute="trailing" constant="-43" id="WXP-8e-uf5"/>
                         <constraint firstItem="dNN-yI-McE" firstAttribute="centerY" secondItem="AW2-Nm-Iy0" secondAttribute="centerY" constant="12" id="XDU-b4-05U"/>

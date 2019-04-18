@@ -140,7 +140,8 @@ extension ALUCoordinator: FetchViewControllerDelegate {
         fetchViewController.touchPoints = [
             fetchViewController.ifMuxToPcStart,
             fetchViewController.ifMuxToPcEnd,
-            fetchViewController.ifPcToAluStart
+            fetchViewController.ifPcToAluStart,
+            fetchViewController.ifPcToAluEnd
         ]
         
         // Setup lines
