@@ -30,11 +30,17 @@ class FetchViewController: UIViewController {
     // MARK: Properties
     @IBOutlet var FetchView: UIView!
     @IBOutlet weak var drawingImageView: UIImageView!
+    
+    // MARK: IFMUXToPC
     @IBOutlet weak var ifMuxToPc1: LineView!
     @IBOutlet weak var ifMuxToPc2: LineView!
     @IBOutlet weak var ifMuxToPc3: LineView!
     @IBOutlet weak var ifMuxToPcStart: TouchPointView!
     @IBOutlet weak var ifMuxToPcEnd: TouchPointView!
+    
+    // MARK: IFPCToALU
+    @IBOutlet weak var ifPcToAluStart: TouchPointView!
+    
     
     public weak var delegate: FetchViewControllerDelegate?
     
@@ -80,7 +86,11 @@ class FetchViewController: UIViewController {
     
     private func setup() {
         // Setup TouchPointViews
-        touchPoints = [ifMuxToPcStart, ifMuxToPcEnd]
+        touchPoints = [
+            ifMuxToPcStart,
+            ifMuxToPcEnd,
+            ifPcToAluStart
+        ]
         
         // Setup lines
         lines["ifMuxToPc"] = [ifMuxToPc1, ifMuxToPc2, ifMuxToPc3]

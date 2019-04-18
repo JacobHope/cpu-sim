@@ -14,20 +14,22 @@ import PMKUIKit
 private enum StartState {
     case ifMuxToPcStartStarted
     case ifMuxToPcEndStarted
+    case ifPcToAluStartStarted
     case noneStarted
 }
 
 private enum EndState {
     case ifMuxToPcStartEnded
     case ifMuxToPcEndEnded
+    case ifPcToAluStartEnded
     case noneReached
 }
 
 class ALUFetchStateService: State {
     var isDrawing: Bool = false
-    
-    var correctnessMap: [String : Bool] = ["ifMuxToPc":false]
-    
+
+    var correctnessMap: [String: Bool] = ["ifMuxToPc": false]
+
     private var touchStartedInTouchPoint: Bool = false
 
     private var startState: StartState = StartState.noneStarted
@@ -109,14 +111,20 @@ class ALUFetchStateService: State {
         if let touch = touches.first {
             touchPoints.forEach { touchPoint in
                 if (touchPoint == touchPoint.hitTest(touch, event: event)) {
-                    if (touchPoint.name == "ifMuxToPcStart") {
+                    switch (touchPoint.name) {
+                    case "ifMuxToPcStart":
                         self.startState = StartState.ifMuxToPcStartStarted
-                        touchStartedInTouchPoint = true
-                    }
-                    if (touchPoint.name == "ifMuxToPcEnd") {
+                        break;
+                    case "ifMuxToPcEnd":
                         self.startState = StartState.ifMuxToPcEndStarted
-                        touchStartedInTouchPoint = true
+                        break;
+                    case "ifPcToAluStart":
+                        self.startState = StartState.ifPcToAluStartStarted
+                        break;
+                    default:
+                        break;
                     }
+                    touchStartedInTouchPoint = true
                 }
             }
 
@@ -164,6 +172,17 @@ class ALUFetchStateService: State {
                                         touchPoints,
                                         touchPointName: "ifMuxToPcEnd",
                                         lines: lines["ifMuxToPc"]!)
+                                drawingService.ignoreTouchInput()
+                                drawingService.clearDrawing(imageView: imageView)
+                            } else if (startState != StartState.ifMuxToPcEndStarted) {
+                                self.onIncorrect(touchPoint)
+                                drawingService.ignoreTouchInput()
+                                drawingService.clearDrawing(imageView: imageView)
+                            }
+                            break;
+                        case "ifPcToAluStart":   // Anything ending at a start point is incorrect
+                            if (startState != StartState.ifPcToAluStartStarted) {
+                                self.onIncorrect(touchPoint)
                                 drawingService.ignoreTouchInput()
                                 drawingService.clearDrawing(imageView: imageView)
                             }

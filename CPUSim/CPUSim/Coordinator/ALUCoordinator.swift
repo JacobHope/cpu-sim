@@ -126,11 +126,7 @@ extension ALUCoordinator: FetchViewControllerDelegate {
     
     func fetchViewControllerSetup(_ fetchViewController: FetchViewController) {
         fetchViewController.touchPoints.forEach { touchPoint in
-            touchPoint.setupWith(
-                DotModel(
-                    x: -4.75,
-                    y: -4.75,
-                    radius: 10.0))
+            touchPoint.setupWith(DotModel.defaultDotModel())
         }
         
         for (_, v) in fetchViewController.lines {
