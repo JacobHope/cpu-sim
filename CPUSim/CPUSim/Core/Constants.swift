@@ -20,5 +20,11 @@ struct LineAttributes {
 }
 
 struct Events {
-    static let aluFetchOnCorrect: String = "aluFetchOnCorrect"
+    static let aluFetchOnCorrect = "aluFetchOnCorrect"
+}
+
+struct CorrectnessMapKeys {
+    static let ifMuxToPc = "ifMuxToPc"
+    static let ifPcToAlu = "ifPcToAlu"
+    static let ifPcToIm = "ifPcToIm"
 }

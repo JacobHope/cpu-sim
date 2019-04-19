@@ -146,7 +146,7 @@ extension ALUCoordinator: FetchViewControllerDelegate {
         ]
         
         // Setup lines
-        fetchViewController.lines["ifMuxToPc"] = [
+        fetchViewController.lines[CorrectnessMapKeys.ifMuxToPc] = [
             fetchViewController.ifMuxToPc1,
             fetchViewController.ifMuxToPc2,
             fetchViewController.ifMuxToPc3
