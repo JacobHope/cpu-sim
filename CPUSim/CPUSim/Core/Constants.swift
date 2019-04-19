@@ -40,4 +40,5 @@ struct TouchPointNames {
     static let ifFourToAluStart = "ifFourToAluStart"
     static let ifFourToAluEnd = "ifFourToAluEnd"
     static let ifAluToMuxStart = "ifAluToMuxStart"
+    static let ifAluToMuxEnd = "ifAluToMuxEnd"
 }

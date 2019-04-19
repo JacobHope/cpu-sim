@@ -54,6 +54,7 @@ class FetchViewController: UIViewController {
     
     // MARK: IFALUToMUX
     @IBOutlet weak var ifAluToMuxStart: TouchPointView!
+    @IBOutlet weak var ifAluToMuxEnd: TouchPointView!
     
     public weak var delegate: FetchViewControllerDelegate?
     

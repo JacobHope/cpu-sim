@@ -20,6 +20,7 @@ private enum StartState {
     case ifFourToAluStartStarted
     case ifFourToAluEndStarted
     case ifAluToMuxStartStarted
+    case ifAluToMuxEndStarted
     case noneStarted
 }
 
@@ -83,6 +84,13 @@ class ALUFetchStateService: State {
                     tp.setCorrect()
                 }
             }
+        case TouchPointNames.ifAluToMuxEnd:
+            correctnessMap[CorrectnessMapKeys.ifAluToMux] = true
+            touchPoints.forEach { tp in
+                if (tp.name == TouchPointNames.ifAluToMuxEnd) {
+                    tp.setCorrect()
+                }
+            }
         default:
             break;
         }
@@ -131,6 +139,14 @@ class ALUFetchStateService: State {
                 touchPoints.forEach { tp in
                     if (tp.name == TouchPointNames.ifFourToAluEnd
                         || tp.name == TouchPointNames.ifFourToAluStart) {
+                        tp.isHidden = true
+                    }
+                }
+                break;
+            case TouchPointNames.ifAluToMuxEnd:
+                touchPoints.forEach { tp in
+                    if (tp.name == TouchPointNames.ifAluToMuxEnd
+                        || tp.name == TouchPointNames.ifAluToMuxStart) {
                         tp.isHidden = true
                     }
                 }
@@ -327,6 +343,19 @@ class ALUFetchStateService: State {
                                 drawingService.clearDrawing(imageView: imageView)
                             }
                             break;
+                        case TouchPointNames.ifAluToMuxEnd:
+                            if (self.startState == StartState.ifAluToMuxStartStarted) {
+                                self.onCorrect(
+                                    touchPoints,
+                                    touchPointName: TouchPointNames.ifAluToMuxEnd,
+                                    lines: [])  // TODO
+                                drawingService.ignoreTouchInput()
+                                drawingService.clearDrawing(imageView: imageView)
+                            } else if (startState != StartState.ifAluToMuxEndStarted) {
+                                self.onIncorrect(touchPoint)
+                                drawingService.ignoreTouchInput()
+                                drawingService.clearDrawing(imageView: imageView)
+                            }
                         default:
                             // Do nothing
                             break;
