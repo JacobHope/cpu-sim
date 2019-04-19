@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="FetchView" destination="iN0-l3-epB" id="ud9-r8-EUu"/>
                 <outlet property="drawingImageView" destination="FMO-9m-4SJ" id="R4K-CE-rVk"/>
+                <outlet property="ifFourToAluStart" destination="FOF-tY-Ni0" id="bkd-Aj-ZGY"/>
                 <outlet property="ifMuxToPc1" destination="875-NL-wgn" id="NJR-I6-0XQ"/>
                 <outlet property="ifMuxToPc2" destination="mH3-QT-mPq" id="GGo-64-2hm"/>
                 <outlet property="ifMuxToPc3" destination="AuM-jR-Qn6" id="4VX-P8-0NK"/>
@@ -79,6 +80,15 @@
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="name" value="ifMuxToPcStart"/>
                             </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOF-tY-Ni0" userLabel="IfFourToAluStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="147.5" y="344.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="2AE-S8-H5q"/>
+                                <constraint firstAttribute="height" constant="25" id="fqH-1z-xdc"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="efD-VM-CsA"/>
                         </view>
                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pgy-ma-IM0">
                             <rect key="frame" x="127.5" y="335" width="20" height="20"/>
@@ -261,7 +271,9 @@
                         <constraint firstItem="xRj-cF-dEu" firstAttribute="leading" secondItem="AW2-Nm-Iy0" secondAttribute="trailing" constant="12" id="WMZ-OP-LB5"/>
                         <constraint firstItem="dNN-yI-McE" firstAttribute="leading" secondItem="AW2-Nm-Iy0" secondAttribute="trailing" constant="-43" id="WXP-8e-uf5"/>
                         <constraint firstItem="dNN-yI-McE" firstAttribute="centerY" secondItem="AW2-Nm-Iy0" secondAttribute="centerY" constant="12" id="XDU-b4-05U"/>
+                        <constraint firstItem="pgy-ma-IM0" firstAttribute="leading" secondItem="FOF-tY-Ni0" secondAttribute="trailing" constant="-45" id="Zr0-jx-bQB"/>
                         <constraint firstItem="mH3-QT-mPq" firstAttribute="leading" secondItem="AuM-jR-Qn6" secondAttribute="trailing" constant="-20" id="bNo-7y-2XB"/>
+                        <constraint firstItem="FOF-tY-Ni0" firstAttribute="centerY" secondItem="pgy-ma-IM0" secondAttribute="centerY" constant="12" id="fKB-s4-e9a"/>
                         <constraint firstItem="CHI-mm-lzq" firstAttribute="leading" secondItem="CPF-4s-pLG" secondAttribute="leading" id="fiW-VH-JdN"/>
                         <constraint firstItem="EGG-i3-PCC" firstAttribute="leading" secondItem="dbV-2J-98q" secondAttribute="leading" constant="25" id="g1g-mc-uzt"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="leading" secondItem="AW2-Nm-Iy0" secondAttribute="trailing" constant="65" id="hNK-q6-nNz"/>

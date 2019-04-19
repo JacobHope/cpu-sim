@@ -48,6 +48,8 @@ class FetchViewController: UIViewController {
     // MARK: IFPCToIM
     @IBOutlet weak var ifPcToImEnd: TouchPointView!
     
+    // MARK: IFFourToALU
+    @IBOutlet weak var ifFourToAluStart: TouchPointView!
     
     public weak var delegate: FetchViewControllerDelegate?
     
