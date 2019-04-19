@@ -254,7 +254,7 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="name" value="ifPcToAluStart"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="if-mux-to-pc-3" translatesAutoresizingMaskIntoConstraints="NO" id="AuM-jR-Qn6" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="AuM-jR-Qn6" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-8" y="453" width="20" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="5qT-wh-WqC"/>
@@ -264,14 +264,20 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="endPointName" value="ifMuxToPc3"/>
                             </userDefinedRuntimeAttributes>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="if-mux-to-pc-2" translatesAutoresizingMaskIntoConstraints="NO" id="mH3-QT-mPq" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="-8" y="152" width="3" height="311"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="mH3-QT-mPq" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="-8" y="152" width="3" height="313"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="3" id="mns-vd-Gf2"/>
+                            </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="endPointName" value="ifMuxToPc2"/>
                             </userDefinedRuntimeAttributes>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="if-mux-to-pc-1" translatesAutoresizingMaskIntoConstraints="NO" id="875-NL-wgn" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="-8" y="149" width="160" height="3"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="875-NL-wgn" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="-9" y="149" width="161" height="3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="3" id="4zD-cd-Rta"/>
+                            </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="endPointName" value="ifMuxToPc1"/>
                             </userDefinedRuntimeAttributes>
@@ -287,7 +293,7 @@
                         <constraint firstItem="dbV-2J-98q" firstAttribute="top" secondItem="EGG-i3-PCC" secondAttribute="bottom" constant="200" id="EKB-0G-Llt"/>
                         <constraint firstItem="KFG-zM-5az" firstAttribute="centerY" secondItem="EGG-i3-PCC" secondAttribute="centerY" constant="12" id="FuN-yx-hfr"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="leading" secondItem="8nM-A2-QiH" secondAttribute="trailing" constant="-12" id="G2X-hS-tez"/>
-                        <constraint firstItem="mH3-QT-mPq" firstAttribute="leading" secondItem="875-NL-wgn" secondAttribute="leading" id="KTc-Bi-Qat"/>
+                        <constraint firstItem="mH3-QT-mPq" firstAttribute="leading" secondItem="875-NL-wgn" secondAttribute="leading" constant="1" id="KTc-Bi-Qat"/>
                         <constraint firstItem="24V-vI-kZI" firstAttribute="centerY" secondItem="for-eX-Teq" secondAttribute="centerY" constant="37" id="LlW-de-sBW"/>
                         <constraint firstItem="EGG-i3-PCC" firstAttribute="leading" secondItem="875-NL-wgn" secondAttribute="trailing" id="PD1-XT-Jam"/>
                         <constraint firstItem="for-eX-Teq" firstAttribute="leading" secondItem="pgy-ma-IM0" secondAttribute="trailing" constant="65" id="PLr-g0-pmL"/>
@@ -296,7 +302,7 @@
                         <constraint firstItem="AuM-jR-Qn6" firstAttribute="centerY" secondItem="AW2-Nm-Iy0" secondAttribute="centerY" id="Q6B-6D-dgF"/>
                         <constraint firstItem="CPF-4s-pLG" firstAttribute="bottom" secondItem="AW2-Nm-Iy0" secondAttribute="bottom" constant="50" id="QtB-2L-abr"/>
                         <constraint firstItem="xRj-cF-dEu" firstAttribute="centerY" secondItem="AW2-Nm-Iy0" secondAttribute="centerY" constant="12" id="RT8-ts-4G3"/>
-                        <constraint firstItem="AuM-jR-Qn6" firstAttribute="top" secondItem="mH3-QT-mPq" secondAttribute="bottom" constant="-10" id="SMf-Ga-pdy"/>
+                        <constraint firstItem="AuM-jR-Qn6" firstAttribute="top" secondItem="mH3-QT-mPq" secondAttribute="bottom" constant="-12" id="SMf-Ga-pdy"/>
                         <constraint firstItem="CPF-4s-pLG" firstAttribute="trailing" secondItem="CHI-mm-lzq" secondAttribute="trailing" id="SgR-p5-q2V"/>
                         <constraint firstItem="AW2-Nm-Iy0" firstAttribute="leading" secondItem="AuM-jR-Qn6" secondAttribute="trailing" id="Uze-1f-1c6"/>
                         <constraint firstItem="for-eX-Teq" firstAttribute="leading" secondItem="LBU-qu-OBc" secondAttribute="trailing" constant="-12" id="VLX-1t-hcv"/>
@@ -344,9 +350,9 @@
         <image name="ALU-shape" width="88" height="199"/>
         <image name="IM-shape" width="212" height="222"/>
         <image name="PC-shape" width="26" height="129"/>
-        <image name="if-mux-to-pc-1" width="140" height="3"/>
-        <image name="if-mux-to-pc-2" width="3" height="372"/>
-        <image name="if-mux-to-pc-3" width="65" height="31"/>
+        <image name="horizontalLine" width="140" height="3"/>
         <image name="mux-shape" width="51" height="130"/>
+        <image name="rightArrow" width="66" height="31"/>
+        <image name="verticalLine" width="5" height="246"/>
     </resources>
 </document>
