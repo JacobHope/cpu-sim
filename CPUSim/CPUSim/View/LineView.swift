@@ -9,9 +9,8 @@
 import UIKit
 
 class LineView: UIImageView {
-    @IBInspectable var endPointName: String = "endTouchPoint"
-    
     func setup() {
+        self.isOpaque = false
         self.alpha = 0.0
     }
 }

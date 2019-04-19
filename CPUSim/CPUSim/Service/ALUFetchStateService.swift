@@ -51,7 +51,7 @@ class ALUFetchStateService: State {
     private func onCorrect(
             _ touchPoints: [TouchPointView],
             touchPointName: String,
-            lines: [LineView]) {
+            linesMap: [String: [LineView]]) {
 
         // Set touch point correct...
         switch touchPointName {
@@ -164,6 +164,9 @@ class ALUFetchStateService: State {
                 break;
             }
 
+            // Get lines for touch point
+            let lines: [LineView] = linesMap[touchPointName] ?? []
+            
             // Animate each line in sequence
             var animate = Guarantee()
             for line in lines {
@@ -337,7 +340,7 @@ class ALUFetchStateService: State {
                                 self.onCorrect(
                                         touchPoints,
                                         touchPointName: TouchPointNames.ifMuxToPcEnd,
-                                        lines: lines[CorrectnessMapKeys.ifMuxToPc]!)
+                                        linesMap: lines)
                                 drawingService.ignoreTouchInput()
                                 drawingService.clearDrawing(imageView: imageView)
                             } else if (startState != StartState.ifMuxToPcEndStarted) {
@@ -360,7 +363,7 @@ class ALUFetchStateService: State {
                                 self.onCorrect(
                                         touchPoints,
                                         touchPointName: TouchPointNames.ifPcToAluEnd,
-                                        lines: [])  // TODO
+                                        linesMap: lines)  // TODO
                                 drawingService.ignoreTouchInput()
                                 drawingService.clearDrawing(imageView: imageView)
                             } else if (startState != StartState.ifPcToAluEndStarted) {
@@ -375,7 +378,7 @@ class ALUFetchStateService: State {
                                 self.onCorrect(
                                         touchPoints,
                                         touchPointName: TouchPointNames.ifPcToImEnd,
-                                        lines: [])  // TODO
+                                        linesMap: lines)  // TODO
                                 drawingService.ignoreTouchInput()
                                 drawingService.clearDrawing(imageView: imageView)
                             } else if (startState != StartState.ifPcToImEndStarted) {
@@ -397,7 +400,7 @@ class ALUFetchStateService: State {
                                 self.onCorrect(
                                         touchPoints,
                                         touchPointName: TouchPointNames.ifFourToAluEnd,
-                                        lines: [])  // TODO
+                                        linesMap: lines)  // TODO
                                 drawingService.ignoreTouchInput()
                                 drawingService.clearDrawing(imageView: imageView)
                             } else if (startState != StartState.ifFourToAluEndStarted) {
@@ -419,7 +422,7 @@ class ALUFetchStateService: State {
                                 self.onCorrect(
                                         touchPoints,
                                         touchPointName: TouchPointNames.ifAluToMuxEnd,
-                                        lines: [])  // TODO
+                                        linesMap: lines)  // TODO
                                 drawingService.ignoreTouchInput()
                                 drawingService.clearDrawing(imageView: imageView)
                             } else if (startState != StartState.ifAluToMuxEndStarted) {
