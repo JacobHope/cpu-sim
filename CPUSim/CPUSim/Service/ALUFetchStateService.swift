@@ -58,7 +58,8 @@ class ALUFetchStateService: State {
         case TouchPointNames.ifMuxToPcEnd:
             correctnessMap[CorrectnessMapKeys.ifMuxToPc] = true
             touchPoints.forEach { tp in
-                if (tp.name == TouchPointNames.ifMuxToPcEnd) {
+                if (tp.name == TouchPointNames.ifMuxToPcEnd
+                    || tp.name == TouchPointNames.ifMuxToPcStart) {
                     tp.setCorrect()
                 }
             }
@@ -66,28 +67,32 @@ class ALUFetchStateService: State {
         case TouchPointNames.ifPcToAluEnd:
             correctnessMap[CorrectnessMapKeys.ifPcToAlu] = true
             touchPoints.forEach { tp in
-                if (tp.name == TouchPointNames.ifPcToAluEnd) {
+                if (tp.name == TouchPointNames.ifPcToAluEnd
+                    || tp.name == TouchPointNames.ifPcToAluStart) {
                     tp.setCorrect()
                 }
             }
         case TouchPointNames.ifPcToImEnd:
             correctnessMap[CorrectnessMapKeys.ifPcToIm] = true
             touchPoints.forEach { tp in
-                if (tp.name == TouchPointNames.ifPcToImEnd) {
+                if (tp.name == TouchPointNames.ifPcToImEnd
+                    || tp.name == TouchPointNames.ifPcToAluStart) {
                     tp.setCorrect()
                 }
             }
         case TouchPointNames.ifFourToAluEnd:
             correctnessMap[CorrectnessMapKeys.ifFourToAlu] = true
             touchPoints.forEach { tp in
-                if (tp.name == TouchPointNames.ifFourToAluEnd) {
+                if (tp.name == TouchPointNames.ifFourToAluEnd
+                    || tp.name == TouchPointNames.ifFourToAluStart) {
                     tp.setCorrect()
                 }
             }
         case TouchPointNames.ifAluToMuxEnd:
             correctnessMap[CorrectnessMapKeys.ifAluToMux] = true
             touchPoints.forEach { tp in
-                if (tp.name == TouchPointNames.ifAluToMuxEnd) {
+                if (tp.name == TouchPointNames.ifAluToMuxEnd
+                    || tp.name == TouchPointNames.ifAluToMuxStart) {
                     tp.setCorrect()
                 }
             }
@@ -118,6 +123,8 @@ class ALUFetchStateService: State {
                         && self.correctnessMap[CorrectnessMapKeys.ifPcToIm] == true
                         && tp.name == TouchPointNames.ifPcToAluStart) {
                         tp.isHidden = true
+                    } else if (tp.name == TouchPointNames.ifPcToAluStart) {
+                        tp.reset()
                     }
                 }
                 break;
@@ -132,6 +139,8 @@ class ALUFetchStateService: State {
                         && self.correctnessMap[CorrectnessMapKeys.ifPcToIm] == true
                         && tp.name == TouchPointNames.ifPcToAluStart) {
                         tp.isHidden = true
+                    } else if (tp.name == TouchPointNames.ifPcToAluStart) {
+                        tp.reset()
                     }
                 }
                 break;
@@ -221,8 +230,10 @@ class ALUFetchStateService: State {
                         break;
                     case TouchPointNames.ifFourToAluEnd:
                         self.startState = StartState.ifFourToAluEndStarted
+                        break;
                     case TouchPointNames.ifAluToMuxStart:
                         self.startState = StartState.ifAluToMuxStartStarted
+                        break;
                     default:
                         break;
                     }
