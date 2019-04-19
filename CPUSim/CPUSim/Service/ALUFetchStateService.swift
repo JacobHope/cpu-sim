@@ -11,7 +11,6 @@ import PromiseKit
 import PMKUIKit
 import SwiftEventBus
 
-// todo: rename StateService to ALUFetchStateService
 private enum StartState {
     case ifMuxToPcStartStarted
     case ifMuxToPcEndStarted
@@ -21,16 +20,6 @@ private enum StartState {
     case ifFourToAluStartStarted
     case ifFourToAluEndStarted
     case noneStarted
-}
-
-// todo: this is unused, get rid of it
-private enum EndState {
-    case ifMuxToPcStartEnded
-    case ifMuxToPcEndEnded
-    case ifPcToAluStartEnded
-    case ifPcToAluEndEnded
-    case ifPcToImEndEnded
-    case noneReached
 }
 
 class ALUFetchStateService: State {
@@ -46,14 +35,12 @@ class ALUFetchStateService: State {
     private var touchStartedInTouchPoint: Bool = false
 
     private var startState: StartState = StartState.noneStarted
-    private var endState: EndState = EndState.noneReached
 
     private var firstPoint = CGPoint.zero
     private var lastPoint = CGPoint.zero
 
     func resetState() {
         startState = StartState.noneStarted
-        endState = EndState.noneReached
         touchStartedInTouchPoint = false
         isDrawing = false
     }
