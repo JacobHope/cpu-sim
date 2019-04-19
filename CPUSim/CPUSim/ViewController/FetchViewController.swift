@@ -42,6 +42,8 @@ class FetchViewController: UIViewController {
     @IBOutlet weak var ifMuxToPcEnd: TouchPointView!
     
     // MARK: IFPCToALU
+    @IBOutlet weak var ifPcToAlu1: LineView!
+    @IBOutlet weak var ifPcToAlu2: LineView!
     @IBOutlet weak var ifPcToAluStart: TouchPointView!
     @IBOutlet weak var ifPcToAluEnd: TouchPointView!
     

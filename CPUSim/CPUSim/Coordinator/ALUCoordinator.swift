@@ -165,6 +165,13 @@ extension ALUCoordinator: FetchViewControllerDelegate {
             fetchViewController.ifMuxToPc3
         ]
         
+        // IFPCtoALU
+        fetchViewController.lines[TouchPointNames.ifPcToAluEnd] = [
+            fetchViewController.ifPcToAlu1,
+            fetchViewController.ifPcToAlu2
+        ]
+        
+        // IFPCtoIM
         fetchViewController.lines[TouchPointNames.ifPcToImEnd] = [
             fetchViewController.ifPcToIm1
         ]
