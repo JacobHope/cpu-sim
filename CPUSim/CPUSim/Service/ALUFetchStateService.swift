@@ -19,6 +19,7 @@ private enum StartState {
     case ifPcToImEndStarted
     case ifFourToAluStartStarted
     case ifFourToAluEndStarted
+    case ifAluToMuxStartStarted
     case noneStarted
 }
 
@@ -29,7 +30,8 @@ class ALUFetchStateService: State {
         CorrectnessMapKeys.ifMuxToPc: false,
         CorrectnessMapKeys.ifPcToAlu: false,
         CorrectnessMapKeys.ifPcToIm: false,
-        CorrectnessMapKeys.ifFourToAlu: false
+        CorrectnessMapKeys.ifFourToAlu: false,
+        CorrectnessMapKeys.ifAluToMux: false
     ]
 
     private var touchStartedInTouchPoint: Bool = false
@@ -203,6 +205,8 @@ class ALUFetchStateService: State {
                         break;
                     case TouchPointNames.ifFourToAluEnd:
                         self.startState = StartState.ifFourToAluEndStarted
+                    case TouchPointNames.ifAluToMuxStart:
+                        self.startState = StartState.ifAluToMuxStartStarted
                     default:
                         break;
                     }
@@ -316,6 +320,13 @@ class ALUFetchStateService: State {
                                 drawingService.ignoreTouchInput()
                                 drawingService.clearDrawing(imageView: imageView)
                             }
+                        case TouchPointNames.ifAluToMuxStart:  // Anything ending at a start point is incorrect
+                            if (startState != StartState.ifAluToMuxStartStarted) {
+                                self.onIncorrect(touchPoint)
+                                drawingService.ignoreTouchInput()
+                                drawingService.clearDrawing(imageView: imageView)
+                            }
+                            break;
                         default:
                             // Do nothing
                             break;
