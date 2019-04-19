@@ -16,6 +16,7 @@
                 <outlet property="drawingImageView" destination="FMO-9m-4SJ" id="R4K-CE-rVk"/>
                 <outlet property="ifAluToMuxEnd" destination="vBO-2r-bcp" id="6Nk-9A-6xM"/>
                 <outlet property="ifAluToMuxStart" destination="4Zv-WK-qJh" id="2Vm-Vr-QN2"/>
+                <outlet property="ifFourToAlu1" destination="d3j-Cf-JBP" id="4mn-eE-ijP"/>
                 <outlet property="ifFourToAluEnd" destination="24V-vI-kZI" id="a6Y-Y5-MLT"/>
                 <outlet property="ifFourToAluStart" destination="FOF-tY-Ni0" id="bkd-Aj-ZGY"/>
                 <outlet property="ifMuxToPc1" destination="8aX-SP-Zf2" id="GA7-rg-AMq"/>
@@ -141,6 +142,40 @@
                                 <constraint firstItem="uo3-me-2kv" firstAttribute="bottom" secondItem="pgh-1q-s3P" secondAttribute="bottom" id="jaR-tc-exW"/>
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="pgh-1q-s3P"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3j-Cf-JBP" userLabel="IfFourToAlu1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="134.5" y="360.5" width="64" height="20"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="47T-Pl-oas" userLabel="IfPcToAlu1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="9" width="44" height="2"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="2" id="raz-rm-VwS"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="endPointName" value="ifMuxToPc3"/>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="jIp-eJ-lgA" userLabel="IfPcToAlu1-2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                                    <rect key="frame" x="44" y="0.0" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="W2n-GB-ra6"/>
+                                        <constraint firstAttribute="width" constant="20" id="ldU-b1-epa"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="endPointName" value="ifMuxToPc3"/>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="2tQ-01-v4e"/>
+                                <constraint firstItem="jIp-eJ-lgA" firstAttribute="leading" secondItem="47T-Pl-oas" secondAttribute="trailing" id="6cc-zS-CuY"/>
+                                <constraint firstItem="47T-Pl-oas" firstAttribute="centerY" secondItem="vS3-eE-b1C" secondAttribute="centerY" id="8D2-xy-DNq"/>
+                                <constraint firstItem="jIp-eJ-lgA" firstAttribute="trailing" secondItem="vS3-eE-b1C" secondAttribute="trailing" id="JLD-OL-451"/>
+                                <constraint firstItem="47T-Pl-oas" firstAttribute="leading" secondItem="vS3-eE-b1C" secondAttribute="leading" id="Vfg-yi-jzr"/>
+                                <constraint firstItem="jIp-eJ-lgA" firstAttribute="centerY" secondItem="vS3-eE-b1C" secondAttribute="centerY" id="otf-3J-Hk5"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="vS3-eE-b1C"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Zv-WK-qJh" userLabel="IfAluToMuxStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="261.5" y="345" width="25" height="25"/>
@@ -395,15 +430,18 @@
                         <constraint firstItem="for-eX-Teq" firstAttribute="centerX" secondItem="dbV-2J-98q" secondAttribute="centerX" constant="35" id="2Or-JA-0RT"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="leading" secondItem="sgY-s0-b3q" secondAttribute="trailing" id="6NT-2y-2Wb"/>
                         <constraint firstItem="8aX-SP-Zf2" firstAttribute="centerY" secondItem="EGG-i3-PCC" secondAttribute="centerY" id="6OR-9i-JFc"/>
+                        <constraint firstItem="24V-vI-kZI" firstAttribute="leading" secondItem="d3j-Cf-JBP" secondAttribute="trailing" constant="-12" id="9fC-W2-3Mx"/>
                         <constraint firstItem="8nM-A2-QiH" firstAttribute="centerY" secondItem="dbV-2J-98q" secondAttribute="centerY" constant="12" id="AK7-qn-OK5"/>
                         <constraint firstItem="LBU-qu-OBc" firstAttribute="centerY" secondItem="for-eX-Teq" secondAttribute="centerY" constant="-25" id="C45-Fs-iKZ"/>
                         <constraint firstItem="sgY-s0-b3q" firstAttribute="top" secondItem="JNk-Go-n7v" secondAttribute="bottom" constant="-12" id="DTQ-K2-VPW"/>
+                        <constraint firstItem="d3j-Cf-JBP" firstAttribute="leading" secondItem="FOF-tY-Ni0" secondAttribute="trailing" constant="-25" id="Ddv-FG-sVR"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="top" secondItem="EGG-i3-PCC" secondAttribute="bottom" constant="200" id="EKB-0G-Llt"/>
                         <constraint firstItem="KFG-zM-5az" firstAttribute="centerY" secondItem="EGG-i3-PCC" secondAttribute="centerY" constant="12" id="FuN-yx-hfr"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="leading" secondItem="8nM-A2-QiH" secondAttribute="trailing" constant="-12" id="G2X-hS-tez"/>
                         <constraint firstItem="24V-vI-kZI" firstAttribute="centerY" secondItem="for-eX-Teq" secondAttribute="centerY" constant="37" id="LlW-de-sBW"/>
                         <constraint firstItem="for-eX-Teq" firstAttribute="leading" secondItem="pgy-ma-IM0" secondAttribute="trailing" constant="65" id="PLr-g0-pmL"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="centerY" secondItem="AW2-Nm-Iy0" secondAttribute="centerY" id="PRD-kK-msM"/>
+                        <constraint firstItem="d3j-Cf-JBP" firstAttribute="centerY" secondItem="FOF-tY-Ni0" secondAttribute="centerY" constant="-12" id="Pji-rx-NHK"/>
                         <constraint firstItem="AuM-jR-Qn6" firstAttribute="centerY" secondItem="AW2-Nm-Iy0" secondAttribute="centerY" id="Q6B-6D-dgF"/>
                         <constraint firstItem="CPF-4s-pLG" firstAttribute="bottom" secondItem="AW2-Nm-Iy0" secondAttribute="bottom" constant="50" id="QtB-2L-abr"/>
                         <constraint firstItem="sgY-s0-b3q" firstAttribute="centerY" secondItem="AW2-Nm-Iy0" secondAttribute="centerY" id="RAD-0u-bgw"/>

@@ -176,6 +176,11 @@ extension ALUCoordinator: FetchViewControllerDelegate {
             fetchViewController.ifPcToIm1
         ]
         
+        // IFFourToALU
+        fetchViewController.lines[TouchPointNames.ifFourToAluEnd] = [
+            fetchViewController.ifFourToAlu1
+        ]
+        
         fetchViewController.touchPoints.forEach { touchPoint in
             touchPoint.setupWith(DotModel.defaultDotModel())
         }

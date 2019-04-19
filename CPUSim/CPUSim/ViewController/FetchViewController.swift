@@ -52,6 +52,7 @@ class FetchViewController: UIViewController {
     @IBOutlet weak var ifPcToImEnd: TouchPointView!
     
     // MARK: IFFourToALU
+    @IBOutlet weak var ifFourToAlu1: LineView!
     @IBOutlet weak var ifFourToAluStart: TouchPointView!
     @IBOutlet weak var ifFourToAluEnd: TouchPointView!
     
