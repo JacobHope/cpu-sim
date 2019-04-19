@@ -61,25 +61,25 @@ class ALUFetchStateService: State {
 
         // Set touch point correct...
         switch touchPointName {
-        case "ifMuxToPcEnd":
+        case TouchPointNames.ifMuxToPcEnd:
             correctnessMap[CorrectnessMapKeys.ifMuxToPc] = true
             touchPoints.forEach { tp in
-                if (tp.name == "ifMuxToPcEnd") {
+                if (tp.name == TouchPointNames.ifMuxToPcEnd) {
                     tp.setCorrect()
                 }
             }
             break;
-        case "ifPcToAluEnd":
+        case TouchPointNames.ifPcToAluEnd:
             correctnessMap[CorrectnessMapKeys.ifPcToAlu] = true
             touchPoints.forEach { tp in
-                if (tp.name == "ifPcToAluEnd") {
+                if (tp.name == TouchPointNames.ifPcToAluEnd) {
                     tp.setCorrect()
                 }
             }
-        case "ifPcToImEnd":
+        case TouchPointNames.ifPcToImEnd:
             correctnessMap[CorrectnessMapKeys.ifPcToIm] = true
             touchPoints.forEach { tp in
-                if (tp.name == "ifPcToImEnd") {
+                if (tp.name == TouchPointNames.ifPcToImEnd) {
                     tp.setCorrect()
                 }
             }
@@ -91,38 +91,38 @@ class ALUFetchStateService: State {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             // Hide touch points
             switch touchPointName {
-            case "ifMuxToPcEnd":
+            case TouchPointNames.ifMuxToPcEnd:
                 touchPoints.forEach { tp in
-                    if (tp.name == "ifMuxToPcEnd"
-                            || tp.name == "ifMuxToPcStart") {
+                    if (tp.name == TouchPointNames.ifMuxToPcEnd
+                            || tp.name == TouchPointNames.ifMuxToPcStart) {
                         tp.isHidden = true
                     }
                 }
                 break;
-            case "ifPcToAluEnd":
+            case TouchPointNames.ifPcToAluEnd:
                 touchPoints.forEach { tp in
-                    if (tp.name == "ifPcToAluEnd") {
+                    if (tp.name == TouchPointNames.ifPcToAluEnd) {
                         tp.isHidden = true
                     }
                     
                     // Special case
                     if (self.correctnessMap[CorrectnessMapKeys.ifPcToAlu] == true
                         && self.correctnessMap[CorrectnessMapKeys.ifPcToIm] == true
-                        && tp.name == "ifPcToAluStart") {
+                        && tp.name == TouchPointNames.ifPcToAluStart) {
                         tp.isHidden = true
                     }
                 }
                 break;
-            case "ifPcToImEnd":
+            case TouchPointNames.ifPcToImEnd:
                 touchPoints.forEach { tp in
-                    if (tp.name == "ifPcToImEnd") {
+                    if (tp.name == TouchPointNames.ifPcToImEnd) {
                         tp.isHidden = true
                     }
                     
                     // Special case
                     if (self.correctnessMap[CorrectnessMapKeys.ifPcToAlu] == true
                         && self.correctnessMap[CorrectnessMapKeys.ifPcToIm] == true
-                        && tp.name == "ifPcToAluStart") {
+                        && tp.name == TouchPointNames.ifPcToAluStart) {
                         tp.isHidden = true
                     }
                 }
@@ -177,19 +177,19 @@ class ALUFetchStateService: State {
             touchPoints.forEach { touchPoint in
                 if (touchPoint == touchPoint.hitTest(touch, event: event)) {
                     switch (touchPoint.name) {
-                    case "ifMuxToPcStart":
+                    case TouchPointNames.ifMuxToPcStart:
                         self.startState = StartState.ifMuxToPcStartStarted
                         break;
-                    case "ifMuxToPcEnd":
+                    case TouchPointNames.ifMuxToPcEnd:
                         self.startState = StartState.ifMuxToPcEndStarted
                         break;
-                    case "ifPcToAluStart":
+                    case TouchPointNames.ifPcToAluStart:
                         self.startState = StartState.ifPcToAluStartStarted
                         break;
-                    case "ifPcToAluEnd":
+                    case TouchPointNames.ifPcToAluEnd:
                         self.startState = StartState.ifPcToAluEndStarted
                         break;
-                    case "ifPcToImEnd":
+                    case TouchPointNames.ifPcToImEnd:
                         self.startState = StartState.ifPcToImEndStarted
                     default:
                         break;
@@ -229,18 +229,18 @@ class ALUFetchStateService: State {
                 touchPoints.forEach { touchPoint in
                     if (touchPoint == touchPoint.hitTest(touch, event: event)) {
                         switch touchPoint.name {
-                        case "ifMuxToPcStart":  // Anything ending at a start point is incorrect
+                        case TouchPointNames.ifMuxToPcStart:  // Anything ending at a start point is incorrect
                             if (startState != StartState.ifMuxToPcStartStarted) {
                                 self.onIncorrect(touchPoint)
                                 drawingService.ignoreTouchInput()
                                 drawingService.clearDrawing(imageView: imageView)
                             }
                             break;
-                        case "ifMuxToPcEnd":
+                        case TouchPointNames.ifMuxToPcEnd:
                             if (self.startState == StartState.ifMuxToPcStartStarted) {
                                 self.onCorrect(
                                         touchPoints,
-                                        touchPointName: "ifMuxToPcEnd",
+                                        touchPointName: TouchPointNames.ifMuxToPcEnd,
                                         lines: lines[CorrectnessMapKeys.ifMuxToPc]!)
                                 drawingService.ignoreTouchInput()
                                 drawingService.clearDrawing(imageView: imageView)
@@ -250,18 +250,18 @@ class ALUFetchStateService: State {
                                 drawingService.clearDrawing(imageView: imageView)
                             }
                             break;
-                        case "ifPcToAluStart":   // Anything ending at a start point is incorrect
+                        case TouchPointNames.ifPcToAluStart:   // Anything ending at a start point is incorrect
                             if (startState != StartState.ifPcToAluStartStarted) {
                                 self.onIncorrect(touchPoint)
                                 drawingService.ignoreTouchInput()
                                 drawingService.clearDrawing(imageView: imageView)
                             }
                             break;
-                        case "ifPcToAluEnd":
+                        case TouchPointNames.ifPcToAluEnd:
                             if (self.startState == StartState.ifPcToAluStartStarted) {
                                 self.onCorrect(
                                     touchPoints,
-                                    touchPointName: "ifPcToAluEnd",
+                                    touchPointName: TouchPointNames.ifPcToAluEnd,
                                     lines: [])  // TODO
                                 drawingService.ignoreTouchInput()
                                 drawingService.clearDrawing(imageView: imageView)
@@ -271,11 +271,11 @@ class ALUFetchStateService: State {
                                 drawingService.clearDrawing(imageView: imageView)
                             }
                             break;
-                        case "ifPcToImEnd":
+                        case TouchPointNames.ifPcToImEnd:
                             if (self.startState == StartState.ifPcToAluStartStarted) {
                                 self.onCorrect(
                                     touchPoints,
-                                    touchPointName: "ifPcToImEnd",
+                                    touchPointName: TouchPointNames.ifPcToImEnd,
                                     lines: [])  // TODO
                                 drawingService.ignoreTouchInput()
                                 drawingService.clearDrawing(imageView: imageView)

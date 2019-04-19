@@ -28,3 +28,11 @@ struct CorrectnessMapKeys {
     static let ifPcToAlu = "ifPcToAlu"
     static let ifPcToIm = "ifPcToIm"
 }
+
+struct TouchPointNames {
+    static let ifMuxToPcStart = "ifMuxToPcStart"
+    static let ifPcToAluStart = "ifPcToAluStart"
+    static let ifMuxToPcEnd = "ifMuxToPcEnd"
+    static let ifPcToAluEnd = "ifPcToAluEnd"
+    static let ifPcToImEnd = "ifPcToImEnd"
+}
