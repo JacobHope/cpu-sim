@@ -14,6 +14,9 @@
             <connections>
                 <outlet property="FetchView" destination="iN0-l3-epB" id="ud9-r8-EUu"/>
                 <outlet property="drawingImageView" destination="FMO-9m-4SJ" id="R4K-CE-rVk"/>
+                <outlet property="ifAluToMux1" destination="46O-QB-Qyv" id="iWq-o2-HcJ"/>
+                <outlet property="ifAluToMux2" destination="XsZ-u5-qSN" id="AYt-YU-57N"/>
+                <outlet property="ifAluToMux3" destination="orI-Uj-3pp" id="sPQ-Ch-5qs"/>
                 <outlet property="ifAluToMuxEnd" destination="vBO-2r-bcp" id="6Nk-9A-6xM"/>
                 <outlet property="ifAluToMuxStart" destination="4Zv-WK-qJh" id="2Vm-Vr-QN2"/>
                 <outlet property="ifFourToAlu1" destination="d3j-Cf-JBP" id="4mn-eE-ijP"/>
@@ -84,6 +87,77 @@
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="name" value="ifMuxToPcStart"/>
                             </userDefinedRuntimeAttributes>
+                        </view>
+                        <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46O-QB-Qyv" userLabel="IfAluToMux1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="249.5" y="344.5" width="13" height="2"/>
+                            <subviews>
+                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="nzj-eL-X2W" userLabel="IfMuxToPc1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="13" height="2"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                    </accessibility>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="endPointName" value="ifMuxToPc1"/>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="0Om-sl-rJW"/>
+                                <constraint firstItem="Y0C-2R-0A9" firstAttribute="trailing" secondItem="nzj-eL-X2W" secondAttribute="trailing" id="QE3-tR-hV3"/>
+                                <constraint firstItem="Y0C-2R-0A9" firstAttribute="bottom" secondItem="nzj-eL-X2W" secondAttribute="bottom" id="TEJ-3l-Kj8"/>
+                                <constraint firstItem="nzj-eL-X2W" firstAttribute="top" secondItem="Y0C-2R-0A9" secondAttribute="top" id="VNl-NM-dRj"/>
+                                <constraint firstItem="Y0C-2R-0A9" firstAttribute="leading" secondItem="nzj-eL-X2W" secondAttribute="leading" id="lem-iE-4dO"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="Y0C-2R-0A9"/>
+                        </view>
+                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="XsZ-u5-qSN" userLabel="IfAluToMux2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="260.5" y="149.5" width="2" height="197"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                            </accessibility>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="2" id="I7j-qC-Vcw"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="endPointName" value="ifMuxToPc2"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orI-Uj-3pp" userLabel="IfAluToMux3" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="185" y="140.5" width="75.5" height="20"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="xgV-Hd-IFv" userLabel="IfPcToIm1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                                    <rect key="frame" x="-12" y="0.0" width="39" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="39" id="tmV-Uq-PCP"/>
+                                        <constraint firstAttribute="height" constant="20" id="xh4-0Z-KdC"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="endPointName" value="ifMuxToPc3"/>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="GXO-vs-kRW" userLabel="IfPcToIm1-2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                                    <rect key="frame" x="22" y="9" width="53.5" height="2"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="2" id="oxu-kA-jhc"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="endPointName" value="ifMuxToPc3"/>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="5w1-Fq-MkV"/>
+                                <constraint firstItem="xgV-Hd-IFv" firstAttribute="leading" secondItem="cIP-Fa-imc" secondAttribute="leading" constant="-12" id="OFf-pi-pL3"/>
+                                <constraint firstItem="GXO-vs-kRW" firstAttribute="leading" secondItem="xgV-Hd-IFv" secondAttribute="trailing" constant="-5" id="Ram-F2-JD2"/>
+                                <constraint firstItem="xgV-Hd-IFv" firstAttribute="centerY" secondItem="cIP-Fa-imc" secondAttribute="centerY" id="dd2-7V-62I"/>
+                                <constraint firstItem="GXO-vs-kRW" firstAttribute="trailing" secondItem="cIP-Fa-imc" secondAttribute="trailing" id="fk0-M8-8F2"/>
+                                <constraint firstItem="GXO-vs-kRW" firstAttribute="centerY" secondItem="cIP-Fa-imc" secondAttribute="centerY" id="w1f-jl-Exa"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="cIP-Fa-imc"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNN-yI-McE" userLabel="IfMuxToPcEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-1" y="462.5" width="25" height="25"/>
@@ -426,10 +500,13 @@
                     <constraints>
                         <constraint firstItem="4Zv-WK-qJh" firstAttribute="centerY" secondItem="for-eX-Teq" secondAttribute="centerY" constant="12" id="0fX-bu-1VJ"/>
                         <constraint firstItem="JNk-Go-n7v" firstAttribute="top" secondItem="VdG-It-Gmr" secondAttribute="bottom" constant="-10" id="167-O5-4mr"/>
+                        <constraint firstItem="46O-QB-Qyv" firstAttribute="leading" secondItem="4Zv-WK-qJh" secondAttribute="trailing" constant="-37" id="1Dv-Ch-dCT"/>
                         <constraint firstItem="VdG-It-Gmr" firstAttribute="leading" secondItem="JNk-Go-n7v" secondAttribute="trailing" constant="-2" id="1dK-22-uWn"/>
                         <constraint firstItem="for-eX-Teq" firstAttribute="centerX" secondItem="dbV-2J-98q" secondAttribute="centerX" constant="35" id="2Or-JA-0RT"/>
+                        <constraint firstItem="orI-Uj-3pp" firstAttribute="leading" secondItem="vBO-2r-bcp" secondAttribute="trailing" constant="-35" id="5Ci-0T-ZXi"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="leading" secondItem="sgY-s0-b3q" secondAttribute="trailing" id="6NT-2y-2Wb"/>
                         <constraint firstItem="8aX-SP-Zf2" firstAttribute="centerY" secondItem="EGG-i3-PCC" secondAttribute="centerY" id="6OR-9i-JFc"/>
+                        <constraint firstItem="46O-QB-Qyv" firstAttribute="centerY" secondItem="4Zv-WK-qJh" secondAttribute="centerY" constant="-12" id="82V-Md-02s"/>
                         <constraint firstItem="24V-vI-kZI" firstAttribute="leading" secondItem="d3j-Cf-JBP" secondAttribute="trailing" constant="-12" id="9fC-W2-3Mx"/>
                         <constraint firstItem="8nM-A2-QiH" firstAttribute="centerY" secondItem="dbV-2J-98q" secondAttribute="centerY" constant="12" id="AK7-qn-OK5"/>
                         <constraint firstItem="LBU-qu-OBc" firstAttribute="centerY" secondItem="for-eX-Teq" secondAttribute="centerY" constant="-25" id="C45-Fs-iKZ"/>
@@ -443,6 +520,7 @@
                         <constraint firstItem="dbV-2J-98q" firstAttribute="centerY" secondItem="AW2-Nm-Iy0" secondAttribute="centerY" id="PRD-kK-msM"/>
                         <constraint firstItem="d3j-Cf-JBP" firstAttribute="centerY" secondItem="FOF-tY-Ni0" secondAttribute="centerY" constant="-12" id="Pji-rx-NHK"/>
                         <constraint firstItem="AuM-jR-Qn6" firstAttribute="centerY" secondItem="AW2-Nm-Iy0" secondAttribute="centerY" id="Q6B-6D-dgF"/>
+                        <constraint firstItem="46O-QB-Qyv" firstAttribute="centerX" secondItem="4Zv-WK-qJh" secondAttribute="centerX" constant="-18" id="QgF-SR-uGm"/>
                         <constraint firstItem="CPF-4s-pLG" firstAttribute="bottom" secondItem="AW2-Nm-Iy0" secondAttribute="bottom" constant="50" id="QtB-2L-abr"/>
                         <constraint firstItem="sgY-s0-b3q" firstAttribute="centerY" secondItem="AW2-Nm-Iy0" secondAttribute="centerY" id="RAD-0u-bgw"/>
                         <constraint firstItem="xRj-cF-dEu" firstAttribute="centerY" secondItem="AW2-Nm-Iy0" secondAttribute="centerY" constant="12" id="RT8-ts-4G3"/>
@@ -458,6 +536,7 @@
                         <constraint firstItem="pgy-ma-IM0" firstAttribute="leading" secondItem="FOF-tY-Ni0" secondAttribute="trailing" constant="-45" id="Zr0-jx-bQB"/>
                         <constraint firstItem="mH3-QT-mPq" firstAttribute="leading" secondItem="AuM-jR-Qn6" secondAttribute="trailing" constant="-20" id="bNo-7y-2XB"/>
                         <constraint firstItem="JNk-Go-n7v" firstAttribute="centerX" secondItem="xRj-cF-dEu" secondAttribute="centerX" constant="-12" id="dSf-uk-KhC"/>
+                        <constraint firstItem="orI-Uj-3pp" firstAttribute="centerY" secondItem="vBO-2r-bcp" secondAttribute="centerY" constant="-12" id="e2E-Fq-aRo"/>
                         <constraint firstItem="VdG-It-Gmr" firstAttribute="centerY" secondItem="LBU-qu-OBc" secondAttribute="centerY" id="eaH-Uj-NtV"/>
                         <constraint firstItem="for-eX-Teq" firstAttribute="leading" secondItem="4Zv-WK-qJh" secondAttribute="trailing" constant="-87" id="f7U-vF-9Gc"/>
                         <constraint firstItem="FOF-tY-Ni0" firstAttribute="centerY" secondItem="pgy-ma-IM0" secondAttribute="centerY" constant="12" id="fKB-s4-e9a"/>
@@ -469,13 +548,17 @@
                         <constraint firstItem="8aX-SP-Zf2" firstAttribute="leading" secondItem="mH3-QT-mPq" secondAttribute="trailing" constant="-3" id="nY7-bd-auS"/>
                         <constraint firstAttribute="width" constant="250" id="p1t-3p-uwC"/>
                         <constraint firstItem="LBU-qu-OBc" firstAttribute="leading" secondItem="VdG-It-Gmr" secondAttribute="trailing" constant="-13" id="pig-G0-uj9"/>
+                        <constraint firstItem="XsZ-u5-qSN" firstAttribute="leading" secondItem="orI-Uj-3pp" secondAttribute="trailing" id="qmb-Es-wjF"/>
                         <constraint firstItem="sgY-s0-b3q" firstAttribute="leading" secondItem="AW2-Nm-Iy0" secondAttribute="trailing" id="qvR-UA-RhL"/>
                         <constraint firstItem="EGG-i3-PCC" firstAttribute="leading" secondItem="vBO-2r-bcp" secondAttribute="trailing" constant="-68" id="rZ5-Sy-WA3"/>
                         <constraint firstItem="EGG-i3-PCC" firstAttribute="leading" secondItem="KFG-zM-5az" secondAttribute="trailing" constant="-12" id="stM-dH-s5N"/>
+                        <constraint firstItem="XsZ-u5-qSN" firstAttribute="leading" secondItem="46O-QB-Qyv" secondAttribute="trailing" constant="-2" id="suF-gF-Z2I"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="top" secondItem="pgy-ma-IM0" secondAttribute="bottom" constant="20" id="svP-Mo-CD4"/>
                         <constraint firstItem="AW2-Nm-Iy0" firstAttribute="leading" secondItem="CPF-4s-pLG" secondAttribute="leading" constant="12" id="t8N-fY-3Lu"/>
                         <constraint firstItem="vBO-2r-bcp" firstAttribute="centerY" secondItem="EGG-i3-PCC" secondAttribute="centerY" constant="12" id="vX9-M3-UZu"/>
+                        <constraint firstItem="46O-QB-Qyv" firstAttribute="top" secondItem="XsZ-u5-qSN" secondAttribute="bottom" constant="-2" id="x7r-We-xnq"/>
                         <constraint firstItem="CHI-mm-lzq" firstAttribute="top" secondItem="CPF-4s-pLG" secondAttribute="top" id="xUw-PX-OYY"/>
+                        <constraint firstItem="XsZ-u5-qSN" firstAttribute="top" secondItem="orI-Uj-3pp" secondAttribute="bottom" constant="-11" id="yCO-7f-Ot7"/>
                         <constraint firstItem="mH3-QT-mPq" firstAttribute="top" secondItem="8aX-SP-Zf2" secondAttribute="bottom" id="zJC-mz-zaw"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="CPF-4s-pLG"/>
@@ -501,6 +584,7 @@
         <image name="IM-shape" width="212" height="222"/>
         <image name="PC-shape" width="26" height="129"/>
         <image name="horizontalLine" width="140" height="3"/>
+        <image name="left-arrow" width="46" height="31"/>
         <image name="mux-shape" width="51" height="130"/>
         <image name="rightArrow" width="66" height="31"/>
         <image name="verticalLine" width="5" height="246"/>

@@ -57,6 +57,9 @@ class FetchViewController: UIViewController {
     @IBOutlet weak var ifFourToAluEnd: TouchPointView!
     
     // MARK: IFALUToMUX
+    @IBOutlet weak var ifAluToMux1: LineView!
+    @IBOutlet weak var ifAluToMux2: LineView!
+    @IBOutlet weak var ifAluToMux3: LineView!
     @IBOutlet weak var ifAluToMuxStart: TouchPointView!
     @IBOutlet weak var ifAluToMuxEnd: TouchPointView!
     
@@ -85,6 +88,7 @@ class FetchViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swiped(_:)))
         leftSwipe.cancelsTouchesInView = false
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swiped(_:)))
@@ -96,6 +100,7 @@ class FetchViewController: UIViewController {
         view.addGestureRecognizer(leftSwipe)
         view.addGestureRecognizer(rightSwipe)
         
+        // Disable Pop Gestures
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
         // Finish setting up
