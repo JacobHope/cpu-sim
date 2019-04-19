@@ -44,15 +44,6 @@
                                 <constraint firstAttribute="height" constant="10" id="iwW-Aa-F0t"/>
                             </constraints>
                         </progressView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBO-2r-bcp" userLabel="IfAluToMuxEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="195" y="150" width="25" height="25"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="25" id="IY2-er-9y3"/>
-                                <constraint firstAttribute="height" constant="25" id="UJo-b4-4dx"/>
-                            </constraints>
-                            <viewLayoutGuide key="safeArea" id="d99-qN-rPx"/>
-                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGG-i3-PCC" userLabel="MUXView">
                             <rect key="frame" x="152" y="100.5" width="30" height="100"/>
                             <subviews>
@@ -68,6 +59,15 @@
                                 <constraint firstItem="vv6-5C-770" firstAttribute="centerX" secondItem="d4k-8m-uvU" secondAttribute="centerX" id="WzA-Rs-bLM"/>
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="d4k-8m-uvU"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBO-2r-bcp" userLabel="IfAluToMuxEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="195" y="150" width="25" height="25"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="IY2-er-9y3"/>
+                                <constraint firstAttribute="height" constant="25" id="UJo-b4-4dx"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="d99-qN-rPx"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFG-zM-5az" userLabel="IfMuxToPcStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="139" y="150" width="25" height="25"/>
