@@ -45,6 +45,10 @@ class FetchViewController: UIViewController {
     @IBOutlet weak var ifPcToAluStart: TouchPointView!
     @IBOutlet weak var ifPcToAluEnd: TouchPointView!
     
+    // MARK: IFPCToIM
+    @IBOutlet weak var ifPcToImEnd: TouchPointView!
+    
+    
     public weak var delegate: FetchViewControllerDelegate?
     
     var touchPoints: [TouchPointView] = []

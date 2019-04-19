@@ -141,7 +141,8 @@ extension ALUCoordinator: FetchViewControllerDelegate {
             fetchViewController.ifMuxToPcStart,
             fetchViewController.ifMuxToPcEnd,
             fetchViewController.ifPcToAluStart,
-            fetchViewController.ifPcToAluEnd
+            fetchViewController.ifPcToAluEnd,
+            fetchViewController.ifPcToImEnd
         ]
         
         // Setup lines

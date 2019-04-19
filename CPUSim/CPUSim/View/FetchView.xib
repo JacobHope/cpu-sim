@@ -21,6 +21,7 @@
                 <outlet property="ifMuxToPcStart" destination="KFG-zM-5az" id="AYg-0e-a3O"/>
                 <outlet property="ifPcToAluEnd" destination="LBU-qu-OBc" id="vsL-H7-XvN"/>
                 <outlet property="ifPcToAluStart" destination="xRj-cF-dEu" id="qfC-yi-eeM"/>
+                <outlet property="ifPcToImEnd" destination="8nM-A2-QiH" id="Jta-2d-Gca"/>
                 <outlet property="progressView" destination="CHI-mm-lzq" id="pxR-j0-6v9"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kie-3E-8ce"/>
             </connections>
@@ -52,7 +53,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGG-i3-PCC" userLabel="MUXView">
-                            <rect key="frame" x="125" y="75" width="30" height="100"/>
+                            <rect key="frame" x="145" y="75" width="30" height="100"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mux-shape" translatesAutoresizingMaskIntoConstraints="NO" id="vv6-5C-770">
                                     <rect key="frame" x="-10.5" y="-15" width="51" height="130"/>
@@ -68,7 +69,7 @@
                             <viewLayoutGuide key="safeArea" id="d4k-8m-uvU"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFG-zM-5az" userLabel="IfMuxToPcStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="112" y="124.5" width="25" height="25"/>
+                            <rect key="frame" x="132" y="124.5" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="rm3-0e-aQy"/>
@@ -80,7 +81,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pgy-ma-IM0">
-                            <rect key="frame" x="107.5" y="335" width="20" height="20"/>
+                            <rect key="frame" x="127.5" y="335" width="20" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="egs-wu-nsf"/>
                                 <constraint firstAttribute="height" constant="20" id="hyE-zc-3uH"/>
@@ -90,7 +91,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="for-eX-Teq" userLabel="ALUView">
-                            <rect key="frame" x="172.5" y="245" width="75" height="125"/>
+                            <rect key="frame" x="192.5" y="245" width="75" height="125"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ALU-shape" translatesAutoresizingMaskIntoConstraints="NO" id="uo3-me-2kv" userLabel="ALUImageView">
                                     <rect key="frame" x="0.0" y="0.0" width="75" height="125"/>
@@ -108,7 +109,7 @@
                             <viewLayoutGuide key="safeArea" id="pgh-1q-s3P"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LBU-qu-OBc" userLabel="IfPcToAluEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="159.5" y="270" width="25" height="25"/>
+                            <rect key="frame" x="179.5" y="270" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="AqN-kn-kas"/>
@@ -119,8 +120,20 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="name" value="ifPcToAluEnd"/>
                             </userDefinedRuntimeAttributes>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nM-A2-QiH" userLabel="IfPcToImEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="107" y="449.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="JdN-ZP-eVV"/>
+                                <constraint firstAttribute="height" constant="25" id="tE5-jy-P3P"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="ib9-yu-Eky"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="name" value="ifPcToImEnd"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbV-2J-98q" userLabel="IMView">
-                            <rect key="frame" x="100" y="375" width="150" height="150"/>
+                            <rect key="frame" x="120" y="375" width="150" height="150"/>
                             <subviews>
                                 <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Instruction Memory" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZbH-BC-KT5" userLabel="Instruction Memory">
                                     <rect key="frame" x="25" y="5" width="100" height="50"/>
@@ -218,7 +231,7 @@
                             </userDefinedRuntimeAttributes>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="if-mux-to-pc-1" translatesAutoresizingMaskIntoConstraints="NO" id="875-NL-wgn" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="5" y="123.5" width="120" height="3"/>
+                            <rect key="frame" x="5" y="123.5" width="140" height="3"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="endPointName" value="ifMuxToPc1"/>
                             </userDefinedRuntimeAttributes>
@@ -228,9 +241,11 @@
                     <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="for-eX-Teq" firstAttribute="centerX" secondItem="dbV-2J-98q" secondAttribute="centerX" constant="35" id="2Or-JA-0RT"/>
+                        <constraint firstItem="8nM-A2-QiH" firstAttribute="centerY" secondItem="dbV-2J-98q" secondAttribute="centerY" constant="12" id="AK7-qn-OK5"/>
                         <constraint firstItem="LBU-qu-OBc" firstAttribute="centerY" secondItem="for-eX-Teq" secondAttribute="centerY" constant="-25" id="C45-Fs-iKZ"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="top" secondItem="EGG-i3-PCC" secondAttribute="bottom" constant="200" id="EKB-0G-Llt"/>
                         <constraint firstItem="KFG-zM-5az" firstAttribute="centerY" secondItem="EGG-i3-PCC" secondAttribute="centerY" constant="12" id="FuN-yx-hfr"/>
+                        <constraint firstItem="dbV-2J-98q" firstAttribute="leading" secondItem="8nM-A2-QiH" secondAttribute="trailing" constant="-12" id="G2X-hS-tez"/>
                         <constraint firstItem="mH3-QT-mPq" firstAttribute="leading" secondItem="875-NL-wgn" secondAttribute="leading" id="KTc-Bi-Qat"/>
                         <constraint firstItem="EGG-i3-PCC" firstAttribute="leading" secondItem="875-NL-wgn" secondAttribute="trailing" id="PD1-XT-Jam"/>
                         <constraint firstItem="for-eX-Teq" firstAttribute="leading" secondItem="pgy-ma-IM0" secondAttribute="trailing" constant="45" id="PLr-g0-pmL"/>
@@ -249,7 +264,7 @@
                         <constraint firstItem="mH3-QT-mPq" firstAttribute="leading" secondItem="AuM-jR-Qn6" secondAttribute="trailing" constant="-20" id="bNo-7y-2XB"/>
                         <constraint firstItem="CHI-mm-lzq" firstAttribute="leading" secondItem="CPF-4s-pLG" secondAttribute="leading" id="fiW-VH-JdN"/>
                         <constraint firstItem="EGG-i3-PCC" firstAttribute="leading" secondItem="dbV-2J-98q" secondAttribute="leading" constant="25" id="g1g-mc-uzt"/>
-                        <constraint firstItem="dbV-2J-98q" firstAttribute="leading" secondItem="AW2-Nm-Iy0" secondAttribute="trailing" constant="45" id="hNK-q6-nNz"/>
+                        <constraint firstItem="dbV-2J-98q" firstAttribute="leading" secondItem="AW2-Nm-Iy0" secondAttribute="trailing" constant="65" id="hNK-q6-nNz"/>
                         <constraint firstItem="mH3-QT-mPq" firstAttribute="top" secondItem="875-NL-wgn" secondAttribute="bottom" id="iHo-bN-u1E"/>
                         <constraint firstAttribute="height" constant="575" id="l6G-iU-cdn"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="top" secondItem="for-eX-Teq" secondAttribute="bottom" constant="5" id="mnL-OQ-Pfe"/>

@@ -17,6 +17,7 @@ private enum StartState {
     case ifMuxToPcEndStarted
     case ifPcToAluStartStarted
     case ifPcToAluEndStarted
+    case ifPcToImEndStarted
     case noneStarted
 }
 
@@ -25,6 +26,7 @@ private enum EndState {
     case ifMuxToPcEndEnded
     case ifPcToAluStartEnded
     case ifPcToAluEndEnded
+    case ifPcToImEndEnded
     case noneReached
 }
 
@@ -33,7 +35,8 @@ class ALUFetchStateService: State {
 
     var correctnessMap: [String: Bool] = [
         "ifMuxToPc": false,
-        "ifPcToAlu": false
+        "ifPcToAlu": false,
+        "ifPcToIm": false
     ]
 
     private var touchStartedInTouchPoint: Bool = false
@@ -73,6 +76,13 @@ class ALUFetchStateService: State {
                     tp.setCorrect()
                 }
             }
+        case "ifPcToImEnd":
+            correctnessMap["ifPcToIm"] = true
+            touchPoints.forEach { tp in
+                if (tp.name == "ifPcToImEnd") {
+                    tp.setCorrect()
+                }
+            }
         default:
             break;
         }
@@ -91,8 +101,28 @@ class ALUFetchStateService: State {
                 break;
             case "ifPcToAluEnd":
                 touchPoints.forEach { tp in
-                    if (tp.name == "ifPcToAluEnd"
-                        || tp.name == "ifPcToAluStart") {
+                    if (tp.name == "ifPcToAluEnd") {
+                        tp.isHidden = true
+                    }
+                    
+                    // Special case
+                    if (self.correctnessMap["ifPcToAlu"] == true
+                        && self.correctnessMap["ifPcToIm"] == true
+                        && tp.name == "ifPcToAluStart") {
+                        tp.isHidden = true
+                    }
+                }
+                break;
+            case "ifPcToImEnd":
+                touchPoints.forEach { tp in
+                    if (tp.name == "ifPcToImEnd") {
+                        tp.isHidden = true
+                    }
+                    
+                    // Special case
+                    if (self.correctnessMap["ifPcToAlu"] == true
+                        && self.correctnessMap["ifPcToIm"] == true
+                        && tp.name == "ifPcToAluStart") {
                         tp.isHidden = true
                     }
                 }
@@ -159,6 +189,8 @@ class ALUFetchStateService: State {
                     case "ifPcToAluEnd":
                         self.startState = StartState.ifPcToAluEndStarted
                         break;
+                    case "ifPcToImEnd":
+                        self.startState = StartState.ifPcToImEndStarted
                     default:
                         break;
                     }
@@ -239,6 +271,19 @@ class ALUFetchStateService: State {
                                 drawingService.clearDrawing(imageView: imageView)
                             }
                             break;
+                        case "ifPcToImEnd":
+                            if (self.startState == StartState.ifPcToAluStartStarted) {
+                                self.onCorrect(
+                                    touchPoints,
+                                    touchPointName: "ifPcToImEnd",
+                                    lines: [])  // TODO
+                                drawingService.ignoreTouchInput()
+                                drawingService.clearDrawing(imageView: imageView)
+                            } else if (startState != StartState.ifPcToImEndStarted) {
+                                self.onIncorrect(touchPoint)
+                                drawingService.ignoreTouchInput()
+                                drawingService.clearDrawing(imageView: imageView)
+                            }
                         default:
                             // Do nothing
                             break;
