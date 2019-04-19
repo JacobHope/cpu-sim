@@ -18,11 +18,12 @@ private enum StartState {
     case ifPcToAluStartStarted
     case ifPcToAluEndStarted
     case ifPcToImEndStarted
-    case if4ToAluStartStarted
+    case ifFourToAluStartStarted
+    case ifFourToAluEndStarted
     case noneStarted
 }
 
-// todo this is unused, get rid of it
+// todo: this is unused, get rid of it
 private enum EndState {
     case ifMuxToPcStartEnded
     case ifMuxToPcEndEnded
@@ -86,6 +87,13 @@ class ALUFetchStateService: State {
                     tp.setCorrect()
                 }
             }
+        case TouchPointNames.ifFourToAluEnd:
+            correctnessMap[CorrectnessMapKeys.ifFourToAlu] = true
+            touchPoints.forEach { tp in
+                if (tp.name == TouchPointNames.ifFourToAluEnd) {
+                    tp.setCorrect()
+                }
+            }
         default:
             break;
         }
@@ -126,6 +134,14 @@ class ALUFetchStateService: State {
                     if (self.correctnessMap[CorrectnessMapKeys.ifPcToAlu] == true
                         && self.correctnessMap[CorrectnessMapKeys.ifPcToIm] == true
                         && tp.name == TouchPointNames.ifPcToAluStart) {
+                        tp.isHidden = true
+                    }
+                }
+                break;
+            case TouchPointNames.ifFourToAluEnd:
+                touchPoints.forEach { tp in
+                    if (tp.name == TouchPointNames.ifFourToAluEnd
+                        || tp.name == TouchPointNames.ifFourToAluStart) {
                         tp.isHidden = true
                     }
                 }
@@ -194,8 +210,12 @@ class ALUFetchStateService: State {
                         break;
                     case TouchPointNames.ifPcToImEnd:
                         self.startState = StartState.ifPcToImEndStarted
+                        break;
                     case TouchPointNames.ifFourToAluStart:
-                        self.startState = StartState.if4ToAluStartStarted
+                        self.startState = StartState.ifFourToAluStartStarted
+                        break;
+                    case TouchPointNames.ifFourToAluEnd:
+                        self.startState = StartState.ifFourToAluEndStarted
                     default:
                         break;
                     }
@@ -290,12 +310,25 @@ class ALUFetchStateService: State {
                                 drawingService.clearDrawing(imageView: imageView)
                             }
                         case TouchPointNames.ifFourToAluStart:   // Anything ending at a start point is incorrect
-                            if (startState != StartState.if4ToAluStartStarted) {
+                            if (startState != StartState.ifFourToAluStartStarted) {
                                 self.onIncorrect(touchPoint)
                                 drawingService.ignoreTouchInput()
                                 drawingService.clearDrawing(imageView: imageView)
                             }
                             break;
+                        case TouchPointNames.ifFourToAluEnd:
+                            if (self.startState == StartState.ifFourToAluStartStarted) {
+                                self.onCorrect(
+                                    touchPoints,
+                                    touchPointName: TouchPointNames.ifFourToAluEnd,
+                                    lines: [])  // TODO
+                                drawingService.ignoreTouchInput()
+                                drawingService.clearDrawing(imageView: imageView)
+                            } else if (startState != StartState.ifFourToAluEndStarted) {
+                                self.onIncorrect(touchPoint)
+                                drawingService.ignoreTouchInput()
+                                drawingService.clearDrawing(imageView: imageView)
+                            }
                         default:
                             // Do nothing
                             break;

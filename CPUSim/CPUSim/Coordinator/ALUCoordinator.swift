@@ -140,6 +140,7 @@ extension ALUCoordinator: FetchViewControllerDelegate {
         
         // todo set up touch point names programmatically
         fetchViewController.ifFourToAluStart.name = TouchPointNames.ifFourToAluStart
+        fetchViewController.ifFourToAluEnd.name = TouchPointNames.ifFourToAluEnd
         
         fetchViewController.touchPoints = [
             fetchViewController.ifMuxToPcStart,
@@ -147,7 +148,8 @@ extension ALUCoordinator: FetchViewControllerDelegate {
             fetchViewController.ifPcToAluStart,
             fetchViewController.ifPcToAluEnd,
             fetchViewController.ifPcToImEnd,
-            fetchViewController.ifFourToAluStart
+            fetchViewController.ifFourToAluStart,
+            fetchViewController.ifFourToAluEnd
         ]
         
         // Setup lines

@@ -37,4 +37,5 @@ struct TouchPointNames {
     static let ifPcToAluEnd = "ifPcToAluEnd"
     static let ifPcToImEnd = "ifPcToImEnd"
     static let ifFourToAluStart = "ifFourToAluStart"
+    static let ifFourToAluEnd = "ifFourToAluEnd"
 }
