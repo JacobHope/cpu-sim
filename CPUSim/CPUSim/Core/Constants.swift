@@ -49,6 +49,7 @@ struct CorrectnessMapKeys {
 }
 
 struct TouchPointNames {
+    //MARK: - IF Touch Point Names
     static let ifMuxToPcStart = "ifMuxToPcStart"
     static let ifPcToAluStart = "ifPcToAluStart"
     static let ifMuxToPcEnd = "ifMuxToPcEnd"
@@ -58,4 +59,17 @@ struct TouchPointNames {
     static let ifFourToAluEnd = "ifFourToAluEnd"
     static let ifAluToMuxStart = "ifAluToMuxStart"
     static let ifAluToMuxEnd = "ifAluToMuxEnd"
+    
+    //MARK: - ID Touch Point Names
+    static let idExcecuteToWriteDataEnd = "idExcecuteToWriteDataEnd"
+    static let idFetchToReadAddress1End = "idFetchToReadAddress1End"
+    static let idFetchToReadAddress2End = "idFetchToReadAddress2End"
+    static let idFetchToMux0End = "idFetchToMux0End"
+    static let idFetchToMux1End = "idFetchToMux1End"
+    static let idFetchToSignExtendEnd = "idFetchToSignExtendEnd"
+    static let idMuxToWriteAddressStart = "idMuxToWriteAddressStart"
+    static let idMuxToWriteAddressEnd = "idMuxToWriteAddressEnd"
+    static let idReadData1ToExStart = "idReadData1ToExStart"
+    static let idReadData2ToExStart = "idReadData2ToExStart"
+    static let idSignExtendToExecuteStart = "idSignExtendToExecuteStart"
 }
