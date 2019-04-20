@@ -13,6 +13,19 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DecodeViewController" customModule="CPUSim" customModuleProvider="target">
             <connections>
                 <outlet property="DecodeView" destination="iN0-l3-epB" id="iIS-NS-bV6"/>
+                <outlet property="idExToWriteDataEnd" destination="uco-Yx-0fo" id="V53-P3-pgT"/>
+                <outlet property="idExTouchTab" destination="mfl-JU-tDh" id="rqg-q6-oCp"/>
+                <outlet property="idIFToMux0End" destination="RfM-dp-SJg" id="8qy-Bj-TfR"/>
+                <outlet property="idIFToMux1End" destination="zGz-9m-7x0" id="hOo-qS-f0W"/>
+                <outlet property="idIFToReadAddress1End" destination="jXe-H3-3ya" id="NoN-9z-oai"/>
+                <outlet property="idIFToReadAddress2End" destination="fYA-RD-uij" id="KwC-4w-EAE"/>
+                <outlet property="idIFToSignExtendEnd" destination="8m1-bs-lDr" id="8Jt-D9-yXx"/>
+                <outlet property="idIFTouchTab" destination="LZV-s8-XCh" id="IbP-mb-C2o"/>
+                <outlet property="idMuxToWriteAddressEnd" destination="HDh-D5-bT5" id="rfD-O1-0e0"/>
+                <outlet property="idMuxToWriteAddressStart" destination="6w5-p2-dFr" id="yN7-zq-KiI"/>
+                <outlet property="idReadData1ToExStart" destination="EFc-al-ldc" id="eJu-r1-hZb"/>
+                <outlet property="idReadData2ToExStart" destination="O19-D5-CMs" id="PbA-dq-Rlf"/>
+                <outlet property="idSignExtendToExStart" destination="H1R-pv-bpc" id="kFg-fT-X4s"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Rjs-Xb-lfm"/>
             </connections>
         </placeholder>
@@ -137,25 +150,25 @@
                                 <constraint firstAttribute="width" constant="27" id="cGC-oQ-rGT"/>
                             </constraints>
                         </imageView>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uco-Yx-0fo" userLabel="idExecuteToWriteDataEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uco-Yx-0fo" userLabel="idExToWriteDataEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="64" y="289.5" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <viewLayoutGuide key="safeArea" id="gMe-YJ-Hdg"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXe-H3-3ya" userLabel="idFetchToReadAddress1End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXe-H3-3ya" userLabel="idIFToReadAddress1End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="64" y="176" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <viewLayoutGuide key="safeArea" id="McQ-kf-Ygi"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-RD-uij" userLabel="idFetchToReadAddress2End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-RD-uij" userLabel="idIFToReadAddress2End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="64" y="212" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <viewLayoutGuide key="safeArea" id="L3e-qh-4Tu"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8m1-bs-lDr" userLabel="idFetchToSignExtendEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8m1-bs-lDr" userLabel="idIFToSignExtendEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="105" y="381" width="25" height="25"/>
                             <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <constraints>
@@ -163,13 +176,13 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="dLK-KK-O2Z"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RfM-dp-SJg" userLabel="idFetchToMux0End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RfM-dp-SJg" userLabel="idIFToMux0End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="3" y="240.5" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <viewLayoutGuide key="safeArea" id="Igs-2R-FZt"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zGz-9m-7x0" userLabel="idFetchToMux1End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zGz-9m-7x0" userLabel="idIFToMux1End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="3" y="266.5" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
@@ -187,19 +200,19 @@
                             <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <viewLayoutGuide key="safeArea" id="lte-tM-B2z"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFc-al-ldc" userLabel="idReadData1ToExecuteStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFc-al-ldc" userLabel="idReadData1ToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="256" y="192.5" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <viewLayoutGuide key="safeArea" id="9Gi-4T-N0j"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O19-D5-CMs" userLabel="idReadData2ToExecuteStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O19-D5-CMs" userLabel="idReadData2ToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="256" y="256.5" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <viewLayoutGuide key="safeArea" id="Bbe-F3-pmm"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H1R-pv-bpc" userLabel="idSignExtendToExecuteStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H1R-pv-bpc" userLabel="idSignExtendToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="206" y="381" width="25" height="25"/>
                             <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <constraints>

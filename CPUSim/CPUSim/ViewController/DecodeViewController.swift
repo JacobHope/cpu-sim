@@ -18,6 +18,20 @@ public protocol DecodeViewControllerDelegate: class {
 public class DecodeViewController: UIViewController {
     // MARK: Properties
     @IBOutlet var DecodeView: UIView!
+    @IBOutlet weak var idExTouchTab: TouchTabView!
+    @IBOutlet weak var idIFTouchTab: TouchTabView!
+    @IBOutlet weak var idExToWriteDataEnd: TouchPointView!
+    @IBOutlet weak var idIFToReadAddress1End: TouchPointView!
+    @IBOutlet weak var idIFToReadAddress2End: TouchPointView!
+    @IBOutlet weak var idIFToSignExtendEnd: TouchPointView!
+    @IBOutlet weak var idIFToMux0End: TouchPointView!
+    @IBOutlet weak var idIFToMux1End: TouchPointView!
+    @IBOutlet weak var idMuxToWriteAddressStart: TouchPointView!
+    @IBOutlet weak var idMuxToWriteAddressEnd: TouchPointView!
+    @IBOutlet weak var idReadData1ToExStart: TouchPointView!
+    @IBOutlet weak var idReadData2ToExStart: TouchPointView!
+    @IBOutlet weak var idSignExtendToExStart: TouchPointView!
+    
     
     weak var delegate: DecodeViewControllerDelegate?
     

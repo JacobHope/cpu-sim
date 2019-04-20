@@ -86,6 +86,7 @@ class TouchTabView: UIView {
 
     }
     
+    
     private func setColor(cgColor: CGColor) {
         self.layer.backgroundColor = cgColor
         self.layer.shadowColor = cgColor
