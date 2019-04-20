@@ -8,6 +8,8 @@
 
 import UIKit
 import Pulsator
+import PromiseKit
+import PMKUIKit
 
 extension Pulsator {
     static func generatePulsator(radius: CGFloat,
@@ -48,8 +50,24 @@ extension CAShapeLayer {
 extension DotModel {
     static func defaultDotModel() -> DotModel {
         return DotModel(
-            x: -4.75,
-            y: -4.75,
-            radius: 10.0)
+                x: -4.75,
+                y: -4.75,
+                radius: 10.0)
+    }
+}
+
+extension LineView {
+    static func animateLines(
+            _ lines: [LineView],
+            duration: TimeInterval) {
+        // Animate each line in sequence
+        var animate = Guarantee()
+        for line in lines {
+            animate = animate.then {
+                UIView.animate(.promise, duration: duration) {
+                    line.alpha = 1.0
+                }.asVoid()
+            }
+        }
     }
 }

@@ -137,19 +137,28 @@ extension ALUCoordinator: FetchViewControllerDelegate {
             
             // If progress is complete...
             if (progress == 1) {
-                // ...show complete button
-                fetchViewController.completeButton.isHidden = false
+                // ...show complete button after 2 seconds
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    fetchViewController.completeButton.alpha = 1.0
+                }
+                
+                // Animate remaining lines after 4 seconds
+                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                    LineView.animateLines(
+                        fetchViewController.lines[CompleteKeys.ifComplete] ?? [],
+                        duration: 0.75)
+                }
             }
         }
         
-        // Set button image color
+        // Set complete button image color
         fetchViewController.completeButton.setImage(
             UIImage(named: "right-arrow-button")?.withRenderingMode(.alwaysTemplate),
             for: .normal)
         fetchViewController.completeButton.tintColor = .blue
         
         // Setup complete button
-        fetchViewController.completeButton.isHidden = true
+        fetchViewController.completeButton.alpha = 0.0
         fetchViewController.completeButton.setup(
             GlowingButtonModel(
                 animDuration: 1.5,
@@ -183,6 +192,11 @@ extension ALUCoordinator: FetchViewControllerDelegate {
         
         // Setup lines
         
+        // Complete lines
+        fetchViewController.lines[CompleteKeys.ifComplete] = [
+            fetchViewController.ifImToNext1
+        ]
+        
         // IFMUXtoPC
         fetchViewController.lines[TouchPointNames.ifMuxToPcEnd] = [
             fetchViewController.ifMuxToPc1,
@@ -213,10 +227,12 @@ extension ALUCoordinator: FetchViewControllerDelegate {
             fetchViewController.ifAluToMux3
         ]
         
+        // Setup all touch points
         fetchViewController.touchPoints.forEach { touchPoint in
             touchPoint.setupWith(DotModel.defaultDotModel())
         }
         
+        // Setup all lines
         for (_, v) in fetchViewController.lines {
             v.forEach { line in
                 line.setup()

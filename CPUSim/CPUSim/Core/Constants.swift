@@ -23,6 +23,10 @@ struct Events {
     static let aluFetchOnCorrect = "aluFetchOnCorrect"
 }
 
+struct CompleteKeys {
+    static let ifComplete = "ifComplete"
+}
+
 struct CorrectnessMapKeys {
     static let ifMuxToPc = "ifMuxToPc"
     static let ifPcToAlu = "ifPcToAlu"

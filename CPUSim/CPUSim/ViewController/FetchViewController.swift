@@ -33,6 +33,9 @@ class FetchViewController: UIViewController {
     
     @IBOutlet weak var completeButton: GlowingButton!
     
+    // MARK: Completed lines
+    @IBOutlet weak var ifImToNext1: LineView!
+    
     // MARK: ProgressView
     @IBOutlet weak var progressView: UIProgressView!
     

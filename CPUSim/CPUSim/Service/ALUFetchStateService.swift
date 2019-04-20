@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import PromiseKit
-import PMKUIKit
 import SwiftEventBus
 
 private enum StartState {
@@ -184,18 +182,10 @@ class ALUFetchStateService: State {
                 break;
             }
 
-            // Get lines for touch point
-            let lines: [LineView] = linesMap[touchPointName] ?? []
-            
-            // Animate each line in sequence
-            var animate = Guarantee()
-            for line in lines {
-                animate = animate.then {
-                    UIView.animate(.promise, duration: 0.75) {
-                        line.alpha = 1.0
-                    }.asVoid()
-                }
-            }
+            // Animate lines
+            LineView.animateLines(
+                linesMap[touchPointName] ?? [],
+                duration: 0.75)
         }
 
         // Post event...
