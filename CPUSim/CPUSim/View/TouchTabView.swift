@@ -13,9 +13,9 @@ import UIKit
 import Foundation
 
 class TouchTabView: UIView {
-    var duration : CGFloat = 3
-    var cornerRadius : CGFloat = 5
-    var maxGlowSize : CGFloat = 10
+    var duration : CGFloat = 2
+    var cornerRadius : CGFloat = 4
+    var maxGlowSize : CGFloat = 8
     var minGlowSize : CGFloat = 0
     
     var name: String = "touchTab"
@@ -64,19 +64,30 @@ class TouchTabView: UIView {
         self.layer.add(layerAnimation, forKey: "glowingAnimation")
     }
     
+    func stopAnimation() {
+        //TODO stop pulsating glow
+    }
+    
     func setCorrect() {
-        //TODO set tab to green
+        // Set background and pulsating glow to green
+        setColor(UIColor.green.cgColor)
+        
+        //TODO let glow pulsate for a limited of time
     }
     
     func setIncorrect() {
-        //TODO set tab to dark red
+        // Set background and pulsating glow to dark red
+        setColor(UIColor.darkRed.cgColor)
     }
     
     func reset() {
-       //TODO reset tab to blue
+        // Set background and pulsating glow to dark red
+        setColor(UIColor.blue.cgColor)
+
     }
     
-    func stop() {
-      //TODO stop glow
+    private func setColor(cgColor: CGColor) {
+        self.layer.backgroundColor = cgColor
+        self.layer.shadowColor = cgColor
     }
 }

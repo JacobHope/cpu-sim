@@ -43,10 +43,12 @@
 		305A00DC22518518008D2A6F /* LoadCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305A00DB22518518008D2A6F /* LoadCoordinator.swift */; };
 		305A00DE22518526008D2A6F /* StoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305A00DD22518526008D2A6F /* StoreCoordinator.swift */; };
 		305A00E022518534008D2A6F /* BranchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305A00DF22518534008D2A6F /* BranchCoordinator.swift */; };
+		30685EDF226BBA6A005F38D4 /* TouchTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30685EDE226BBA6A005F38D4 /* TouchTabView.swift */; };
 		30DBC869224D7BB700FDF861 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBC868224D7BB700FDF861 /* AppDelegate.swift */; };
 		30DBC876224D7BB800FDF861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30DBC875224D7BB800FDF861 /* Assets.xcassets */; };
 		30DBC884224D7BB800FDF861 /* CPUSimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBC883224D7BB800FDF861 /* CPUSimTests.swift */; };
 		30DBC88F224D7BB800FDF861 /* CPUSimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBC88E224D7BB800FDF861 /* CPUSimUITests.swift */; };
+		30FEB626226B9C85006E8E44 /* ALUDecodeStateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FEB625226B9C85006E8E44 /* ALUDecodeStateService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,7 @@
 		305A00DB22518518008D2A6F /* LoadCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCoordinator.swift; sourceTree = "<group>"; };
 		305A00DD22518526008D2A6F /* StoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCoordinator.swift; sourceTree = "<group>"; };
 		305A00DF22518534008D2A6F /* BranchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchCoordinator.swift; sourceTree = "<group>"; };
+		30685EDE226BBA6A005F38D4 /* TouchTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchTabView.swift; sourceTree = "<group>"; };
 		30DBC865224D7BB700FDF861 /* CPUSim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPUSim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30DBC868224D7BB700FDF861 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30DBC875224D7BB800FDF861 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 		30DBC88A224D7BB800FDF861 /* CPUSimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CPUSimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30DBC88E224D7BB800FDF861 /* CPUSimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUSimUITests.swift; sourceTree = "<group>"; };
 		30DBC890224D7BB800FDF861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30FEB625226B9C85006E8E44 /* ALUDecodeStateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALUDecodeStateService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 			children = (
 				04D3F7A82260376D002C80B6 /* DrawingService.swift */,
 				04D3F7A92260376D002C80B6 /* ALUFetchStateService.swift */,
+				30FEB625226B9C85006E8E44 /* ALUDecodeStateService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				04CF4312226B478C00C7B0E7 /* GlowingButton.swift */,
 				04D3F7902260265F002C80B6 /* LineView.swift */,
 				04D3F78E2260265B002C80B6 /* TouchPointView.swift */,
+				30685EDE226BBA6A005F38D4 /* TouchTabView.swift */,
 				305A00D722516AA3008D2A6F /* MenuView.xib */,
 				3007E7422257F83D0021DB6D /* FetchView.xib */,
 				3007E7442257F8490021DB6D /* DecodeView.xib */,
@@ -473,9 +479,11 @@
 				04CF4313226B478C00C7B0E7 /* GlowingButton.swift in Sources */,
 				305A00DA22518506008D2A6F /* ALUCoordinator.swift in Sources */,
 				3007E73B225716750021DB6D /* ExecuteViewController.swift in Sources */,
+				30FEB626226B9C85006E8E44 /* ALUDecodeStateService.swift in Sources */,
 				3007E7352256E46E0021DB6D /* FetchViewController.swift in Sources */,
 				04D3F78022602530002C80B6 /* Drawing.swift in Sources */,
 				30DBC869224D7BB700FDF861 /* AppDelegate.swift in Sources */,
+				30685EDF226BBA6A005F38D4 /* TouchTabView.swift in Sources */,
 				305A00E022518534008D2A6F /* BranchCoordinator.swift in Sources */,
 				04D3F7A3226036AE002C80B6 /* Extensions.swift in Sources */,
 				04CF4315226B4D4A00C7B0E7 /* GlowingButtonModel.swift in Sources */,

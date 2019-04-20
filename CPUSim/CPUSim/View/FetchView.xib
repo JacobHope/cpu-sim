@@ -605,7 +605,7 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="CPF-4s-pLG"/>
                 </view>
-                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opK-a2-cL1" userLabel="Decode Bar View" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opK-a2-cL1" userLabel="ifIDTab" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
                     <rect key="frame" x="296" y="64" width="24" height="460"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="ID" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q62-Gc-NZI" userLabel="IDTextView">

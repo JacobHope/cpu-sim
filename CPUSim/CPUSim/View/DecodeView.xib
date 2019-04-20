@@ -233,7 +233,7 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="J8h-pv-fDy"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfl-JU-tDh" userLabel="Execute Bar View" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfl-JU-tDh" userLabel="idExTouchTab" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
                     <rect key="frame" x="296" y="64" width="24" height="460"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="EX" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSI-xG-ltq" userLabel="ExecuteTextView">
@@ -252,7 +252,7 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="MW2-LQ-tmg"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZV-s8-XCh" userLabel="Fetch Bar View" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZV-s8-XCh" userLabel="idIFTouchTab" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="64" width="24" height="460"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="IF" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXw-TO-vsu" userLabel="FetchTextView">
