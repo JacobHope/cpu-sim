@@ -138,7 +138,7 @@ extension ALUCoordinator: FetchViewControllerDelegate {
         
         // Setup TouchPointViews
         
-        // todo set up touch point names programmatically
+        // todo set up touch point names programmatically, currently setup in xib as IBInspectable
         fetchViewController.ifFourToAluStart.name = TouchPointNames.ifFourToAluStart
         fetchViewController.ifFourToAluEnd.name = TouchPointNames.ifFourToAluEnd
         fetchViewController.ifAluToMuxStart.name = TouchPointNames.ifAluToMuxStart
@@ -157,10 +157,35 @@ extension ALUCoordinator: FetchViewControllerDelegate {
         ]
         
         // Setup lines
-        fetchViewController.lines[CorrectnessMapKeys.ifMuxToPc] = [
+        
+        // IFMUXtoPC
+        fetchViewController.lines[TouchPointNames.ifMuxToPcEnd] = [
             fetchViewController.ifMuxToPc1,
             fetchViewController.ifMuxToPc2,
             fetchViewController.ifMuxToPc3
+        ]
+        
+        // IFPCtoALU
+        fetchViewController.lines[TouchPointNames.ifPcToAluEnd] = [
+            fetchViewController.ifPcToAlu1,
+            fetchViewController.ifPcToAlu2
+        ]
+        
+        // IFPCtoIM
+        fetchViewController.lines[TouchPointNames.ifPcToImEnd] = [
+            fetchViewController.ifPcToIm1
+        ]
+        
+        // IFFourToALU
+        fetchViewController.lines[TouchPointNames.ifFourToAluEnd] = [
+            fetchViewController.ifFourToAlu1
+        ]
+        
+        // IFALUToMUX
+        fetchViewController.lines[TouchPointNames.ifAluToMuxEnd] = [
+            fetchViewController.ifAluToMux1,
+            fetchViewController.ifAluToMux2,
+            fetchViewController.ifAluToMux3
         ]
         
         fetchViewController.touchPoints.forEach { touchPoint in
