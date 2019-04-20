@@ -44,15 +44,11 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="88x-6N-2Un"/>
                         </progressView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PK9-Kv-lhZ" userLabel="Register View">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PK9-Kv-lhZ" userLabel="Register File View">
                             <rect key="frame" x="76.5" y="134" width="175" height="180"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="IM-shape" translatesAutoresizingMaskIntoConstraints="NO" id="x8J-Pu-WYU" userLabel="RegisterFileImageView">
                                     <rect key="frame" x="3" y="-1" width="168" height="182"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="168" id="auz-mK-3iX"/>
-                                        <constraint firstAttribute="height" constant="182" id="b5A-yJ-r05"/>
-                                    </constraints>
                                 </imageView>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Register File" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrP-CW-IcH" userLabel="RegisterFileTextView">
                                     <rect key="frame" x="22" y="0.0" width="131" height="46"/>
@@ -289,7 +285,6 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="mfl-JU-tDh" firstAttribute="leading" secondItem="byp-Ai-w6D" secondAttribute="trailing" constant="11" id="1QY-4Q-qT5"/>
                 <constraint firstAttribute="trailing" secondItem="mfl-JU-tDh" secondAttribute="trailing" id="44f-vG-Jjm"/>
                 <constraint firstItem="mfl-JU-tDh" firstAttribute="top" secondItem="LZV-s8-XCh" secondAttribute="top" id="5Eo-6d-Hvb"/>
                 <constraint firstItem="mfl-JU-tDh" firstAttribute="bottom" secondItem="LZV-s8-XCh" secondAttribute="bottom" id="EKg-ya-EQw"/>
