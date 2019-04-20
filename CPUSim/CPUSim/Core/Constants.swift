@@ -28,11 +28,24 @@ struct CompleteKeys {
 }
 
 struct CorrectnessMapKeys {
+    //MARK: - IF Correctness Map Keys
     static let ifMuxToPc = "ifMuxToPc"
     static let ifPcToAlu = "ifPcToAlu"
     static let ifPcToIm = "ifPcToIm"
     static let ifFourToAlu = "ifFourToAlu"
     static let ifAluToMux = "ifAluToMux"
+    
+    //MARK: - ID Correctness Map Keys
+    static let idFetchToReadAddress1 = "idFetchToReadAddress1"
+    static let idFetchToReadAddress2 = "idFetchToReadAddress2"
+    static let idFetchToMux1 = "idFetchToMux1"
+    static let idFetchToMux0 = "idFetchToMux0"
+    static let idMuxToWriteAddress = "idMuxToWriteAddress"
+    static let idExecuteToWriteData = "idExecuteToWriteData"
+    static let idFetchToSignExtend = "idFetchToSignExtend"
+    static let idSignExtendToExecute = "idSignExtendToExecute"
+    static let idReadData1ToExecute = "idReadData1ToExecute"
+    static let idReadData2ToExecute = "idReadData2ToExecute"
 }
 
 struct TouchPointNames {
