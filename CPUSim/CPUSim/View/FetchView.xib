@@ -366,10 +366,6 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="name" value="ifPcToAluStart"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-<<<<<<< .merge_file_huHwmM
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="AuM-jR-Qn6" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="-8" y="452.99999999999994" width="20" height="20"/>
-=======
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sgY-s0-b3q" userLabel="IfPcToIm1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="42" y="453" width="85" height="20"/>
                             <subviews>
@@ -455,7 +451,6 @@
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                             </accessibility>
->>>>>>> .merge_file_09UK1T
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="5qT-wh-WqC"/>
                                 <constraint firstAttribute="height" constant="20" id="lBW-2y-Xfg"/>
