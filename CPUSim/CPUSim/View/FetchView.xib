@@ -53,7 +53,7 @@
                             </constraints>
                         </progressView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kaw-BT-IVA" userLabel="CompleteButton" customClass="GlowingButton" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="200" y="38.5" width="25" height="25"/>
+                            <rect key="frame" x="112.5" y="38.5" width="25" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="a2a-vy-Y83"/>
                                 <constraint firstAttribute="width" constant="25" id="vHT-dJ-IUz"/>
@@ -570,11 +570,11 @@
                         <constraint firstItem="XsZ-u5-qSN" firstAttribute="leading" secondItem="46O-QB-Qyv" secondAttribute="trailing" constant="-2" id="suF-gF-Z2I"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="top" secondItem="pgy-ma-IM0" secondAttribute="bottom" constant="20" id="svP-Mo-CD4"/>
                         <constraint firstItem="AW2-Nm-Iy0" firstAttribute="leading" secondItem="CPF-4s-pLG" secondAttribute="leading" constant="12" id="t8N-fY-3Lu"/>
+                        <constraint firstItem="Kaw-BT-IVA" firstAttribute="centerX" secondItem="CPF-4s-pLG" secondAttribute="centerX" id="v1A-bW-5WW"/>
                         <constraint firstItem="vBO-2r-bcp" firstAttribute="centerY" secondItem="EGG-i3-PCC" secondAttribute="centerY" constant="12" id="vX9-M3-UZu"/>
                         <constraint firstItem="46O-QB-Qyv" firstAttribute="top" secondItem="XsZ-u5-qSN" secondAttribute="bottom" constant="-2" id="x7r-We-xnq"/>
                         <constraint firstItem="CHI-mm-lzq" firstAttribute="top" secondItem="CPF-4s-pLG" secondAttribute="top" id="xUw-PX-OYY"/>
                         <constraint firstItem="XsZ-u5-qSN" firstAttribute="top" secondItem="orI-Uj-3pp" secondAttribute="bottom" constant="-11" id="yCO-7f-Ot7"/>
-                        <constraint firstItem="CPF-4s-pLG" firstAttribute="trailing" secondItem="Kaw-BT-IVA" secondAttribute="trailing" constant="25" id="yaD-B6-gHg"/>
                         <constraint firstItem="mH3-QT-mPq" firstAttribute="top" secondItem="8aX-SP-Zf2" secondAttribute="bottom" id="zJC-mz-zaw"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="CPF-4s-pLG"/>
