@@ -13,6 +13,16 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DecodeViewController" customModule="CPUSim" customModuleProvider="target">
             <connections>
                 <outlet property="DecodeView" destination="iN0-l3-epB" id="iIS-NS-bV6"/>
+                <outlet property="idFetchToMux0End" destination="RfM-dp-SJg" id="Qcv-3g-e6q"/>
+                <outlet property="idFetchToMux1End" destination="zGz-9m-7x0" id="RNq-Im-vfP"/>
+                <outlet property="idFetchToReadAddress1End" destination="jXe-H3-3ya" id="oks-J7-Qmr"/>
+                <outlet property="idFetchToReadAddress2End" destination="fYA-RD-uij" id="kTt-tN-4Uw"/>
+                <outlet property="idFetchToSignExtendEnd" destination="8m1-bs-lDr" id="B5n-zt-R6z"/>
+                <outlet property="idMuxToWriteAddressEnd" destination="HDh-D5-bT5" id="dP4-xE-Dhk"/>
+                <outlet property="idMuxToWriteAddressStart" destination="6w5-p2-dFr" id="uRd-Nq-jtz"/>
+                <outlet property="idReadData1ToExStart" destination="EFc-al-ldc" id="jsd-Jh-2Tf"/>
+                <outlet property="idReadData2ToExStart" destination="O19-D5-CMs" id="Z7B-dS-hoX"/>
+                <outlet property="idSignExtendToExecuteStart" destination="H1R-pv-bpc" id="3wJ-nW-Eqs"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Rjs-Xb-lfm"/>
             </connections>
         </placeholder>
@@ -187,13 +197,13 @@
                             <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <viewLayoutGuide key="safeArea" id="lte-tM-B2z"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFc-al-ldc" userLabel="idReadData1ToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFc-al-ldc" userLabel="idReadData1ToExecuteStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="256" y="192.5" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <viewLayoutGuide key="safeArea" id="9Gi-4T-N0j"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O19-D5-CMs" userLabel="idReadData2ToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O19-D5-CMs" userLabel="idReadData2ToExecuteStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="256" y="256.5" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
