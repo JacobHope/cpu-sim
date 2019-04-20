@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byp-Ai-w6D" userLabel="ContainerView">
-                    <rect key="frame" x="35" y="7" width="250" height="575"/>
+                    <rect key="frame" x="35" y="6.5" width="250" height="575"/>
                     <subviews>
                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8h4-y4-W0a">
                             <rect key="frame" x="0.0" y="13.5" width="250" height="10"/>
@@ -32,58 +32,77 @@
                             <viewLayoutGuide key="safeArea" id="88x-6N-2Un"/>
                         </progressView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PK9-Kv-lhZ" userLabel="Register View">
-                            <rect key="frame" x="38" y="164" width="175" height="180"/>
+                            <rect key="frame" x="37.5" y="164" width="175" height="180"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="IM-shape" translatesAutoresizingMaskIntoConstraints="NO" id="x8J-Pu-WYU" userLabel="IDImageView">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="IM-shape" translatesAutoresizingMaskIntoConstraints="NO" id="x8J-Pu-WYU" userLabel="RegisterFileImageView">
                                     <rect key="frame" x="3" y="-1" width="168" height="182"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 </imageView>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Read Address 1" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwB-9b-REJ" userLabel="ReadAddress1TextView">
-                                    <rect key="frame" x="9" y="30" width="110" height="28"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Register File" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrP-CW-IcH" userLabel="RegisterFileTextView">
+                                    <rect key="frame" x="22" y="0.0" width="131" height="46"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="46" id="Vx7-gg-SD2"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Register File" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrP-CW-IcH" userLabel="RegisterFileTextView">
-                                    <rect key="frame" x="22" y="0.0" width="129" height="46"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Read Address 1" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwB-9b-REJ" userLabel="ReadAddress1TextView">
+                                    <rect key="frame" x="9" y="30" width="104" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Read Address 2" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkC-P1-ryq" userLabel="ReadAddress2TextView">
-                                    <rect key="frame" x="7" y="66" width="115" height="28"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Read Address 2" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkC-P1-ryq" userLabel="ReadAddress2TextView">
+                                    <rect key="frame" x="7" y="66" width="114" height="28"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Write Address" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cO-Zh-a1c" userLabel="WriteAddressTextView">
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Write Address" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cO-Zh-a1c" userLabel="WriteAddressTextView">
                                     <rect key="frame" x="9" y="111" width="110" height="28"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="28" id="gsh-xa-akL"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Read Data 1" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dta-6Y-utJ" userLabel="ReadData1TextView">
                                     <rect key="frame" x="105" y="38" width="67" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Read Data 2" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xy0-tP-HKG" userLabel="ReadData2TextView">
                                     <rect key="frame" x="106" y="102" width="67" height="52"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Write Data" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrQ-LM-fSd" userLabel="WriteDataTextView">
-                                    <rect key="frame" x="9" y="147" width="110" height="27"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Write Data" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrQ-LM-fSd" userLabel="WriteDataTextView">
+                                    <rect key="frame" x="9" y="147" width="110" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                             </subviews>
                             <constraints>
+                                <constraint firstItem="6cO-Zh-a1c" firstAttribute="leading" secondItem="vrQ-LM-fSd" secondAttribute="leading" id="0GJ-zU-6Um"/>
+                                <constraint firstItem="SwB-9b-REJ" firstAttribute="leading" secondItem="VKz-9X-mi1" secondAttribute="leading" constant="9" id="2zr-za-Wcg"/>
+                                <constraint firstAttribute="bottom" secondItem="6cO-Zh-a1c" secondAttribute="bottom" constant="41" id="34I-ba-qLf"/>
+                                <constraint firstItem="x8J-Pu-WYU" firstAttribute="leading" secondItem="VKz-9X-mi1" secondAttribute="leading" constant="3" id="7fa-t3-Cqn"/>
+                                <constraint firstItem="VKz-9X-mi1" firstAttribute="top" secondItem="x8J-Pu-WYU" secondAttribute="top" constant="1" id="8Nx-kf-MDT"/>
+                                <constraint firstItem="TkC-P1-ryq" firstAttribute="top" secondItem="RrP-CW-IcH" secondAttribute="bottom" constant="20" id="Bed-rl-ETO"/>
+                                <constraint firstItem="TkC-P1-ryq" firstAttribute="leading" secondItem="VKz-9X-mi1" secondAttribute="leading" constant="7" id="C7L-u0-4XA"/>
                                 <constraint firstAttribute="width" constant="175" id="D4T-RQ-zkT"/>
+                                <constraint firstItem="RrP-CW-IcH" firstAttribute="centerX" secondItem="VKz-9X-mi1" secondAttribute="centerX" id="O2U-QN-vBL"/>
+                                <constraint firstItem="6cO-Zh-a1c" firstAttribute="centerX" secondItem="TkC-P1-ryq" secondAttribute="centerX" id="XlS-Sy-Bfo"/>
+                                <constraint firstItem="VKz-9X-mi1" firstAttribute="trailing" secondItem="x8J-Pu-WYU" secondAttribute="trailing" constant="4" id="Xyc-JJ-wen"/>
+                                <constraint firstItem="VKz-9X-mi1" firstAttribute="trailing" secondItem="6cO-Zh-a1c" secondAttribute="trailing" constant="56" id="bTA-jS-iqu"/>
+                                <constraint firstItem="RrP-CW-IcH" firstAttribute="leading" secondItem="VKz-9X-mi1" secondAttribute="leading" constant="22" id="cnP-Lg-WcM"/>
+                                <constraint firstItem="vrQ-LM-fSd" firstAttribute="top" secondItem="6cO-Zh-a1c" secondAttribute="bottom" constant="8" symbolic="YES" id="dVq-lb-739"/>
+                                <constraint firstItem="x8J-Pu-WYU" firstAttribute="bottom" secondItem="VKz-9X-mi1" secondAttribute="bottom" constant="1" id="eii-1V-ASy"/>
+                                <constraint firstItem="6cO-Zh-a1c" firstAttribute="leading" secondItem="VKz-9X-mi1" secondAttribute="leading" constant="9" id="j2a-Gd-vfB"/>
+                                <constraint firstItem="6cO-Zh-a1c" firstAttribute="top" secondItem="TkC-P1-ryq" secondAttribute="bottom" constant="17" id="kqd-Uz-H6D"/>
+                                <constraint firstItem="SwB-9b-REJ" firstAttribute="top" secondItem="RrP-CW-IcH" secondAttribute="bottom" constant="-16" id="mY2-vX-co9"/>
                                 <constraint firstAttribute="height" constant="180" id="sFT-5L-uZh"/>
+                                <constraint firstItem="RrP-CW-IcH" firstAttribute="top" secondItem="VKz-9X-mi1" secondAttribute="top" id="skw-nL-2Jj"/>
+                                <constraint firstItem="6cO-Zh-a1c" firstAttribute="trailing" secondItem="vrQ-LM-fSd" secondAttribute="trailing" id="zOq-k3-7bF"/>
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="VKz-9X-mi1"/>
                         </view>
@@ -132,13 +151,12 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <viewLayoutGuide key="safeArea" id="gMe-YJ-Hdg"/>
                         </view>
-                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H1R-pv-bpc" userLabel="idSignExtendToExecuteStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H1R-pv-bpc" userLabel="idSignExtendToExecuteStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="167" y="411" width="25" height="25"/>
                             <viewLayoutGuide key="safeArea" id="SxV-q9-ugz"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8m1-bs-lDr" userLabel="idFetchToSignExtendEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8m1-bs-lDr" userLabel="idFetchToSignExtendEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="66" y="411" width="25" height="25"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <viewLayoutGuide key="safeArea" id="dLK-KK-O2Z"/>
                         </view>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O19-D5-CMs" userLabel="idReadData2ToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
@@ -149,14 +167,21 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="H0A-5E-Ycw" firstAttribute="top" secondItem="PK9-Kv-lhZ" secondAttribute="bottom" constant="8" symbolic="YES" id="38v-eq-5Yh"/>
+                        <constraint firstItem="8m1-bs-lDr" firstAttribute="leading" secondItem="J8h-pv-fDy" secondAttribute="leading" constant="66" id="6qH-oP-JtX"/>
                         <constraint firstItem="H0A-5E-Ycw" firstAttribute="centerX" secondItem="8h4-y4-W0a" secondAttribute="centerX" id="Ero-af-EvU"/>
+                        <constraint firstItem="H1R-pv-bpc" firstAttribute="top" secondItem="PK9-Kv-lhZ" secondAttribute="bottom" constant="67" id="F5y-LM-7pz"/>
                         <constraint firstItem="J8h-pv-fDy" firstAttribute="bottom" secondItem="H0A-5E-Ycw" secondAttribute="bottom" constant="103" id="IWJ-2O-3jc"/>
+                        <constraint firstItem="H1R-pv-bpc" firstAttribute="leading" secondItem="8m1-bs-lDr" secondAttribute="trailing" constant="76" id="KP0-1H-186"/>
                         <constraint firstAttribute="width" constant="250" id="N8G-iM-TZA"/>
                         <constraint firstItem="J8h-pv-fDy" firstAttribute="top" secondItem="8h4-y4-W0a" secondAttribute="top" id="TLF-cP-bry"/>
                         <constraint firstAttribute="height" constant="575" id="ZxP-0b-Ucg"/>
+                        <constraint firstItem="H1R-pv-bpc" firstAttribute="bottom" secondItem="8m1-bs-lDr" secondAttribute="bottom" id="bFa-I3-3Hm"/>
                         <constraint firstItem="8h4-y4-W0a" firstAttribute="leading" secondItem="J8h-pv-fDy" secondAttribute="leading" id="dxs-CT-DZq"/>
                         <constraint firstItem="H1R-pv-bpc" firstAttribute="leading" secondItem="H0A-5E-Ycw" secondAttribute="trailing" constant="2" id="ehz-DX-MD5"/>
+                        <constraint firstItem="J8h-pv-fDy" firstAttribute="trailing" secondItem="H1R-pv-bpc" secondAttribute="trailing" constant="58" id="gnN-ez-78W"/>
                         <constraint firstItem="J8h-pv-fDy" firstAttribute="trailing" secondItem="8h4-y4-W0a" secondAttribute="trailing" id="kiK-A6-ao7"/>
+                        <constraint firstItem="J8h-pv-fDy" firstAttribute="bottom" secondItem="H1R-pv-bpc" secondAttribute="bottom" constant="139" id="mkR-Gl-Wr3"/>
+                        <constraint firstItem="H1R-pv-bpc" firstAttribute="top" secondItem="8m1-bs-lDr" secondAttribute="top" id="xN3-Fr-n2z"/>
                         <constraint firstItem="H0A-5E-Ycw" firstAttribute="centerX" secondItem="PK9-Kv-lhZ" secondAttribute="centerX" id="xto-vT-vaA"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="J8h-pv-fDy"/>
