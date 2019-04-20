@@ -32,10 +32,14 @@
                             <viewLayoutGuide key="safeArea" id="88x-6N-2Un"/>
                         </progressView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PK9-Kv-lhZ" userLabel="Register View">
-                            <rect key="frame" x="37.5" y="164" width="175" height="180"/>
+                            <rect key="frame" x="76.5" y="134" width="175" height="180"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="IM-shape" translatesAutoresizingMaskIntoConstraints="NO" id="x8J-Pu-WYU" userLabel="RegisterFileImageView">
                                     <rect key="frame" x="3" y="-1" width="168" height="182"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="168" id="auz-mK-3iX"/>
+                                        <constraint firstAttribute="height" constant="182" id="b5A-yJ-r05"/>
+                                    </constraints>
                                 </imageView>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Register File" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrP-CW-IcH" userLabel="RegisterFileTextView">
                                     <rect key="frame" x="22" y="0.0" width="131" height="46"/>
@@ -107,7 +111,7 @@
                             <viewLayoutGuide key="safeArea" id="VKz-9X-mi1"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0A-5E-Ycw" userLabel="Sign Extend View">
-                            <rect key="frame" x="85" y="352" width="80" height="120"/>
+                            <rect key="frame" x="124" y="322" width="80" height="120"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sign-extend-shape" translatesAutoresizingMaskIntoConstraints="NO" id="cbQ-Jw-6Nz" userLabel="Oval Image View">
                                     <rect key="frame" x="-64" y="5" width="209" height="111"/>
@@ -127,60 +131,103 @@
                             <viewLayoutGuide key="safeArea" id="wqf-fq-5xv"/>
                         </view>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFc-al-ldc" userLabel="idReadData1ToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="217" y="223" width="25" height="25"/>
+                            <rect key="frame" x="256" y="193" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <viewLayoutGuide key="safeArea" id="9Gi-4T-N0j"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXe-H3-3ya" userLabel="idReadAddress1End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="25" y="206" width="25" height="25"/>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXe-H3-3ya" userLabel="idFetchToReadAddress1End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="64" y="176" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <viewLayoutGuide key="safeArea" id="McQ-kf-Ygi"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-RD-uij" userLabel="idReadAddress2End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="25" y="242" width="25" height="25"/>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-RD-uij" userLabel="idFetchToReadAddress2End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="64" y="212" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <viewLayoutGuide key="safeArea" id="L3e-qh-4Tu"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDh-D5-bT5" userLabel="idWriteAddressEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="25" y="287" width="25" height="25"/>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDh-D5-bT5" userLabel="idMuxToWriteAddressEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="64" y="257" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <viewLayoutGuide key="safeArea" id="lte-tM-B2z"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uco-Yx-0fo" userLabel="idToWriteDataEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="25" y="320" width="25" height="25"/>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uco-Yx-0fo" userLabel="idExecuteToWriteDataEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="64" y="290" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <viewLayoutGuide key="safeArea" id="gMe-YJ-Hdg"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H1R-pv-bpc" userLabel="idSignExtendToExecuteStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="167" y="411" width="25" height="25"/>
+                            <rect key="frame" x="206" y="381" width="25" height="25"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="07u-dY-ELo"/>
+                            </constraints>
                             <viewLayoutGuide key="safeArea" id="SxV-q9-ugz"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8m1-bs-lDr" userLabel="idFetchToSignExtendEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="66" y="411" width="25" height="25"/>
+                            <rect key="frame" x="105" y="381" width="25" height="25"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="RO8-rx-agQ"/>
+                            </constraints>
                             <viewLayoutGuide key="safeArea" id="dLK-KK-O2Z"/>
                         </view>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O19-D5-CMs" userLabel="idReadData2ToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="217" y="287" width="25" height="25"/>
+                            <rect key="frame" x="256" y="257" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             <viewLayoutGuide key="safeArea" id="Bbe-F3-pmm"/>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="mux-shape" translatesAutoresizingMaskIntoConstraints="NO" id="KJL-7M-WQD" userLabel="Mux Image View">
+                            <rect key="frame" x="8" y="234" width="27" height="58"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="58" id="Y8B-Te-d8I"/>
+                                <constraint firstAttribute="width" constant="27" id="cGC-oQ-rGT"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6w5-p2-dFr" userLabel="idMuxToWriteAddressStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="36" y="257" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="bLx-Vy-af8"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RfM-dp-SJg" userLabel="idFetchToMux0End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="3" y="241" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="Igs-2R-FZt"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zGz-9m-7x0" userLabel="idFetchToMux1End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="3" y="267" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="Hpj-a3-13u"/>
                         </view>
                     </subviews>
                     <constraints>
                         <constraint firstItem="H0A-5E-Ycw" firstAttribute="top" secondItem="PK9-Kv-lhZ" secondAttribute="bottom" constant="8" symbolic="YES" id="38v-eq-5Yh"/>
-                        <constraint firstItem="8m1-bs-lDr" firstAttribute="leading" secondItem="J8h-pv-fDy" secondAttribute="leading" constant="66" id="6qH-oP-JtX"/>
-                        <constraint firstItem="H0A-5E-Ycw" firstAttribute="centerX" secondItem="8h4-y4-W0a" secondAttribute="centerX" id="Ero-af-EvU"/>
+                        <constraint firstItem="8m1-bs-lDr" firstAttribute="leading" secondItem="J8h-pv-fDy" secondAttribute="leading" constant="105" id="6qH-oP-JtX"/>
+                        <constraint firstItem="H0A-5E-Ycw" firstAttribute="centerX" secondItem="8h4-y4-W0a" secondAttribute="centerX" constant="39" id="Ero-af-EvU"/>
                         <constraint firstItem="H1R-pv-bpc" firstAttribute="top" secondItem="PK9-Kv-lhZ" secondAttribute="bottom" constant="67" id="F5y-LM-7pz"/>
-                        <constraint firstItem="J8h-pv-fDy" firstAttribute="bottom" secondItem="H0A-5E-Ycw" secondAttribute="bottom" constant="103" id="IWJ-2O-3jc"/>
+                        <constraint firstItem="J8h-pv-fDy" firstAttribute="bottom" secondItem="H0A-5E-Ycw" secondAttribute="bottom" constant="133" id="IWJ-2O-3jc"/>
                         <constraint firstItem="H1R-pv-bpc" firstAttribute="leading" secondItem="8m1-bs-lDr" secondAttribute="trailing" constant="76" id="KP0-1H-186"/>
                         <constraint firstAttribute="width" constant="250" id="N8G-iM-TZA"/>
+                        <constraint firstItem="J8h-pv-fDy" firstAttribute="bottom" secondItem="KJL-7M-WQD" secondAttribute="bottom" constant="283" id="Qdt-mL-dD4"/>
+                        <constraint firstItem="KJL-7M-WQD" firstAttribute="top" secondItem="J8h-pv-fDy" secondAttribute="top" constant="220.5" id="Sna-S5-Sd3"/>
                         <constraint firstItem="J8h-pv-fDy" firstAttribute="top" secondItem="8h4-y4-W0a" secondAttribute="top" id="TLF-cP-bry"/>
                         <constraint firstAttribute="height" constant="575" id="ZxP-0b-Ucg"/>
                         <constraint firstItem="H1R-pv-bpc" firstAttribute="bottom" secondItem="8m1-bs-lDr" secondAttribute="bottom" id="bFa-I3-3Hm"/>
+                        <constraint firstItem="KJL-7M-WQD" firstAttribute="leading" secondItem="J8h-pv-fDy" secondAttribute="leading" constant="8" id="c66-Ek-lh8"/>
                         <constraint firstItem="8h4-y4-W0a" firstAttribute="leading" secondItem="J8h-pv-fDy" secondAttribute="leading" id="dxs-CT-DZq"/>
                         <constraint firstItem="H1R-pv-bpc" firstAttribute="leading" secondItem="H0A-5E-Ycw" secondAttribute="trailing" constant="2" id="ehz-DX-MD5"/>
-                        <constraint firstItem="J8h-pv-fDy" firstAttribute="trailing" secondItem="H1R-pv-bpc" secondAttribute="trailing" constant="58" id="gnN-ez-78W"/>
+                        <constraint firstItem="J8h-pv-fDy" firstAttribute="trailing" secondItem="H1R-pv-bpc" secondAttribute="trailing" constant="19" id="gnN-ez-78W"/>
                         <constraint firstItem="J8h-pv-fDy" firstAttribute="trailing" secondItem="8h4-y4-W0a" secondAttribute="trailing" id="kiK-A6-ao7"/>
-                        <constraint firstItem="J8h-pv-fDy" firstAttribute="bottom" secondItem="H1R-pv-bpc" secondAttribute="bottom" constant="139" id="mkR-Gl-Wr3"/>
+                        <constraint firstItem="PK9-Kv-lhZ" firstAttribute="leading" secondItem="KJL-7M-WQD" secondAttribute="trailing" constant="41.5" id="m53-Eo-UiD"/>
+                        <constraint firstItem="J8h-pv-fDy" firstAttribute="bottom" secondItem="H1R-pv-bpc" secondAttribute="bottom" constant="169" id="mkR-Gl-Wr3"/>
                         <constraint firstItem="H1R-pv-bpc" firstAttribute="top" secondItem="8m1-bs-lDr" secondAttribute="top" id="xN3-Fr-n2z"/>
                         <constraint firstItem="H0A-5E-Ycw" firstAttribute="centerX" secondItem="PK9-Kv-lhZ" secondAttribute="centerX" id="xto-vT-vaA"/>
                     </constraints>
@@ -319,11 +366,6 @@
             <viewLayoutGuide key="safeArea" id="KB7-dr-Uow"/>
             <point key="canvasLocation" x="-559.6875" y="109.33098591549296"/>
         </view>
-        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="mux-shape" id="KJL-7M-WQD" userLabel="Mux Image View">
-            <rect key="frame" x="0.0" y="0.0" width="49" height="104"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <point key="canvasLocation" x="-253" y="-288"/>
-        </imageView>
     </objects>
     <resources>
         <image name="IM-shape" width="212" height="222"/>
