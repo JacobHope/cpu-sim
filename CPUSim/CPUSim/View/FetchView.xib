@@ -605,17 +605,16 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="CPF-4s-pLG"/>
                 </view>
-                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opK-a2-cL1" userLabel="Fetch Bar View">
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opK-a2-cL1" userLabel="Decode Bar View" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
                     <rect key="frame" x="296" y="64" width="24" height="460"/>
                     <subviews>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="IF" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q62-Gc-NZI" userLabel="FetchTextView">
-                            <rect key="frame" x="1" y="213.5" width="22" height="33"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="ID" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q62-Gc-NZI" userLabel="IDTextView">
+                            <rect key="frame" x="0.0" y="213.5" width="24" height="33"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.22519798799999999" colorSpace="custom" customColorSpace="sRGB"/>
-                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                     <constraints>
                         <constraint firstItem="Q62-Gc-NZI" firstAttribute="centerY" secondItem="2bD-wV-CPq" secondAttribute="centerY" id="6UI-Lg-gmW"/>
                         <constraint firstAttribute="width" constant="24" id="IxQ-sU-Mp6"/>
