@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		04869A622268FAB00037B827 /* SwiftEventBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04869A612268FAB00037B827 /* SwiftEventBus.framework */; };
+		04CF4313226B478C00C7B0E7 /* GlowingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4312226B478C00C7B0E7 /* GlowingButton.swift */; };
+		04CF4315226B4D4A00C7B0E7 /* GlowingButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4314226B4D4A00C7B0E7 /* GlowingButtonModel.swift */; };
 		04D3F77B22602461002C80B6 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 04D3F77A22602460002C80B6 /* README.txt */; };
 		04D3F78022602530002C80B6 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F77F22602530002C80B6 /* Drawing.swift */; };
 		04D3F78222602533002C80B6 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F78122602533002C80B6 /* State.swift */; };
@@ -66,6 +68,8 @@
 
 /* Begin PBXFileReference section */
 		04869A612268FAB00037B827 /* SwiftEventBus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftEventBus.framework; path = Carthage/Build/iOS/SwiftEventBus.framework; sourceTree = "<group>"; };
+		04CF4312226B478C00C7B0E7 /* GlowingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowingButton.swift; sourceTree = "<group>"; };
+		04CF4314226B4D4A00C7B0E7 /* GlowingButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowingButtonModel.swift; sourceTree = "<group>"; };
 		04D3F77A22602460002C80B6 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		04D3F77F22602530002C80B6 /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
 		04D3F78122602533002C80B6 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 		3007E740225720130021DB6D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04CF4312226B478C00C7B0E7 /* GlowingButton.swift */,
 				04D3F7902260265F002C80B6 /* LineView.swift */,
 				04D3F78E2260265B002C80B6 /* TouchPointView.swift */,
 				305A00D722516AA3008D2A6F /* MenuView.xib */,
@@ -188,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				04D3F7A422603701002C80B6 /* DotModel.swift */,
+				04CF4314226B4D4A00C7B0E7 /* GlowingButtonModel.swift */,
 				305A00CF224D8095008D2A6F /* Services.swift */,
 			);
 			path = Model;
@@ -464,6 +470,7 @@
 				3007E73F225716960021DB6D /* WriteBackViewController.swift in Sources */,
 				3007E739225716660021DB6D /* DecodeViewController.swift in Sources */,
 				305A00CC224D7F4F008D2A6F /* RootViewCoordinator.swift in Sources */,
+				04CF4313226B478C00C7B0E7 /* GlowingButton.swift in Sources */,
 				305A00DA22518506008D2A6F /* ALUCoordinator.swift in Sources */,
 				3007E73B225716750021DB6D /* ExecuteViewController.swift in Sources */,
 				3007E7352256E46E0021DB6D /* FetchViewController.swift in Sources */,
@@ -471,6 +478,7 @@
 				30DBC869224D7BB700FDF861 /* AppDelegate.swift in Sources */,
 				305A00E022518534008D2A6F /* BranchCoordinator.swift in Sources */,
 				04D3F7A3226036AE002C80B6 /* Extensions.swift in Sources */,
+				04CF4315226B4D4A00C7B0E7 /* GlowingButtonModel.swift in Sources */,
 				04D3F7AA2260376D002C80B6 /* DrawingService.swift in Sources */,
 				04D3F7912260265F002C80B6 /* LineView.swift in Sources */,
 				305A00DE22518526008D2A6F /* StoreCoordinator.swift in Sources */,

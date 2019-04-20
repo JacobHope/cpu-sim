@@ -134,11 +134,31 @@ extension ALUCoordinator: FetchViewControllerDelegate {
         SwiftEventBus.onMainThread(fetchViewController, name: Events.aluFetchOnCorrect) { result in
             let progress: Float = result?.object as! Float
             fetchViewController.progressView.setProgress(progress, animated: true)
+            
+            // If progress is complete...
+            if (progress == 1) {
+                // ...show complete button
+                fetchViewController.completeButton.isHidden = false
+            }
         }
         
-        // Setup TouchPointViews
+        // Set button image color
+        fetchViewController.completeButton.setImage(
+            UIImage(named: "right-arrow-button")?.withRenderingMode(.alwaysTemplate),
+            for: .normal)
+        fetchViewController.completeButton.tintColor = .blue
         
-        // todo set up touch point names programmatically, currently setup in xib as IBInspectable
+        // Setup complete button
+        fetchViewController.completeButton.isHidden = true
+        fetchViewController.completeButton.setup(
+            GlowingButtonModel(
+                animDuration: 1.5,
+                cornerRadius: 5.0,
+                maxGlowSize: 12.5,
+                minGlowSize: 2.5,
+                shadowColor: UIColor.green.cgColor))
+        
+        // Setup TouchPointViews
         fetchViewController.ifMuxToPcStart.name = TouchPointNames.ifMuxToPcStart
         fetchViewController.ifMuxToPcEnd.name = TouchPointNames.ifMuxToPcEnd
         fetchViewController.ifPcToAluStart.name = TouchPointNames.ifPcToAluStart

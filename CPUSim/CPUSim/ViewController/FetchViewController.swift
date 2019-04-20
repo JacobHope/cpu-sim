@@ -31,6 +31,8 @@ class FetchViewController: UIViewController {
     @IBOutlet var FetchView: UIView!
     @IBOutlet weak var drawingImageView: UIImageView!
     
+    @IBOutlet weak var completeButton: GlowingButton!
+    
     // MARK: ProgressView
     @IBOutlet weak var progressView: UIProgressView!
     
@@ -135,5 +137,9 @@ class FetchViewController: UIViewController {
         if (sender.direction == .right) {
              self.delegate?.fetchViewControllerDidSwipeLeft(self)
         }
+    }
+    
+    @IBAction func completeButtonPressed(_ sender: Any) {
+        self.delegate?.fetchViewControllerDidSwipeRight(self)
     }
 }
