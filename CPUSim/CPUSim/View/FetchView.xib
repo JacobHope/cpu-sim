@@ -65,7 +65,7 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGG-i3-PCC" userLabel="MUXView">
-                            <rect key="frame" x="142" y="125.5" width="22" height="75"/>
+                            <rect key="frame" x="137" y="138" width="22" height="75"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mux-shape" translatesAutoresizingMaskIntoConstraints="NO" id="vv6-5C-770">
                                     <rect key="frame" x="-5" y="-5" width="32" height="85"/>
@@ -83,7 +83,7 @@
                             <viewLayoutGuide key="safeArea" id="d4k-8m-uvU"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBO-2r-bcp" userLabel="IfAluToMuxEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="177" y="162.5" width="25" height="25"/>
+                            <rect key="frame" x="172" y="175" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="IY2-er-9y3"/>
@@ -92,7 +92,7 @@
                             <viewLayoutGuide key="safeArea" id="d99-qN-rPx"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFG-zM-5az" userLabel="IfMuxToPcStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="129" y="162.5" width="25" height="25"/>
+                            <rect key="frame" x="124" y="175" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="rm3-0e-aQy"/>
@@ -104,7 +104,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46O-QB-Qyv" userLabel="IfAluToMux1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="239.5" y="344.5" width="13" height="2"/>
+                            <rect key="frame" x="202" y="357" width="13" height="2"/>
                             <subviews>
                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="nzj-eL-X2W" userLabel="IfMuxToPc1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="13" height="2"/>
@@ -127,7 +127,7 @@
                             <viewLayoutGuide key="safeArea" id="Y0C-2R-0A9"/>
                         </view>
                         <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="XsZ-u5-qSN" userLabel="IfAluToMux2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="250.5" y="162" width="2" height="184.5"/>
+                            <rect key="frame" x="213" y="174.5" width="2" height="184.5"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                             </accessibility>
@@ -139,7 +139,7 @@
                             </userDefinedRuntimeAttributes>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orI-Uj-3pp" userLabel="IfAluToMux3" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="167" y="153" width="83.5" height="20"/>
+                            <rect key="frame" x="162" y="165.5" width="51" height="20"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="xgV-Hd-IFv" userLabel="IfPcToIm1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                                     <rect key="frame" x="-12" y="0.0" width="39" height="20"/>
@@ -153,7 +153,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="GXO-vs-kRW" userLabel="IfPcToIm1-2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                                    <rect key="frame" x="22" y="9" width="61.5" height="2"/>
+                                    <rect key="frame" x="22" y="9" width="29" height="2"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="2" id="oxu-kA-jhc"/>
@@ -187,7 +187,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOF-tY-Ni0" userLabel="IfFourToAluStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="124.5" y="370" width="25" height="25"/>
+                            <rect key="frame" x="87" y="382.5" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="2AE-S8-H5q"/>
@@ -196,7 +196,7 @@
                             <viewLayoutGuide key="safeArea" id="efD-VM-CsA"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24V-vI-kZI" userLabel="IfFourToAluEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="176.5" y="370" width="25" height="25"/>
+                            <rect key="frame" x="139" y="382.5" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="Qoz-Xl-ukT"/>
@@ -205,7 +205,7 @@
                             <viewLayoutGuide key="safeArea" id="LMV-Rg-P8q"/>
                         </view>
                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pgy-ma-IM0">
-                            <rect key="frame" x="104.5" y="360.5" width="20" height="20"/>
+                            <rect key="frame" x="67" y="373" width="20" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="egs-wu-nsf"/>
                                 <constraint firstAttribute="height" constant="20" id="hyE-zc-3uH"/>
@@ -215,25 +215,37 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="for-eX-Teq" userLabel="ALUView">
-                            <rect key="frame" x="189.5" y="295.5" width="50" height="100"/>
+                            <rect key="frame" x="152" y="308" width="50" height="100"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ALU-shape" translatesAutoresizingMaskIntoConstraints="NO" id="uo3-me-2kv" userLabel="ALUImageView">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="100"/>
                                 </imageView>
+                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" text="Add" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rSx-KJ-06C">
+                                    <rect key="frame" x="15.5" y="40" width="29" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="F7E-1O-hdN"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstItem="rSx-KJ-06C" firstAttribute="centerY" secondItem="pgh-1q-s3P" secondAttribute="centerY" id="Ahp-de-zdr"/>
                                 <constraint firstAttribute="width" constant="50" id="Bmz-n4-I48"/>
                                 <constraint firstAttribute="height" constant="100" id="FIL-fS-WWE"/>
                                 <constraint firstItem="uo3-me-2kv" firstAttribute="leading" secondItem="pgh-1q-s3P" secondAttribute="leading" id="Fdm-DH-pSi"/>
                                 <constraint firstItem="uo3-me-2kv" firstAttribute="top" secondItem="pgh-1q-s3P" secondAttribute="top" id="OpM-QJ-06b"/>
+                                <constraint firstItem="rSx-KJ-06C" firstAttribute="centerX" secondItem="pgh-1q-s3P" secondAttribute="centerX" constant="5" id="PM5-X4-aOt"/>
                                 <constraint firstItem="uo3-me-2kv" firstAttribute="trailing" secondItem="pgh-1q-s3P" secondAttribute="trailing" id="gNk-oX-mxi"/>
                                 <constraint firstItem="uo3-me-2kv" firstAttribute="bottom" secondItem="pgh-1q-s3P" secondAttribute="bottom" id="jaR-tc-exW"/>
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="pgh-1q-s3P"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3j-Cf-JBP" userLabel="IfFourToAlu1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="124.5" y="360.5" width="64" height="20"/>
+                            <rect key="frame" x="87" y="373" width="64" height="20"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="47T-Pl-oas" userLabel="IfPcToAlu1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="9" width="44" height="2"/>
@@ -267,7 +279,7 @@
                             <viewLayoutGuide key="safeArea" id="vS3-eE-b1C"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Zv-WK-qJh" userLabel="IfAluToMuxStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="251.5" y="345" width="25" height="25"/>
+                            <rect key="frame" x="214" y="357.5" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="hqA-qg-lFC"/>
@@ -276,7 +288,7 @@
                             <viewLayoutGuide key="safeArea" id="UdO-cc-RB8"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LBU-qu-OBc" userLabel="IfPcToAluEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="176.5" y="308" width="25" height="25"/>
+                            <rect key="frame" x="139" y="320.5" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="AqN-kn-kas"/>
@@ -288,7 +300,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nM-A2-QiH" userLabel="IfPcToImEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="104" y="462.5" width="25" height="25"/>
+                            <rect key="frame" x="99" y="462.5" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="JdN-ZP-eVV"/>
@@ -300,30 +312,30 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbV-2J-98q" userLabel="IMView">
-                            <rect key="frame" x="117" y="400.5" width="125" height="125"/>
+                            <rect key="frame" x="112" y="413" width="100" height="100"/>
                             <subviews>
                                 <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Instruction Memory" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZbH-BC-KT5" userLabel="Instruction Memory">
-                                    <rect key="frame" x="12.5" y="0.0" width="100" height="50"/>
+                                    <rect key="frame" x="0.0" y="-5" width="100" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="100" id="bCh-ND-DqW"/>
                                         <constraint firstAttribute="height" constant="50" id="wms-WS-Ue4"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Read Address" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Mh-2t-whc" userLabel="Read Address">
-                                    <rect key="frame" x="5" y="37.5" width="75" height="50"/>
+                                    <rect key="frame" x="5" y="25" width="75" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="JES-vx-i2k"/>
                                         <constraint firstAttribute="width" constant="75" id="ZT2-uK-19b"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IM-shape" translatesAutoresizingMaskIntoConstraints="NO" id="297-tx-QJO" userLabel="IMImageView">
-                                    <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -333,11 +345,11 @@
                                 <constraint firstItem="1lh-V5-7BZ" firstAttribute="leading" secondItem="9Mh-2t-whc" secondAttribute="leading" constant="-5" id="Hfh-mt-dbh"/>
                                 <constraint firstItem="297-tx-QJO" firstAttribute="top" secondItem="1lh-V5-7BZ" secondAttribute="top" id="HqH-eI-V0p"/>
                                 <constraint firstItem="9Mh-2t-whc" firstAttribute="centerY" secondItem="1lh-V5-7BZ" secondAttribute="centerY" id="Jtw-AI-Te7"/>
-                                <constraint firstAttribute="height" constant="125" id="M1c-ex-pqn"/>
+                                <constraint firstAttribute="height" constant="100" id="M1c-ex-pqn"/>
                                 <constraint firstItem="1lh-V5-7BZ" firstAttribute="bottom" secondItem="297-tx-QJO" secondAttribute="bottom" id="QtW-Ap-Ln9"/>
                                 <constraint firstItem="ZbH-BC-KT5" firstAttribute="centerX" secondItem="1lh-V5-7BZ" secondAttribute="centerX" id="kvk-24-H2L"/>
-                                <constraint firstAttribute="width" constant="125" id="oG8-J6-qTe"/>
-                                <constraint firstItem="1lh-V5-7BZ" firstAttribute="top" secondItem="ZbH-BC-KT5" secondAttribute="top" id="sc9-AM-eYr"/>
+                                <constraint firstAttribute="width" constant="100" id="oG8-J6-qTe"/>
+                                <constraint firstItem="1lh-V5-7BZ" firstAttribute="top" secondItem="ZbH-BC-KT5" secondAttribute="top" constant="5" id="sc9-AM-eYr"/>
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="1lh-V5-7BZ"/>
                         </view>
@@ -347,7 +359,7 @@
                                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="PC" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cT-s4-RNB">
                                     <rect key="frame" x="0.0" y="51" width="30" height="22"/>
                                     <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PC-shape" translatesAutoresizingMaskIntoConstraints="NO" id="xOg-KD-BXM" userLabel="PCImageView">
@@ -382,10 +394,10 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sgY-s0-b3q" userLabel="IfPcToIm1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="42" y="453" width="75" height="20"/>
+                            <rect key="frame" x="42" y="453" width="70" height="20"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="lxh-rd-Wp9" userLabel="IfPcToIm1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="9" width="55" height="2"/>
+                                    <rect key="frame" x="0.0" y="9" width="50" height="2"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="2" id="Q54-gu-X8o"/>
                                     </constraints>
@@ -394,7 +406,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="Nd2-wy-tfm" userLabel="IfPcToIm1-2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                                    <rect key="frame" x="55" y="0.0" width="20" height="20"/>
+                                    <rect key="frame" x="50" y="0.0" width="20" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="20" id="Qpf-Vv-uDl"/>
                                         <constraint firstAttribute="height" constant="20" id="kus-JB-PEb"/>
@@ -416,10 +428,10 @@
                             <viewLayoutGuide key="safeArea" id="mf2-kT-cQF"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VdG-It-Gmr" userLabel="IfPcToAlu2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="53.5" y="310.5" width="136" height="20"/>
+                            <rect key="frame" x="53.5" y="323" width="98.5" height="20"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="DrX-jd-Pm2" userLabel="IfPcToAlu1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="9" width="116" height="2"/>
+                                    <rect key="frame" x="0.0" y="9" width="78.5" height="2"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="2" id="2jo-bE-y0V"/>
                                     </constraints>
@@ -428,7 +440,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="j8Y-Bi-sJc" userLabel="IfPcToAlu1-2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                                    <rect key="frame" x="116" y="0.0" width="20" height="20"/>
+                                    <rect key="frame" x="78.5" y="0.0" width="20" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="6x3-bu-fM9"/>
                                         <constraint firstAttribute="width" constant="20" id="C8s-Pj-iYn"/>
@@ -450,7 +462,7 @@
                             <viewLayoutGuide key="safeArea" id="fmK-I4-ZlO"/>
                         </view>
                         <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="JNk-Go-n7v" userLabel="IfPcToAlu1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="53.5" y="320.5" width="2" height="144.5"/>
+                            <rect key="frame" x="53.5" y="333" width="2" height="132"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                             </accessibility>
@@ -475,7 +487,7 @@
                             </userDefinedRuntimeAttributes>
                         </imageView>
                         <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="mH3-QT-mPq" userLabel="IfMuxToPc2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="-8" y="164" width="2" height="301"/>
+                            <rect key="frame" x="-8" y="176.5" width="2" height="288.5"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                             </accessibility>
@@ -487,10 +499,10 @@
                             </userDefinedRuntimeAttributes>
                         </imageView>
                         <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8aX-SP-Zf2" userLabel="IfMuxToPc1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="-9" y="162" width="151" height="2"/>
+                            <rect key="frame" x="-9" y="174.5" width="146" height="2"/>
                             <subviews>
                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="875-NL-wgn" userLabel="IfMuxToPc1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="151" height="2"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="146" height="2"/>
                                     <accessibility key="accessibilityConfiguration">
                                         <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                     </accessibility>
@@ -510,10 +522,10 @@
                             <viewLayoutGuide key="safeArea" id="oIf-dF-lbK"/>
                         </view>
                         <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bv6-ew-JSo" userLabel="IfImToNext1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="240" y="462" width="21" height="2"/>
+                            <rect key="frame" x="210" y="462" width="55" height="2"/>
                             <subviews>
                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="ieA-bh-UFk" userLabel="IfMuxToPc1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="21" height="2"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="55" height="2"/>
                                     <accessibility key="accessibilityConfiguration">
                                         <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                     </accessibility>
@@ -540,7 +552,7 @@
                         <constraint firstItem="JNk-Go-n7v" firstAttribute="top" secondItem="VdG-It-Gmr" secondAttribute="bottom" constant="-10" id="167-O5-4mr"/>
                         <constraint firstItem="46O-QB-Qyv" firstAttribute="leading" secondItem="4Zv-WK-qJh" secondAttribute="trailing" constant="-37" id="1Dv-Ch-dCT"/>
                         <constraint firstItem="VdG-It-Gmr" firstAttribute="leading" secondItem="JNk-Go-n7v" secondAttribute="trailing" constant="-2" id="1dK-22-uWn"/>
-                        <constraint firstItem="for-eX-Teq" firstAttribute="centerX" secondItem="dbV-2J-98q" secondAttribute="centerX" constant="35" id="2Or-JA-0RT"/>
+                        <constraint firstItem="for-eX-Teq" firstAttribute="centerX" secondItem="dbV-2J-98q" secondAttribute="centerX" constant="15" id="2Or-JA-0RT"/>
                         <constraint firstItem="orI-Uj-3pp" firstAttribute="leading" secondItem="vBO-2r-bcp" secondAttribute="trailing" constant="-35" id="5Ci-0T-ZXi"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="leading" secondItem="sgY-s0-b3q" secondAttribute="trailing" id="6NT-2y-2Wb"/>
                         <constraint firstItem="8aX-SP-Zf2" firstAttribute="centerY" secondItem="EGG-i3-PCC" secondAttribute="centerY" id="6OR-9i-JFc"/>
@@ -583,7 +595,7 @@
                         <constraint firstItem="EGG-i3-PCC" firstAttribute="leading" secondItem="dbV-2J-98q" secondAttribute="leading" constant="25" id="g1g-mc-uzt"/>
                         <constraint firstItem="Bv6-ew-JSo" firstAttribute="leading" secondItem="dbV-2J-98q" secondAttribute="trailing" constant="-2" id="gkG-r8-aUt"/>
                         <constraint firstItem="Bv6-ew-JSo" firstAttribute="centerY" secondItem="dbV-2J-98q" secondAttribute="centerY" id="hJU-c5-eOc"/>
-                        <constraint firstItem="dbV-2J-98q" firstAttribute="leading" secondItem="AW2-Nm-Iy0" secondAttribute="trailing" constant="75" id="hNK-q6-nNz"/>
+                        <constraint firstItem="dbV-2J-98q" firstAttribute="leading" secondItem="AW2-Nm-Iy0" secondAttribute="trailing" constant="70" id="hNK-q6-nNz"/>
                         <constraint firstAttribute="height" constant="575" id="l6G-iU-cdn"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="top" secondItem="for-eX-Teq" secondAttribute="bottom" constant="5" id="mnL-OQ-Pfe"/>
                         <constraint firstItem="8aX-SP-Zf2" firstAttribute="leading" secondItem="mH3-QT-mPq" secondAttribute="trailing" constant="-3" id="nY7-bd-auS"/>
@@ -606,10 +618,10 @@
                     <viewLayoutGuide key="safeArea" id="CPF-4s-pLG"/>
                 </view>
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opK-a2-cL1" userLabel="ifIDTab" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
-                    <rect key="frame" x="296" y="64" width="24" height="460"/>
+                    <rect key="frame" x="300" y="64" width="20" height="460"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="ID" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q62-Gc-NZI" userLabel="IDTextView">
-                            <rect key="frame" x="0.0" y="213.5" width="24" height="33"/>
+                            <rect key="frame" x="-2" y="213.5" width="24" height="33"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
@@ -617,7 +629,7 @@
                     <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                     <constraints>
                         <constraint firstItem="Q62-Gc-NZI" firstAttribute="centerY" secondItem="2bD-wV-CPq" secondAttribute="centerY" id="6UI-Lg-gmW"/>
-                        <constraint firstAttribute="width" constant="24" id="IxQ-sU-Mp6"/>
+                        <constraint firstAttribute="width" constant="20" id="IxQ-sU-Mp6"/>
                         <constraint firstItem="Q62-Gc-NZI" firstAttribute="centerX" secondItem="2bD-wV-CPq" secondAttribute="centerX" id="Wys-Ee-v3U"/>
                         <constraint firstAttribute="height" constant="460" id="fcS-Nb-ZbG"/>
                         <constraint firstItem="Q62-Gc-NZI" firstAttribute="centerY" secondItem="2bD-wV-CPq" secondAttribute="centerY" id="k6v-6V-lNp"/>
