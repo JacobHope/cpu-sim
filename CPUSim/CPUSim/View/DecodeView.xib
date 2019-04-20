@@ -13,16 +13,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DecodeViewController" customModule="CPUSim" customModuleProvider="target">
             <connections>
                 <outlet property="DecodeView" destination="iN0-l3-epB" id="iIS-NS-bV6"/>
-                <outlet property="idFetchToMux0End" destination="RfM-dp-SJg" id="Qcv-3g-e6q"/>
-                <outlet property="idFetchToMux1End" destination="zGz-9m-7x0" id="RNq-Im-vfP"/>
-                <outlet property="idFetchToReadAddress1End" destination="jXe-H3-3ya" id="oks-J7-Qmr"/>
-                <outlet property="idFetchToReadAddress2End" destination="fYA-RD-uij" id="kTt-tN-4Uw"/>
-                <outlet property="idFetchToSignExtendEnd" destination="8m1-bs-lDr" id="B5n-zt-R6z"/>
-                <outlet property="idMuxToWriteAddressEnd" destination="HDh-D5-bT5" id="dP4-xE-Dhk"/>
-                <outlet property="idMuxToWriteAddressStart" destination="6w5-p2-dFr" id="uRd-Nq-jtz"/>
-                <outlet property="idReadData1ToExStart" destination="EFc-al-ldc" id="jsd-Jh-2Tf"/>
-                <outlet property="idReadData2ToExStart" destination="O19-D5-CMs" id="Z7B-dS-hoX"/>
-                <outlet property="idSignExtendToExecuteStart" destination="H1R-pv-bpc" id="3wJ-nW-Eqs"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Rjs-Xb-lfm"/>
             </connections>
         </placeholder>
@@ -243,7 +233,7 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="J8h-pv-fDy"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfl-JU-tDh" userLabel="Execute Bar View">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfl-JU-tDh" userLabel="Execute Bar View" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
                     <rect key="frame" x="296" y="64" width="24" height="460"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="EX" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSI-xG-ltq" userLabel="ExecuteTextView">
@@ -252,7 +242,7 @@
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.22519798801369864" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="hSI-xG-ltq" firstAttribute="centerY" secondItem="MW2-LQ-tmg" secondAttribute="centerY" id="9ca-KQ-1Ai"/>
@@ -262,7 +252,7 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="MW2-LQ-tmg"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZV-s8-XCh" userLabel="Fetch Bar View">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZV-s8-XCh" userLabel="Fetch Bar View" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="64" width="24" height="460"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="IF" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXw-TO-vsu" userLabel="FetchTextView">
@@ -271,7 +261,7 @@
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.22519798799999999" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="460" id="5FW-Tt-VxF"/>
