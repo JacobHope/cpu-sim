@@ -14,7 +14,7 @@ class TouchPointView: UIView {
     var dot: CAShapeLayer?
     var dotModel: DotModel?
 
-    @IBInspectable var name: String = "touchPoint"
+    var name: String = "touchPoint"
 
     func setupWith(_ dotModel: DotModel) {
         self.dotModel = dotModel

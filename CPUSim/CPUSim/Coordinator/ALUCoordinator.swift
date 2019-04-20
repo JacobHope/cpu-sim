@@ -139,6 +139,11 @@ extension ALUCoordinator: FetchViewControllerDelegate {
         // Setup TouchPointViews
         
         // todo set up touch point names programmatically, currently setup in xib as IBInspectable
+        fetchViewController.ifMuxToPcStart.name = TouchPointNames.ifMuxToPcStart
+        fetchViewController.ifMuxToPcEnd.name = TouchPointNames.ifMuxToPcEnd
+        fetchViewController.ifPcToAluStart.name = TouchPointNames.ifPcToAluStart
+        fetchViewController.ifPcToAluEnd.name = TouchPointNames.ifPcToAluEnd
+        fetchViewController.ifPcToImEnd.name = TouchPointNames.ifPcToImEnd
         fetchViewController.ifFourToAluStart.name = TouchPointNames.ifFourToAluStart
         fetchViewController.ifFourToAluEnd.name = TouchPointNames.ifFourToAluEnd
         fetchViewController.ifAluToMuxStart.name = TouchPointNames.ifAluToMuxStart
