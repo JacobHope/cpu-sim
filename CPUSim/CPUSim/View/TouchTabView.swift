@@ -70,19 +70,19 @@ class TouchTabView: UIView {
     
     func setCorrect() {
         // Set background and pulsating glow to green
-        setColor(UIColor.green.cgColor)
+        setColor(cgColor: UIColor.green.cgColor)
         
         //TODO let glow pulsate for a limited of time
     }
     
     func setIncorrect() {
         // Set background and pulsating glow to dark red
-        setColor(UIColor.darkRed.cgColor)
+        setColor(cgColor: UIColor.darkRed.cgColor)
     }
     
     func reset() {
         // Set background and pulsating glow to dark red
-        setColor(UIColor.blue.cgColor)
+        setColor(cgColor: UIColor.blue.cgColor)
 
     }
     
