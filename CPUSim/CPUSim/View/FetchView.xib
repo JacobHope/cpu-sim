@@ -15,6 +15,8 @@
                 <outlet property="FetchView" destination="iN0-l3-epB" id="ud9-r8-EUu"/>
                 <outlet property="completeButton" destination="Kaw-BT-IVA" id="ANb-G2-Tb0"/>
                 <outlet property="drawingImageView" destination="FMO-9m-4SJ" id="R4K-CE-rVk"/>
+                <outlet property="ifAluToId1" destination="vRO-2H-BcX" id="LML-FM-BEu"/>
+                <outlet property="ifAluToIdEnd" destination="dwK-3F-xJe" id="i8h-84-qBL"/>
                 <outlet property="ifAluToMux1" destination="46O-QB-Qyv" id="iWq-o2-HcJ"/>
                 <outlet property="ifAluToMux2" destination="XsZ-u5-qSN" id="AYt-YU-57N"/>
                 <outlet property="ifAluToMux3" destination="orI-Uj-3pp" id="sPQ-Ch-5qs"/>
@@ -110,6 +112,15 @@
                                 <constraint firstAttribute="width" constant="25" id="cn0-2N-chL"/>
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="79s-HH-s1v"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwK-3F-xJe" userLabel="IfAluToIdEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="265" y="357.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="3B8-82-ysz"/>
+                                <constraint firstAttribute="height" constant="25" id="LJQ-XO-HIJ"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="dxf-qW-Czg"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1e-sL-erF" userLabel="IfImToIdEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="265" y="462.5" width="25" height="25"/>
@@ -504,6 +515,26 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="sxa-WX-itH"/>
                         </view>
+                        <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRO-2H-BcX" userLabel="IfAluToId1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="214" y="357" width="51" height="2"/>
+                            <subviews>
+                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="h5a-dI-zwP" userLabel="IfMuxToPc1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="51" height="2"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                    </accessibility>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="qnT-bS-Lq8" firstAttribute="trailing" secondItem="h5a-dI-zwP" secondAttribute="trailing" id="NWj-Fu-WVg"/>
+                                <constraint firstItem="qnT-bS-Lq8" firstAttribute="leading" secondItem="h5a-dI-zwP" secondAttribute="leading" id="iBd-5o-WO8"/>
+                                <constraint firstItem="h5a-dI-zwP" firstAttribute="top" secondItem="qnT-bS-Lq8" secondAttribute="top" id="orP-Ze-1LQ"/>
+                                <constraint firstItem="qnT-bS-Lq8" firstAttribute="bottom" secondItem="h5a-dI-zwP" secondAttribute="bottom" id="rdq-Qa-eMR"/>
+                                <constraint firstAttribute="height" constant="2" id="zJx-Ch-LIA"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="qnT-bS-Lq8"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <gestureRecognizers/>
@@ -527,6 +558,7 @@
                         <constraint firstItem="KFG-zM-5az" firstAttribute="centerY" secondItem="EGG-i3-PCC" secondAttribute="centerY" constant="12" id="FuN-yx-hfr"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="leading" secondItem="8nM-A2-QiH" secondAttribute="trailing" constant="-12" id="G2X-hS-tez"/>
                         <constraint firstItem="2jF-w8-QLu" firstAttribute="leading" secondItem="dbV-2J-98q" secondAttribute="trailing" constant="12" id="IMf-WQ-1US"/>
+                        <constraint firstItem="vRO-2H-BcX" firstAttribute="centerY" secondItem="46O-QB-Qyv" secondAttribute="centerY" id="LXE-pp-IAd"/>
                         <constraint firstItem="24V-vI-kZI" firstAttribute="centerY" secondItem="for-eX-Teq" secondAttribute="centerY" constant="37" id="LlW-de-sBW"/>
                         <constraint firstItem="for-eX-Teq" firstAttribute="leading" secondItem="pgy-ma-IM0" secondAttribute="trailing" constant="65" id="PLr-g0-pmL"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="centerY" secondItem="AW2-Nm-Iy0" secondAttribute="centerY" id="PRD-kK-msM"/>
@@ -560,6 +592,7 @@
                         <constraint firstItem="Bv6-ew-JSo" firstAttribute="centerY" secondItem="dbV-2J-98q" secondAttribute="centerY" id="hJU-c5-eOc"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="leading" secondItem="AW2-Nm-Iy0" secondAttribute="trailing" constant="70" id="hNK-q6-nNz"/>
                         <constraint firstAttribute="height" constant="575" id="l6G-iU-cdn"/>
+                        <constraint firstItem="dwK-3F-xJe" firstAttribute="centerY" secondItem="for-eX-Teq" secondAttribute="centerY" constant="12" id="m6Q-KQ-76M"/>
                         <constraint firstItem="dbV-2J-98q" firstAttribute="top" secondItem="for-eX-Teq" secondAttribute="bottom" constant="5" id="mnL-OQ-Pfe"/>
                         <constraint firstItem="8aX-SP-Zf2" firstAttribute="leading" secondItem="mH3-QT-mPq" secondAttribute="trailing" constant="-3" id="nY7-bd-auS"/>
                         <constraint firstAttribute="width" constant="250" id="p1t-3p-uwC"/>
@@ -576,6 +609,7 @@
                         <constraint firstItem="46O-QB-Qyv" firstAttribute="top" secondItem="XsZ-u5-qSN" secondAttribute="bottom" constant="-2" id="x7r-We-xnq"/>
                         <constraint firstItem="CHI-mm-lzq" firstAttribute="top" secondItem="CPF-4s-pLG" secondAttribute="top" id="xUw-PX-OYY"/>
                         <constraint firstItem="XsZ-u5-qSN" firstAttribute="top" secondItem="orI-Uj-3pp" secondAttribute="bottom" constant="-11" id="yCO-7f-Ot7"/>
+                        <constraint firstItem="vRO-2H-BcX" firstAttribute="leading" secondItem="46O-QB-Qyv" secondAttribute="trailing" constant="-1" id="yrF-oT-Kg1"/>
                         <constraint firstItem="mH3-QT-mPq" firstAttribute="top" secondItem="8aX-SP-Zf2" secondAttribute="bottom" id="zJC-mz-zaw"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="CPF-4s-pLG"/>
@@ -610,11 +644,13 @@
                 <constraint firstItem="Scq-pV-vHR" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="XYw-zv-Pxm"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="opK-a2-cL1" secondAttribute="trailing" id="Z7e-YA-Ysg"/>
                 <constraint firstItem="FMO-9m-4SJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="dHD-u4-ydO"/>
+                <constraint firstItem="opK-a2-cL1" firstAttribute="leading" secondItem="dwK-3F-xJe" secondAttribute="trailing" constant="-25" id="dcP-Ml-G7k"/>
                 <constraint firstItem="Scq-pV-vHR" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="flZ-N9-RfV"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FMO-9m-4SJ" secondAttribute="trailing" id="qpE-Ng-CM5"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FMO-9m-4SJ" secondAttribute="bottom" id="s1z-gF-BEe"/>
                 <constraint firstItem="FMO-9m-4SJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sX1-qU-QTp"/>
                 <constraint firstItem="opK-a2-cL1" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="vrb-Jc-nbv"/>
+                <constraint firstItem="opK-a2-cL1" firstAttribute="leading" secondItem="vRO-2H-BcX" secondAttribute="trailing" id="w6j-uv-E6O"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>

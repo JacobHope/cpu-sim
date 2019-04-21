@@ -177,6 +177,7 @@ extension ALUCoordinator: FetchViewControllerDelegate {
         fetchViewController.ifAluToMuxEnd.name = TouchPointNames.ifAluToMuxEnd
         fetchViewController.ifImToIdStart.name = TouchPointNames.ifImToIdStart
         fetchViewController.ifImToIdEnd.name = TouchPointNames.ifImToIdEnd
+        fetchViewController.ifAluToIdEnd.name = TouchPointNames.ifAluToIdEnd
         
         fetchViewController.touchPoints = [
             fetchViewController.ifMuxToPcStart,
@@ -189,7 +190,8 @@ extension ALUCoordinator: FetchViewControllerDelegate {
             fetchViewController.ifAluToMuxStart,
             fetchViewController.ifAluToMuxEnd,
             fetchViewController.ifImToIdStart,
-            fetchViewController.ifImToIdEnd
+            fetchViewController.ifImToIdEnd,
+            fetchViewController.ifAluToIdEnd
         ]
         
         // Setup lines
@@ -227,6 +229,11 @@ extension ALUCoordinator: FetchViewControllerDelegate {
         // IFIMtoID
         fetchViewController.lines[TouchPointNames.ifImToIdEnd] = [
             fetchViewController.ifImToId1
+        ]
+        
+        // IFALUToID
+        fetchViewController.lines[TouchPointNames.ifAluToIdEnd] = [
+            fetchViewController.ifAluToId1
         ]
         
         // Setup all touch points

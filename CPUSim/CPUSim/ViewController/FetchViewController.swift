@@ -70,6 +70,10 @@ class FetchViewController: UIViewController {
     @IBOutlet weak var ifImToIdEnd: TouchPointView!
     @IBOutlet weak var ifImToId1: LineView!
     
+    // MARK: IFALUToID
+    @IBOutlet weak var ifAluToIdEnd: TouchPointView!
+    @IBOutlet weak var ifAluToId1: LineView!
+    
     public weak var delegate: FetchViewControllerDelegate?
     
     var touchPoints: [TouchPointView] = []

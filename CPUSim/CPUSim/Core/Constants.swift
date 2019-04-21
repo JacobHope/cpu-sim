@@ -31,6 +31,7 @@ struct CorrectnessMapKeys {
     static let ifFourToAlu = "ifFourToAlu"
     static let ifAluToMux = "ifAluToMux"
     static let ifImToId = "ifImToId"
+    static let ifAluToId = "ifAluToId"
     
     //MARK: - ID Correctness Map Keys
     static let idFetchToReadAddress1 = "idFetchToReadAddress1"
@@ -58,6 +59,7 @@ struct TouchPointNames {
     static let ifAluToMuxEnd = "ifAluToMuxEnd"
     static let ifImToIdStart = "ifImToIdStart"
     static let ifImToIdEnd = "ifImToIdEnd"
+    static let ifAluToIdEnd = "ifAluToIdEnd"
     
     //MARK: - ID Touch Point Names
     static let idExcecuteToWriteDataEnd = "idExcecuteToWriteDataEnd"
