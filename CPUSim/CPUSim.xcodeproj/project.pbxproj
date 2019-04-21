@@ -11,6 +11,7 @@
 		04CF4313226B478C00C7B0E7 /* GlowingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4312226B478C00C7B0E7 /* GlowingButton.swift */; };
 		04CF4315226B4D4A00C7B0E7 /* GlowingButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4314226B4D4A00C7B0E7 /* GlowingButtonModel.swift */; };
 		04CF4317226C11B300C7B0E7 /* EasyAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CF4316226C11B300C7B0E7 /* EasyAnimation.framework */; };
+		04CF4319226CB37500C7B0E7 /* ALUWriteBackStateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4318226CB37500C7B0E7 /* ALUWriteBackStateService.swift */; };
 		04D3F77B22602461002C80B6 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 04D3F77A22602460002C80B6 /* README.txt */; };
 		04D3F78022602530002C80B6 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F77F22602530002C80B6 /* Drawing.swift */; };
 		04D3F78222602533002C80B6 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F78122602533002C80B6 /* State.swift */; };
@@ -74,6 +75,7 @@
 		04CF4312226B478C00C7B0E7 /* GlowingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowingButton.swift; sourceTree = "<group>"; };
 		04CF4314226B4D4A00C7B0E7 /* GlowingButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowingButtonModel.swift; sourceTree = "<group>"; };
 		04CF4316226C11B300C7B0E7 /* EasyAnimation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyAnimation.framework; path = Carthage/Build/iOS/EasyAnimation.framework; sourceTree = "<group>"; };
+		04CF4318226CB37500C7B0E7 /* ALUWriteBackStateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALUWriteBackStateService.swift; sourceTree = "<group>"; };
 		04D3F77A22602460002C80B6 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		04D3F77F22602530002C80B6 /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
 		04D3F78122602533002C80B6 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				04D3F7A82260376D002C80B6 /* DrawingService.swift */,
 				04D3F7A92260376D002C80B6 /* ALUFetchStateService.swift */,
 				30FEB625226B9C85006E8E44 /* ALUDecodeStateService.swift */,
+				04CF4318226CB37500C7B0E7 /* ALUWriteBackStateService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				3007E73D225716870021DB6D /* MemoryAccessViewController.swift in Sources */,
 				04D3F7A522603701002C80B6 /* DotModel.swift in Sources */,
 				04D3F78222602533002C80B6 /* State.swift in Sources */,
+				04CF4319226CB37500C7B0E7 /* ALUWriteBackStateService.swift in Sources */,
 				305A00CA224D7E4E008D2A6F /* Coordinator.swift in Sources */,
 				305A00D0224D8095008D2A6F /* Services.swift in Sources */,
 				3007E73F225716960021DB6D /* WriteBackViewController.swift in Sources */,

@@ -37,14 +37,17 @@ class ALUCoordinator: RootViewCoordinator {
     
     private let drawingService: Drawing
     private let fetchStateService: State
+    private let writeBackStateService: State
     //private var fetchViewController: FetchViewController?
     
     // MARK: Init
     
     init(drawingService: Drawing,
-         fetchStateService: State) {
+         fetchStateService: State,
+         writeBackStateService: State) {
         self.drawingService = drawingService
         self.fetchStateService = fetchStateService
+        self.writeBackStateService = writeBackStateService
     }
     
     // MARK: Functions
@@ -57,7 +60,6 @@ class ALUCoordinator: RootViewCoordinator {
         let fetchViewController = FetchViewController()
         fetchViewController.delegate = self
         self.navigationController.viewControllers = [fetchViewController]
-        //self.fetchViewController = fetchViewController
     }
     
     func showDecodeViewController() {
@@ -332,6 +334,75 @@ extension ALUCoordinator: MemoryAccessViewControllerDelegate {
 // MARK: WriteBackViewControllerDelegate
 
 extension ALUCoordinator: WriteBackViewControllerDelegate {
+    func writeBackViewControllerOnTouchesBegan(_ writeBackViewController: WriteBackViewController, _ touches: Set<UITouch>, with event: UIEvent?) {
+        drawingService.clearDrawing(
+            imageView: writeBackViewController.drawingImageView)
+        
+        writeBackStateService.handleTouchesBegan(
+            touches,
+            with: event,
+            touchPoints: writeBackViewController.touchPoints,
+            view: writeBackViewController.drawingImageView)
+    }
+    
+    func writeBackViewControllerOnTouchesMoved(_ writeBackViewController: WriteBackViewController, _ touches: Set<UITouch>, with event: UIEvent?) {
+        // todo: pass in only drawingImageView
+        writeBackStateService.handleTouchesMoved(
+            touches,
+            with: event,
+            imageView: writeBackViewController.drawingImageView,
+            view: writeBackViewController.drawingImageView,
+            withDrawing: drawingService,
+            touchPoints: writeBackViewController.touchPoints,
+            lines: writeBackViewController.lines)
+    }
+    
+    func writeBackViewControllerOnTouchesEnded(_ writeBackViewController: WriteBackViewController) {
+        writeBackStateService.resetState()
+    }
+    
+    func writeBackViewControllerOnTouchesCancelled(_ writeBackViewController: WriteBackViewController) {
+        drawingService.resumeTouchInput()
+        writeBackStateService.resetState()
+    }
+    
+    func writeBackViewControllerClearDrawing(_ writeBackViewController: WriteBackViewController) {
+        drawingService.clearDrawing(imageView: writeBackViewController.drawingImageView)
+    }
+    
+    func writeBackViewControllerSetup(_ writeBackViewController: WriteBackViewController) {
+        // Setup ProgressView
+        writeBackViewController.progressView.progress = 0.0
+        writeBackViewController.progressView.progressTintColor = UIColor.green
+        
+        // Setup event subscribers
+        SwiftEventBus.onMainThread(writeBackViewController, name: Events.aluWriteBackOnCorrect) { result in
+            let progress: Float = result?.object as! Float
+            writeBackViewController.progressView.setProgress(progress, animated: true)
+            
+            // If progress is complete...
+            if (progress == 1) {
+                // ...animate tab bar after 4 seconds
+                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                    // Begin tab bar animation
+                    writeBackViewController.wbMemTab.setStageFinished()
+                }
+            }
+        }
+        
+        // Setup all touch points
+        writeBackViewController.touchPoints.forEach { touchPoint in
+            touchPoint.setupWith(DotModel.defaultDotModel())
+        }
+        
+        // Setup all lines
+        for (_, v) in writeBackViewController.lines {
+            v.forEach { line in
+                line.setup()
+            }
+        }
+    }
+    
     func writeBackViewControllerDidSwipeLeft(_ writeBackViewController: WriteBackViewController) {
         self.navigationController.popViewController(animated: true)
     }
