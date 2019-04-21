@@ -390,6 +390,53 @@ extension ALUCoordinator: WriteBackViewControllerDelegate {
             }
         }
         
+        // Setup TouchPointViews
+        writeBackViewController.wbMemReadDataToMuxStart.name = TouchPointNames.wbMemReadDataToMuxStart
+        writeBackViewController.wbMemReadDataToMuxEnd.name = TouchPointNames.wbMemReadDataToMuxEnd
+        writeBackViewController.wbMemAddressToMuxStart.name = TouchPointNames.wbMemAddressToMuxStart
+        writeBackViewController.wbMemAddressToMuxEnd.name = TouchPointNames.wbMemAddressToMuxEnd
+        writeBackViewController.wbMuxToIfWriteDataStart.name = TouchPointNames.wbMuxToIfWriteDataStart
+        writeBackViewController.wbMuxToIfWriteDataEnd.name = TouchPointNames.wbMuxToIfWriteDataEnd
+        writeBackViewController.wbMemToIfWriteAddressStart.name = TouchPointNames.wbMemToIfWriteAddressStart
+        writeBackViewController.wbMemToIfWriteAddressEnd.name = TouchPointNames.wbMemToIfWriteAddressEnd
+        
+        writeBackViewController.touchPoints = [
+            writeBackViewController.wbMemReadDataToMuxStart,
+            writeBackViewController.wbMemReadDataToMuxEnd,
+            writeBackViewController.wbMemAddressToMuxStart,
+            writeBackViewController.wbMemAddressToMuxEnd,
+            writeBackViewController.wbMuxToIfWriteDataStart,
+            writeBackViewController.wbMuxToIfWriteDataEnd,
+            writeBackViewController.wbMemToIfWriteAddressStart,
+            writeBackViewController.wbMemToIfWriteAddressEnd,
+        ]
+        
+        // Setup lines
+        
+        // WBMEMReadDataToMUX
+        writeBackViewController.lines[TouchPointNames.wbMemReadDataToMuxEnd] = [
+            writeBackViewController.wbMemReadDataToMux1
+        ]
+        
+        // WBMEMAddressToMux
+        writeBackViewController.lines[TouchPointNames.wbMemAddressToMuxEnd] = [
+            writeBackViewController.wbMemAddressToMux1
+        ]
+        
+        // WBMUXToIFWriteData
+        writeBackViewController.lines[TouchPointNames.wbMuxToIfWriteDataEnd] = [
+            writeBackViewController.wbMuxToIfWriteData1,
+            writeBackViewController.wbMuxToIfWriteData2,
+            writeBackViewController.wbMuxToIfWriteData3,
+        ]
+        
+        // WBMEMToIFWriteAddress
+        writeBackViewController.lines[TouchPointNames.wbMemToIfWriteAddressEnd] = [
+            writeBackViewController.wbMemToIfWriteAddress1,
+            writeBackViewController.wbMemToIfWriteAddress2,
+            writeBackViewController.wbMemToIfWriteAddress3,
+        ]
+        
         // Setup all touch points
         writeBackViewController.touchPoints.forEach { touchPoint in
             touchPoint.setupWith(DotModel.defaultDotModel())

@@ -45,6 +45,12 @@ struct CorrectnessMapKeys {
     static let idSignExtendToExecute = "idSignExtendToExecute"
     static let idReadData1ToExecute = "idReadData1ToExecute"
     static let idReadData2ToExecute = "idReadData2ToExecute"
+    
+    //MARK: - WB Correctness Map Keys
+    static let wbMemReadDataToMux = "wbMemReadDataToMux"
+    static let wbMemAddressToMux = "wbMemAddressToMux"
+    static let wbMuxToIfWriteData = "wbMuxToIfWriteData"
+    static let wbMemToIfWriteAddress = "wbMemtoIfWriteAddress"
 }
 
 struct TouchPointNames {
@@ -74,4 +80,14 @@ struct TouchPointNames {
     static let idReadData1ToExStart = "idReadData1ToExStart"
     static let idReadData2ToExStart = "idReadData2ToExStart"
     static let idSignExtendToExecuteStart = "idSignExtendToExecuteStart"
+    
+    //MARK: - WB Touch Point Names
+    static let wbMemReadDataToMuxStart = "wbMemReadDataToMuxStart"
+    static let wbMemReadDataToMuxEnd = "wbMemReadDataToMuxEnd"
+    static let wbMemAddressToMuxStart = "wbMemAddressToMuxStart"
+    static let wbMemAddressToMuxEnd = "wbMemAddressToMuxEnd"
+    static let wbMuxToIfWriteDataStart = "wbMuxToIfWriteDataStart"
+    static let wbMuxToIfWriteDataEnd = "wbMuxToIfWriteDataEnd"
+    static let wbMemToIfWriteAddressStart = "wbMemToIfWriteAddressStart"
+    static let wbMemToIfWriteAddressEnd = "wbMemToIfWriteAddressEnd"
 }
