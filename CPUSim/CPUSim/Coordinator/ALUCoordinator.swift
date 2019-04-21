@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SwiftEventBus
+import EasyAnimation
 
 protocol ALUCoordinatorDelegate: class {
     func aluCoordinatorDidRequestCancel(aluCoordinator: ALUCoordinator)
@@ -139,27 +140,20 @@ extension ALUCoordinator: FetchViewControllerDelegate {
             if (progress == 1) {
                 // ...show complete button and animate tab bar after 4 seconds
                 DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-//                    fetchViewController.completeButton.alpha = 1.0
+                    // Unhide complete button
+                    fetchViewController.completeButton.isHidden = false
+                    
+                    // Begin complete button animation
+                    UIView.beginCompleteButtonAnimation(fetchViewController.completeButton)
+                    
+                    // Begin tab bar animation
                     fetchViewController.ifIdTab.setStageFinished()
                 }
             }
         }
         
-        // Set complete button image color
-        fetchViewController.completeButton.setImage(
-            UIImage(named: "right-arrow-button")?.withRenderingMode(.alwaysTemplate),
-            for: .normal)
-        fetchViewController.completeButton.tintColor = .blue
-        
         // Setup complete button
-        fetchViewController.completeButton.alpha = 0.0
-        fetchViewController.completeButton.setup(
-            GlowingButtonModel(
-                animDuration: 1.5,
-                cornerRadius: 5.0,
-                maxGlowSize: 12.5,
-                minGlowSize: 2.5,
-                shadowColor: UIColor.green.cgColor))
+        fetchViewController.completeButton.isHidden = true
         
         // Setup TouchPointViews
         fetchViewController.ifMuxToPcStart.name = TouchPointNames.ifMuxToPcStart
@@ -253,6 +247,8 @@ extension ALUCoordinator: FetchViewControllerDelegate {
     
     func fetchViewControllerDidSwipeRight(_ fetchViewController: FetchViewController) {
         if (!fetchStateService.isDrawing) {
+            // Hide complete button
+            fetchViewController.completeButton.isHidden = true
             self.showDecodeViewController()
         }
     }
@@ -272,7 +268,7 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
     func decodeViewControllerDidSwipeLeft(_ decodeViewController: DecodeViewController) {
         self.navigationController.popViewController(animated: true)
 
-        // Reset pulsation animation
+        // Reset animations
         guard let tvc = self.navigationController.topViewController else {
             return
         }

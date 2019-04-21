@@ -2,3 +2,4 @@ github "shu223/Pulsator" ~> 0.5.3
 github "mxcl/PromiseKit" ~> 6.8.4
 github "PromiseKit/UIKit" ~> 3.1.0
 github "cesarferreira/SwiftEventBus" ~> 5.0.0
+github "icanzilb/EasyAnimation" ~> 2.2.1
