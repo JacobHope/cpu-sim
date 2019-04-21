@@ -451,7 +451,9 @@ extension ALUCoordinator: WriteBackViewControllerDelegate {
     }
     
     func writeBackViewControllerDidSwipeLeft(_ writeBackViewController: WriteBackViewController) {
-        self.navigationController.popViewController(animated: true)
+        if (!writeBackStateService.isDrawing) {
+            self.navigationController.popViewController(animated: true)
+        }
     }
     
     func writeBackViewControllerDidSwipeRight(_ writeBackViewController: WriteBackViewController) {
