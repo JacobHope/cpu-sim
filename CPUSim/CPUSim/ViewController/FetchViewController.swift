@@ -33,9 +33,6 @@ class FetchViewController: UIViewController {
     
     @IBOutlet weak var completeButton: GlowingButton!
     
-    // MARK: Completed lines
-    @IBOutlet weak var ifImToNext1: LineView!
-    
     // MARK: ProgressView
     @IBOutlet weak var progressView: UIProgressView!
     
@@ -67,6 +64,11 @@ class FetchViewController: UIViewController {
     @IBOutlet weak var ifAluToMux3: LineView!
     @IBOutlet weak var ifAluToMuxStart: TouchPointView!
     @IBOutlet weak var ifAluToMuxEnd: TouchPointView!
+    
+    // MARK: IFIMtoID
+    @IBOutlet weak var ifImToIdStart: TouchPointView!
+    @IBOutlet weak var ifImToIdEnd: TouchPointView!
+    @IBOutlet weak var ifImToId1: LineView!
     
     public weak var delegate: FetchViewControllerDelegate?
     

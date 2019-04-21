@@ -144,9 +144,7 @@ extension ALUCoordinator: FetchViewControllerDelegate {
                 
                 // Animate remaining lines after 4 seconds
                 DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                    LineView.animateLines(
-                        fetchViewController.lines[CompleteKeys.ifComplete] ?? [],
-                        duration: 0.75)
+                    
                 }
             }
         }
@@ -177,6 +175,8 @@ extension ALUCoordinator: FetchViewControllerDelegate {
         fetchViewController.ifFourToAluEnd.name = TouchPointNames.ifFourToAluEnd
         fetchViewController.ifAluToMuxStart.name = TouchPointNames.ifAluToMuxStart
         fetchViewController.ifAluToMuxEnd.name = TouchPointNames.ifAluToMuxEnd
+        fetchViewController.ifImToIdStart.name = TouchPointNames.ifImToIdStart
+        fetchViewController.ifImToIdEnd.name = TouchPointNames.ifImToIdEnd
         
         fetchViewController.touchPoints = [
             fetchViewController.ifMuxToPcStart,
@@ -187,15 +187,12 @@ extension ALUCoordinator: FetchViewControllerDelegate {
             fetchViewController.ifFourToAluStart,
             fetchViewController.ifFourToAluEnd,
             fetchViewController.ifAluToMuxStart,
-            fetchViewController.ifAluToMuxEnd
+            fetchViewController.ifAluToMuxEnd,
+            fetchViewController.ifImToIdStart,
+            fetchViewController.ifImToIdEnd
         ]
         
         // Setup lines
-        
-        // Complete lines
-        fetchViewController.lines[CompleteKeys.ifComplete] = [
-            fetchViewController.ifImToNext1
-        ]
         
         // IFMUXtoPC
         fetchViewController.lines[TouchPointNames.ifMuxToPcEnd] = [
@@ -225,6 +222,11 @@ extension ALUCoordinator: FetchViewControllerDelegate {
             fetchViewController.ifAluToMux1,
             fetchViewController.ifAluToMux2,
             fetchViewController.ifAluToMux3
+        ]
+        
+        // IFIMtoID
+        fetchViewController.lines[TouchPointNames.ifImToIdEnd] = [
+            fetchViewController.ifImToId1
         ]
         
         // Setup all touch points

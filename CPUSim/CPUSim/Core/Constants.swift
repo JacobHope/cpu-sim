@@ -23,10 +23,6 @@ struct Events {
     static let aluFetchOnCorrect = "aluFetchOnCorrect"
 }
 
-struct CompleteKeys {
-    static let ifComplete = "ifComplete"
-}
-
 struct CorrectnessMapKeys {
     //MARK: - IF Correctness Map Keys
     static let ifMuxToPc = "ifMuxToPc"
@@ -34,6 +30,7 @@ struct CorrectnessMapKeys {
     static let ifPcToIm = "ifPcToIm"
     static let ifFourToAlu = "ifFourToAlu"
     static let ifAluToMux = "ifAluToMux"
+    static let ifImToId = "ifImToId"
     
     //MARK: - ID Correctness Map Keys
     static let idFetchToReadAddress1 = "idFetchToReadAddress1"
@@ -59,6 +56,8 @@ struct TouchPointNames {
     static let ifFourToAluEnd = "ifFourToAluEnd"
     static let ifAluToMuxStart = "ifAluToMuxStart"
     static let ifAluToMuxEnd = "ifAluToMuxEnd"
+    static let ifImToIdStart = "ifImToIdStart"
+    static let ifImToIdEnd = "ifImToIdEnd"
     
     //MARK: - ID Touch Point Names
     static let idExcecuteToWriteDataEnd = "idExcecuteToWriteDataEnd"

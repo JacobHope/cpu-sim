@@ -19,6 +19,8 @@ private enum StartState {
     case ifFourToAluEndStarted
     case ifAluToMuxStartStarted
     case ifAluToMuxEndStarted
+    case ifImToIdStartStarted
+    case ifImToIdEndStarted
     case noneStarted
 }
 
@@ -30,7 +32,8 @@ class ALUFetchStateService: State {
         CorrectnessMapKeys.ifPcToAlu: false,
         CorrectnessMapKeys.ifPcToIm: false,
         CorrectnessMapKeys.ifFourToAlu: false,
-        CorrectnessMapKeys.ifAluToMux: false
+        CorrectnessMapKeys.ifAluToMux: false,
+        CorrectnessMapKeys.ifImToId: false
     ]
 
     private var touchStartedInTouchPoint: Bool = false
@@ -76,6 +79,7 @@ class ALUFetchStateService: State {
                     tp.setCorrect()
                 }
             }
+            break;
         case TouchPointNames.ifPcToImEnd:
             // Set correctnessMap
             correctnessMap[CorrectnessMapKeys.ifPcToIm] = true
@@ -87,6 +91,7 @@ class ALUFetchStateService: State {
                     tp.setCorrect()
                 }
             }
+            break;
         case TouchPointNames.ifFourToAluEnd:
             // Set correctnessMap
             correctnessMap[CorrectnessMapKeys.ifFourToAlu] = true
@@ -98,6 +103,7 @@ class ALUFetchStateService: State {
                     tp.setCorrect()
                 }
             }
+            break;
         case TouchPointNames.ifAluToMuxEnd:
             // Set correctnessMap
             correctnessMap[CorrectnessMapKeys.ifAluToMux] = true
@@ -109,6 +115,19 @@ class ALUFetchStateService: State {
                     tp.setCorrect()
                 }
             }
+            break;
+        case TouchPointNames.ifImToIdEnd:
+            // Set correctnessMap
+            correctnessMap[CorrectnessMapKeys.ifImToId] = true
+            
+            // Set correct (change color to green)
+            touchPoints.forEach { tp in
+                if (tp.name == TouchPointNames.ifImToIdEnd
+                    || tp.name == TouchPointNames.ifImToIdStart) {
+                    tp.setCorrect()
+                }
+            }
+            break;
         default:
             break;
         }
@@ -178,6 +197,15 @@ class ALUFetchStateService: State {
                     }
                 }
                 break;
+            case TouchPointNames.ifImToIdEnd:
+                touchPoints.forEach { tp in
+                    // Set hidden
+                    if (tp.name == TouchPointNames.ifImToIdEnd
+                        || tp.name == TouchPointNames.ifImToIdStart) {
+                        tp.isHidden = true
+                    }
+                }
+                break;
             default:
                 break;
             }
@@ -226,6 +254,12 @@ class ALUFetchStateService: State {
             break;
         case StartState.ifAluToMuxEndStarted:
             startName = TouchPointNames.ifAluToMuxEnd
+            break;
+        case StartState.ifImToIdStartStarted:
+            startName = TouchPointNames.ifImToIdStart
+            break;
+        case StartState.ifImToIdEndStarted:
+            startName = TouchPointNames.ifImToIdEnd
             break;
         default:
             startName = ""
@@ -301,6 +335,12 @@ class ALUFetchStateService: State {
                         break;
                     case TouchPointNames.ifAluToMuxEnd:
                         self.startState = StartState.ifAluToMuxEndStarted
+                        break;
+                    case TouchPointNames.ifImToIdStart:
+                        self.startState = StartState.ifImToIdStartStarted
+                        break;
+                    case TouchPointNames.ifImToIdEnd:
+                        self.startState = StartState.ifImToIdEndStarted
                         break;
                     default:
                         break;
@@ -449,6 +489,28 @@ class ALUFetchStateService: State {
                             } else if (startState != StartState.ifAluToMuxEndStarted) {
                                 self.onIncorrect(touchPoints,
                                         touchPointName: TouchPointNames.ifAluToMuxEnd)
+                                drawingService.ignoreTouchInput()
+                                drawingService.clearDrawing(imageView: imageView)
+                            }
+                        case TouchPointNames.ifImToIdStart:  // Anything ending at a start point is incorrect
+                            if (startState != StartState.ifImToIdStartStarted) {
+                                self.onIncorrect(touchPoints,
+                                                 touchPointName: TouchPointNames.ifImToIdStart)
+                                drawingService.ignoreTouchInput()
+                                drawingService.clearDrawing(imageView: imageView)
+                            }
+                            break;
+                        case TouchPointNames.ifImToIdEnd:
+                            if (self.startState == StartState.ifImToIdStartStarted) {
+                                self.onCorrect(
+                                    touchPoints,
+                                    touchPointName: TouchPointNames.ifImToIdEnd,
+                                    linesMap: lines)
+                                drawingService.ignoreTouchInput()
+                                drawingService.clearDrawing(imageView: imageView)
+                            } else if (startState != StartState.ifImToIdEndStarted) {
+                                self.onIncorrect(touchPoints,
+                                                 touchPointName: TouchPointNames.ifImToIdEnd)
                                 drawingService.ignoreTouchInput()
                                 drawingService.clearDrawing(imageView: imageView)
                             }
