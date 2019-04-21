@@ -25,6 +25,7 @@
                 <outlet property="ifFourToAlu1" destination="d3j-Cf-JBP" id="4mn-eE-ijP"/>
                 <outlet property="ifFourToAluEnd" destination="24V-vI-kZI" id="a6Y-Y5-MLT"/>
                 <outlet property="ifFourToAluStart" destination="FOF-tY-Ni0" id="bkd-Aj-ZGY"/>
+                <outlet property="ifIdTab" destination="opK-a2-cL1" id="EEv-AB-aLG"/>
                 <outlet property="ifImToId1" destination="Bv6-ew-JSo" id="8lk-F1-Ex7"/>
                 <outlet property="ifImToIdEnd" destination="X1e-sL-erF" id="uzh-i9-ZMh"/>
                 <outlet property="ifImToIdStart" destination="2jF-w8-QLu" id="U5y-DU-ZhV"/>
@@ -614,7 +615,7 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="CPF-4s-pLG"/>
                 </view>
-                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opK-a2-cL1" userLabel="ifIDTab" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opK-a2-cL1" userLabel="ifIdTab" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
                     <rect key="frame" x="300" y="64" width="20" height="460"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="ID" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q62-Gc-NZI" userLabel="IDTextView">

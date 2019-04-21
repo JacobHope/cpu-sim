@@ -31,7 +31,11 @@ class FetchViewController: UIViewController {
     @IBOutlet var FetchView: UIView!
     @IBOutlet weak var drawingImageView: UIImageView!
     
+    // MARK: Complete button
     @IBOutlet weak var completeButton: GlowingButton!
+    
+    // MARK: Tab bar
+    @IBOutlet weak var ifIdTab: TouchTabView!
     
     // MARK: ProgressView
     @IBOutlet weak var progressView: UIProgressView!

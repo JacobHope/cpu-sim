@@ -137,14 +137,10 @@ extension ALUCoordinator: FetchViewControllerDelegate {
             
             // If progress is complete...
             if (progress == 1) {
-                // ...show complete button after 2 seconds
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-//                    fetchViewController.completeButton.alpha = 1.0
-                }
-                
-                // Animate remaining lines after 4 seconds
+                // ...show complete button and animate tab bar after 4 seconds
                 DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                    
+//                    fetchViewController.completeButton.alpha = 1.0
+                    fetchViewController.ifIdTab.setStageFinished()
                 }
             }
         }
