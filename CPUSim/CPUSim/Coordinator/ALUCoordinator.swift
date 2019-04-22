@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SwiftEventBus
+import EasyAnimation
 
 protocol ALUCoordinatorDelegate: class {
     func aluCoordinatorDidRequestCancel(aluCoordinator: ALUCoordinator)
@@ -36,14 +37,17 @@ class ALUCoordinator: RootViewCoordinator {
     
     private let drawingService: Drawing
     private let fetchStateService: State
+    private let writeBackStateService: State
     //private var fetchViewController: FetchViewController?
     
     // MARK: Init
     
     init(drawingService: Drawing,
-         fetchStateService: State) {
+         fetchStateService: State,
+         writeBackStateService: State) {
         self.drawingService = drawingService
         self.fetchStateService = fetchStateService
+        self.writeBackStateService = writeBackStateService
     }
     
     // MARK: Functions
@@ -56,7 +60,6 @@ class ALUCoordinator: RootViewCoordinator {
         let fetchViewController = FetchViewController()
         fetchViewController.delegate = self
         self.navigationController.viewControllers = [fetchViewController]
-        //self.fetchViewController = fetchViewController
     }
     
     func showDecodeViewController() {
@@ -137,35 +140,22 @@ extension ALUCoordinator: FetchViewControllerDelegate {
             
             // If progress is complete...
             if (progress == 1) {
-                // ...show complete button after 2 seconds
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-//                    fetchViewController.completeButton.alpha = 1.0
-                }
-                
-                // Animate remaining lines after 4 seconds
+                // ...show complete button and animate tab bar after 4 seconds
                 DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                    LineView.animateLines(
-                        fetchViewController.lines[CompleteKeys.ifComplete] ?? [],
-                        duration: 0.75)
+                    // Unhide complete button
+                    fetchViewController.completeButton.isHidden = false
+                    
+                    // Begin complete button animation
+                    UIView.beginCompleteButtonAnimation(fetchViewController.completeButton)
+                    
+                    // Begin tab bar animation
+                    fetchViewController.ifIdTab.setStageFinished()
                 }
             }
         }
         
-        // Set complete button image color
-        fetchViewController.completeButton.setImage(
-            UIImage(named: "right-arrow-button")?.withRenderingMode(.alwaysTemplate),
-            for: .normal)
-        fetchViewController.completeButton.tintColor = .blue
-        
         // Setup complete button
-        fetchViewController.completeButton.alpha = 0.0
-        fetchViewController.completeButton.setup(
-            GlowingButtonModel(
-                animDuration: 1.5,
-                cornerRadius: 5.0,
-                maxGlowSize: 12.5,
-                minGlowSize: 2.5,
-                shadowColor: UIColor.green.cgColor))
+        fetchViewController.completeButton.isHidden = true
         
         // Setup TouchPointViews
         fetchViewController.ifMuxToPcStart.name = TouchPointNames.ifMuxToPcStart
@@ -177,6 +167,9 @@ extension ALUCoordinator: FetchViewControllerDelegate {
         fetchViewController.ifFourToAluEnd.name = TouchPointNames.ifFourToAluEnd
         fetchViewController.ifAluToMuxStart.name = TouchPointNames.ifAluToMuxStart
         fetchViewController.ifAluToMuxEnd.name = TouchPointNames.ifAluToMuxEnd
+        fetchViewController.ifImToIdStart.name = TouchPointNames.ifImToIdStart
+        fetchViewController.ifImToIdEnd.name = TouchPointNames.ifImToIdEnd
+        fetchViewController.ifAluToIdEnd.name = TouchPointNames.ifAluToIdEnd
         
         fetchViewController.touchPoints = [
             fetchViewController.ifMuxToPcStart,
@@ -187,15 +180,13 @@ extension ALUCoordinator: FetchViewControllerDelegate {
             fetchViewController.ifFourToAluStart,
             fetchViewController.ifFourToAluEnd,
             fetchViewController.ifAluToMuxStart,
-            fetchViewController.ifAluToMuxEnd
+            fetchViewController.ifAluToMuxEnd,
+            fetchViewController.ifImToIdStart,
+            fetchViewController.ifImToIdEnd,
+            fetchViewController.ifAluToIdEnd
         ]
         
         // Setup lines
-        
-        // Complete lines
-        fetchViewController.lines[CompleteKeys.ifComplete] = [
-            fetchViewController.ifImToNext1
-        ]
         
         // IFMUXtoPC
         fetchViewController.lines[TouchPointNames.ifMuxToPcEnd] = [
@@ -227,6 +218,16 @@ extension ALUCoordinator: FetchViewControllerDelegate {
             fetchViewController.ifAluToMux3
         ]
         
+        // IFIMtoID
+        fetchViewController.lines[TouchPointNames.ifImToIdEnd] = [
+            fetchViewController.ifImToId1
+        ]
+        
+        // IFALUToID
+        fetchViewController.lines[TouchPointNames.ifAluToIdEnd] = [
+            fetchViewController.ifAluToId1
+        ]
+        
         // Setup all touch points
         fetchViewController.touchPoints.forEach { touchPoint in
             touchPoint.setupWith(DotModel.defaultDotModel())
@@ -248,6 +249,8 @@ extension ALUCoordinator: FetchViewControllerDelegate {
     
     func fetchViewControllerDidSwipeRight(_ fetchViewController: FetchViewController) {
         if (!fetchStateService.isDrawing) {
+            // Hide complete button
+            fetchViewController.completeButton.isHidden = true
             self.showDecodeViewController()
         }
     }
@@ -267,7 +270,7 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
     func decodeViewControllerDidSwipeLeft(_ decodeViewController: DecodeViewController) {
         self.navigationController.popViewController(animated: true)
 
-        // Reset pulsation animation
+        // Reset animations
         guard let tvc = self.navigationController.topViewController else {
             return
         }
@@ -331,8 +334,126 @@ extension ALUCoordinator: MemoryAccessViewControllerDelegate {
 // MARK: WriteBackViewControllerDelegate
 
 extension ALUCoordinator: WriteBackViewControllerDelegate {
+    func writeBackViewControllerOnTouchesBegan(_ writeBackViewController: WriteBackViewController, _ touches: Set<UITouch>, with event: UIEvent?) {
+        drawingService.clearDrawing(
+            imageView: writeBackViewController.drawingImageView)
+        
+        writeBackStateService.handleTouchesBegan(
+            touches,
+            with: event,
+            touchPoints: writeBackViewController.touchPoints,
+            view: writeBackViewController.drawingImageView)
+    }
+    
+    func writeBackViewControllerOnTouchesMoved(_ writeBackViewController: WriteBackViewController, _ touches: Set<UITouch>, with event: UIEvent?) {
+        // todo: pass in only drawingImageView
+        writeBackStateService.handleTouchesMoved(
+            touches,
+            with: event,
+            imageView: writeBackViewController.drawingImageView,
+            view: writeBackViewController.drawingImageView,
+            withDrawing: drawingService,
+            touchPoints: writeBackViewController.touchPoints,
+            lines: writeBackViewController.lines)
+    }
+    
+    func writeBackViewControllerOnTouchesEnded(_ writeBackViewController: WriteBackViewController) {
+        writeBackStateService.resetState()
+    }
+    
+    func writeBackViewControllerOnTouchesCancelled(_ writeBackViewController: WriteBackViewController) {
+        drawingService.resumeTouchInput()
+        writeBackStateService.resetState()
+    }
+    
+    func writeBackViewControllerClearDrawing(_ writeBackViewController: WriteBackViewController) {
+        drawingService.clearDrawing(imageView: writeBackViewController.drawingImageView)
+    }
+    
+    func writeBackViewControllerSetup(_ writeBackViewController: WriteBackViewController) {
+        // Setup ProgressView
+        writeBackViewController.progressView.progress = 0.0
+        writeBackViewController.progressView.progressTintColor = UIColor.green
+        
+        // Setup event subscribers
+        SwiftEventBus.onMainThread(writeBackViewController, name: Events.aluWriteBackOnCorrect) { result in
+            let progress: Float = result?.object as! Float
+            writeBackViewController.progressView.setProgress(progress, animated: true)
+            
+            // If progress is complete...
+            if (progress == 1) {
+                // ...animate tab bar after 4 seconds
+                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                    // Begin tab bar animation
+                    writeBackViewController.wbMemTab.setStageFinished()
+                }
+            }
+        }
+        
+        // Setup TouchPointViews
+        writeBackViewController.wbMemReadDataToMuxStart.name = TouchPointNames.wbMemReadDataToMuxStart
+        writeBackViewController.wbMemReadDataToMuxEnd.name = TouchPointNames.wbMemReadDataToMuxEnd
+        writeBackViewController.wbMemAddressToMuxStart.name = TouchPointNames.wbMemAddressToMuxStart
+        writeBackViewController.wbMemAddressToMuxEnd.name = TouchPointNames.wbMemAddressToMuxEnd
+        writeBackViewController.wbMuxToIfWriteDataStart.name = TouchPointNames.wbMuxToIfWriteDataStart
+        writeBackViewController.wbMuxToIfWriteDataEnd.name = TouchPointNames.wbMuxToIfWriteDataEnd
+        writeBackViewController.wbMemToIfWriteAddressStart.name = TouchPointNames.wbMemToIfWriteAddressStart
+        writeBackViewController.wbMemToIfWriteAddressEnd.name = TouchPointNames.wbMemToIfWriteAddressEnd
+        
+        writeBackViewController.touchPoints = [
+            writeBackViewController.wbMemReadDataToMuxStart,
+            writeBackViewController.wbMemReadDataToMuxEnd,
+            writeBackViewController.wbMemAddressToMuxStart,
+            writeBackViewController.wbMemAddressToMuxEnd,
+            writeBackViewController.wbMuxToIfWriteDataStart,
+            writeBackViewController.wbMuxToIfWriteDataEnd,
+            writeBackViewController.wbMemToIfWriteAddressStart,
+            writeBackViewController.wbMemToIfWriteAddressEnd,
+        ]
+        
+        // Setup lines
+        
+        // WBMEMReadDataToMUX
+        writeBackViewController.lines[TouchPointNames.wbMemReadDataToMuxEnd] = [
+            writeBackViewController.wbMemReadDataToMux1
+        ]
+        
+        // WBMEMAddressToMux
+        writeBackViewController.lines[TouchPointNames.wbMemAddressToMuxEnd] = [
+            writeBackViewController.wbMemAddressToMux1
+        ]
+        
+        // WBMUXToIFWriteData
+        writeBackViewController.lines[TouchPointNames.wbMuxToIfWriteDataEnd] = [
+            writeBackViewController.wbMuxToIfWriteData1,
+            writeBackViewController.wbMuxToIfWriteData2,
+            writeBackViewController.wbMuxToIfWriteData3,
+        ]
+        
+        // WBMEMToIFWriteAddress
+        writeBackViewController.lines[TouchPointNames.wbMemToIfWriteAddressEnd] = [
+            writeBackViewController.wbMemToIfWriteAddress1,
+            writeBackViewController.wbMemToIfWriteAddress2,
+            writeBackViewController.wbMemToIfWriteAddress3,
+        ]
+        
+        // Setup all touch points
+        writeBackViewController.touchPoints.forEach { touchPoint in
+            touchPoint.setupWith(DotModel.defaultDotModel())
+        }
+        
+        // Setup all lines
+        for (_, v) in writeBackViewController.lines {
+            v.forEach { line in
+                line.setup()
+            }
+        }
+    }
+    
     func writeBackViewControllerDidSwipeLeft(_ writeBackViewController: WriteBackViewController) {
-        self.navigationController.popViewController(animated: true)
+        if (!writeBackStateService.isDrawing) {
+            self.navigationController.popViewController(animated: true)
+        }
     }
     
     func writeBackViewControllerDidSwipeRight(_ writeBackViewController: WriteBackViewController) {

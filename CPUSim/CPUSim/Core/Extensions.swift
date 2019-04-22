@@ -10,6 +10,7 @@ import UIKit
 import Pulsator
 import PromiseKit
 import PMKUIKit
+import EasyAnimation
 
 extension Pulsator {
     static func generatePulsator(radius: CGFloat,
@@ -69,5 +70,17 @@ extension LineView {
                 }.asVoid()
             }
         }
+    }
+}
+
+extension UIView {
+    static func beginCompleteButtonAnimation(_ view: UIView) {
+        UIView.animate(
+            withDuration: 1.0,
+            delay: 1.0,
+            options: [.repeat, .autoreverse],
+            animations: {
+                view.center.x += 50
+        }, completion: nil)
     }
 }
