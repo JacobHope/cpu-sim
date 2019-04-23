@@ -13,27 +13,27 @@ import SwiftEventBus
 
 //MARK: - ID Start States
 private enum StartState {
-    case idFetchToReadAddress1StartStarted
-    case idFetchToReadAddress1EndStarted
-    case idFetchToReadAddress2StartStarted
-    case idFetchToReadAddress2EndStarted
+    case idIfToReadAddress1StartStarted
+    case idIfToReadAddress1EndStarted
+    case idIfToReadAddress2StartStarted
+    case idIfToReadAddress2EndStarted
     //TODO: start state needed for forked path between read address and mux
-    case idFetchToMux0StartStarted
-    case idFetchToMux0EndStarted
-    case idFetchToMux1StartStarted
-    case idFetchToMux1EndStarted
+    case idIfToMux0StartStarted
+    case idIfToMux0EndStarted
+    case idIfToMux1StartStarted
+    case idIfToMux1EndStarted
     case idMuxToWriteAddressStartStarted
     case idMuxToWriteAddressEndStarted
-    case idFetchToSignExtendStartStarted
-    case idFetchToSignExtendEndStarted
-    case idExecuteToWriteDataStartStarted
-    case idExecuteToWriteDataEndStarted
-    case idSignExtendToExecuteStartStarted
-    case idSignExtendToExecuteEndStarted
-    case idReadData1ToExecuteStartStarted
-    case idReadData1ToExecuteEndStarted
-    case idReadData2ToExecuteStartStarted
-    case idReadData2ToExecuteEndStarted
+    case idIfToSignExtendStartStarted
+    case idIfToSignExtendEndStarted
+    case idExToWriteDataStartStarted
+    case idExToWriteDataEndStarted
+    case idSignExtendToExStartStarted
+    case idSignExtendToExEndStarted
+    case idReadData1ToExStartStarted
+    case idReadData1ToExEndStarted
+    case idReadData2ToExStartStarted
+    case idReadData2ToExEndStarted
     case noneStarted
 }
 
@@ -75,13 +75,13 @@ class ALUDecodeStateService: State {
         
         // Set touch point correct...
         switch touchPointName {
-        case TouchPointNames.idFetchToMux0End:
+        case TouchPointNames.idIfToMux0End:
             // Set correctnessMap
-            correctnessMap[CorrectnessMapKeys.idFetchToMux0] = true
+            correctnessMap[CorrectnessMapKeys.idIfToMux0] = true
             break;
-        case TouchPointNames.idFetchToMux1End:
+        case TouchPointNames.idIfToMux1End:
             break;
-        case TouchPointNames.idFetchToSignExtendEnd:
+        case TouchPointNames.idIfToSignExtendEnd:
             break;
         case TouchPointNames.idMuxToWriteAddressEnd:
             break;
@@ -94,7 +94,7 @@ class ALUDecodeStateService: State {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             // Hide touch points
             switch touchPointName {
-            case TouchPointNames.idFetchToMux0End:
+            case TouchPointNames.idIfToMux0End:
                 break;
                 //TODO: add remaining cases and special cases
             default:
@@ -108,7 +108,7 @@ class ALUDecodeStateService: State {
         }
         
         // Post event...
-        SwiftEventBus.post(Events.aluFetchOnCorrect, sender: determineProgress())
+        SwiftEventBus.post(Events.aluIfOnCorrect, sender: determineProgress())
     }
     
     private func onIncorrect(
@@ -120,9 +120,9 @@ class ALUDecodeStateService: State {
         
         // TODO add cases
         switch startState {
-        case StartState.idFetchToMux0EndStarted:
+        case StartState.idIfToMux0EndStarted:
             break;
-        case StartState.idFetchToMux1EndStarted:
+        case StartState.idIfToMux1EndStarted:
             break;
         default:
             startName = ""
