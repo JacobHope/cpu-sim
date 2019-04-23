@@ -67,7 +67,8 @@ class ALUDecodeStateService: State {
         touchStartedInTouchPoint = false
         isDrawing = false
     }
-    
+
+    //TODO special and missing cases still need be implemented in onCorrect...
     private func onCorrect(
         _ touchPoints: [TouchPointView],
         touchPointName: String,
@@ -181,7 +182,77 @@ class ALUDecodeStateService: State {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             // Hide touch points
             switch touchPointName {
+            case TouchPointNames.idExToWriteDataEnd:
+                touchPoints.forEach { tp in
+                    // Set hidden
+                    if (tp.name == TouchPointNames.idExToWriteDataEnd
+                            || tp.name == TouchPointNames.idExToWriteDataStart) {
+                        tp.isHidden = true
+                    }
+                }
+                break;
+            case TouchPointNames.idIfToReadAddress1End:
+                touchPoints.forEach { tp in
+                    // Set hidden
+                    if (tp.name == TouchPointNames.idIfToReadAddress1End
+                            || tp.name == TouchPointNames.idIfToReadAddress1Start) {
+                        tp.isHidden = true
+                    }
+                }
+                break;
+            case TouchPointNames.idIfToReadAddress2End:
+                touchPoints.forEach { tp in
+                    // Set hidden
+                    if (tp.name == TouchPointNames.idIfToReadAddress2End
+                            || tp.name == TouchPointNames.idIfToReadAddress2Start) {
+                        tp.isHidden = true
+                    }
+                }
+                break;
             case TouchPointNames.idIfToMux0End:
+                touchPoints.forEach { tp in
+                    // Set hidden
+                    if (tp.name == TouchPointNames.idIfToMux0End
+                            || tp.name == TouchPointNames.idIfToMux0Start) {
+                        tp.isHidden = true
+                    }
+                }
+                break;
+            case TouchPointNames.idIfToMux1End:
+                touchPoints.forEach { tp in
+                    // Set hidden
+                    if (tp.name == TouchPointNames.idIfToMux1End
+                            || tp.name == TouchPointNames.idIfToMux1Start) {
+                        tp.isHidden = true
+                    }
+                }
+                break;
+            case TouchPointNames.idSignExtendToExEnd:
+                touchPoints.forEach { tp in
+                    // Set hidden
+                    if (tp.name == TouchPointNames.idSignExtendToExEnd
+                            || tp.name == TouchPointNames.idSignExtendToExStart) {
+                        tp.isHidden = true
+                    }
+                }
+                break;
+            case TouchPointNames.idMuxToWriteAddressEnd:
+                touchPoints.forEach { tp in
+                    // Set hidden
+                    if (tp.name == TouchPointNames.idMuxToWriteAddressEnd
+                            || tp.name == TouchPointNames.idMuxToWriteAddressStart) {
+                        tp.isHidden = true
+                    }
+                }
+                break;
+            case TouchPointNames.idIfToSignExtendEnd:
+                touchPoints.forEach { tp in
+                    // Set hidden
+                    if (tp.name == TouchPointNames.idIfToSignExtendEnd
+                            || tp.name == TouchPointNames.idIfToSignExtendStart) {
+                        tp.isHidden = true
+                    }
+                }
                 break;
                 //TODO: add remaining cases and special cases
             default:
@@ -195,6 +266,7 @@ class ALUDecodeStateService: State {
         }
         
         // Post event...
+        //TODO add swift event bus for alu decode
         SwiftEventBus.post(Events.aluIfOnCorrect, sender: determineProgress())
     }
     
