@@ -17,6 +17,7 @@ private enum StartState {
     case idFetchToReadAddress1EndStarted
     case idFetchToReadAddress2StartStarted
     case idFetchToReadAddress2EndStarted
+    //TODO: start state needed for forked path between read address and mux
     case idFetchToMux0StartStarted
     case idFetchToMux0EndStarted
     case idFetchToMux1StartStarted
@@ -41,16 +42,17 @@ class ALUDecodeStateService: State {
     var isDrawing: Bool = false
     
     var correctnessMap: [String: Bool] = [
-        CorrectnessMapKeys.idFetchToReadAddress1: false,
-        CorrectnessMapKeys.idFetchToReadAddress2: false,
-        CorrectnessMapKeys.idFetchToMux1: false,
-        CorrectnessMapKeys.idFetchToMux0: false,
+        CorrectnessMapKeys.idIfToReadAddress1: false,
+        CorrectnessMapKeys.idIfToReadAddress2: false,
+        //TODO need correctness map keys for forked path between mux 0 and read addr 1.
+        CorrectnessMapKeys.idIfToMux1: false,
+        CorrectnessMapKeys.idIfToMux0: false,
         CorrectnessMapKeys.idMuxToWriteAddress: false,
-        CorrectnessMapKeys.idExecuteToWriteData: false,
-        CorrectnessMapKeys.idFetchToSignExtend: false,
-        CorrectnessMapKeys.idSignExtendToExecute: false,
-        CorrectnessMapKeys.idReadData1ToExecute: false,
-        CorrectnessMapKeys.idReadData2ToExecute: false
+        CorrectnessMapKeys.idExToWriteData: false,
+        CorrectnessMapKeys.idIfToSignExtend: false,
+        CorrectnessMapKeys.idSignExtendToEx: false,
+        CorrectnessMapKeys.idReadData1ToEx: false,
+        CorrectnessMapKeys.idReadData2ToEx: false
     ]
     
     private var touchStartedInTouchPoint: Bool = false

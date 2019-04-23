@@ -35,16 +35,16 @@ struct CorrectnessMapKeys {
     static let ifAluToId = "ifAluToId"
     
     //MARK: - ID Correctness Map Keys
-    static let idFetchToReadAddress1 = "idFetchToReadAddress1"
-    static let idFetchToReadAddress2 = "idFetchToReadAddress2"
-    static let idFetchToMux1 = "idFetchToMux1"
-    static let idFetchToMux0 = "idFetchToMux0"
+    static let idIfToReadAddress1 = "idIfToReadAddress1"
+    static let idIfToReadAddress2 = "idIfToReadAddress2"
+    static let idIfToMux0 = "idIfToMux0"
+    static let idIfToMux1 = "idIfToMux1"
     static let idMuxToWriteAddress = "idMuxToWriteAddress"
-    static let idExecuteToWriteData = "idExecuteToWriteData"
-    static let idFetchToSignExtend = "idFetchToSignExtend"
-    static let idSignExtendToExecute = "idSignExtendToExecute"
-    static let idReadData1ToExecute = "idReadData1ToExecute"
-    static let idReadData2ToExecute = "idReadData2ToExecute"
+    static let idExToWriteData = "idExToWriteData"
+    static let idIfToSignExtend = "idIfToSignExtend"
+    static let idSignExtendToEx = "idSignExtendToEx"
+    static let idReadData1ToEx = "idReadData1ToExecute"
+    static let idReadData2ToEx = "idReadData2ToExecute"
     
     //MARK: - WB Correctness Map Keys
     static let wbMemReadDataToMux = "wbMemReadDataToMux"
