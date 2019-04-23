@@ -20,7 +20,7 @@ struct LineAttributes {
 }
 
 struct Events {
-    static let aluFetchOnCorrect = "aluFetchOnCorrect"
+    static let aluIfOnCorrect = "aluIfOnCorrect"
     static let aluWriteBackOnCorrect = "aluWriteBackOnCorrect"
 }
 
@@ -43,8 +43,8 @@ struct CorrectnessMapKeys {
     static let idExToWriteData = "idExToWriteData"
     static let idIfToSignExtend = "idIfToSignExtend"
     static let idSignExtendToEx = "idSignExtendToEx"
-    static let idReadData1ToEx = "idReadData1ToExecute"
-    static let idReadData2ToEx = "idReadData2ToExecute"
+    static let idReadData1ToEx = "idReadData1ToEx"
+    static let idReadData2ToEx = "idReadData2ToEx"
     
     //MARK: - WB Correctness Map Keys
     static let wbMemReadDataToMux = "wbMemReadDataToMux"
@@ -69,17 +69,17 @@ struct TouchPointNames {
     static let ifAluToIdEnd = "ifAluToIdEnd"
     
     //MARK: - ID Touch Point Names
-    static let idExcecuteToWriteDataEnd = "idExcecuteToWriteDataEnd"
-    static let idFetchToReadAddress1End = "idFetchToReadAddress1End"
-    static let idFetchToReadAddress2End = "idFetchToReadAddress2End"
-    static let idFetchToMux0End = "idFetchToMux0End"
-    static let idFetchToMux1End = "idFetchToMux1End"
-    static let idFetchToSignExtendEnd = "idFetchToSignExtendEnd"
+    static let idExToWriteDataEnd = "idExToWriteDataEnd"
+    static let idIfToReadAddress1End = "idIfToReadAddress1End"
+    static let idIfToReadAddress2End = "idIfToReadAddress2End"
+    static let idIfToMux0End = "idIfToMux0End"
+    static let idIfToMux1End = "idIfToMux1End"
+    static let idIfToSignExtendEnd = "idIfToSignExtendEnd"
     static let idMuxToWriteAddressStart = "idMuxToWriteAddressStart"
     static let idMuxToWriteAddressEnd = "idMuxToWriteAddressEnd"
     static let idReadData1ToExStart = "idReadData1ToExStart"
     static let idReadData2ToExStart = "idReadData2ToExStart"
-    static let idSignExtendToExecuteStart = "idSignExtendToExecuteStart"
+    static let idSignExtendToExStart = "idSignExtendToExStart"
     
     //MARK: - WB Touch Point Names
     static let wbMemReadDataToMuxStart = "wbMemReadDataToMuxStart"
