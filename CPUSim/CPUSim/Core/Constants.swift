@@ -72,14 +72,16 @@ struct TouchPointNames {
     static let idExToWriteDataEnd = "idExToWriteDataEnd"
     static let idIfToReadAddress1End = "idIfToReadAddress1End"
     static let idIfToReadAddress2End = "idIfToReadAddress2End"
+    static let idIfToMux0Start = "idIfToMux0Start"
     static let idIfToMux0End = "idIfToMux0End"
+    static let idIfToMux1Start = "idIfToMux1Start"
     static let idIfToMux1End = "idIfToMux1End"
     static let idIfToSignExtendEnd = "idIfToSignExtendEnd"
     static let idMuxToWriteAddressStart = "idMuxToWriteAddressStart"
     static let idMuxToWriteAddressEnd = "idMuxToWriteAddressEnd"
     static let idReadData1ToExStart = "idReadData1ToExStart"
     static let idReadData2ToExStart = "idReadData2ToExStart"
-    static let idSignExtendToExStart = "idSignExtendToExStart"
+    static let idSignExtendToExEnd = "idSignExtendToExEnd"
     
     //MARK: - WB Touch Point Names
     static let wbMemReadDataToMuxStart = "wbMemReadDataToMuxStart"
