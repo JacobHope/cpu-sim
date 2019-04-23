@@ -75,15 +75,102 @@ class ALUDecodeStateService: State {
         
         // Set touch point correct...
         switch touchPointName {
+        case TouchPointNames.idExToWriteDataEnd:
+            // Set correctnessMap
+            correctnessMap[CorrectnessMapKeys.idExToWriteData] = true
+
+            // Set correct (change color to green)
+            touchPoints.forEach { tp in
+                if (tp.name == TouchPointNames.idExToWriteDataEnd
+                        || tp.name == TouchPointNames.idExToWriteDataStart) {
+                    tp.setCorrect()
+                }
+            }
+            break;
+        case TouchPointNames.idIfToReadAddress1End:
+            // Set correctnessMap
+            correctnessMap[CorrectnessMapKeys.idIfToReadAddress1] = true
+
+            // Set correct (change color to green)
+            touchPoints.forEach { tp in
+                if (tp.name == TouchPointNames.idIfToReadAddress1End
+                        || tp.name == TouchPointNames.idIfToReadAddress1Start) {
+                    tp.setCorrect()
+                }
+            }
+            break;
+        case TouchPointNames.idIfToReadAddress2End:
+            // Set correctnessMap
+            correctnessMap[CorrectnessMapKeys.idIfToReadAddress2] = true
+
+            // Set correct (change color to green)
+            touchPoints.forEach { tp in
+                if (tp.name == TouchPointNames.idIfToReadAddress2End
+                        || tp.name == TouchPointNames.idIfToReadAddress2Start) {
+                    tp.setCorrect()
+                }
+            }
+            break;
         case TouchPointNames.idIfToMux0End:
             // Set correctnessMap
             correctnessMap[CorrectnessMapKeys.idIfToMux0] = true
+
+            // Set correct (change color to green)
+            touchPoints.forEach { tp in
+                if (tp.name == TouchPointNames.idIfToMux0End
+                        || tp.name == TouchPointNames.idIfToMux0Start) {
+                    tp.setCorrect()
+                }
+            }
             break;
         case TouchPointNames.idIfToMux1End:
+            // Set correctnessMap
+            correctnessMap[CorrectnessMapKeys.idIfToMux1] = true
+
+            // Set correct (change color to green)
+            touchPoints.forEach { tp in
+                if (tp.name == TouchPointNames.idIfToMux1End
+                        || tp.name == TouchPointNames.idIfToMux1Start) {
+                    tp.setCorrect()
+                }
+            }
             break;
-        case TouchPointNames.idIfToSignExtendEnd:
+        case TouchPointNames.idSignExtendToExEnd:
+            // Set correctnessMap
+            correctnessMap[CorrectnessMapKeys.idSignExtendToEx] = true
+
+            // Set correct (change color to green)
+            touchPoints.forEach { tp in
+                if (tp.name == TouchPointNames.idSignExtendToExEnd
+                        || tp.name == TouchPointNames.idSignExtendToExStart) {
+                    tp.setCorrect()
+                }
+            }
             break;
         case TouchPointNames.idMuxToWriteAddressEnd:
+            // Set correctnessMap
+            correctnessMap[CorrectnessMapKeys.idIfToMux1] = true
+
+            // Set correct (change color to green)
+            touchPoints.forEach { tp in
+                if (tp.name == TouchPointNames.idIfToMux1End
+                        || tp.name == TouchPointNames.idIfToMux1Start) {
+                    tp.setCorrect()
+                }
+            }
+            break;
+        case TouchPointNames.idIfToSignExtendEnd:
+            // Set correctnessMap
+            correctnessMap[CorrectnessMapKeys.idIfToSignExtend] = true
+
+            //TODO sign extend start doesn't exist start touch point shared...
+            /* Set correct (change color to green)
+            touchPoints.forEach { tp in
+                if (tp.name == TouchPointNames.idIfToSignExtendEnd
+                        || tp.name == TouchPointNames.idIfToSignExtendStart) {
+                    tp.setCorrect()
+                }
+            }*/
             break;
         //TODO: Add remaining touch point name cases and implement them...
         default:
