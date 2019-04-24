@@ -122,39 +122,74 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
         // Setup lines
         //TODO setup all lines...
 
-        // IFMUXtoPC
-        decodeViewController.lines[TouchPointNames.ifMuxToPcEnd] = [
+        //
+        decodeViewController.lines[TouchPointNames.idExToWriteDataEnd] = [
             decodeViewController.idExToWriteData1,
             decodeViewController.idExToWriteData2,
-            decodeViewController.idExToWriteData3,
-            decodeViewController.idIfToEx1,
+            decodeViewController.idExToWriteData3
+        ]
+
+        decodeViewController.lines[TouchPointNames.idIfToExEnd] = [
+            decodeViewController.idIfToEx1
+        ]
+
+        decodeViewController.lines[TouchPointNames.idIfToReadAddress1End] = [
             decodeViewController.idIf1,
             decodeViewController.idIfToReadAddress1_1,
             decodeViewController.idIfToReadAddress1_2,
             decodeViewController.idIfToReadAddress1_2,
-            decodeViewController.idIfToReadAddress1_3,
+            decodeViewController.idIfToReadAddress1_3
+        ]
+
+        decodeViewController.lines[TouchPointNames.idIfToReadAddress2End] = [
+            decodeViewController.idIf1,
             decodeViewController.idIfToReadAddress2_1,
             decodeViewController.idIfToReadAddress2_2,
             decodeViewController.idIfToReadAddress2_3,
+        ]
+
+        decodeViewController.lines[TouchPointNames.idIfToMux0End] = [
+            decodeViewController.idIf1,
             decodeViewController.idIfToMux0_1,
             decodeViewController.idIfToMux0_2,
-            decodeViewController.idIfToMux0_3,
+            decodeViewController.idIfToMux0_3
+        ]
+
+        decodeViewController.lines[TouchPointNames.idIfToMux1End] = [
+            decodeViewController.idIf1,
             decodeViewController.idIfToMux1_1,
             decodeViewController.idIfToMux1_2,
-            decodeViewController.idIfToMux1_3,
+            decodeViewController.idIfToMux1_3
+        ]
+
+        decodeViewController.lines[TouchPointNames.idIfToSignExtendEnd] = [
+            decodeViewController.idIf1,
             decodeViewController.idIfToSignExtend1,
             decodeViewController.idIfToSignExtend2,
-            decodeViewController.idIfToSignExtend3,
+            decodeViewController.idIfToSignExtend3
+        ]
+
+        decodeViewController.lines[TouchPointNames.idMuxToWriteAddressEnd] = [
             decodeViewController.idMuxToWriteAddress1,
             decodeViewController.idMuxToWriteAddress2,
-            decodeViewController.idMuxToWriteAddress3,
-            decodeViewController.idReadData1ToEx1,
-            decodeViewController.idReadData1ToEx2,
-            decodeViewController.idReadData2ToEx1,
-            decodeViewController.idReadData2ToEx2,
-            decodeViewController.idSignExtendToEx1,
-            decodeViewController.idSignExtendToEx2,
+            decodeViewController.idMuxToWriteAddress3
         ]
+
+        decodeViewController.lines[TouchPointNames.idReadData1ToExEnd] = [
+            decodeViewController.idReadData1ToEx1,
+            decodeViewController.idReadData1ToEx2
+        ]
+
+        decodeViewController.lines[TouchPointNames.idReadData2ToExEnd] = [
+            decodeViewController.idReadData2ToEx1,
+            decodeViewController.idReadData2ToEx2
+        ]
+
+        decodeViewController.lines[TouchPointNames.idSignExtendToExEnd] = [
+            decodeViewController.idSignExtendToEx1,
+            decodeViewController.idSignExtendToEx2
+        ]
+
 
         // Setup all touch points
         decodeViewController.touchPoints.forEach { touchPoint in

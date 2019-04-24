@@ -161,21 +161,21 @@ public class DecodeViewController: UIViewController {
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
 
-//    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.delegate?.decodeViewControllerOnTouchesBegan(self, touches, with: event)
-//    }
-//
-//    override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.delegate?.decodeViewControllerOnTouchesMoved(self, touches, with: event)
-//    }
-//
-//    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.delegate?.decodeViewControllerOnTouchesEnded(self)
-//    }
-//
-//    override public func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.delegate?.decodeViewControllerOnTouchesCancelled(self)
-//    }
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.delegate?.decodeViewControllerOnTouchesBegan(self, touches, with: event)
+    }
+
+    override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.delegate?.decodeViewControllerOnTouchesMoved(self, touches, with: event)
+    }
+
+    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.delegate?.decodeViewControllerOnTouchesEnded(self)
+    }
+
+    override public func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.delegate?.decodeViewControllerOnTouchesCancelled(self)
+    }
 
     @objc private func swiped(_ sender:UISwipeGestureRecognizer) {
         if (sender.direction == .left) {
