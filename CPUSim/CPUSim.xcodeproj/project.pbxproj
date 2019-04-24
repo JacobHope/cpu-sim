@@ -26,6 +26,9 @@
 		04D3F7A522603701002C80B6 /* DotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A422603701002C80B6 /* DotModel.swift */; };
 		04D3F7AA2260376D002C80B6 /* DrawingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A82260376D002C80B6 /* DrawingService.swift */; };
 		04D3F7AB2260376D002C80B6 /* ALUFetchStateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A92260376D002C80B6 /* ALUFetchStateService.swift */; };
+		1DAAD2A08BD2E56BB706FC3A /* ALUCoordinator+DecodeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAD048AB9868F2244DCB31 /* ALUCoordinator+DecodeViewControllerDelegate.swift */; };
+		1DAADD0CFBC80E2AECAABD67 /* ALUCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAD4B2EA7125BE76C2CCD6 /* ALUCoordinator.swift */; };
+		1DAADD7B740C25FA3634BC2B /* ALUCoordinator+FetchViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAD62E440C439D8C3CA921 /* ALUCoordinator+FetchViewControllerDelegate.swift */; };
 		3007E7352256E46E0021DB6D /* FetchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007E7342256E46E0021DB6D /* FetchViewController.swift */; };
 		3007E739225716660021DB6D /* DecodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007E738225716660021DB6D /* DecodeViewController.swift */; };
 		3007E73B225716750021DB6D /* ExecuteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007E73A225716750021DB6D /* ExecuteViewController.swift */; };
@@ -42,7 +45,6 @@
 		305A00D0224D8095008D2A6F /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305A00CF224D8095008D2A6F /* Services.swift */; };
 		305A00D2224D8202008D2A6F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305A00D1224D8202008D2A6F /* MenuViewController.swift */; };
 		305A00D822516AA3008D2A6F /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305A00D722516AA3008D2A6F /* MenuView.xib */; };
-		305A00DA22518506008D2A6F /* ALUCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305A00D922518506008D2A6F /* ALUCoordinator.swift */; };
 		305A00DC22518518008D2A6F /* LoadCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305A00DB22518518008D2A6F /* LoadCoordinator.swift */; };
 		305A00DE22518526008D2A6F /* StoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305A00DD22518526008D2A6F /* StoreCoordinator.swift */; };
 		305A00E022518534008D2A6F /* BranchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305A00DF22518534008D2A6F /* BranchCoordinator.swift */; };
@@ -91,6 +93,9 @@
 		04D3F7A422603701002C80B6 /* DotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotModel.swift; sourceTree = "<group>"; };
 		04D3F7A82260376D002C80B6 /* DrawingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingService.swift; sourceTree = "<group>"; };
 		04D3F7A92260376D002C80B6 /* ALUFetchStateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALUFetchStateService.swift; sourceTree = "<group>"; };
+		1DAAD048AB9868F2244DCB31 /* ALUCoordinator+DecodeViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ALUCoordinator+DecodeViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		1DAAD4B2EA7125BE76C2CCD6 /* ALUCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALUCoordinator.swift; sourceTree = "<group>"; };
+		1DAAD62E440C439D8C3CA921 /* ALUCoordinator+FetchViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ALUCoordinator+FetchViewControllerDelegate.swift"; sourceTree = "<group>"; };
 		3007E7342256E46E0021DB6D /* FetchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchViewController.swift; sourceTree = "<group>"; };
 		3007E738225716660021DB6D /* DecodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeViewController.swift; sourceTree = "<group>"; };
 		3007E73A225716750021DB6D /* ExecuteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +112,6 @@
 		305A00CF224D8095008D2A6F /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		305A00D1224D8202008D2A6F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		305A00D722516AA3008D2A6F /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
-		305A00D922518506008D2A6F /* ALUCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALUCoordinator.swift; sourceTree = "<group>"; };
 		305A00DB22518518008D2A6F /* LoadCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCoordinator.swift; sourceTree = "<group>"; };
 		305A00DD22518526008D2A6F /* StoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCoordinator.swift; sourceTree = "<group>"; };
 		305A00DF22518534008D2A6F /* BranchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchCoordinator.swift; sourceTree = "<group>"; };
@@ -188,6 +192,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1DAADA795FA3A7FFA84CC606 /* ALUCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1DAAD4B2EA7125BE76C2CCD6 /* ALUCoordinator.swift */,
+				1DAAD048AB9868F2244DCB31 /* ALUCoordinator+DecodeViewControllerDelegate.swift */,
+				1DAAD62E440C439D8C3CA921 /* ALUCoordinator+FetchViewControllerDelegate.swift */,
+			);
+			path = ALUCoordinator;
+			sourceTree = "<group>";
+		};
 		3007E740225720130021DB6D /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,10 +235,10 @@
 				305A00C9224D7E4E008D2A6F /* Coordinator.swift */,
 				305A00CD224D7FB0008D2A6F /* AppCoordinator.swift */,
 				305A00CB224D7F4F008D2A6F /* RootViewCoordinator.swift */,
-				305A00D922518506008D2A6F /* ALUCoordinator.swift */,
 				305A00DF22518534008D2A6F /* BranchCoordinator.swift */,
 				305A00DB22518518008D2A6F /* LoadCoordinator.swift */,
 				305A00DD22518526008D2A6F /* StoreCoordinator.swift */,
+				1DAADA795FA3A7FFA84CC606 /* ALUCoordinator */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -490,7 +504,6 @@
 				3007E739225716660021DB6D /* DecodeViewController.swift in Sources */,
 				305A00CC224D7F4F008D2A6F /* RootViewCoordinator.swift in Sources */,
 				04CF4313226B478C00C7B0E7 /* GlowingButton.swift in Sources */,
-				305A00DA22518506008D2A6F /* ALUCoordinator.swift in Sources */,
 				3007E73B225716750021DB6D /* ExecuteViewController.swift in Sources */,
 				30FEB626226B9C85006E8E44 /* ALUDecodeStateService.swift in Sources */,
 				3007E7352256E46E0021DB6D /* FetchViewController.swift in Sources */,
@@ -505,6 +518,9 @@
 				305A00DE22518526008D2A6F /* StoreCoordinator.swift in Sources */,
 				048F45EC2270001000116874 /* ALUMemoryAccessStateService.swift in Sources */,
 				305A00D2224D8202008D2A6F /* MenuViewController.swift in Sources */,
+				1DAADD0CFBC80E2AECAABD67 /* ALUCoordinator.swift in Sources */,
+				1DAAD2A08BD2E56BB706FC3A /* ALUCoordinator+DecodeViewControllerDelegate.swift in Sources */,
+				1DAADD7B740C25FA3634BC2B /* ALUCoordinator+FetchViewControllerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

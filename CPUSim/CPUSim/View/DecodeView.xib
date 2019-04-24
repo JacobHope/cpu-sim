@@ -20,7 +20,11 @@
                 <outlet property="idExToWriteDataStart" destination="bTp-Yf-TYu" id="2jb-Bg-zij"/>
                 <outlet property="idExTouchTab" destination="mfl-JU-tDh" id="rqg-q6-oCp"/>
                 <outlet property="idIFTouchTab" destination="LZV-s8-XCh" id="IbP-mb-C2o"/>
+                <outlet property="idIf1" destination="9ZP-Qc-zBL" id="jr4-r6-ndg"/>
+                <outlet property="idIfStart" destination="9ZP-Qc-zBL" id="2gq-OL-4GE"/>
                 <outlet property="idIfToEx1" destination="yLe-1O-422" id="rTS-Ih-cVL"/>
+                <outlet property="idIfToExEnd" destination="b8e-e9-6Xv" id="tdH-QK-4lh"/>
+                <outlet property="idIfToExStart" destination="V02-KA-CGe" id="JqR-RH-bMj"/>
                 <outlet property="idIfToMux0End" destination="RfM-dp-SJg" id="8qy-Bj-TfR"/>
                 <outlet property="idIfToMux0_1" destination="3Jw-Nk-RRP" id="qfb-ny-RPv"/>
                 <outlet property="idIfToMux0_2" destination="nmf-b7-Dgu" id="4qP-62-aBh"/>
@@ -48,12 +52,15 @@
                 <outlet property="idMuxToWriteAddressStart" destination="6w5-p2-dFr" id="yN7-zq-KiI"/>
                 <outlet property="idReadData1ToEx1" destination="wQL-Fe-4hX" id="P1D-4x-DON"/>
                 <outlet property="idReadData1ToEx2" destination="QFg-4q-afe" id="n5X-gC-Fel"/>
+                <outlet property="idReadData1ToExEnd" destination="EEM-rx-oBI" id="0AG-Wh-VCr"/>
                 <outlet property="idReadData1ToExStart" destination="EFc-al-ldc" id="eJu-r1-hZb"/>
                 <outlet property="idReadData2ToEx1" destination="ZY5-8j-tPW" id="xsc-yR-x60"/>
                 <outlet property="idReadData2ToEx2" destination="ee0-8C-TEl" id="pJQ-BY-CYz"/>
+                <outlet property="idReadData2ToExEnd" destination="CWe-Pg-4v3" id="xyd-Po-ata"/>
                 <outlet property="idReadData2ToExStart" destination="O19-D5-CMs" id="PbA-dq-Rlf"/>
                 <outlet property="idSignExtendToEx1" destination="WO0-Td-kCH" id="SAj-GN-iWP"/>
                 <outlet property="idSignExtendToEx2" destination="WO0-Td-kCH" id="MrK-S5-6yI"/>
+                <outlet property="idSignExtendToExEnd" destination="7Jp-WB-KW9" id="xYF-0W-pj6"/>
                 <outlet property="idSignExtendToExStart" destination="H1R-pv-bpc" id="kFg-fT-X4s"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Rjs-Xb-lfm"/>
             </connections>
@@ -179,73 +186,22 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="wqf-fq-5xv"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8m1-bs-lDr" userLabel="idIFToSignExtendEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="105" y="376" width="25" height="25"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="25" id="RO8-rx-agQ"/>
-                            </constraints>
-                            <viewLayoutGuide key="safeArea" id="dLK-KK-O2Z"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFc-al-ldc" userLabel="idReadData1ToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="234" y="203" width="25" height="25"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <viewLayoutGuide key="safeArea" id="9Gi-4T-N0j"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O19-D5-CMs" userLabel="idReadData2ToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="234" y="257" width="25" height="25"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <viewLayoutGuide key="safeArea" id="Bbe-F3-pmm"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXe-H3-3ya" userLabel="idIFToReadAddress1End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="65" y="192" width="25" height="25"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <viewLayoutGuide key="safeArea" id="McQ-kf-Ygi"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-RD-uij" userLabel="idIFToReadAddress2End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="65" y="222" width="25" height="25"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <viewLayoutGuide key="safeArea" id="L3e-qh-4Tu"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDh-D5-bT5" userLabel="idMuxToWriteAddressEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="65" y="252" width="25" height="25"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <viewLayoutGuide key="safeArea" id="lte-tM-B2z"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uco-Yx-0fo" userLabel="idExToWriteDataEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="65" y="282" width="25" height="25"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <viewLayoutGuide key="safeArea" id="gMe-YJ-Hdg"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H1R-pv-bpc" userLabel="idSignExtendToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="188" y="376" width="25" height="25"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="25" id="07u-dY-ELo"/>
-                            </constraints>
-                            <viewLayoutGuide key="safeArea" id="SxV-q9-ugz"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfM-dp-SJg" userLabel="idIFToMux0End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="13" y="275" width="25" height="25"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <viewLayoutGuide key="safeArea" id="Igs-2R-FZt"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGz-9m-7x0" userLabel="idIFToMux1End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="13" y="315" width="25" height="25"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <viewLayoutGuide key="safeArea" id="Hpj-a3-13u"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6w5-p2-dFr" userLabel="idMuxToWriteAddressStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="34" y="252" width="25" height="25"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <viewLayoutGuide key="safeArea" id="bLx-Vy-af8"/>
-                        </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="mux-shape" translatesAutoresizingMaskIntoConstraints="NO" id="KJL-7M-WQD" userLabel="Mux Image View">
                             <rect key="frame" x="22" y="266" width="27" height="58"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="58" id="Y8B-Te-d8I"/>
                                 <constraint firstAttribute="width" constant="27" id="cGC-oQ-rGT"/>
                             </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nzp-xQ-QgD" userLabel="idIFStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="275" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="Vcg-41-Tt8"/>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="9ZP-Qc-zBL" userLabel="idIf1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="-11" y="301" width="5" height="2"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTp-Yf-TYu" userLabel="idExToWriteDataStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="260" y="536" width="25" height="25"/>
@@ -256,10 +212,6 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="qed-wS-tGJ"/>
                         </view>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="9ZP-Qc-zBL" userLabel="idIFToMany1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="-11" y="301" width="5" height="2"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" misplaced="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="Dk0-FO-2Qa" userLabel="idExToWriteData1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="55" y="546" width="206" height="2"/>
                         </imageView>
@@ -269,7 +221,18 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" misplaced="YES" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="x25-2v-tYf" userLabel="idExToWriteData3" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="58" y="273" width="20" height="20"/>
                         </imageView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLe-1O-422" userLabel="idIFToEx1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uco-Yx-0fo" userLabel="idExToWriteDataEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="65" y="282" width="25" height="25"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="gMe-YJ-Hdg"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V02-KA-CGe" userLabel="idIfToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="275" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="2FJ-un-Hjh"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLe-1O-422" userLabel="idIfToEx1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-11" y="97" width="272" height="20"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="8y9-mU-o46" userLabel="IfPcToAlu1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
@@ -297,6 +260,12 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="6bw-cF-Bym"/>
                         </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b8e-e9-6Xv" userLabel="idIfToExEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="275" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="4lU-Pb-txe"/>
+                        </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="RC5-QR-jz9" userLabel="idIFToReadAddress1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-8" y="192" width="2" height="111"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -309,6 +278,11 @@
                             <rect key="frame" x="58" y="183" width="20" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXe-H3-3ya" userLabel="idIFToReadAddress1End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="65" y="192" width="25" height="25"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="McQ-kf-Ygi"/>
+                        </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="lKK-Pa-jds" userLabel="idIFToReadAddress2-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-8" y="222" width="2" height="81"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -321,6 +295,11 @@
                             <rect key="frame" x="58" y="213" width="20" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-RD-uij" userLabel="idIFToReadAddress2End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="65" y="222" width="25" height="25"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="L3e-qh-4Tu"/>
+                        </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="YzH-8P-x2u" userLabel="idIFToSignExtend1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-8" y="302" width="2" height="76"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -333,6 +312,14 @@
                             <rect key="frame" x="99" y="367" width="20" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8m1-bs-lDr" userLabel="idIFToSignExtendEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="105" y="376" width="25" height="25"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="RO8-rx-agQ"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="dLK-KK-O2Z"/>
+                        </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="3Jw-Nk-RRP" userLabel="idIFToMux0-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-6" y="222" width="16" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -345,6 +332,11 @@
                             <rect key="frame" x="8" y="266" width="20" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfM-dp-SJg" userLabel="idIFToMux0End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="13" y="275" width="25" height="25"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="Igs-2R-FZt"/>
+                        </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="AfT-dP-zeK" userLabel="idIFToMux1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-8" y="302" width="2" height="15"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -357,6 +349,16 @@
                             <rect key="frame" x="8" y="306" width="20" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGz-9m-7x0" userLabel="idIFToMux1End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="13" y="315" width="25" height="25"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="Hpj-a3-13u"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6w5-p2-dFr" userLabel="idMuxToWriteAddressStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="34" y="252" width="25" height="25"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="bLx-Vy-af8"/>
+                        </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="fMQ-az-ppe" userLabel="idMuxToWriteAddress1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="34" y="252" width="2" height="15"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -369,6 +371,16 @@
                             <rect key="frame" x="58" y="243" width="20" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDh-D5-bT5" userLabel="idMuxToWriteAddressEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="65" y="252" width="25" height="25"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="lte-tM-B2z"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFc-al-ldc" userLabel="idReadData1ToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="234" y="203" width="25" height="25"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="9Gi-4T-N0j"/>
+                        </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="wQL-Fe-4hX" userLabel="idReadData1ToEx1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="228" y="202" width="14" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -377,6 +389,17 @@
                             <rect key="frame" x="241" y="193" width="20" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EEM-rx-oBI" userLabel="idReadData1ToExEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="275" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="wTe-Hk-lLo"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O19-D5-CMs" userLabel="idReadData2ToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="234" y="257" width="25" height="25"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="Bbe-F3-pmm"/>
+                        </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="CP8-x7-xDN" userLabel="idReadData2ToEx2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="228" y="256" width="14" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -385,6 +408,20 @@
                             <rect key="frame" x="241" y="247" width="20" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CWe-Pg-4v3" userLabel="idReadData2ToExEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="275" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="LGD-LN-OXb"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H1R-pv-bpc" userLabel="idSignExtendToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="188" y="376" width="25" height="25"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="07u-dY-ELo"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="SxV-q9-ugz"/>
+                        </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="ZY5-8j-tPW" userLabel="idSignExtendToEx1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="180" y="376" width="62" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -393,6 +430,12 @@
                             <rect key="frame" x="241" y="367" width="20" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Jp-WB-KW9" userLabel="idSignExtendToExEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="275" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            <viewLayoutGuide key="safeArea" id="pWS-8z-0SX"/>
+                        </view>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="fYA-RD-uij" secondAttribute="bottom" constant="328" id="0N9-ir-LgE"/>
@@ -471,18 +514,6 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nzp-xQ-QgD" userLabel="idIFStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="24" y="233" width="25" height="25"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <viewLayoutGuide key="safeArea" id="Vcg-41-Tt8"/>
-                        </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V02-KA-CGe" userLabel="idIFToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="24" y="39" width="25" height="25"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <viewLayoutGuide key="safeArea" id="2FJ-un-Hjh"/>
-                        </view>
                     </subviews>
                     <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -504,44 +535,14 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b8e-e9-6Xv" userLabel="idIFToExEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="40" width="25" height="25"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <viewLayoutGuide key="safeArea" id="4lU-Pb-txe"/>
-                        </view>
-                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EEM-rx-oBI" userLabel="idIFReadData1ToExEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="136" width="25" height="25"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <viewLayoutGuide key="safeArea" id="wTe-Hk-lLo"/>
-                        </view>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CWe-Pg-4v3" userLabel="idReadData2ToExEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="190" width="25" height="25"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <viewLayoutGuide key="safeArea" id="LGD-LN-OXb"/>
-                        </view>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Jp-WB-KW9" userLabel="idSignExtendToExEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="309" width="25" height="25"/>
-                            <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            <viewLayoutGuide key="safeArea" id="pWS-8z-0SX"/>
-                        </view>
                     </subviews>
                     <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="CWe-Pg-4v3" secondAttribute="bottom" constant="245" id="3H9-Hw-M7D"/>
-                        <constraint firstItem="CWe-Pg-4v3" firstAttribute="top" secondItem="EEM-rx-oBI" secondAttribute="bottom" constant="29" id="5KH-aY-mij"/>
-                        <constraint firstItem="7Jp-WB-KW9" firstAttribute="centerX" secondItem="hSI-xG-ltq" secondAttribute="centerX" id="7k4-WD-eLi"/>
                         <constraint firstItem="hSI-xG-ltq" firstAttribute="centerY" secondItem="MW2-LQ-tmg" secondAttribute="centerY" id="9ca-KQ-1Ai"/>
-                        <constraint firstItem="7Jp-WB-KW9" firstAttribute="top" secondItem="mfl-JU-tDh" secondAttribute="top" constant="252" id="GHH-ke-MSR"/>
-                        <constraint firstItem="7Jp-WB-KW9" firstAttribute="leading" secondItem="mfl-JU-tDh" secondAttribute="leading" id="HFz-n3-3ll"/>
                         <constraint firstItem="hSI-xG-ltq" firstAttribute="centerY" secondItem="MW2-LQ-tmg" secondAttribute="centerY" id="MKJ-B4-AMu"/>
                         <constraint firstAttribute="width" constant="24" id="dtQ-VV-m1Y"/>
-                        <constraint firstItem="CWe-Pg-4v3" firstAttribute="centerX" secondItem="hSI-xG-ltq" secondAttribute="centerX" id="gtT-gL-OlK"/>
-                        <constraint firstAttribute="trailing" secondItem="CWe-Pg-4v3" secondAttribute="trailing" id="kOf-XC-kzD"/>
                         <constraint firstItem="hSI-xG-ltq" firstAttribute="centerX" secondItem="MW2-LQ-tmg" secondAttribute="centerX" id="pJ9-of-1a5"/>
-                        <constraint firstItem="CWe-Pg-4v3" firstAttribute="top" secondItem="mfl-JU-tDh" secondAttribute="top" constant="190" id="v3c-Qo-mSz"/>
-                        <constraint firstItem="7Jp-WB-KW9" firstAttribute="bottom" secondItem="MW2-LQ-tmg" secondAttribute="bottom" constant="-183" id="x4B-Ue-Als"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="MW2-LQ-tmg"/>
                 </view>
