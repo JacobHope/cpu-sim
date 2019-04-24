@@ -80,6 +80,9 @@ struct TouchPointNames {
     static let ifAluToIdEnd = "ifAluToIdEnd"
     
     //MARK: - ID Touch Point Names
+    static let idIfStart = "idIfStart"
+    static let idIfToExStart = "idIfToExStart"
+    static let idIfToExEnd = "idIfToExEnd"
     static let idExToWriteDataStart = "idExToWriteDataStart"
     static let idExToWriteDataEnd = "idExToWriteDataEnd"
     static let idIfToReadAddress1Start = "idIfToReadAddress1Start"
