@@ -32,8 +32,9 @@ public class DecodeViewController: UIViewController {
     @IBOutlet var DecodeView: UIView!
 
     var FetchView: UIView!
-    weak var drawingImageView: UIImageView!
-
+    //weak var drawingImageView: UIImageView!
+    @IBOutlet weak var drawingImageView: UIImageView!
+    
     // MARK: Properties - Complete button
     //weak var completeButton: GlowingButton!
 

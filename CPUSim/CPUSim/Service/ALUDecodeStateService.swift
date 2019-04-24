@@ -13,18 +13,15 @@ import SwiftEventBus
 
 //MARK: - ID Start States
 private enum StartState {
-    case idIfToReadAddress1StartStarted
+    case idIfStartStarted
     case idIfToReadAddress1EndStarted
-    case idIfToReadAddress2StartStarted
     case idIfToReadAddress2EndStarted
-    case idIfToMux0StartStarted
     case idIfToMux0EndStarted
-    case idIfToMux1StartStarted
     case idIfToMux1EndStarted
-    case idMuxToWriteAddressStartStarted
-    case idMuxToWriteAddressEndStarted
     case idIfToSignExtendStartStarted
     case idIfToSignExtendEndStarted
+    case idMuxToWriteAddressStartStarted
+    case idMuxToWriteAddressEndStarted
     case idExToWriteDataStartStarted
     case idExToWriteDataEndStarted
     case idSignExtendToExStartStarted
@@ -320,7 +317,8 @@ class ALUDecodeStateService: State {
         }
         return progress / total
     }
-    
+
+    //TODO implement handle touches began
     func handleTouchesBegan(
         _ touches: Set<UITouch>,
         with event: UIEvent?,
@@ -345,7 +343,8 @@ class ALUDecodeStateService: State {
             }
         }
     }
-    
+
+    //TODO implement handle touches moved
     func handleTouchesMoved(
         _ touches: Set<UITouch>,
         with event: UIEvent?,
