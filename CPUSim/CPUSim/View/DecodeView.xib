@@ -13,15 +13,15 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DecodeViewController" customModule="CPUSim" customModuleProvider="target">
             <connections>
                 <outlet property="DecodeView" destination="iN0-l3-epB" id="iIS-NS-bV6"/>
+                <outlet property="idExTab" destination="mfl-JU-tDh" id="Mkb-t3-0rT"/>
                 <outlet property="idExToWriteData1" destination="Dk0-FO-2Qa" id="nqP-K8-ylb"/>
                 <outlet property="idExToWriteData2" destination="X5h-w5-3Ai" id="xhN-i8-jF7"/>
                 <outlet property="idExToWriteData3" destination="x25-2v-tYf" id="WRV-mc-8eC"/>
                 <outlet property="idExToWriteDataEnd" destination="uco-Yx-0fo" id="V53-P3-pgT"/>
                 <outlet property="idExToWriteDataStart" destination="bTp-Yf-TYu" id="2jb-Bg-zij"/>
-                <outlet property="idExTouchTab" destination="mfl-JU-tDh" id="rqg-q6-oCp"/>
-                <outlet property="idIFTouchTab" destination="LZV-s8-XCh" id="IbP-mb-C2o"/>
                 <outlet property="idIf1" destination="9ZP-Qc-zBL" id="jr4-r6-ndg"/>
                 <outlet property="idIfStart" destination="9ZP-Qc-zBL" id="2gq-OL-4GE"/>
+                <outlet property="idIfTab" destination="LZV-s8-XCh" id="zo1-HN-Ghd"/>
                 <outlet property="idIfToEx1" destination="yLe-1O-422" id="rTS-Ih-cVL"/>
                 <outlet property="idIfToExEnd" destination="b8e-e9-6Xv" id="tdH-QK-4lh"/>
                 <outlet property="idIfToExStart" destination="V02-KA-CGe" id="JqR-RH-bMj"/>
@@ -62,6 +62,7 @@
                 <outlet property="idSignExtendToEx2" destination="WO0-Td-kCH" id="MrK-S5-6yI"/>
                 <outlet property="idSignExtendToExEnd" destination="7Jp-WB-KW9" id="xYF-0W-pj6"/>
                 <outlet property="idSignExtendToExStart" destination="H1R-pv-bpc" id="kFg-fT-X4s"/>
+                <outlet property="progressView" destination="8h4-y4-W0a" id="XmL-3U-M6J"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Rjs-Xb-lfm"/>
             </connections>
         </placeholder>
@@ -506,7 +507,7 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="J8h-pv-fDy"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZV-s8-XCh" userLabel="idIFTouchTab" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZV-s8-XCh" userLabel="idIfTab" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="64" width="24" height="460"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="IF" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXw-TO-vsu" userLabel="FetchTextView">
@@ -527,7 +528,7 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="uB0-cG-UoS"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfl-JU-tDh" userLabel="idExTouchTab" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfl-JU-tDh" userLabel="idExTab" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
                     <rect key="frame" x="296" y="64" width="24" height="460"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="EX" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSI-xG-ltq" userLabel="ExecuteTextView">
