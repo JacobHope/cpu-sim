@@ -11,12 +11,12 @@ import UIKit
 
 public protocol DecodeViewControllerDelegate: class {
     // MARK: Base Delegate Functions
-//    func decodeViewControllerOnTouchesBegan(_ decodeViewController: DecodeViewController, _ touches: Set<UITouch>, with event: UIEvent?)
-//    func decodeViewControllerOnTouchesMoved(_ decodeViewController: DecodeViewController, _ touches: Set<UITouch>, with event: UIEvent?)
-//    func decodeViewControllerOnTouchesEnded(_ decodeViewController: DecodeViewController)
-//    func decodeViewControllerOnTouchesCancelled(_ decodeViewController: DecodeViewController)
-//    func decodeViewControllerClearDrawing(_ decodeViewController: DecodeViewController)
-//    func decodeViewControllerSetup(_ decodeViewController: DecodeViewController)
+    func decodeViewControllerOnTouchesBegan(_ decodeViewController: DecodeViewController, _ touches: Set<UITouch>, with event: UIEvent?)
+    func decodeViewControllerOnTouchesMoved(_ decodeViewController: DecodeViewController, _ touches: Set<UITouch>, with event: UIEvent?)
+    func decodeViewControllerOnTouchesEnded(_ decodeViewController: DecodeViewController)
+    func decodeViewControllerOnTouchesCancelled(_ decodeViewController: DecodeViewController)
+    func decodeViewControllerClearDrawing(_ decodeViewController: DecodeViewController)
+    func decodeViewControllerSetup(_ decodeViewController: DecodeViewController)
 //
     // MARK: Base Delegate Functions - Swipe Handling
     func decodeViewControllerDidSwipeLeft(_ decodeViewController: DecodeViewController)
@@ -34,19 +34,18 @@ public class DecodeViewController: UIViewController {
     var FetchView: UIView!
     weak var drawingImageView: UIImageView!
 
-    // MARK: Complete button
-    weak var completeButton: GlowingButton!
+    // MARK: Properties - Complete button
+    //weak var completeButton: GlowingButton!
 
-    // MARK: Tab bar
-    weak var ifIdTab: TouchTabView!
-
-    // MARK: ProgressView
-    weak var progressView: UIProgressView!
-    
     // MARK: Properties - Tab View
-    @IBOutlet weak var idExTouchTab: TouchTabView!
-    @IBOutlet weak var idIFTouchTab: TouchTabView!
+    //weak var ifIdTab: TouchTabView!
+    @IBOutlet weak var idIfTab: TouchTabView!
+    @IBOutlet weak var idExTab: TouchTabView!
     
+    // MARK: ProgressView
+    //weak var progressView: UIProgressView!
+    @IBOutlet weak var progressView: UIProgressView!
+
     // MARK: Properties - idExToWriteData
     @IBOutlet weak var idExToWriteDataEnd: TouchPointView!
     @IBOutlet weak var idExToWriteDataStart: TouchPointView!

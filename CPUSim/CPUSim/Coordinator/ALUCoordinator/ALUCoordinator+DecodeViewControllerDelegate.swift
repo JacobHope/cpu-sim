@@ -53,7 +53,7 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
         decodeViewController.progressView.progressTintColor = UIColor.green
 
         // Setup event subscribers
-        SwiftEventBus.onMainThread(decodeViewController, name: Events.aluFetchOnCorrect) { result in
+        SwiftEventBus.onMainThread(decodeViewController, name: Events.aluDecodeOnCorrect) { result in
             let progress: Float = result?.object as! Float
             decodeViewController.progressView.setProgress(progress, animated: true)
 
@@ -74,77 +74,70 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
         }
 
         // Setup complete button
-        decodeViewController.completeButton.isHidden = true
+        //decodeViewController.completeButton.isHidden = true
 
+        //TODO setup all touch point views
         // Setup TouchPointViews
-//        decodeViewController.ifMuxToPcStart.name = TouchPointNames.ifMuxToPcStart
-//        decodeViewController.ifMuxToPcEnd.name = TouchPointNames.ifMuxToPcEnd
-//        decodeViewController.ifPcToAluStart.name = TouchPointNames.ifPcToAluStart
-//        decodeViewController.ifPcToAluEnd.name = TouchPointNames.ifPcToAluEnd
-//        decodeViewController.ifPcToImEnd.name = TouchPointNames.ifPcToImEnd
-//        decodeViewController.ifFourToAluStart.name = TouchPointNames.ifFourToAluStart
-//        decodeViewController.ifFourToAluEnd.name = TouchPointNames.ifFourToAluEnd
-//        decodeViewController.ifAluToMuxStart.name = TouchPointNames.ifAluToMuxStart
-//        decodeViewController.ifAluToMuxEnd.name = TouchPointNames.ifAluToMuxEnd
-//        decodeViewController.ifImToIdStart.name = TouchPointNames.ifImToIdStart
-//        decodeViewController.ifImToIdEnd.name = TouchPointNames.ifImToIdEnd
-//        decodeViewController.ifAluToIdEnd.name = TouchPointNames.ifAluToIdEnd
+        decodeViewController.idExToWriteDataStart.name = TouchPointNames.idExToWriteDataStart
+        decodeViewController.idExToWriteDataEnd.name = TouchPointNames.idExToWriteDataEnd
+        decodeViewController.idIfToExStart.name = TouchPointNames.idIfToExStart
+        decodeViewController.idIfToExEnd.name = TouchPointNames.idIfToExEnd
+        decodeViewController.idIfStart.name = TouchPointNames.idIfStart
+        decodeViewController.idIfToReadAddress1End.name = TouchPointNames.idIfToReadAddress1End
+        decodeViewController.idIfToReadAddress2End.name = TouchPointNames.idIfToReadAddress2End
+        decodeViewController.idIfToMux0End.name = TouchPointNames.idIfToMux0End
+        decodeViewController.idIfToMux1End.name = TouchPointNames.idIfToMux1End
+        decodeViewController.idIfToSignExtendEnd.name = TouchPointNames.idIfToSignExtendEnd
+        decodeViewController.idMuxToWriteAddressStart.name = TouchPointNames.idMuxToWriteAddressStart
+        decodeViewController.idMuxToWriteAddressEnd.name = TouchPointNames.idMuxToWriteAddressEnd
+        decodeViewController.idReadData1ToExStart.name = TouchPointNames.idReadData1ToExStart
+        decodeViewController.idReadData1ToExEnd.name = TouchPointNames.idReadData1ToExEnd
+        decodeViewController.idReadData2ToExStart.name = TouchPointNames.idReadData2ToExStart
+        decodeViewController.idReadData2ToExEnd.name = TouchPointNames.idReadData2ToExEnd
+        decodeViewController.idSignExtendToExStart.name = TouchPointNames.idSignExtendToExStart
+        decodeViewController.idSignExtendToExEnd.name = TouchPointNames.idSignExtendToExEnd
 
+        //TODO setup all touch points
         decodeViewController.touchPoints = [
 //            decodeViewController.ifMuxToPcStart,
 //            decodeViewController.ifMuxToPcEnd,
-//            decodeViewController.ifPcToAluStart,
-//            decodeViewController.ifPcToAluEnd,
-//            decodeViewController.ifPcToImEnd,
-//            decodeViewController.ifFourToAluStart,
-//            decodeViewController.ifFourToAluEnd,
-//            decodeViewController.ifAluToMuxStart,
-//            decodeViewController.ifAluToMuxEnd,
-//            decodeViewController.ifImToIdStart,
-//            decodeViewController.ifImToIdEnd,
-//            decodeViewController.ifAluToIdEnd
         ]
 
         // Setup lines
+        //TODO setup all lines...
 
         // IFMUXtoPC
         decodeViewController.lines[TouchPointNames.ifMuxToPcEnd] = [
-//            decodeViewController.ifMuxToPc1,
-//            decodeViewController.ifMuxToPc2,
-//            decodeViewController.ifMuxToPc3
-        ]
-
-        // IFPCtoALU
-        decodeViewController.lines[TouchPointNames.ifPcToAluEnd] = [
-//            decodeViewController.ifPcToAlu1,
-//            decodeViewController.ifPcToAlu2
-        ]
-
-        // IFPCtoIM
-        decodeViewController.lines[TouchPointNames.ifPcToImEnd] = [
-//            decodeViewController.ifPcToIm1
-        ]
-
-        // IFFourToALU
-        decodeViewController.lines[TouchPointNames.ifFourToAluEnd] = [
-//            decodeViewController.ifFourToAlu1
-        ]
-
-        // IFALUToMUX
-        decodeViewController.lines[TouchPointNames.ifAluToMuxEnd] = [
-//            decodeViewController.ifAluToMux1,
-//            decodeViewController.ifAluToMux2,
-//            decodeViewController.ifAluToMux3
-        ]
-
-        // IFIMtoID
-        decodeViewController.lines[TouchPointNames.ifImToIdEnd] = [
-//            decodeViewController.ifImToId1
-        ]
-
-        // IFALUToID
-        decodeViewController.lines[TouchPointNames.ifAluToIdEnd] = [
-//            decodeViewController.ifAluToId1
+            decodeViewController.idExToWriteData1,
+            decodeViewController.idExToWriteData2,
+            decodeViewController.idExToWriteData3,
+            decodeViewController.idIfToEx1,
+            decodeViewController.idIf1,
+            decodeViewController.idIfToReadAddress1_1,
+            decodeViewController.idIfToReadAddress1_2,
+            decodeViewController.idIfToReadAddress1_2,
+            decodeViewController.idIfToReadAddress1_3,
+            decodeViewController.idIfToReadAddress2_1,
+            decodeViewController.idIfToReadAddress2_2,
+            decodeViewController.idIfToReadAddress2_3,
+            decodeViewController.idIfToMux0_1,
+            decodeViewController.idIfToMux0_2,
+            decodeViewController.idIfToMux0_3,
+            decodeViewController.idIfToMux1_1,
+            decodeViewController.idIfToMux1_2,
+            decodeViewController.idIfToMux1_3,
+            decodeViewController.idIfToSignExtend1,
+            decodeViewController.idIfToSignExtend2,
+            decodeViewController.idIfToSignExtend3,
+            decodeViewController.idMuxToWriteAddress1,
+            decodeViewController.idMuxToWriteAddress2,
+            decodeViewController.idMuxToWriteAddress3,
+            decodeViewController.idReadData1ToEx1,
+            decodeViewController.idReadData1ToEx2,
+            decodeViewController.idReadData2ToEx1,
+            decodeViewController.idReadData2ToEx2,
+            decodeViewController.idSignExtendToEx1,
+            decodeViewController.idSignExtendToEx2,
         ]
 
         // Setup all touch points
@@ -179,6 +172,6 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
     }
 
     func decodeViewController(_ decodeViewController: DecodeViewController) {
-        //self.showDecodeViewController()
+        self.showDecodeViewController()
     }
 }

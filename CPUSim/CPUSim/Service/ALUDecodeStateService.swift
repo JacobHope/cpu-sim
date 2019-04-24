@@ -267,7 +267,7 @@ class ALUDecodeStateService: State {
         
         // Post event...
         //TODO add swift event bus for alu decode
-        SwiftEventBus.post(Events.aluIfOnCorrect, sender: determineProgress())
+        SwiftEventBus.post(Events.aluDecodeOnCorrect, sender: determineProgress())
     }
     
     private func onIncorrect(
