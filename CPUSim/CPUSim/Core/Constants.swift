@@ -22,6 +22,7 @@ struct LineAttributes {
 struct Events {
     static let aluFetchOnCorrect = "aluFetchOnCorrect"
     static let aluIfOnCorrect = "aluIfOnCorrect"
+    static let aluMemoryAccessOnCorrect = "aluMemoryAccessOnCorrect"
     static let aluWriteBackOnCorrect = "aluWriteBackOnCorrect"
 }
 
@@ -47,11 +48,19 @@ struct CorrectnessMapKeys {
     static let idReadData1ToEx = "idReadData1ToEx"
     static let idReadData2ToEx = "idReadData2ToEx"
     
+    //MARK: - MEM Correctness Map Keys
+    static let memExToAddress = "memExToAddress"
+    static let memExToWriteData = "memExToWriteData"
+    static let memReadDataToWb = "memReadDataToWb"
+    static let memRegDstExToWb = "memRegDstExToWb"
+    static let memRegDstWbToEx = "memRegDstWbToEx"
+    static let memMemToRegWbToEx = "memMemToRegWbToEx"
+    
     //MARK: - WB Correctness Map Keys
     static let wbMemReadDataToMux = "wbMemReadDataToMux"
     static let wbMemAddressToMux = "wbMemAddressToMux"
     static let wbMuxToIfWriteData = "wbMuxToIfWriteData"
-    static let wbMemToIfWriteAddress = "wbMemtoIfWriteAddress"
+    static let wbMemToIfWriteAddress = "wbMemToIfWriteAddress"
 }
 
 struct TouchPointNames {
@@ -90,6 +99,20 @@ struct TouchPointNames {
     static let idReadData2ToExEnd = "idReadData2ToExEnd"
     static let idSignExtendToExStart = "idSignExtendToExStart"
     static let idSignExtendToExEnd = "idSignExtendToExEnd"
+    
+    //MARK: - MEM Touch Point Names
+    static let memExToAddressStart = "memExToAddressStart"
+    static let memExToAddressEnd = "memExToAddressEnd"
+    static let memExToWriteDataStart = "memExToWriteDataStart"
+    static let memExToWriteDataEnd = "memExToWriteDataEnd"
+    static let memReadDataToWbStart = "memReadDataToWbStart"
+    static let memReadDataToWbEnd = "memReadDataToWbEnd"
+    static let memRegDstExToWbStart = "memRegDstExToWbStart"
+    static let memRegDstExToWbEnd = "memRegDstExToWbEnd"
+    static let memRegDstWbToExStart = "memRegDstWbToExStart"
+    static let memRegDstWbToExEnd = "memRegDstWbToExEnd"
+    static let memMemToRegWbToExStart = "memMemToRegWbToExStart"
+    static let memMemToRegWbToExEnd = "memMemToRegWbToExEnd"
     
     //MARK: - WB Touch Point Names
     static let wbMemReadDataToMuxStart = "wbMemReadDataToMuxStart"

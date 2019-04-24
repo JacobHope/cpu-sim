@@ -99,7 +99,7 @@ public class WriteBackViewController: UIViewController {
         view.addGestureRecognizer(leftSwipe)
         view.addGestureRecognizer(rightSwipe)
         
-       // Disable Pop Gestures
+        // Disable Pop Gestures
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
         // Finish setting up

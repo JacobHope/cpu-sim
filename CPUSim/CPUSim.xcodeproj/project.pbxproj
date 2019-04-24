@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04869A622268FAB00037B827 /* SwiftEventBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04869A612268FAB00037B827 /* SwiftEventBus.framework */; };
+		048F45EC2270001000116874 /* ALUMemoryAccessStateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F45EB2270001000116874 /* ALUMemoryAccessStateService.swift */; };
 		04CF4313226B478C00C7B0E7 /* GlowingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4312226B478C00C7B0E7 /* GlowingButton.swift */; };
 		04CF4315226B4D4A00C7B0E7 /* GlowingButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF4314226B4D4A00C7B0E7 /* GlowingButtonModel.swift */; };
 		04CF4317226C11B300C7B0E7 /* EasyAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CF4316226C11B300C7B0E7 /* EasyAnimation.framework */; };
@@ -72,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		04869A612268FAB00037B827 /* SwiftEventBus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftEventBus.framework; path = Carthage/Build/iOS/SwiftEventBus.framework; sourceTree = "<group>"; };
+		048F45EB2270001000116874 /* ALUMemoryAccessStateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALUMemoryAccessStateService.swift; sourceTree = "<group>"; };
 		04CF4312226B478C00C7B0E7 /* GlowingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowingButton.swift; sourceTree = "<group>"; };
 		04CF4314226B4D4A00C7B0E7 /* GlowingButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowingButtonModel.swift; sourceTree = "<group>"; };
 		04CF4316226C11B300C7B0E7 /* EasyAnimation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyAnimation.framework; path = Carthage/Build/iOS/EasyAnimation.framework; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				04D3F7A92260376D002C80B6 /* ALUFetchStateService.swift */,
 				30FEB625226B9C85006E8E44 /* ALUDecodeStateService.swift */,
 				04CF4318226CB37500C7B0E7 /* ALUWriteBackStateService.swift */,
+				048F45EB2270001000116874 /* ALUMemoryAccessStateService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				04D3F7AA2260376D002C80B6 /* DrawingService.swift in Sources */,
 				04D3F7912260265F002C80B6 /* LineView.swift in Sources */,
 				305A00DE22518526008D2A6F /* StoreCoordinator.swift in Sources */,
+				048F45EC2270001000116874 /* ALUMemoryAccessStateService.swift in Sources */,
 				305A00D2224D8202008D2A6F /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
