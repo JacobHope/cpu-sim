@@ -20,6 +20,7 @@ struct LineAttributes {
 }
 
 struct Events {
+    static let aluFetchOnCorrect = "aluFetchOnCorrect"
     static let aluIfOnCorrect = "aluIfOnCorrect"
     static let aluWriteBackOnCorrect = "aluWriteBackOnCorrect"
 }
