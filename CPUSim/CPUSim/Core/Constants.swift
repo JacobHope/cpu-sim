@@ -38,6 +38,7 @@ struct CorrectnessMapKeys {
     static let ifAluToId = "ifAluToId"
     
     //MARK: - ID Correctness Map Keys
+    static let idIfToEx = "idIfToEx"
     static let idIfToReadAddress1 = "idIfToReadAddress1"
     static let idIfToReadAddress2 = "idIfToReadAddress2"
     static let idIfToMux0 = "idIfToMux0"

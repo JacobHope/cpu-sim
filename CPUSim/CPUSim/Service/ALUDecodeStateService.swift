@@ -17,7 +17,6 @@ private enum StartState {
     case idIfToReadAddress1EndStarted
     case idIfToReadAddress2StartStarted
     case idIfToReadAddress2EndStarted
-    //TODO: start state needed for forked path between read address and mux
     case idIfToMux0StartStarted
     case idIfToMux0EndStarted
     case idIfToMux1StartStarted
@@ -42,9 +41,9 @@ class ALUDecodeStateService: State {
     var isDrawing: Bool = false
     
     var correctnessMap: [String: Bool] = [
+        CorrectnessMapKeys.idIfToEx: false,
         CorrectnessMapKeys.idIfToReadAddress1: false,
         CorrectnessMapKeys.idIfToReadAddress2: false,
-        //TODO need correctness map keys for forked path between mux 0 and read addr 1.
         CorrectnessMapKeys.idIfToMux1: false,
         CorrectnessMapKeys.idIfToMux0: false,
         CorrectnessMapKeys.idMuxToWriteAddress: false,
@@ -119,7 +118,7 @@ class ALUDecodeStateService: State {
             // Set correct (change color to green)
             touchPoints.forEach { tp in
                 if (tp.name == TouchPointNames.idIfToMux0End
-                        || tp.name == TouchPointNames.idIfToMux0Start) {
+                        || tp.name == TouchPointNames.idIfStart) {
                     tp.setCorrect()
                 }
             }
@@ -131,7 +130,7 @@ class ALUDecodeStateService: State {
             // Set correct (change color to green)
             touchPoints.forEach { tp in
                 if (tp.name == TouchPointNames.idIfToMux1End
-                        || tp.name == TouchPointNames.idIfToMux1Start) {
+                        || tp.name == TouchPointNames.idIfStart) {
                     tp.setCorrect()
                 }
             }
@@ -155,7 +154,7 @@ class ALUDecodeStateService: State {
             // Set correct (change color to green)
             touchPoints.forEach { tp in
                 if (tp.name == TouchPointNames.idIfToMux1End
-                        || tp.name == TouchPointNames.idIfToMux1Start) {
+                        || tp.name == TouchPointNames.idIfStart) {
                     tp.setCorrect()
                 }
             }
@@ -164,14 +163,13 @@ class ALUDecodeStateService: State {
             // Set correctnessMap
             correctnessMap[CorrectnessMapKeys.idIfToSignExtend] = true
 
-            //TODO sign extend start doesn't exist start touch point shared...
-            /* Set correct (change color to green)
+            // Set correct (change color to green)
             touchPoints.forEach { tp in
                 if (tp.name == TouchPointNames.idIfToSignExtendEnd
-                        || tp.name == TouchPointNames.idIfToSignExtendStart) {
+                        || tp.name == TouchPointNames.idIfStart) {
                     tp.setCorrect()
                 }
-            }*/
+            }
             break;
         //TODO: Add remaining touch point name cases and implement them...
         default:
@@ -195,7 +193,7 @@ class ALUDecodeStateService: State {
                 touchPoints.forEach { tp in
                     // Set hidden
                     if (tp.name == TouchPointNames.idIfToReadAddress1End
-                            || tp.name == TouchPointNames.idIfToReadAddress1Start) {
+                            || tp.name == TouchPointNames.idIfStart) {
                         tp.isHidden = true
                     }
                 }
@@ -204,7 +202,7 @@ class ALUDecodeStateService: State {
                 touchPoints.forEach { tp in
                     // Set hidden
                     if (tp.name == TouchPointNames.idIfToReadAddress2End
-                            || tp.name == TouchPointNames.idIfToReadAddress2Start) {
+                            || tp.name == TouchPointNames.idIfStart) {
                         tp.isHidden = true
                     }
                 }
@@ -213,7 +211,7 @@ class ALUDecodeStateService: State {
                 touchPoints.forEach { tp in
                     // Set hidden
                     if (tp.name == TouchPointNames.idIfToMux0End
-                            || tp.name == TouchPointNames.idIfToMux0Start) {
+                            || tp.name == TouchPointNames.idIfStart) {
                         tp.isHidden = true
                     }
                 }
@@ -222,7 +220,7 @@ class ALUDecodeStateService: State {
                 touchPoints.forEach { tp in
                     // Set hidden
                     if (tp.name == TouchPointNames.idIfToMux1End
-                            || tp.name == TouchPointNames.idIfToMux1Start) {
+                            || tp.name == TouchPointNames.idIfStart) {
                         tp.isHidden = true
                     }
                 }
@@ -249,7 +247,7 @@ class ALUDecodeStateService: State {
                 touchPoints.forEach { tp in
                     // Set hidden
                     if (tp.name == TouchPointNames.idIfToSignExtendEnd
-                            || tp.name == TouchPointNames.idIfToSignExtendStart) {
+                            || tp.name == TouchPointNames.idIfStart) {
                         tp.isHidden = true
                     }
                 }
@@ -292,11 +290,10 @@ class ALUDecodeStateService: State {
         var tpStart: TouchPointView?
         var tpEnd: TouchPointView?
         touchPoints.forEach { tp in
-            //TODO uncomment below when above switch statement is implemented.
-//            if (tp.name == startName) {
-//                tp.setIncorrect()
-//                tpStart = tp
-//            }
+            if (tp.name == startName) {
+                tp.setIncorrect()
+                tpStart = tp
+            }
             
             if (tp.name == endName) {
                 tp.setIncorrect()
