@@ -99,8 +99,24 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
 
         //TODO setup all touch points
         decodeViewController.touchPoints = [
-//            decodeViewController.ifMuxToPcStart,
-//            decodeViewController.ifMuxToPcEnd,
+            decodeViewController.idExToWriteDataStart,
+            decodeViewController.idExToWriteDataEnd,
+            decodeViewController.idIfToExStart,
+            decodeViewController.idIfToExEnd,
+            decodeViewController.idIfStart,
+            decodeViewController.idIfToReadAddress1End,
+            decodeViewController.idIfToReadAddress2End,
+            decodeViewController.idIfToMux0End,
+            decodeViewController.idIfToMux1End,
+            decodeViewController.idIfToSignExtendEnd,
+            decodeViewController.idMuxToWriteAddressStart,
+            decodeViewController.idMuxToWriteAddressEnd,
+            decodeViewController.idReadData1ToExStart,
+            decodeViewController.idReadData1ToExEnd,
+            decodeViewController.idReadData2ToExStart,
+            decodeViewController.idReadData2ToExEnd,
+            decodeViewController.idSignExtendToExStart,
+            decodeViewController.idSignExtendToExEnd
         ]
 
         // Setup lines
