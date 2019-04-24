@@ -39,7 +39,6 @@ class ALUCoordinator: RootViewCoordinator {
     private let fetchStateService: State
     private let memoryAccessStateService: State
     private let writeBackStateService: State
-    //private var fetchViewController: FetchViewController?
     
     // MARK: Init
     
