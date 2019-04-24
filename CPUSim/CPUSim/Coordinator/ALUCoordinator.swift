@@ -606,6 +606,19 @@ extension ALUCoordinator: WriteBackViewControllerDelegate {
     func writeBackViewControllerDidSwipeLeft(_ writeBackViewController: WriteBackViewController) {
         if (!writeBackStateService.isDrawing) {
             self.navigationController.popViewController(animated: true)
+            
+            // Reset animations
+            guard let tvc = self.navigationController.topViewController else {
+                return
+            }
+            if (tvc.nibName == "MemoryAccessView") {
+                let mavc: MemoryAccessViewController = tvc as! MemoryAccessViewController
+                mavc.touchPoints.forEach { tp in
+                    if (!tp.isHidden) {
+                        tp.setupWith(DotModel.defaultDotModel())
+                    }
+                }
+            }
         }
     }
     
