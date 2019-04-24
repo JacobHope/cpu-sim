@@ -374,7 +374,7 @@ extension ALUCoordinator: MemoryAccessViewControllerDelegate {
         memoryAccessViewController.progressView.progressTintColor = UIColor.green
         
         // Setup event subscribers
-        SwiftEventBus.onMainThread(memoryAccessViewController, name: Events.aluWriteBackOnCorrect) { result in
+        SwiftEventBus.onMainThread(memoryAccessViewController, name: Events.aluMemoryAccessOnCorrect) { result in
             let progress: Float = result?.object as! Float
             memoryAccessViewController.progressView.setProgress(progress, animated: true)
             
