@@ -278,8 +278,10 @@ class ALUDecodeStateService: State {
         // TODO add cases
         switch startState {
         case StartState.idIfToMux0EndStarted:
+            startName = ""
             break;
         case StartState.idIfToMux1EndStarted:
+            startName = ""
             break;
         default:
             startName = ""
