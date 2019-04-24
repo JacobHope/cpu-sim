@@ -47,13 +47,9 @@ SwiftEventBus
 
 Image copyrights
 
-    right-arrow-button
-
-        <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                 title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-
     Swipe-Left
 
-        https://www.iconfinder.com/icons/2167652/finger_gesture_interaction_left_swipe_touch_icon
+        https://www.flaticon.com/free-icon/swipe-left_617907#term=swipe%20left&page=1&position=25
 
 EasyAnimation
 
