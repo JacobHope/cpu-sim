@@ -202,11 +202,11 @@
 			isa = PBXGroup;
 			children = (
 				1DAAD4B2EA7125BE76C2CCD6 /* ALUCoordinator.swift */,
-				1DAAD048AB9868F2244DCB31 /* ALUCoordinator+DecodeViewControllerDelegate.swift */,
 				1DAAD62E440C439D8C3CA921 /* ALUCoordinator+FetchViewControllerDelegate.swift */,
+				1DAAD048AB9868F2244DCB31 /* ALUCoordinator+DecodeViewControllerDelegate.swift */,
 				1DAAD85EBDDA04246BEADD07 /* ALUCoordinator+ExecuteViewControllerDelegate.swift */,
-				1DAAD48AD119301BBA3955A2 /* ALUCoordinator+WriteBackViewControllerDelegate.swift */,
 				1DAADAEE8EC6C1E75A025221 /* ALUCoordinator+MemoryAccessViewControllerDelegate.swift */,
+				1DAAD48AD119301BBA3955A2 /* ALUCoordinator+WriteBackViewControllerDelegate.swift */,
 			);
 			path = ALUCoordinator;
 			sourceTree = "<group>";
