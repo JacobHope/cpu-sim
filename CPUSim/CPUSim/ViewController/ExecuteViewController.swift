@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 public protocol ExecuteViewControllerDelegate: class {
+    func evcViewWillDisappear(_ evc: ExecuteViewController)
     func executeViewControllerDidSwipeLeft(_ executeViewController: ExecuteViewController)
     func executeViewControllerDidSwipeRight(_ executeViewController: ExecuteViewController)
     func executeViewController(_ executeViewController: ExecuteViewController)
@@ -46,6 +47,10 @@ public class ExecuteViewController: UIViewController {
         view.addGestureRecognizer(rightSwipe)
         
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+    }
+    
+    public override func viewWillDisappear(_ animated: Bool) {
+        delegate?.evcViewWillDisappear(self)
     }
     
     @objc private func swiped(_ sender:UISwipeGestureRecognizer) {

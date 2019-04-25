@@ -130,20 +130,12 @@ extension ALUCoordinator: WriteBackViewControllerDelegate {
     func writeBackViewControllerDidSwipeLeft(_ writeBackViewController: WriteBackViewController) {
         if (!writeBackStateService.isDrawing) {
             self.navigationController.popViewController(animated: true)
-
-            // Reset animations
-            guard let tvc = self.navigationController.topViewController else {
-                return
-            }
-            if (tvc.nibName == "MemoryAccessView") {
-                let mavc: MemoryAccessViewController = tvc as! MemoryAccessViewController
-                mavc.touchPoints.forEach { tp in
-                    if (!tp.isHidden) {
-                        tp.setupWith(DotModel.defaultDotModel())
-                    }
-                }
-            }
+            resetPreviousViewControllerAnimations()
         }
+    }
+    
+    func wbvcViewWillDisappear(_ wbvc: WriteBackViewController) {
+        resetPreviousViewControllerAnimations()
     }
 
     func writeBackViewControllerDidSwipeRight(_ writeBackViewController: WriteBackViewController) {
@@ -154,5 +146,20 @@ extension ALUCoordinator: WriteBackViewControllerDelegate {
 
     func writeBackViewController(_ writeBackViewController: WriteBackViewController) {
 
+    }
+    
+    private func resetPreviousViewControllerAnimations() {
+        // Reset animations
+        guard let tvc = self.navigationController.topViewController else {
+            return
+        }
+        if (tvc.nibName == "MemoryAccessView") {
+            let mavc: MemoryAccessViewController = tvc as! MemoryAccessViewController
+            mavc.touchPoints.forEach { tp in
+                if (!tp.isHidden) {
+                    tp.setupWith(DotModel.defaultDotModel())
+                }
+            }
+        }
     }
 }
