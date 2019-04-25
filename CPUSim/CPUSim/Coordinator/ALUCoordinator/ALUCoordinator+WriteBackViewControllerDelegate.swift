@@ -137,6 +137,15 @@ extension ALUCoordinator: WriteBackViewControllerDelegate {
     func wbvcViewWillDisappear(_ wbvc: WriteBackViewController) {
         resetPreviousViewControllerAnimations()
     }
+    
+    func wbvcViewWillAppear(_ wbvc: WriteBackViewController) {
+        // Reset animations
+        wbvc.touchPoints.forEach { tp in
+            if (!tp.isHidden) {
+                tp.setupWith(DotModel.defaultDotModel())
+            }
+        }
+    }
 
     func writeBackViewControllerDidSwipeRight(_ writeBackViewController: WriteBackViewController) {
     }

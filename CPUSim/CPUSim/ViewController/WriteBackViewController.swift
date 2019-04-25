@@ -17,6 +17,7 @@ public protocol WriteBackViewControllerDelegate: class {
     func writeBackViewControllerClearDrawing(_ writeBackViewController: WriteBackViewController)
     func writeBackViewControllerSetup(_ writeBackViewController: WriteBackViewController)
     func wbvcViewWillDisappear(_ wbvc: WriteBackViewController)
+    func wbvcViewWillAppear(_ wbvc: WriteBackViewController)
     
     func writeBackViewControllerDidSwipeLeft(_ writeBackViewController: WriteBackViewController)
     func writeBackViewControllerDidSwipeRight(_ writeBackViewController: WriteBackViewController)
@@ -109,6 +110,10 @@ public class WriteBackViewController: UIViewController {
     
     public override func viewWillDisappear(_ animated: Bool) {
         delegate?.wbvcViewWillDisappear(self)
+    }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        delegate?.wbvcViewWillAppear(self)
     }
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -46,6 +46,10 @@ class ALUCoordinator: RootViewCoordinator {
     let memoryAccessStateService: State
     let writeBackStateService: State
     
+    // MARK: Properties - VCs
+    
+    private var wbvc: WriteBackViewController? = nil
+    
     // MARK: Init
     
     init(drawingService: Drawing,
@@ -91,8 +95,13 @@ class ALUCoordinator: RootViewCoordinator {
     }
      
     func showWriteBackViewController() {
-         let writeBackViewController = WriteBackViewController()
-         writeBackViewController.delegate = self
-         self.navigationController.pushViewController(writeBackViewController, animated: true)
+        // Lazy init the WriteBackViewController
+        if (wbvc == nil) {
+            wbvc = WriteBackViewController()
+            wbvc?.delegate = self
+        }
+        
+        // Safe bang due to lazy initialization above
+        self.navigationController.pushViewController(wbvc!, animated: true)
     }
 }
