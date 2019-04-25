@@ -160,6 +160,8 @@ public class DecodeViewController: UIViewController {
         view.addGestureRecognizer(rightSwipe)
         
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        
+        delegate?.decodeViewControllerSetup(self)
     }
 
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
