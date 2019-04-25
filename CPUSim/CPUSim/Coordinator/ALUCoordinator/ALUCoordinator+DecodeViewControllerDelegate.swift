@@ -207,7 +207,12 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
     func decodeViewControllerDidSwipeLeft(_ decodeViewController: DecodeViewController) {
         if (!decodeStateService.isDrawing) {
             self.navigationController.popViewController(animated: true)
+            resetPreviousViewControllerAnimations()
         }
+    }
+    
+    func decodeViewControllerViewWillDisappear(_ dvc: DecodeViewController) {
+        resetPreviousViewControllerAnimations()
     }
 
     func decodeViewControllerDidSwipeRight(_ decodeViewController: DecodeViewController) {
@@ -224,5 +229,20 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
 
     func decodeViewController(_ decodeViewController: DecodeViewController) {
         self.showDecodeViewController()
+    }
+    
+    private func resetPreviousViewControllerAnimations() {
+        // Reset animations
+        guard let tvc = self.navigationController.topViewController else {
+            return
+        }
+        if (tvc.nibName == "FetchView") {
+            let fvc: FetchViewController = tvc as! FetchViewController
+            fvc.touchPoints.forEach { tp in
+                if (!tp.isHidden) {
+                    tp.setupWith(DotModel.defaultDotModel())
+                }
+            }
+        }
     }
 }

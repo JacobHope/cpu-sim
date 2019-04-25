@@ -17,7 +17,8 @@ public protocol DecodeViewControllerDelegate: class {
     func decodeViewControllerOnTouchesCancelled(_ decodeViewController: DecodeViewController)
     func decodeViewControllerClearDrawing(_ decodeViewController: DecodeViewController)
     func decodeViewControllerSetup(_ decodeViewController: DecodeViewController)
-//
+    func decodeViewControllerViewWillDisappear(_ dvc: DecodeViewController)
+    
     // MARK: Base Delegate Functions - Swipe Handling
     func decodeViewControllerDidSwipeLeft(_ decodeViewController: DecodeViewController)
     func decodeViewControllerDidSwipeRight(_ decodeViewController: DecodeViewController)
@@ -162,6 +163,10 @@ public class DecodeViewController: UIViewController {
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
         delegate?.decodeViewControllerSetup(self)
+    }
+    
+    public override func viewWillDisappear(_ animated: Bool) {
+        delegate?.decodeViewControllerViewWillDisappear(self)
     }
 
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
