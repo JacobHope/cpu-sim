@@ -6,10 +6,7 @@
 //  Copyright © 2019 Jacob M. Hope. All rights reserved.
 //
 
-import Foundation
 import UIKit
-import SwiftEventBus
-import EasyAnimation
 
 protocol ALUCoordinatorDelegate: class {
     func aluCoordinatorDidRequestCancel(aluCoordinator: ALUCoordinator)
@@ -21,7 +18,7 @@ class ALUCoordinatorPayload {
 }
 
 class ALUCoordinator: RootViewCoordinator {
-    
+
     // MARK: Properties
 
     var childCoordinators: [Coordinator] = []
@@ -45,13 +42,14 @@ class ALUCoordinator: RootViewCoordinator {
     let decodeStateService: State
     let memoryAccessStateService: State
     let writeBackStateService: State
-    
+
     // MARK: Properties - VCs
-    
+
+    private var mavc: MemoryAccessViewController? = nil
     private var wbvc: WriteBackViewController? = nil
-    
+
     // MARK: Init
-    
+
     init(drawingService: Drawing,
          fetchStateService: State,
          decodeStateService: State,
@@ -63,44 +61,49 @@ class ALUCoordinator: RootViewCoordinator {
         self.memoryAccessStateService = memoryAccessStateService
         self.writeBackStateService = writeBackStateService
     }
-    
+
     // MARK: Functions
-    
+
     func start() {
         self.showFetchViewController()
     }
-    
+
     func showFetchViewController() {
         let fetchViewController = FetchViewController()
         fetchViewController.delegate = self
         self.navigationController.viewControllers = [fetchViewController]
     }
-    
+
     func showDecodeViewController() {
-         let decodeViewController = DecodeViewController()
-         decodeViewController.delegate = self
-         self.navigationController.pushViewController(decodeViewController, animated: true)
+        let decodeViewController = DecodeViewController()
+        decodeViewController.delegate = self
+        self.navigationController.pushViewController(decodeViewController, animated: true)
     }
-     
+
     func showExecuteViewController() {
-         let executeViewController = ExecuteViewController()
-         executeViewController.delegate = self
-         self.navigationController.pushViewController(executeViewController, animated: true)
+        let executeViewController = ExecuteViewController()
+        executeViewController.delegate = self
+        self.navigationController.pushViewController(executeViewController, animated: true)
     }
-     
+
     func showMemoryAccessViewController() {
-         let memoryAccessViewController = MemoryAccessViewController()
-         memoryAccessViewController.delegate = self
-         self.navigationController.pushViewController(memoryAccessViewController, animated: true)
+        // Lazy init the MemoryAccessViewController
+        if (mavc == nil) {
+            mavc = MemoryAccessViewController()
+            mavc?.delegate = self
+        }
+
+        // Safe bang due to lazy initialization above
+        self.navigationController.pushViewController(mavc!, animated: true)
     }
-     
+
     func showWriteBackViewController() {
         // Lazy init the WriteBackViewController
         if (wbvc == nil) {
             wbvc = WriteBackViewController()
             wbvc?.delegate = self
         }
-        
+
         // Safe bang due to lazy initialization above
         self.navigationController.pushViewController(wbvc!, animated: true)
     }
