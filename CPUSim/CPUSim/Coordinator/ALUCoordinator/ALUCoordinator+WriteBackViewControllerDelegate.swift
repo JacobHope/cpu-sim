@@ -151,6 +151,7 @@ extension ALUCoordinator: WriteBackViewControllerDelegate {
     }
 
     func writeBackViewControllerDidTapDone(_ writeBackViewController: WriteBackViewController) {
+        self.delegate?.aluCoordinatorDidRequestCancel(aluCoordinator: self)
     }
 
     func writeBackViewController(_ writeBackViewController: WriteBackViewController) {
