@@ -16,6 +16,8 @@ public protocol MemoryAccessViewControllerDelegate: class {
     func memoryAccessViewControllerOnTouchesCancelled(_ memoryAccessViewController: MemoryAccessViewController)
     func memoryAccessViewControllerClearDrawing(_ memoryAccessViewController: MemoryAccessViewController)
     func memoryAccessViewControllerSetup(_ memoryAccessViewController: MemoryAccessViewController)
+    func mavcViewWillDisappear(_ mavc: MemoryAccessViewController)
+    func mavcViewWillAppear(_ mavc: MemoryAccessViewController)
     
     func memoryAccessViewControllerDidSwipeLeft(_ memoryAccessViewController: MemoryAccessViewController)
     func memoryAccessViewControllerDidSwipeRight(_ memoryAccessViewController: MemoryAccessViewController)
@@ -103,6 +105,14 @@ public class MemoryAccessViewController: UIViewController {
         
         // Finish setting up
         self.delegate?.memoryAccessViewControllerSetup(self)
+    }
+
+    public override func viewWillDisappear(_ animated: Bool) {
+        delegate?.mavcViewWillDisappear(self)
+    }
+
+    public override func viewWillAppear(_ animated: Bool) {
+        delegate?.mavcViewWillAppear(self)
     }
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

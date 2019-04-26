@@ -180,8 +180,8 @@
 				04D3F7A82260376D002C80B6 /* DrawingService.swift */,
 				04D3F7A92260376D002C80B6 /* ALUFetchStateService.swift */,
 				30FEB625226B9C85006E8E44 /* ALUDecodeStateService.swift */,
-				04CF4318226CB37500C7B0E7 /* ALUWriteBackStateService.swift */,
 				048F45EB2270001000116874 /* ALUMemoryAccessStateService.swift */,
+				04CF4318226CB37500C7B0E7 /* ALUWriteBackStateService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";

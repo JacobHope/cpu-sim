@@ -159,19 +159,52 @@ extension ALUCoordinator: MemoryAccessViewControllerDelegate {
         }
     }
 
+    public func mavcViewWillDisappear(_ mavc: MemoryAccessViewController) {
+        resetPreviousViewControllerAnimations()
+    }
+
+    public func mavcViewWillAppear(_ mavc: MemoryAccessViewController) {
+        // Reset animations
+        mavc.touchPoints.forEach { tp in
+            if (!tp.isHidden) {
+                tp.setupWith(DotModel.defaultDotModel())
+            }
+        }
+    }
+
     func memoryAccessViewControllerDidSwipeLeft(
             _ memoryAccessViewController: MemoryAccessViewController) {
-        self.navigationController.popViewController(animated: true)
+        if (!memoryAccessStateService.isDrawing) {
+            self.navigationController.popViewController(animated: true)
+            resetPreviousViewControllerAnimations()
+        }
     }
 
     func memoryAccessViewControllerDidSwipeRight(
             _ memoryAccessViewController: MemoryAccessViewController) {
-        self.showWriteBackViewController()
+        if (!memoryAccessStateService.isDrawing) {
+            self.showWriteBackViewController()
+        }
     }
 
     func memoryAccessViewController(
             _ memoryAccessViewController: MemoryAccessViewController) {
 
+    }
+
+    private func resetPreviousViewControllerAnimations() {
+        // Reset animations
+//        guard let tvc = self.navigationController.topViewController else {
+//            return
+//        }
+//        if (tvc.nibName == "ExecuteView") {
+//            let evc: ExecuteViewController = tvc as! ExecuteViewController
+//            evc.touchPoints.forEach { tp in
+//                if (!tp.isHidden) {
+//                    tp.setupWith(DotModel.defaultDotModel())
+//                }
+//            }
+//        }
     }
 
 }
