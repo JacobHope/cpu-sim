@@ -181,6 +181,30 @@ class ALUDecodeStateService: State {
                 }
             }
             break;
+        case TouchPointNames.idReadData1ToExEnd:
+            // Set correctnessMap
+            correctnessMap[CorrectnessMapKeys.idReadData1ToEx] = true
+
+            // Set correct (change color to green)
+            touchPoints.forEach { tp in
+                if (tp.name == TouchPointNames.idReadData1ToExEnd
+                        || tp.name == TouchPointNames.idReadData1ToExStart) {
+                    tp.setCorrect()
+                }
+            }
+            break;
+        case TouchPointNames.idReadData2ToExEnd:
+            // Set correctnessMap
+            correctnessMap[CorrectnessMapKeys.idReadData2ToEx] = true
+
+            // Set correct (change color to green)
+            touchPoints.forEach { tp in
+                if (tp.name == TouchPointNames.idReadData2ToExEnd
+                        || tp.name == TouchPointNames.idReadData2ToExStart) {
+                    tp.setCorrect()
+                }
+            }
+            break;
         //TODO: Add remaining touch point name cases and implement them...
         default:
             break;
