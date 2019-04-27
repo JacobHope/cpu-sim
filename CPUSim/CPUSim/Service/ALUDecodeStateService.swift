@@ -20,6 +20,8 @@ private enum StartState {
     case idIfToMux1EndStarted
     case idIfToSignExtendStartStarted
     case idIfToSignExtendEndStarted
+    case idIfToExStartStarted
+    case idIfToExEndStarted
     case idMuxToWriteAddressStartStarted
     case idMuxToWriteAddressEndStarted
     case idExToWriteDataStartStarted
@@ -452,61 +454,59 @@ class ALUDecodeStateService: State {
             touchPoints.forEach { touchPoint in
                 if (touchPoint == touchPoint.hitTest(touch, event: event)) {
                     switch (touchPoint.name) {
-                    case TouchPointNames.idIfStartStarted:
+                    case TouchPointNames.idIfStart:
                         self.startState = StartState.idIfStartStarted
                         break
-                    case TouchPointNames.idIfToReadAddress1EndStarted:
+                    case TouchPointNames.idIfToReadAddress1End:
                         self.startState = StartState.idIfStartStarted
                         break
-                    case TouchPointNames.idIfToReadAddress2EndStarted:
+                    case TouchPointNames.idIfToReadAddress2End:
                         self.startState = StartState.idIfStartStarted
                         break
-                    case TouchPointNames.idIfToMux0EndStarted:
+                    case TouchPointNames.idIfToMux0End:
                         self.startState = StartState.idIfStartStarted
                         break
-                    case TouchPointNames.idIfToMux1EndStarted:
+                    case TouchPointNames.idIfToMux1End:
                         self.startState = StartState.idIfStartStarted
                         break
-                    case TouchPointNames.idIfToSignExtendStartStarted:
+                    case TouchPointNames.idIfToSignExtendStart:
                         self.startState = StartState.idIfStartStarted
                         break
-                    case TouchPointNames.idIfToSignExtendEndStarted:
+                    case TouchPointNames.idIfToSignExtendEnd:
                         self.startState = StartState.idIfStartStarted
                         break
-                    case TouchPointNames.idMuxToWriteAddressStartStarted:
+                    case TouchPointNames.idMuxToWriteAddressStart:
                         self.startState = StartState.idIfStartStarted
                         break
-                    case TouchPointNames.idMuxToWriteAddressEndStarted:
+                    case TouchPointNames.idMuxToWriteAddressEnd:
                         self.startState = StartState.idIfStartStarted
                         break
-                    case TouchPointNames.idExToWriteDataStartStarted:
+                    case TouchPointNames.idExToWriteDataStart:
                         self.startState = StartState.idIfStartStarted
                         break
-                    case TouchPointNames.idExToWriteDataEndStarted:
+                    case TouchPointNames.idExToWriteDataEnd:
                         self.startState = StartState.idIfStartStarted
                         break
-                    case TouchPointNames.idSignExtendToExStartStarted:
+                    case TouchPointNames.idSignExtendToExStart:
                         self.startState = StartState.idIfStartStarted
                         break
-                    case TouchPointNames.idSignExtendToExEndStarted:
+                    case TouchPointNames.idSignExtendToExEnd:
                         self.startState = StartState.idIfStartStarted
                         break
-                    case TouchPointNames.idReadData1ToExStartStarted:
+                    case TouchPointNames.idReadData1ToExStart:
                         self.startState = StartState.idIfStartStarted
                         break
-                    case TouchPointNames.idReadData1ToExEndStarted:
+                    case TouchPointNames.idReadData1ToExEnd:
                         self.startState = StartState.idIfStartStarted
                         break
-                    case TouchPointNames.idReadData2ToExStartStarted:
+                    case TouchPointNames.idReadData2ToExStart:
                         self.startState = StartState.idIfStartStarted
                         break
-                    case TouchPointNames.idReadData2ToExEndStarted:
+                    case TouchPointNames.idReadData2ToExEnd:
                         self.startState = StartState.idIfStartStarted
                         break
                     default:
                         break
-                    default:
-                        break;
                     }
                     touchStartedInTouchPoint = true
                 }
@@ -520,7 +520,6 @@ class ALUDecodeStateService: State {
         }
     }
 
-    //TODO implement handle touches moved
     func handleTouchesMoved(
         _ touches: Set<UITouch>,
         with event: UIEvent?,
@@ -550,16 +549,194 @@ class ALUDecodeStateService: State {
                 
                 // Handle a drag from a start point to an end point
                 touchPoints.forEach { touchPoint in
+                    var handleDrawingOnHitTest = false
                     if (touchPoint == touchPoint.hitTest(touch, event: event)) {
                         switch touchPoint.name {
-                        //TODO: Add cases
+                        case TouchPointNames.idExToWriteDataStart:
+                            if (startState != StartState.idExToWriteDataStartStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idExToWriteDataStart)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
+                        case TouchPointNames.idExToWriteDataEnd:
+                            if (self.startState == StartState.idExToWriteDataStartStarted) {
+                                self.onCorrect(
+                                        touchPoints,
+                                        touchPointName: TouchPointNames.idExToWriteDataEnd,
+                                        linesMap: lines)
+                                handleDrawingOnHitTest = true
+                            } else if (startState != StartState.idExToWriteDataEndStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idExToWriteDataEnd)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
+                        case TouchPointNames.idIfStart:
+                            if (startState != StartState.idIfStartStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idIfStart)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
+                        case TouchPointNames.idIfToReadAddress1End:
+                            if (self.startState == StartState.idIfStartStarted) {
+                                self.onCorrect(
+                                        touchPoints,
+                                        touchPointName: TouchPointNames.idIfToReadAddress1End,
+                                        linesMap: lines)
+                                handleDrawingOnHitTest = true
+                            } else if (startState != StartState.idIfToReadAddress1EndStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idIfToReadAddress1End)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
+                        case TouchPointNames.idIfToReadAddress2End:
+                            if (self.startState == StartState.idIfStartStarted) {
+                                self.onCorrect(
+                                        touchPoints,
+                                        touchPointName: TouchPointNames.idIfToReadAddress2End,
+                                        linesMap: lines)
+                                handleDrawingOnHitTest = true
+                            } else if (startState != StartState.idIfToReadAddress2EndStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idIfToReadAddress2End)
+                                handleDrawingOnHitTest = true
+                        }
+                        break
+                        case TouchPointNames.idIfToMux0End:
+                            if (self.startState == StartState.idIfStartStarted) {
+                                self.onCorrect(
+                                        touchPoints,
+                                        touchPointName: TouchPointNames.idIfToMux0End,
+                                        linesMap: lines)
+                                handleDrawingOnHitTest = true
+                            } else if (startState != StartState.idIfToMux0EndStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idIfToMux0End)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
+                        case TouchPointNames.idIfToMux1End:
+                            if (self.startState == StartState.idIfStartStarted) {
+                                self.onCorrect(
+                                        touchPoints,
+                                        touchPointName: TouchPointNames.idIfToMux1End,
+                                        linesMap: lines)
+                                handleDrawingOnHitTest = true
+                            } else if (startState != StartState.idIfToMux1EndStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idIfToMux1End)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
+                        case TouchPointNames.idIfToSignExtendEnd:
+                            if (self.startState == StartState.idIfToSignExtendStartStarted) {
+                                self.onCorrect(
+                                        touchPoints,
+                                        touchPointName: TouchPointNames.idIfToSignExtendEnd,
+                                        linesMap: lines)
+                                handleDrawingOnHitTest = true
+                            } else if (startState != StartState.idIfToSignExtendEndStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idIfToSignExtendEnd)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
+                        case TouchPointNames.idIfToExStart:
+                            if (startState != StartState.idIfToExStartStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idIfToExStart)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
+                        case TouchPointNames.idIfToExEnd:
+                            if (self.startState == StartState.idIfToExStartStarted) {
+                                self.onCorrect(
+                                        touchPoints,
+                                        touchPointName: TouchPointNames.idIfToExEnd,
+                                        linesMap: lines)
+                                handleDrawingOnHitTest = true
+                            } else if (startState != StartState.idIfToExEndStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idIfToExEnd)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
+                        case TouchPointNames.idSignExtendToExStart:
+                            if (startState != StartState.idSignExtendToExStartStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idSignExtendToExStart)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
+                        case TouchPointNames.idSignExtendToExEnd:
+                            if (self.startState == StartState.idSignExtendToExStartStarted) {
+                                self.onCorrect(
+                                        touchPoints,
+                                        touchPointName: TouchPointNames.idSignExtendToExEnd,
+                                        linesMap: lines)
+                                handleDrawingOnHitTest = true
+                            } else if (startState != StartState.idSignExtendToExEndStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idSignExtendToExEnd)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
+                        case TouchPointNames.idMuxToWriteAddressStart:
+                            if (startState != StartState.idMuxToWriteAddressStartStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idMuxToWriteAddressStart)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
+                        case TouchPointNames.idMuxToWriteAddressEnd:
+                            if (self.startState == StartState.idMuxToWriteAddressStartStarted) {
+                                self.onCorrect(
+                                        touchPoints,
+                                        touchPointName: TouchPointNames.idMuxToWriteAddressEnd,
+                                        linesMap: lines)
+                                handleDrawingOnHitTest = true
+                            } else if (startState != StartState.idMuxToWriteAddressEndStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idMuxToWriteAddressEnd)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
+                        case TouchPointNames.idReadData1ToExStart:
+                            if (startState != StartState.idReadData1ToExStartStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idReadData1ToExStart)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
+                        case TouchPointNames.idReadData1ToExEnd:
+                            if (self.startState == StartState.idReadData1ToExStartStarted) {
+                                self.onCorrect(
+                                        touchPoints,
+                                        touchPointName: TouchPointNames.idReadData1ToExEnd,
+                                        linesMap: lines)
+                                handleDrawingOnHitTest = true
+                            } else if (startState != StartState.idReadData1ToExEndStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idReadData1ToExEnd)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
+                        case TouchPointNames.idReadData2ToExStart:
+                            if (startState != StartState.idReadData2ToExStartStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idReadData2ToExStart)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
+                        case TouchPointNames.idReadData2ToExEnd:
+                            if (self.startState == StartState.idReadData2ToExStartStarted) {
+                                self.onCorrect(
+                                        touchPoints,
+                                        touchPointName: TouchPointNames.idReadData2ToExEnd,
+                                        linesMap: lines)
+                                handleDrawingOnHitTest = true
+                            } else if (startState != StartState.idReadData2ToExEndStarted) {
+                                self.onIncorrect(touchPoints, touchPointName: TouchPointNames.idReadData2ToExEnd)
+                                handleDrawingOnHitTest = true
+                            }
+                            break
                         default:
-                            break;
+                            break
+                        }
+                        if (handleDrawingOnHitTest) {
+                            drawingService.ignoreTouchInput()
+                            drawingService.clearDrawing(imageView: imageView)
+                        }
                     }
                 }
             }
         }
-      }
     }
     
     func handleTouchesEnded() {
@@ -571,61 +748,3 @@ class ALUDecodeStateService: State {
         self.resetState()
     }
  }
-
-
-/*
-switch startState {
-        case idIfStartStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        case idIfToReadAddress1EndStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        case idIfToReadAddress2EndStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        case idIfToMux0EndStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        case idIfToMux1EndStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        case idIfToSignExtendStartStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        case idIfToSignExtendEndStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        case idMuxToWriteAddressStartStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        case idMuxToWriteAddressEndStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        case idExToWriteDataStartStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        case idExToWriteDataEndStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        case idSignExtendToExStartStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        case idSignExtendToExEndStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        case idReadData1ToExStartStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        case idReadData1ToExEndStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        case idReadData2ToExStartStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        case idReadData2ToExEndStarted:
-            self.startState = StartState.idIfStartStarted
-            break
-        default:
-            break
-        }*/
