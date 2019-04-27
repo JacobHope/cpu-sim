@@ -76,7 +76,6 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
         // Setup complete button
         //decodeViewController.completeButton.isHidden = true
 
-        //TODO setup all touch point views
         // Setup TouchPointViews
         decodeViewController.idExToWriteDataStart.name = TouchPointNames.idExToWriteDataStart
         decodeViewController.idExToWriteDataEnd.name = TouchPointNames.idExToWriteDataEnd
@@ -97,7 +96,7 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
         decodeViewController.idSignExtendToExStart.name = TouchPointNames.idSignExtendToExStart
         decodeViewController.idSignExtendToExEnd.name = TouchPointNames.idSignExtendToExEnd
 
-        //TODO setup all touch points
+        //Setup all touch points
         decodeViewController.touchPoints = [
             decodeViewController.idExToWriteDataStart,
             decodeViewController.idExToWriteDataEnd,
@@ -120,9 +119,6 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
         ]
 
         // Setup lines
-        //TODO setup all lines...
-
-        //
         decodeViewController.lines[TouchPointNames.idExToWriteDataEnd] = [
             decodeViewController.idExToWriteData1,
             decodeViewController.idExToWriteData2,
@@ -162,7 +158,6 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
             decodeViewController.idIfToMux1_2
         ]
 
-        //TODO: add idIf2 (to anywhere that idIf1 is used...
         decodeViewController.lines[TouchPointNames.idIfToSignExtendEnd] = [
             decodeViewController.idIf1,
             decodeViewController.idIf2,
