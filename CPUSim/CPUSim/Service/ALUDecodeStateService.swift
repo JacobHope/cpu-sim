@@ -286,11 +286,11 @@ class ALUDecodeStateService: State {
                     }
                 }
                 break;
-            case TouchPointNames.idIfToEx:
+            case TouchPointNames.idIfToExEnd:
                 touchPoints.forEach { tp in
                     // Set hidden
-                    if (tp.name == touchPointNames.idIfToExEnd
-                       || tp.name == touchPointNames.idIfToExStart) {
+                    if (tp.name == TouchPointNames.idIfToExEnd
+                       || tp.name == TouchPointNames.idIfToExStart) {
                         tp.isHidden = true
                     }
                 }
@@ -313,17 +313,23 @@ class ALUDecodeStateService: State {
                 }
                 break;
             case TouchPointNames.idReadData1ToExEnd:
-                // Set hidden
-                if (tp.name == TouchPointNames.idReadData1ToExEnd
-                        || tp.name == TouchPointNames.idReadData1ToExStart) {
-                    tp.isHidden = true
+                touchPoints.forEach { tp in
+                    // Set hidden
+                    if (tp.name == TouchPointNames.idReadData1ToExEnd
+                            || tp.name == TouchPointNames.idReadData1ToExStart) {
+                        tp.isHidden = true
+                    }
                 }
+                 break
             case TouchPointNames.idReadData2ToExEnd:
-                // Set hidden
-                if (tp.name == TouchPointNames.idReadData2ToExEnd
-                        || tp.name == TouchPointNames.idReadData2ToExStart) {
-                    tp.isHidden = true
+                touchPoints.forEach { tp in
+                    // Set hidden
+                    if (tp.name == TouchPointNames.idReadData2ToExEnd
+                            || tp.name == TouchPointNames.idReadData2ToExStart) {
+                        tp.isHidden = true
+                    }
                 }
+                break
             default:
                 break;
             }
@@ -446,6 +452,59 @@ class ALUDecodeStateService: State {
             touchPoints.forEach { touchPoint in
                 if (touchPoint == touchPoint.hitTest(touch, event: event)) {
                     switch (touchPoint.name) {
+                    case TouchPointNames.idIfStartStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    case TouchPointNames.idIfToReadAddress1EndStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    case TouchPointNames.idIfToReadAddress2EndStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    case TouchPointNames.idIfToMux0EndStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    case TouchPointNames.idIfToMux1EndStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    case TouchPointNames.idIfToSignExtendStartStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    case TouchPointNames.idIfToSignExtendEndStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    case TouchPointNames.idMuxToWriteAddressStartStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    case TouchPointNames.idMuxToWriteAddressEndStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    case TouchPointNames.idExToWriteDataStartStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    case TouchPointNames.idExToWriteDataEndStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    case TouchPointNames.idSignExtendToExStartStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    case TouchPointNames.idSignExtendToExEndStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    case TouchPointNames.idReadData1ToExStartStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    case TouchPointNames.idReadData1ToExEndStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    case TouchPointNames.idReadData2ToExStartStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    case TouchPointNames.idReadData2ToExEndStarted:
+                        self.startState = StartState.idIfStartStarted
+                        break
+                    default:
+                        break
                     default:
                         break;
                     }
