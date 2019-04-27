@@ -335,7 +335,6 @@ class ALUDecodeStateService: State {
         }
         
         // Post event...
-        //TODO add swift event bus for alu decode
         SwiftEventBus.post(Events.aluDecodeOnCorrect, sender: determineProgress())
     }
     
@@ -345,18 +344,62 @@ class ALUDecodeStateService: State {
         
         let startName: String
         let endName = touchPointName
-        
-        // TODO add cases
+
         switch startState {
+        case StartState.idIfStartStarted:
+            startName = TouchPointNames.idIfStart
+            break
+        case StartState.idIfToReadAddress1EndStarted:
+            startName = TouchPointNames.idIfToReadAddress1End
+            break
+        case StartState.idIfToReadAddress2EndStarted:
+            startName = TouchPointNames.idIfToReadAddress2End
+            break
         case StartState.idIfToMux0EndStarted:
-            startName = ""
-            break;
+            startName = TouchPointNames.idIfToMux0End
+            break
         case StartState.idIfToMux1EndStarted:
-            startName = ""
-            break;
+            startName = TouchPointNames.idIfToMux1End
+            break
+        case StartState.idIfToSignExtendStartStarted:
+            startName = TouchPointNames.idIfToSignExtendStart
+            break
+        case StartState.idIfToSignExtendEndStarted:
+            startName = TouchPointNames.idIfToSignExtendEnd
+            break
+        case StartState.idMuxToWriteAddressStartStarted:
+            startName = TouchPointNames.idMuxToWriteAddressStart
+            break
+        case StartState.idMuxToWriteAddressEndStarted:
+            startName = TouchPointNames.idMuxToWriteAddressEnd
+            break
+        case StartState.idExToWriteDataStartStarted:
+            startName = TouchPointNames.idExToWriteDataStart
+            break
+        case StartState.idExToWriteDataEndStarted:
+            startName = TouchPointNames.idExToWriteDataEnd
+            break
+        case StartState.idSignExtendToExStartStarted:
+            startName = TouchPointNames.idSignExtendToExStart
+            break
+        case StartState.idSignExtendToExEndStarted:
+            startName = TouchPointNames.idSignExtendToExEnd
+            break
+        case StartState.idReadData1ToExStartStarted:
+            startName = TouchPointNames.idReadData1ToExStart
+            break
+        case StartState.idReadData1ToExEndStarted:
+            startName = TouchPointNames.idReadData1ToExEnd
+            break
+        case StartState.idReadData2ToExStartStarted:
+            startName = TouchPointNames.idReadData2ToExStart
+            break
+        case StartState.idReadData2ToExEndStarted:
+            startName = TouchPointNames.idReadData2ToExEnd
+            break
         default:
             startName = ""
-            break;
+            break
         }
         
         // Set touch points incorrect...
@@ -471,3 +514,59 @@ class ALUDecodeStateService: State {
  }
 
 
+/*
+switch startState {
+        case idIfStartStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        case idIfToReadAddress1EndStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        case idIfToReadAddress2EndStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        case idIfToMux0EndStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        case idIfToMux1EndStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        case idIfToSignExtendStartStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        case idIfToSignExtendEndStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        case idMuxToWriteAddressStartStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        case idMuxToWriteAddressEndStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        case idExToWriteDataStartStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        case idExToWriteDataEndStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        case idSignExtendToExStartStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        case idSignExtendToExEndStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        case idReadData1ToExStartStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        case idReadData1ToExEndStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        case idReadData2ToExStartStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        case idReadData2ToExEndStarted:
+            self.startState = StartState.idIfStartStarted
+            break
+        default:
+            break
+        }*/
