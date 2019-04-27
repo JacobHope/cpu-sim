@@ -133,6 +133,18 @@ class ALUDecodeStateService: State {
                 }
             }
             break;
+        case TouchPointNames.idIfToExEnd:
+            // Set correctnessMap
+            correctnessMap[CorrectnessMapKeys.idIfToEx] = true
+
+            // Set correct (change color to green)
+            touchPoints.forEach { tp in
+                if (tp.name == TouchPointNames.idIfToExEnd
+                        || tp.name == TouchPointNames.idIfToExStart) {
+                    tp.setCorrect()
+                }
+            }
+            break;
         case TouchPointNames.idSignExtendToExEnd:
             // Set correctnessMap
             correctnessMap[CorrectnessMapKeys.idSignExtendToEx] = true
@@ -371,6 +383,12 @@ class ALUDecodeStateService: State {
         case StartState.idIfToSignExtendEndStarted:
             startName = TouchPointNames.idIfToSignExtendEnd
             break
+        case StartState.idIfToExStartStarted:
+            startName = TouchPointNames.idIfToExStart
+            break
+        case StartState.idIfToExEndStarted:
+            startName = TouchPointNames.idIfToExEnd
+            break
         case StartState.idMuxToWriteAddressStartStarted:
             startName = TouchPointNames.idMuxToWriteAddressStart
             break
@@ -467,6 +485,12 @@ class ALUDecodeStateService: State {
                         break
                     case TouchPointNames.idIfToSignExtendEnd:
                         self.startState = StartState.idIfToSignExtendEndStarted
+                        break
+                    case TouchPointNames.idIfToExStart:
+                        self.startState = StartState.idIfToExStartStarted
+                        break
+                    case TouchPointNames.idIfToExEnd:
+                        self.startState = StartState.idIfToExEndStarted
                         break
                     case TouchPointNames.idMuxToWriteAddressStart:
                         self.startState = StartState.idMuxToWriteAddressStartStarted
