@@ -189,39 +189,111 @@ class ALUDecodeStateService: State {
             case TouchPointNames.idIfToReadAddress1End:
                 touchPoints.forEach { tp in
                     // Set hidden
-                    if (tp.name == TouchPointNames.idIfToReadAddress1End
-                            || tp.name == TouchPointNames.idIfStart) {
+                    if (tp.name == TouchPointNames.idIfToReadAddress1End) {
                         tp.isHidden = true
+                    }
+
+                    // Special case
+                    if (self.correctnessMap[CorrectnessMapKeys.idIfToReadAddress1] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToReadAddress2] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToMux0] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToMux1] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToSignExtend] == true
+                            && tp.name == TouchPointNames.idIfStart) {
+                        tp.isHidden = true
+                    } else if (tp.name == TouchPointNames.idIfStart) {
+                        tp.reset()
                     }
                 }
                 break;
             case TouchPointNames.idIfToReadAddress2End:
                 touchPoints.forEach { tp in
                     // Set hidden
-                    if (tp.name == TouchPointNames.idIfToReadAddress2End
-                            || tp.name == TouchPointNames.idIfStart) {
+                    if (tp.name == TouchPointNames.idIfToReadAddress2End) {
                         tp.isHidden = true
+                    }
+
+                    // Special case
+                    if (self.correctnessMap[CorrectnessMapKeys.idIfToReadAddress1] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToReadAddress2] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToMux0] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToMux1] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToSignExtend] == true
+                            && tp.name == TouchPointNames.idIfStart) {
+                        tp.isHidden = true
+                    } else if (tp.name == TouchPointNames.idIfStart) {
+                        tp.reset()
                     }
                 }
                 break;
             case TouchPointNames.idIfToMux0End:
                 touchPoints.forEach { tp in
                     // Set hidden
-                    if (tp.name == TouchPointNames.idIfToMux0End
-                            || tp.name == TouchPointNames.idIfStart) {
+                    if (tp.name == TouchPointNames.idIfToMux0End) {
                         tp.isHidden = true
+                    }
+
+                    // Special case
+                    if (self.correctnessMap[CorrectnessMapKeys.idIfToReadAddress1] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToReadAddress2] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToMux0] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToMux1] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToSignExtend] == true
+                            && tp.name == TouchPointNames.idIfStart) {
+                        tp.isHidden = true
+                    } else if (tp.name == TouchPointNames.idIfStart) {
+                        tp.reset()
                     }
                 }
                 break;
             case TouchPointNames.idIfToMux1End:
                 touchPoints.forEach { tp in
                     // Set hidden
-                    if (tp.name == TouchPointNames.idIfToMux1End
-                            || tp.name == TouchPointNames.idIfStart) {
+                    if (tp.name == TouchPointNames.idIfToMux1End) {
                         tp.isHidden = true
+                    }
+
+                    // Special case
+                    if (self.correctnessMap[CorrectnessMapKeys.idIfToReadAddress1] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToReadAddress2] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToMux0] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToMux1] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToSignExtend] == true
+                            && tp.name == TouchPointNames.idIfStart) {
+                        tp.isHidden = true
+                    } else if (tp.name == TouchPointNames.idIfStart) {
+                        tp.reset()
                     }
                 }
                 break;
+            case TouchPointNames.idIfToSignExtendEnd:
+                touchPoints.forEach { tp in
+                    // Set hidden
+                    if (tp.name == TouchPointNames.idIfToSignExtendEnd) {
+                        tp.isHidden = true
+                    }
+
+                    // Special case
+                    if (self.correctnessMap[CorrectnessMapKeys.idIfToReadAddress1] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToReadAddress2] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToMux0] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToMux1] == true
+                            && self.correctnessMap[CorrectnessMapKeys.idIfToSignExtend] == true
+                            && tp.name == TouchPointNames.idIfStart) {
+                        tp.isHidden = true
+                    } else if (tp.name == TouchPointNames.idIfStart) {
+                        tp.reset()
+                    }
+                }
+                break;
+            case TouchPointNames.idIfToEx:
+                touchPoints.forEach { tp in
+                    // Set hidden
+                    if (tp.name == touchPointNames.idIfToExEnd
+                       || tp.name == touchPointNames.idIfToExStart) {
+                        tp.isHidden = true
+                    }
+                }
             case TouchPointNames.idSignExtendToExEnd:
                 touchPoints.forEach { tp in
                     // Set hidden
@@ -240,16 +312,18 @@ class ALUDecodeStateService: State {
                     }
                 }
                 break;
-            case TouchPointNames.idIfToSignExtendEnd:
-                touchPoints.forEach { tp in
-                    // Set hidden
-                    if (tp.name == TouchPointNames.idIfToSignExtendEnd
-                            || tp.name == TouchPointNames.idIfStart) {
-                        tp.isHidden = true
-                    }
+            case TouchPointNames.idReadData1ToExEnd:
+                // Set hidden
+                if (tp.name == TouchPointNames.idReadData1ToExEnd
+                        || tp.name == TouchPointNames.idReadData1ToExStart) {
+                    tp.isHidden = true
                 }
-                break;
-                //TODO: add remaining cases and special cases
+            case TouchPointNames.idReadData2ToExEnd:
+                // Set hidden
+                if (tp.name == TouchPointNames.idReadData2ToExEnd
+                        || tp.name == TouchPointNames.idReadData2ToExStart) {
+                    tp.isHidden = true
+                }
             default:
                 break;
             }
