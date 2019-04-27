@@ -127,6 +127,13 @@
                                 <constraint firstAttribute="width" constant="45" id="q4b-Rm-fvX"/>
                             </constraints>
                         </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="mux-shape" translatesAutoresizingMaskIntoConstraints="NO" id="dwP-UD-omX" userLabel="muxTwoImageView">
+                            <rect key="frame" x="50" y="390" width="40" height="85"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="85" id="Cpc-Ik-UYM"/>
+                                <constraint firstAttribute="width" constant="40" id="fmL-CF-PbM"/>
+                            </constraints>
+                        </imageView>
                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koU-GI-VWi" userLabel="exIdToMux0Start" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="100" y="99.5" width="25" height="25"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -275,11 +282,13 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="IgQ-pC-fpw" firstAttribute="leading" secondItem="ZKx-1H-UDH" secondAttribute="trailing" constant="50" id="2WC-HO-vGe"/>
+                        <constraint firstItem="dwP-UD-omX" firstAttribute="leading" secondItem="AD9-7d-Zax" secondAttribute="leading" constant="50" id="2i7-yc-TcV"/>
                         <constraint firstItem="W6M-d5-L5N" firstAttribute="top" secondItem="AD9-7d-Zax" secondAttribute="top" id="C3v-Gf-w2o"/>
                         <constraint firstItem="XSO-F0-xi7" firstAttribute="centerY" secondItem="AeK-fw-cwD" secondAttribute="centerY" constant="60" id="EaJ-pm-2xk"/>
                         <constraint firstItem="ZKx-1H-UDH" firstAttribute="leading" secondItem="AD9-7d-Zax" secondAttribute="leading" constant="50" id="FPQ-Is-HC5"/>
                         <constraint firstItem="AeK-fw-cwD" firstAttribute="centerY" secondItem="AD9-7d-Zax" secondAttribute="centerY" constant="-40" id="YnM-sp-OST"/>
                         <constraint firstItem="IgQ-pC-fpw" firstAttribute="centerY" secondItem="ZKx-1H-UDH" secondAttribute="centerY" constant="-25" id="cA1-jy-LZL"/>
+                        <constraint firstItem="AD9-7d-Zax" firstAttribute="bottom" secondItem="dwP-UD-omX" secondAttribute="bottom" constant="100" id="dU0-T7-roD"/>
                         <constraint firstItem="W6M-d5-L5N" firstAttribute="leading" secondItem="AD9-7d-Zax" secondAttribute="leading" id="gjR-3k-DLJ"/>
                         <constraint firstItem="XSO-F0-xi7" firstAttribute="leading" secondItem="AD9-7d-Zax" secondAttribute="leading" constant="50" id="pFe-AK-sZ8"/>
                         <constraint firstItem="AeK-fw-cwD" firstAttribute="centerX" secondItem="AD9-7d-Zax" secondAttribute="centerX" constant="50" id="rXI-gk-Dxx"/>
