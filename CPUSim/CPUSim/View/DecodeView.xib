@@ -580,6 +580,7 @@
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="fYA-RD-uij" secondAttribute="bottom" constant="328" id="0N9-ir-LgE"/>
                         <constraint firstItem="Dk0-FO-2Qa" firstAttribute="leading" secondItem="X5h-w5-3Ai" secondAttribute="trailing" constant="5" id="14J-hJ-Zxh"/>
+                        <constraint firstItem="O19-D5-CMs" firstAttribute="centerY" secondItem="CWe-Pg-4v3" secondAttribute="centerY" id="2uE-xn-ReX"/>
                         <constraint firstItem="H0A-5E-Ycw" firstAttribute="top" secondItem="PK9-Kv-lhZ" secondAttribute="bottom" constant="25" id="38v-eq-5Yh"/>
                         <constraint firstItem="fYA-RD-uij" firstAttribute="leading" secondItem="jXe-H3-3ya" secondAttribute="leading" id="4fr-kt-7ak"/>
                         <constraint firstItem="EFc-al-ldc" firstAttribute="top" secondItem="byp-Ai-w6D" secondAttribute="top" constant="203" id="5wD-Vi-S2A"/>
@@ -605,6 +606,7 @@
                         <constraint firstItem="6w5-p2-dFr" firstAttribute="leading" secondItem="zGz-9m-7x0" secondAttribute="trailing" constant="-4" id="PRo-di-rjO"/>
                         <constraint firstItem="uco-Yx-0fo" firstAttribute="top" secondItem="HDh-D5-bT5" secondAttribute="bottom" constant="5" id="Q22-o6-LnU"/>
                         <constraint firstItem="HDh-D5-bT5" firstAttribute="top" secondItem="fYA-RD-uij" secondAttribute="bottom" constant="5" id="QEg-qV-E4O"/>
+                        <constraint firstItem="EFc-al-ldc" firstAttribute="centerY" secondItem="EEM-rx-oBI" secondAttribute="centerY" id="QjC-0Y-40d"/>
                         <constraint firstItem="J8h-pv-fDy" firstAttribute="bottom" secondItem="uco-Yx-0fo" secondAttribute="bottom" constant="268" id="QwB-11-Jdn"/>
                         <constraint firstItem="6w5-p2-dFr" firstAttribute="leading" secondItem="RfM-dp-SJg" secondAttribute="trailing" constant="-4" id="RI4-0o-lvO"/>
                         <constraint firstItem="J8h-pv-fDy" firstAttribute="bottom" secondItem="6w5-p2-dFr" secondAttribute="bottom" constant="298" id="Rml-hS-ZB0"/>
