@@ -18,7 +18,6 @@ private enum StartState {
     case idIfToReadAddress2EndStarted
     case idIfToMux0EndStarted
     case idIfToMux1EndStarted
-    case idIfToSignExtendStartStarted
     case idIfToSignExtendEndStarted
     case idIfToExStartStarted
     case idIfToExEndStarted
@@ -369,9 +368,6 @@ class ALUDecodeStateService: State {
         case StartState.idIfToMux1EndStarted:
             startName = TouchPointNames.idIfToMux1End
             break
-        case StartState.idIfToSignExtendStartStarted:
-            startName = TouchPointNames.idIfToSignExtendStart
-            break
         case StartState.idIfToSignExtendEndStarted:
             startName = TouchPointNames.idIfToSignExtendEnd
             break
@@ -625,7 +621,7 @@ class ALUDecodeStateService: State {
                             }
                             break
                         case TouchPointNames.idIfToSignExtendEnd:
-                            if (self.startState == StartState.idIfToSignExtendStartStarted) {
+                            if (self.startState == StartState.idIfStartStarted) {
                                 self.onCorrect(
                                         touchPoints,
                                         touchPointName: TouchPointNames.idIfToSignExtendEnd,
