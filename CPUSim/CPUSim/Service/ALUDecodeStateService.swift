@@ -64,8 +64,7 @@ class ALUDecodeStateService: State {
         touchStartedInTouchPoint = false
         isDrawing = false
     }
-
-    //TODO special and missing cases still need be implemented in onCorrect...
+    
     private func onCorrect(
         _ touchPoints: [TouchPointView],
         touchPointName: String,
