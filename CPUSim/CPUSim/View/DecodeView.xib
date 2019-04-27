@@ -91,13 +91,14 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="Vcg-41-Tt8"/>
                         </view>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="9ZP-Qc-zBL" userLabel="idIf1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" ambiguous="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="9ZP-Qc-zBL" userLabel="idIf1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-11" y="420" width="13" height="2"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="ato-dL-SmJ" userLabel="idif2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" ambiguous="YES" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="ato-dL-SmJ" userLabel="idif2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="377" width="2" height="45"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="2" id="HGb-QZ-PzQ"/>
+                            </constraints>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTp-Yf-TYu" userLabel="idExToWriteDataStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="260.5" y="536" width="25" height="25"/>
@@ -131,8 +132,8 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="2FJ-un-Hjh"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLe-1O-422" userLabel="idIfToEx1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="-11" y="97" width="272" height="20"/>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yLe-1O-422" userLabel="idIfToEx1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="-11" y="97" width="272" height="2"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="8y9-mU-o46" userLabel="IfPcToAlu1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                                     <rect key="frame" x="-5" y="9" width="262" height="2"/>
@@ -172,9 +173,11 @@
                             <rect key="frame" x="0.0" y="192" width="2" height="111"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="CFl-7m-COJ" userLabel="idIFToReadAddress1-2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" ambiguous="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="CFl-7m-COJ" userLabel="idIFToReadAddress1-2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="192" width="51" height="2"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="RJp-R9-kLY"/>
+                            </constraints>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="cY4-re-F5x" userLabel="idIFToReadAddress1-3" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="50" y="183" width="20" height="20"/>
@@ -189,9 +192,11 @@
                             <rect key="frame" x="0.0" y="222" width="2" height="81"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="ydI-Ok-VhV" userLabel="idIFToReadAddress2-2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" ambiguous="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="ydI-Ok-VhV" userLabel="idIFToReadAddress2-2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="222" width="51" height="2"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="JeA-bf-zMf"/>
+                            </constraints>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="jRy-BF-aYI" userLabel="idIFToReadAddress2-3" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="50" y="213" width="20" height="20"/>
@@ -206,9 +211,11 @@
                             <rect key="frame" x="0.0" y="302" width="2" height="76"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="7pe-BE-UqQ" userLabel="idIFToSignExtend2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" ambiguous="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="7pe-BE-UqQ" userLabel="idIFToSignExtend2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="1" y="376" width="100" height="2"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="aEA-pY-XVT"/>
+                            </constraints>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="8Vc-XL-VHH" userLabel="idIFToSignExtend3" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="99" y="367" width="20" height="20"/>
@@ -222,9 +229,11 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="dLK-KK-O2Z"/>
                         </view>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="3Jw-Nk-RRP" userLabel="idIFToMux0-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" ambiguous="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="3Jw-Nk-RRP" userLabel="idIFToMux0-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="222" width="10" height="2"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="fUB-Lg-1Fd"/>
+                            </constraints>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="nmf-b7-Dgu" userLabel="idIFToMux0-2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="8" y="222" width="2" height="53"/>
@@ -243,9 +252,11 @@
                             <rect key="frame" x="0.0" y="302" width="2" height="15"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="ajv-cz-2mu" userLabel="idIFToMux1-2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" ambiguous="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="ajv-cz-2mu" userLabel="idIFToMux1-2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="315" width="10" height="2"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="CeE-30-eW6"/>
+                            </constraints>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="eq1-Bm-yWE" userLabel="idIFToMux1-3" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="8" y="306" width="20" height="20"/>
@@ -265,9 +276,11 @@
                             <rect key="frame" x="34" y="252" width="2" height="15"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="Swu-TZ-ZQU" userLabel="idMuxToWriteAddress2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" ambiguous="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="Swu-TZ-ZQU" userLabel="idMuxToWriteAddress2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="34" y="252" width="16" height="2"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="N35-N2-sms"/>
+                            </constraints>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="lrF-YZ-DrT" userLabel="idMuxToWriteAddress3" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="50" y="243" width="20" height="20"/>
@@ -283,9 +296,11 @@
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <viewLayoutGuide key="safeArea" id="9Gi-4T-N0j"/>
                         </view>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="wQL-Fe-4hX" userLabel="idReadData1ToEx1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" ambiguous="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="wQL-Fe-4hX" userLabel="idReadData1ToEx1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="220" y="202" width="22" height="2"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="jj9-5c-03N"/>
+                            </constraints>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="QFg-4q-afe" userLabel="idReadData1ToEx2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="241" y="193" width="20" height="20"/>
@@ -330,9 +345,11 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="SxV-q9-ugz"/>
                         </view>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="ZY5-8j-tPW" userLabel="idSignExtendToEx1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" ambiguous="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="ZY5-8j-tPW" userLabel="idSignExtendToEx1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="180" y="376" width="62" height="2"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="BzN-eP-rVc"/>
+                            </constraints>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="WO0-Td-kCH" userLabel="idSignExtendToEx2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="241" y="367" width="20" height="20"/>
@@ -474,6 +491,8 @@
                         <constraint firstItem="8m1-bs-lDr" firstAttribute="leading" secondItem="J8h-pv-fDy" secondAttribute="leading" constant="106" id="6qH-oP-JtX"/>
                         <constraint firstItem="KJL-7M-WQD" firstAttribute="leading" secondItem="J8h-pv-fDy" secondAttribute="leading" constant="22" id="8z1-Rh-9nb"/>
                         <constraint firstItem="O19-D5-CMs" firstAttribute="top" secondItem="EFc-al-ldc" secondAttribute="bottom" constant="29" id="9Up-Nr-b2F"/>
+                        <constraint firstItem="Nzp-xQ-QgD" firstAttribute="leading" secondItem="9ZP-Qc-zBL" secondAttribute="trailing" constant="-2" id="D4W-S7-9bn"/>
+                        <constraint firstItem="9ZP-Qc-zBL" firstAttribute="top" secondItem="ato-dL-SmJ" secondAttribute="top" id="DZu-wS-e0h"/>
                         <constraint firstItem="H0A-5E-Ycw" firstAttribute="centerX" secondItem="8h4-y4-W0a" secondAttribute="centerX" constant="25" id="Ero-af-EvU"/>
                         <constraint firstItem="H1R-pv-bpc" firstAttribute="top" secondItem="PK9-Kv-lhZ" secondAttribute="bottom" constant="74" id="F5y-LM-7pz"/>
                         <constraint firstItem="J8h-pv-fDy" firstAttribute="bottom" secondItem="zGz-9m-7x0" secondAttribute="bottom" constant="235" id="FLF-s7-t6m"/>
@@ -493,6 +512,7 @@
                         <constraint firstItem="J8h-pv-fDy" firstAttribute="bottom" secondItem="uco-Yx-0fo" secondAttribute="bottom" constant="268" id="QwB-11-Jdn"/>
                         <constraint firstItem="6w5-p2-dFr" firstAttribute="leading" secondItem="RfM-dp-SJg" secondAttribute="trailing" constant="-4" id="RI4-0o-lvO"/>
                         <constraint firstItem="J8h-pv-fDy" firstAttribute="bottom" secondItem="6w5-p2-dFr" secondAttribute="bottom" constant="298" id="Rml-hS-ZB0"/>
+                        <constraint firstItem="ato-dL-SmJ" firstAttribute="bottom" secondItem="9ZP-Qc-zBL" secondAttribute="bottom" id="SpJ-yB-ST2"/>
                         <constraint firstItem="J8h-pv-fDy" firstAttribute="top" secondItem="8h4-y4-W0a" secondAttribute="top" id="TLF-cP-bry"/>
                         <constraint firstItem="fYA-RD-uij" firstAttribute="leading" secondItem="HDh-D5-bT5" secondAttribute="leading" id="UES-iU-g2R"/>
                         <constraint firstItem="fYA-RD-uij" firstAttribute="leading" secondItem="KJL-7M-WQD" secondAttribute="trailing" constant="8" id="WMH-g6-Cai"/>
@@ -525,6 +545,7 @@
                         <constraint firstItem="RfM-dp-SJg" firstAttribute="leading" secondItem="J8h-pv-fDy" secondAttribute="leading" constant="13" id="pcC-Wf-YyW"/>
                         <constraint firstItem="Dk0-FO-2Qa" firstAttribute="top" secondItem="X5h-w5-3Ai" secondAttribute="bottom" constant="-4" id="q7V-Pn-WuE"/>
                         <constraint firstItem="fYA-RD-uij" firstAttribute="top" secondItem="jXe-H3-3ya" secondAttribute="bottom" constant="5" id="qZ1-8K-duX"/>
+                        <constraint firstItem="V02-KA-CGe" firstAttribute="top" secondItem="b8e-e9-6Xv" secondAttribute="bottom" constant="-25" id="sfm-ci-JSW"/>
                         <constraint firstItem="EFc-al-ldc" firstAttribute="leading" secondItem="O19-D5-CMs" secondAttribute="leading" id="uD7-JJ-eem"/>
                         <constraint firstItem="EEM-rx-oBI" firstAttribute="top" secondItem="b8e-e9-6Xv" secondAttribute="bottom" constant="81" id="ubg-CA-erl"/>
                         <constraint firstItem="J8h-pv-fDy" firstAttribute="bottom" secondItem="7Jp-WB-KW9" secondAttribute="bottom" constant="173" id="v7i-k4-lV1"/>
@@ -606,6 +627,7 @@
                 <constraint firstItem="U2z-dl-cyp" firstAttribute="centerY" secondItem="byp-Ai-w6D" secondAttribute="centerY" constant="9.5" id="tvP-Wj-MQo"/>
                 <constraint firstItem="byp-Ai-w6D" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-9.5" id="v6L-rM-2gp"/>
                 <constraint firstItem="bTp-Yf-TYu" firstAttribute="centerX" secondItem="mfl-JU-tDh" secondAttribute="centerX" id="xuE-en-KuZ"/>
+                <constraint firstItem="9ZP-Qc-zBL" firstAttribute="leading" secondItem="LZV-s8-XCh" secondAttribute="trailing" id="y2a-ox-d1p"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="135" y="137.32394366197184"/>
