@@ -173,16 +173,29 @@
                             <rect key="frame" x="0.0" y="192" width="2" height="111"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" ambiguous="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="CFl-7m-COJ" userLabel="idIFToReadAddress1-2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="192" width="51" height="2"/>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ctX-Lm-nxK" userLabel="idIfToReadAddress1-2">
+                            <rect key="frame" x="0.0" y="182" width="70" height="20"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" ambiguous="YES" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="CFl-7m-COJ" userLabel="idIFToReadAddress1-2Line" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="9" width="51" height="2"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="2" id="RJp-R9-kLY"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" ambiguous="YES" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="cY4-re-F5x" userLabel="idIFToReadAddress1-3Arrow" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                                    <rect key="frame" x="50" y="0.0" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="NOe-SS-9sX"/>
+                                        <constraint firstAttribute="width" constant="20" id="gJ2-cX-YJn"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="2" id="RJp-R9-kLY"/>
+                                <constraint firstItem="cY4-re-F5x" firstAttribute="leading" secondItem="CFl-7m-COJ" secondAttribute="trailing" constant="-1" id="8QY-Az-fGO"/>
+                                <constraint firstItem="CFl-7m-COJ" firstAttribute="centerY" secondItem="ctX-Lm-nxK" secondAttribute="centerY" id="c5j-cj-tZI"/>
                             </constraints>
-                        </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="cY4-re-F5x" userLabel="idIFToReadAddress1-3" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="50" y="183" width="20" height="20"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
+                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXe-H3-3ya" userLabel="idIFToReadAddress1End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="57" y="192" width="25" height="25"/>
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
