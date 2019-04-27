@@ -92,7 +92,7 @@ class ALUDecodeStateService: State {
             // Set correct (change color to green)
             touchPoints.forEach { tp in
                 if (tp.name == TouchPointNames.idIfToReadAddress1End
-                        || tp.name == TouchPointNames.idIfToReadAddress1Start) {
+                        || tp.name == TouchPointNames.idIfStart) {
                     tp.setCorrect()
                 }
             }
@@ -104,7 +104,7 @@ class ALUDecodeStateService: State {
             // Set correct (change color to green)
             touchPoints.forEach { tp in
                 if (tp.name == TouchPointNames.idIfToReadAddress2End
-                        || tp.name == TouchPointNames.idIfToReadAddress2Start) {
+                        || tp.name == TouchPointNames.idIfStart) {
                     tp.setCorrect()
                 }
             }
@@ -463,9 +463,6 @@ class ALUDecodeStateService: State {
                         self.startState = StartState.idIfStartStarted
                         break
                     case TouchPointNames.idIfToMux1End:
-                        self.startState = StartState.idIfStartStarted
-                        break
-                    case TouchPointNames.idIfToSignExtendStart:
                         self.startState = StartState.idIfStartStarted
                         break
                     case TouchPointNames.idIfToSignExtendEnd:
