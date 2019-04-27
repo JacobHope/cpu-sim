@@ -134,6 +134,150 @@
                                 <constraint firstAttribute="width" constant="40" id="fmL-CF-PbM"/>
                             </constraints>
                         </imageView>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koU-GI-VWi" userLabel="exIdToMux0Start" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="100" y="99.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="8Kq-bD-JCo"/>
+                                <constraint firstAttribute="width" constant="25" id="mFS-Mv-tDc"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="j3C-Zi-xOa"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DUy-s8-P0l" userLabel="exIdToMux0End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="274.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="Kkt-nc-vgX"/>
+                                <constraint firstAttribute="height" constant="25" id="LZW-8n-KFK"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="OVm-9J-Wbk"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2OA-6R-qgs" userLabel="exIdToMux1Start" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="274.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="7HO-j2-qKA"/>
+                                <constraint firstAttribute="width" constant="25" id="Ofi-M3-V7S"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="Zau-te-ZRD"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tiY-zY-clT" userLabel="exIdToMux1End" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="274.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="IUr-iy-mLu"/>
+                                <constraint firstAttribute="height" constant="25" id="M53-et-OBp"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="cSI-2K-KGN"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Lb-3j-NCe" userLabel="exMuxToAluStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="274.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="dvq-7Q-ehE"/>
+                                <constraint firstAttribute="height" constant="25" id="hcS-YR-PVb"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="hvF-qE-Cxh"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m7K-J2-aEN" userLabel="exMuxToAluEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="274.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="Nc0-ca-Nuv"/>
+                                <constraint firstAttribute="width" constant="25" id="cHV-sg-Y1j"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="aOI-iV-dfS"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DsU-hb-l9R" userLabel="exIdToAluStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="274.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="NfJ-xj-Pte"/>
+                                <constraint firstAttribute="width" constant="25" id="hhc-Oy-y1f"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="k8Y-6h-tXF"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qcg-Py-RZT" userLabel="exIdToAluEnd1" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="274.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="NAd-LJ-5KT"/>
+                                <constraint firstAttribute="width" constant="25" id="UDh-rw-Z0Y"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="gDf-rW-oD7"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KYP-vm-nY0" userLabel="exIdToAluEnd2" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="274.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="KY8-hH-kok"/>
+                                <constraint firstAttribute="width" constant="25" id="ibO-cM-oXC"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="z9Z-gJ-BH4"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="011-SV-5rW" userLabel="exIdToShiftLeftEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="274.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="L80-S8-hlJ"/>
+                                <constraint firstAttribute="height" constant="25" id="r06-N5-yqc"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="EXb-4E-SBL"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6HK-Nn-KtT" userLabel="exShiftLeftToAddStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="274.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="ZF3-dM-phh"/>
+                                <constraint firstAttribute="width" constant="25" id="zbt-I4-Cw7"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="0JX-Bg-zQW"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xoh-fL-Ue3" userLabel="exShiftLeftToAddEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="274.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="WzI-Na-cR7"/>
+                                <constraint firstAttribute="height" constant="25" id="jwE-B9-QZs"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="SKe-N6-S0d"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MSW-cU-yzX" userLabel="exAddToMaStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="274.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="fey-om-gzQ"/>
+                                <constraint firstAttribute="width" constant="25" id="hsH-G0-X2u"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="4a7-6G-VWN"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TyX-qK-Sgd" userLabel="exAddToMaEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="274.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="9eF-7F-nug"/>
+                                <constraint firstAttribute="height" constant="25" id="bVn-4J-Jzj"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="idg-0J-Ten"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m8A-Vc-hti" userLabel="exIdToMaEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="274.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="eIS-q9-jbI"/>
+                                <constraint firstAttribute="width" constant="25" id="v7b-yU-xig"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="Vbm-tB-ejm"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mk3-3U-KBw" userLabel="genericTouchPointView" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="112" y="274.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="0aF-tU-VxK"/>
+                                <constraint firstAttribute="width" constant="25" id="dTP-kD-elh"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="NWm-X8-8DA"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
