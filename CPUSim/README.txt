@@ -51,6 +51,10 @@ Image copyrights
 
         https://www.flaticon.com/free-icon/swipe-left_617907#term=swipe%20left&page=1&position=25
 
+    touch-and-drag
+
+        <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                 title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
 EasyAnimation
 
     https://github.com/icanzilb/EasyAnimation
