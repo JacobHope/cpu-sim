@@ -301,7 +301,7 @@
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UpM-uM-Nbl" userLabel="exIdTab" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="74" width="20" height="400"/>
                     <subviews>
-                        <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="EX" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaJ-Gt-iHT" userLabel="exTextView">
+                        <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="ID" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaJ-Gt-iHT" userLabel="exTextView">
                             <rect key="frame" x="0.0" y="170" width="20" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="FQX-Lm-2sN"/>
@@ -323,7 +323,7 @@
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifK-p0-yeh" userLabel="exMemTab" customClass="TouchTabView" customModule="CPUSim" customModuleProvider="target">
                     <rect key="frame" x="300" y="74" width="20" height="400"/>
                     <subviews>
-                        <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="WB" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZa-PR-z7J" userLabel="wbTextView">
+                        <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="MA" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZa-PR-z7J" userLabel="wbTextView">
                             <rect key="frame" x="0.0" y="170" width="20" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="6Mw-b6-a3r"/>
