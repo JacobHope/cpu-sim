@@ -151,8 +151,8 @@ class ALUDecodeStateService: State {
 
             // Set correct (change color to green)
             touchPoints.forEach { tp in
-                if (tp.name == TouchPointNames.idIfToMux1End
-                        || tp.name == TouchPointNames.idIfStart) {
+                if (tp.name == TouchPointNames.idMuxToWriteAddressEnd
+                        || tp.name == TouchPointNames.idMuxToWriteAddressStart) {
                     tp.setCorrect()
                 }
             }
@@ -454,49 +454,49 @@ class ALUDecodeStateService: State {
                         self.startState = StartState.idIfStartStarted
                         break
                     case TouchPointNames.idIfToReadAddress1End:
-                        self.startState = StartState.idIfStartStarted
+                        self.startState = StartState.idIfToReadAddress1EndStarted
                         break
                     case TouchPointNames.idIfToReadAddress2End:
-                        self.startState = StartState.idIfStartStarted
+                        self.startState = StartState.idIfToReadAddress2EndStarted
                         break
                     case TouchPointNames.idIfToMux0End:
-                        self.startState = StartState.idIfStartStarted
+                        self.startState = StartState.idIfToMux0EndStarted
                         break
                     case TouchPointNames.idIfToMux1End:
-                        self.startState = StartState.idIfStartStarted
+                        self.startState = StartState.idIfToMux1EndStarted
                         break
                     case TouchPointNames.idIfToSignExtendEnd:
-                        self.startState = StartState.idIfStartStarted
+                        self.startState = StartState.idIfToSignExtendEndStarted
                         break
                     case TouchPointNames.idMuxToWriteAddressStart:
-                        self.startState = StartState.idIfStartStarted
+                        self.startState = StartState.idMuxToWriteAddressStartStarted
                         break
                     case TouchPointNames.idMuxToWriteAddressEnd:
-                        self.startState = StartState.idIfStartStarted
+                        self.startState = StartState.idMuxToWriteAddressEndStarted
                         break
                     case TouchPointNames.idExToWriteDataStart:
-                        self.startState = StartState.idIfStartStarted
+                        self.startState = StartState.idExToWriteDataStartStarted
                         break
                     case TouchPointNames.idExToWriteDataEnd:
-                        self.startState = StartState.idIfStartStarted
+                        self.startState = StartState.idExToWriteDataEndStarted
                         break
                     case TouchPointNames.idSignExtendToExStart:
-                        self.startState = StartState.idIfStartStarted
+                        self.startState = StartState.idSignExtendToExStartStarted
                         break
                     case TouchPointNames.idSignExtendToExEnd:
-                        self.startState = StartState.idIfStartStarted
+                        self.startState = StartState.idSignExtendToExEndStarted
                         break
                     case TouchPointNames.idReadData1ToExStart:
-                        self.startState = StartState.idIfStartStarted
+                        self.startState = StartState.idReadData1ToExStartStarted
                         break
                     case TouchPointNames.idReadData1ToExEnd:
-                        self.startState = StartState.idIfStartStarted
+                        self.startState = StartState.idReadData1ToExEndStarted
                         break
                     case TouchPointNames.idReadData2ToExStart:
-                        self.startState = StartState.idIfStartStarted
+                        self.startState = StartState.idReadData2ToExStartStarted
                         break
                     case TouchPointNames.idReadData2ToExEnd:
-                        self.startState = StartState.idIfStartStarted
+                        self.startState = StartState.idReadData2ToExEndStarted
                         break
                     default:
                         break

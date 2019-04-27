@@ -58,6 +58,7 @@ public class DecodeViewController: UIViewController {
     // MARK: Properties - idIfToEx
     @IBOutlet weak var idIfToExStart: TouchPointView!
     @IBOutlet weak var idIfToExEnd: TouchPointView!
+    
     @IBOutlet weak var idIfToEx1: LineView!
     
     // MARK: Properties - idIfStart
