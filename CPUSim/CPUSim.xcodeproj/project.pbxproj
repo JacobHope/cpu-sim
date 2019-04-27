@@ -26,6 +26,7 @@
 		04D3F7A522603701002C80B6 /* DotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A422603701002C80B6 /* DotModel.swift */; };
 		04D3F7AA2260376D002C80B6 /* DrawingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A82260376D002C80B6 /* DrawingService.swift */; };
 		04D3F7AB2260376D002C80B6 /* ALUFetchStateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3F7A92260376D002C80B6 /* ALUFetchStateService.swift */; };
+		04D5984B227517120042721A /* ALUExecuteStateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5984A227517120042721A /* ALUExecuteStateService.swift */; };
 		1DAAD1FFB5662C4CE60CF497 /* ALUCoordinator+WriteBackViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAD48AD119301BBA3955A2 /* ALUCoordinator+WriteBackViewControllerDelegate.swift */; };
 		1DAAD2A08BD2E56BB706FC3A /* ALUCoordinator+DecodeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAAD048AB9868F2244DCB31 /* ALUCoordinator+DecodeViewControllerDelegate.swift */; };
 		1DAAD3425231C850454C6401 /* ALUCoordinator+MemoryAccessViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAADAEE8EC6C1E75A025221 /* ALUCoordinator+MemoryAccessViewControllerDelegate.swift */; };
@@ -96,6 +97,7 @@
 		04D3F7A422603701002C80B6 /* DotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotModel.swift; sourceTree = "<group>"; };
 		04D3F7A82260376D002C80B6 /* DrawingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingService.swift; sourceTree = "<group>"; };
 		04D3F7A92260376D002C80B6 /* ALUFetchStateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALUFetchStateService.swift; sourceTree = "<group>"; };
+		04D5984A227517120042721A /* ALUExecuteStateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALUExecuteStateService.swift; sourceTree = "<group>"; };
 		1DAAD048AB9868F2244DCB31 /* ALUCoordinator+DecodeViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ALUCoordinator+DecodeViewControllerDelegate.swift"; sourceTree = "<group>"; };
 		1DAAD48AD119301BBA3955A2 /* ALUCoordinator+WriteBackViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ALUCoordinator+WriteBackViewControllerDelegate.swift"; sourceTree = "<group>"; };
 		1DAAD4B2EA7125BE76C2CCD6 /* ALUCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALUCoordinator.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				04D3F7A82260376D002C80B6 /* DrawingService.swift */,
 				04D3F7A92260376D002C80B6 /* ALUFetchStateService.swift */,
 				30FEB625226B9C85006E8E44 /* ALUDecodeStateService.swift */,
+				04D5984A227517120042721A /* ALUExecuteStateService.swift */,
 				048F45EB2270001000116874 /* ALUMemoryAccessStateService.swift */,
 				04CF4318226CB37500C7B0E7 /* ALUWriteBackStateService.swift */,
 			);
@@ -512,6 +515,7 @@
 				3007E73F225716960021DB6D /* WriteBackViewController.swift in Sources */,
 				3007E739225716660021DB6D /* DecodeViewController.swift in Sources */,
 				305A00CC224D7F4F008D2A6F /* RootViewCoordinator.swift in Sources */,
+				04D5984B227517120042721A /* ALUExecuteStateService.swift in Sources */,
 				04CF4313226B478C00C7B0E7 /* GlowingButton.swift in Sources */,
 				3007E73B225716750021DB6D /* ExecuteViewController.swift in Sources */,
 				30FEB626226B9C85006E8E44 /* ALUDecodeStateService.swift in Sources */,

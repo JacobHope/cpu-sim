@@ -194,17 +194,17 @@ extension ALUCoordinator: MemoryAccessViewControllerDelegate {
 
     private func resetPreviousViewControllerAnimations() {
         // Reset animations
-//        guard let tvc = self.navigationController.topViewController else {
-//            return
-//        }
-//        if (tvc.nibName == "ExecuteView") {
-//            let evc: ExecuteViewController = tvc as! ExecuteViewController
-//            evc.touchPoints.forEach { tp in
-//                if (!tp.isHidden) {
-//                    tp.setupWith(DotModel.defaultDotModel())
-//                }
-//            }
-//        }
+        guard let tvc = self.navigationController.topViewController else {
+            return
+        }
+        if (tvc.nibName == "ExecuteView") {
+            let evc: ExecuteViewController = tvc as! ExecuteViewController
+            evc.touchPoints.forEach { tp in
+                if (!tp.isHidden) {
+                    tp.setupWith(DotModel.defaultDotModel())
+                }
+            }
+        }
     }
 
 }

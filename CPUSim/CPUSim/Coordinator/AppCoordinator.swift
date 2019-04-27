@@ -61,6 +61,7 @@ extension AppCoordinator: MenuViewControllerDelegate {
         let aluCoordinator = ALUCoordinator(drawingService: DrawingService(),
             fetchStateService: ALUFetchStateService(),
             decodeStateService: ALUDecodeStateService(),
+            executeStateService: ALUExecuteStateService(),
             memoryAccessStateService: ALUMemoryAccessStateService(),
             writeBackStateService: ALUWriteBackStateService())
         aluCoordinator.delegate = self

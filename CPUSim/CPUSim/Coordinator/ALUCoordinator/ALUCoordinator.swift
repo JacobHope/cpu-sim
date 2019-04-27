@@ -40,6 +40,7 @@ class ALUCoordinator: RootViewCoordinator {
 
     let fetchStateService: State
     let decodeStateService: State
+    let executeStateService: State
     let memoryAccessStateService: State
     let writeBackStateService: State
 
@@ -53,11 +54,13 @@ class ALUCoordinator: RootViewCoordinator {
     init(drawingService: Drawing,
          fetchStateService: State,
          decodeStateService: State,
+         executeStateService: State,
          memoryAccessStateService: State,
          writeBackStateService: State) {
         self.drawingService = drawingService
-        self.decodeStateService = decodeStateService
         self.fetchStateService = fetchStateService
+        self.decodeStateService = decodeStateService
+        self.executeStateService = executeStateService
         self.memoryAccessStateService = memoryAccessStateService
         self.writeBackStateService = writeBackStateService
     }

@@ -21,8 +21,8 @@ struct LineAttributes {
 
 struct Events {
     static let aluFetchOnCorrect = "aluFetchOnCorrect"
-    static let aluIfOnCorrect = "aluIfOnCorrect"
     static let aluDecodeOnCorrect = "aluIfOnCorrect"
+    static let aluExecuteOnCorrect = "aluExecuteOnCorrect"
     static let aluMemoryAccessOnCorrect = "aluMemoryAccessOnCorrect"
     static let aluWriteBackOnCorrect = "aluWriteBackOnCorrect"
 }
@@ -49,6 +49,16 @@ struct CorrectnessMapKeys {
     static let idSignExtendToEx = "idSignExtendToEx"
     static let idReadData1ToEx = "idReadData1ToEx"
     static let idReadData2ToEx = "idReadData2ToEx"
+
+    //MARK: - EX Correctness Map Keys
+    static let exIdAddToAdd = "exIdAddToAdd"
+    static let exShiftLeftToAdd = "exShiftLeftToAdd"
+    static let exAluToMem = "exAluToMem"
+    static let exIdSignExtendToShiftLeft = "exIdSignExtendToShiftLeft"
+    static let exIdSignExtendToMux = "exIdSignExtendToMux"
+    static let exIdReadDataOneToAlu = "exIdReadDataOneToAlu"
+    static let exIdReadDataTwoToMux = "exIdReadDataTwoToMux"
+    static let exMuxToAlu = "exMuxToAlu"
     
     //MARK: - MEM Correctness Map Keys
     static let memExToAddress = "memExToAddress"
@@ -99,6 +109,23 @@ struct TouchPointNames {
     static let idReadData2ToExEnd = "idReadData2ToExEnd"
     static let idSignExtendToExStart = "idSignExtendToExStart"
     static let idSignExtendToExEnd = "idSignExtendToExEnd"
+
+    //MARK: - EX Touch Point Names
+    static let exIdAddToAddStart = "exIdAddToAddStart"
+    static let exIdAddToAddEnd = "exIdAddToAddEnd"
+    static let exShiftLeftToAddStart = "exShiftLeftToAddStart"
+    static let exShiftLeftToAddEnd = "exShiftLeftToAddEnd"
+    static let exAluToMemStart = "exAluToMemStart"
+    static let exAluToMemEnd = "exAluToMemEnd"
+    static let exIdSignExtendToShiftLeftStart = "exIdSignExtendToShiftLeftStart"
+    static let exIdSignExtendToShiftLeftEnd = "exIdSignExtendToShiftLeftStartEnd"
+    static let exIdSignExtendToMuxEnd = "exIdSignExtendToMuxEnd"
+    static let exIdReadDataOneToAluStart = "exIdReadDataOneToAluStart"
+    static let exIdReadDataOneToAluEnd = "exIdReadDataOneToAluEnd"
+    static let exIdReadDataTwoToMuxStart = "exIdReadDataTwoToMuxStart"
+    static let exIdReadDataTwoToMuxEnd = "exIdReadDataTwoToMuxEnd"
+    static let exMuxToAluStart = "exMuxToAluStart"
+    static let exMuxToAluEnd = "exMuxToAluEnd"
     
     //MARK: - MEM Touch Point Names
     static let memExToAddressStart = "memExToAddressStart"

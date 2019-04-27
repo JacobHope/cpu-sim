@@ -13,6 +13,41 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExecuteViewController" customModule="CPUSim" customModuleProvider="target">
             <connections>
                 <outlet property="ExecuteView" destination="iN0-l3-epB" id="B9F-hL-LjD"/>
+                <outlet property="drawingImageView" destination="Dea-TN-36l" id="XYP-Jl-1ts"/>
+                <outlet property="exAluToMem1" destination="6Pl-2R-zfb" id="t6h-S9-Obp"/>
+                <outlet property="exAluToMemEnd" destination="dfw-Gh-jAn" id="nBC-2f-sl5"/>
+                <outlet property="exAluToMemStart" destination="Afi-do-dYO" id="qIY-bJ-rBn"/>
+                <outlet property="exIdAddToAdd1" destination="Op6-pY-wzi" id="6Dh-Fs-QhK"/>
+                <outlet property="exIdAddToAddEnd" destination="34i-HK-LlF" id="3vP-Xz-EWT"/>
+                <outlet property="exIdAddToAddStart" destination="koU-GI-VWi" id="qo3-tE-cbP"/>
+                <outlet property="exIdReadDataOneToAluEnd" destination="DUy-s8-P0l" id="FdV-1Z-4ze"/>
+                <outlet property="exIdReadDataOneToAluStart" destination="Sw9-J9-fSW" id="2JE-I9-mfv"/>
+                <outlet property="exIdReadDataTwoToMux1" destination="blQ-tw-HbO" id="ynV-hg-vBb"/>
+                <outlet property="exIdReadDataTwoToMux2" destination="fE8-IE-nX4" id="5Wm-CY-fxJ"/>
+                <outlet property="exIdReadDataTwoToMux3" destination="Kcx-qN-xRv" id="i9q-a9-Pkh"/>
+                <outlet property="exIdReadDataTwoToMux4" destination="jzE-aS-UBa" id="Kdq-PO-IST"/>
+                <outlet property="exIdReadDataTwoToMux5" destination="NYs-A3-Hgj" id="YOa-vQ-deS"/>
+                <outlet property="exIdReadDataTwoToMuxEnd" destination="cmm-2q-AdV" id="hdK-V9-PBW"/>
+                <outlet property="exIdReadDataTwoToMuxStart" destination="mIg-wb-RMs" id="App-tN-ZiR"/>
+                <outlet property="exIdSignExtendToMux1" destination="t2k-5g-XxT" id="WGG-gV-wJX"/>
+                <outlet property="exIdSignExtendToMux2" destination="g31-SP-GmR" id="KwF-9i-QmY"/>
+                <outlet property="exIdSignExtendToMux3" destination="CsZ-Lu-ngL" id="EOX-wG-SbG"/>
+                <outlet property="exIdSignExtendToMuxEnd" destination="dvK-om-2qa" id="UUP-dK-vKU"/>
+                <outlet property="exIdSignExtendToShiftLeft1" destination="TRy-tu-DQV" id="lNY-EI-v9x"/>
+                <outlet property="exIdSignExtendToShiftLeft2" destination="lxe-pe-XY4" id="uGG-ow-isT"/>
+                <outlet property="exIdSignExtendToShiftLeft3" destination="HaH-Pp-gqG" id="l91-kk-nTu"/>
+                <outlet property="exIdSignExtendToShiftLeftEnd" destination="0gH-3Q-akQ" id="apm-k3-NBh"/>
+                <outlet property="exIdSignExtendToShiftLeftStart" destination="1TP-br-0WY" id="lpQ-aj-7fk"/>
+                <outlet property="exIdTab" destination="UpM-uM-Nbl" id="bo3-cm-iNK"/>
+                <outlet property="exIdreadDataOneToAlu1" destination="cnl-P4-akn" id="UUw-fY-w16"/>
+                <outlet property="exMemTab" destination="ifK-p0-yeh" id="oNz-Ip-88O"/>
+                <outlet property="exMuxToAlu1" destination="Ysq-W7-2kJ" id="Qcv-2G-erf"/>
+                <outlet property="exMuxToAluEnd" destination="Y3f-Z2-OEG" id="4J1-qQ-Ce0"/>
+                <outlet property="exMuxToAluStart" destination="kH2-rT-eE2" id="az8-84-a2C"/>
+                <outlet property="exShiftLeftToAdd1" destination="cUA-PV-8sr" id="v5F-4j-s30"/>
+                <outlet property="exShiftLeftToAddEnd" destination="n3p-Xi-dm5" id="pYz-I0-DRp"/>
+                <outlet property="exShiftLeftToAddStart" destination="LOq-h2-DK0" id="rgj-GB-wKZ"/>
+                <outlet property="progressView" destination="W6M-d5-L5N" id="0dF-Td-oCR"/>
                 <outlet property="view" destination="iN0-l3-epB" id="9sW-j5-6o0"/>
             </connections>
         </placeholder>
@@ -30,7 +65,7 @@
                                 <constraint firstAttribute="height" constant="10" id="rtv-Mz-oGk"/>
                             </constraints>
                         </progressView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKx-1H-UDH" userLabel="ShiftLeftTwoView">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKx-1H-UDH" userLabel="ShiftLeftView">
                             <rect key="frame" x="50" y="113.5" width="50" height="50"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="shift-left-2-shape" translatesAutoresizingMaskIntoConstraints="NO" id="g1d-Au-mci" userLabel="ShiftLeft2ImageView">
@@ -265,7 +300,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="2RF-nT-Ydi"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1TP-br-0WY" userLabel="exIdSignExtendToShiftLeftTwoStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1TP-br-0WY" userLabel="exIdSignExtendToShiftLeftStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-15" y="455.5" width="25" height="25"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -274,7 +309,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="a7H-oH-5C0"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gH-3Q-akQ" userLabel="exIdSignExtendToShiftLeftTwoEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gH-3Q-akQ" userLabel="exIdSignExtendToShiftLeftEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="25" y="138" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -283,7 +318,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="KlZ-nI-hhS"/>
                         </view>
-                        <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRy-tu-DQV" userLabel="exIdSignExtendToShiftLeftTwo1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRy-tu-DQV" userLabel="exIdSignExtendToShiftLeft1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-15" y="455" width="25" height="2"/>
                             <subviews>
                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="cn9-HD-Wad" userLabel="IfMuxToPc1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
@@ -304,7 +339,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="g22-dB-eId"/>
                         </view>
-                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="lxe-pe-XY4" userLabel="exIdSignExtendToShiftLeftTwo2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="lxe-pe-XY4" userLabel="exIdSignExtendToShiftLeft2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="10" y="138" width="2" height="321"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
@@ -313,7 +348,7 @@
                                 <constraint firstAttribute="width" constant="2" id="XU7-Sp-gyW"/>
                             </constraints>
                         </imageView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HaH-Pp-gqG" userLabel="exIdSignExtendToShiftLeftTwo3" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HaH-Pp-gqG" userLabel="exIdSignExtendToShiftLeft3" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="12" y="129" width="38" height="20"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="lhI-fr-cfS" userLabel="IfPcToAlu1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
