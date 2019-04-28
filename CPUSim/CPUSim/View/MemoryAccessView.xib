@@ -26,8 +26,8 @@
                 <outlet property="memExToWriteDataEnd" destination="VcD-Zp-itg" id="9nz-Na-0Ns"/>
                 <outlet property="memExtoWriteDataStart" destination="BlG-Gr-3uf" id="ngg-7e-N55"/>
                 <outlet property="memMemToRegWbToEx1" destination="htI-85-l3q" id="I68-w1-ThH"/>
-                <outlet property="memMemToRegWbToExEnd" destination="qx9-VQ-P8w" id="mtI-g8-1pF"/>
-                <outlet property="memMemToRegWbToExStart" destination="X5q-RM-Nfj" id="sAR-9Y-QMo"/>
+                <outlet property="memMemToRegWbToExEnd" destination="X5q-RM-Nfj" id="MAh-Ao-iys"/>
+                <outlet property="memMemToRegWbToExStart" destination="qx9-VQ-P8w" id="1Vg-9O-lef"/>
                 <outlet property="memReadDataToWb1" destination="rzf-3e-ukc" id="FO7-jP-glp"/>
                 <outlet property="memReadDataToWbEnd" destination="oaF-aj-ddQ" id="JUy-LN-DDO"/>
                 <outlet property="memReadDataToWbStart" destination="Rg8-Zb-ncB" id="mvg-yI-HnV"/>
@@ -321,16 +321,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="Kfx-j9-cTD"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X5q-RM-Nfj" userLabel="memMemToRegWbToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="-23" y="535" width="25" height="25"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="25" id="BA6-z7-CQj"/>
-                                <constraint firstAttribute="width" constant="25" id="qbB-59-0un"/>
-                            </constraints>
-                            <viewLayoutGuide key="safeArea" id="oHA-T3-dOb"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qx9-VQ-P8w" userLabel="memMemToRegWbToExEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qx9-VQ-P8w" userLabel="memMemToRegWbToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="272" y="535" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -338,6 +329,15 @@
                                 <constraint firstAttribute="width" constant="25" id="q0D-sh-VnN"/>
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="ttX-OZ-C3f"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X5q-RM-Nfj" userLabel="memMemToRegWbToExEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="-23" y="535" width="25" height="25"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="BA6-z7-CQj"/>
+                                <constraint firstAttribute="width" constant="25" id="qbB-59-0un"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="oHA-T3-dOb"/>
                         </view>
                         <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="htI-85-l3q" userLabel="memMemToRegWbToEx1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-35" y="534.5" width="320" height="2"/>
