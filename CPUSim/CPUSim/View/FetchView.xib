@@ -59,7 +59,7 @@
                             </constraints>
                         </progressView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kaw-BT-IVA" userLabel="CompleteButton" customClass="GlowingButton" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="150" y="269.5" width="50" height="50"/>
+                            <rect key="frame" x="150" y="38.5" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="a2a-vy-Y83"/>
                                 <constraint firstAttribute="width" constant="50" id="vHT-dJ-IUz"/>
@@ -583,7 +583,6 @@
                         <constraint firstItem="JNk-Go-n7v" firstAttribute="centerX" secondItem="xRj-cF-dEu" secondAttribute="centerX" constant="-12" id="dSf-uk-KhC"/>
                         <constraint firstItem="orI-Uj-3pp" firstAttribute="centerY" secondItem="vBO-2r-bcp" secondAttribute="centerY" constant="-12" id="e2E-Fq-aRo"/>
                         <constraint firstItem="VdG-It-Gmr" firstAttribute="centerY" secondItem="LBU-qu-OBc" secondAttribute="centerY" id="eaH-Uj-NtV"/>
-                        <constraint firstItem="Kaw-BT-IVA" firstAttribute="centerY" secondItem="CPF-4s-pLG" secondAttribute="centerY" id="edN-E5-DjF"/>
                         <constraint firstItem="for-eX-Teq" firstAttribute="leading" secondItem="4Zv-WK-qJh" secondAttribute="trailing" constant="-87" id="f7U-vF-9Gc"/>
                         <constraint firstItem="FOF-tY-Ni0" firstAttribute="centerY" secondItem="pgy-ma-IM0" secondAttribute="centerY" constant="12" id="fKB-s4-e9a"/>
                         <constraint firstItem="EGG-i3-PCC" firstAttribute="leading" secondItem="dbV-2J-98q" secondAttribute="leading" constant="25" id="g1g-mc-uzt"/>
@@ -639,6 +638,7 @@
             <constraints>
                 <constraint firstItem="CHI-mm-lzq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="265-Vo-W9q"/>
                 <constraint firstItem="opK-a2-cL1" firstAttribute="leading" secondItem="X1e-sL-erF" secondAttribute="trailing" constant="-12" id="3Mo-hm-ea0"/>
+                <constraint firstItem="Kaw-BT-IVA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="25" id="4d5-80-evk"/>
                 <constraint firstItem="opK-a2-cL1" firstAttribute="leading" secondItem="Bv6-ew-JSo" secondAttribute="trailing" id="QYT-Za-KRu"/>
                 <constraint firstItem="Scq-pV-vHR" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="XYw-zv-Pxm"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="opK-a2-cL1" secondAttribute="trailing" id="Z7e-YA-Ysg"/>
