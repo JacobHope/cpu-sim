@@ -60,7 +60,7 @@
                     <rect key="frame" x="35" y="6.5" width="250" height="575"/>
                     <subviews>
                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="W6M-d5-L5N" userLabel="ProgressView">
-                            <rect key="frame" x="0.0" y="13.5" width="250" height="10"/>
+                            <rect key="frame" x="-35" y="13.5" width="320" height="10"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="10" id="rtv-Mz-oGk"/>
                             </constraints>
@@ -694,7 +694,6 @@
                         <constraint firstItem="CsZ-Lu-ngL" firstAttribute="leading" secondItem="g31-SP-GmR" secondAttribute="trailing" id="fCj-gK-XPK"/>
                         <constraint firstItem="dvK-om-2qa" firstAttribute="centerY" secondItem="XSO-F0-xi7" secondAttribute="centerY" constant="25" id="fs9-7B-vNB"/>
                         <constraint firstItem="jzE-aS-UBa" firstAttribute="top" secondItem="6Pl-2R-zfb" secondAttribute="bottom" constant="25" id="gb8-Wd-iea"/>
-                        <constraint firstItem="W6M-d5-L5N" firstAttribute="leading" secondItem="AD9-7d-Zax" secondAttribute="leading" id="gjR-3k-DLJ"/>
                         <constraint firstItem="fE8-IE-nX4" firstAttribute="top" secondItem="blQ-tw-HbO" secondAttribute="bottom" constant="-10" id="hBc-Y8-rMI"/>
                         <constraint firstItem="jzE-aS-UBa" firstAttribute="leading" secondItem="Kcx-qN-xRv" secondAttribute="trailing" constant="-2" id="hE8-1T-rGI"/>
                         <constraint firstItem="IgQ-pC-fpw" firstAttribute="leading" secondItem="34i-HK-LlF" secondAttribute="trailing" constant="-12" id="kRj-lx-TBm"/>
@@ -709,7 +708,6 @@
                         <constraint firstItem="AeK-fw-cwD" firstAttribute="centerX" secondItem="AD9-7d-Zax" secondAttribute="centerX" constant="50" id="rXI-gk-Dxx"/>
                         <constraint firstItem="NYs-A3-Hgj" firstAttribute="leading" secondItem="jzE-aS-UBa" secondAttribute="trailing" constant="-2" id="swn-1r-GoN"/>
                         <constraint firstItem="Afi-do-dYO" firstAttribute="leading" secondItem="AeK-fw-cwD" secondAttribute="trailing" constant="6" id="uWA-Xu-20P"/>
-                        <constraint firstItem="AD9-7d-Zax" firstAttribute="trailing" secondItem="W6M-d5-L5N" secondAttribute="trailing" id="uyH-Aj-sr0"/>
                         <constraint firstAttribute="height" constant="575" id="vOe-k4-F48"/>
                         <constraint firstItem="Afi-do-dYO" firstAttribute="centerY" secondItem="AeK-fw-cwD" secondAttribute="centerY" constant="18" id="vgX-FV-vNI"/>
                         <constraint firstItem="ZKx-1H-UDH" firstAttribute="top" secondItem="AD9-7d-Zax" secondAttribute="top" constant="100" id="w84-Ep-Gc2"/>
@@ -793,11 +791,13 @@
                 <constraint firstItem="ifK-p0-yeh" firstAttribute="leading" secondItem="v6p-O1-9ZS" secondAttribute="trailing" constant="15" id="nKK-pH-vui"/>
                 <constraint firstItem="1TP-br-0WY" firstAttribute="leading" secondItem="UpM-uM-Nbl" secondAttribute="trailing" constant="12" id="onY-pG-8Bg"/>
                 <constraint firstItem="v6p-O1-9ZS" firstAttribute="leading" secondItem="UpM-uM-Nbl" secondAttribute="trailing" constant="15" id="pgG-MX-4in"/>
+                <constraint firstItem="W6M-d5-L5N" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vlx-jb-0VF"/>
                 <constraint firstItem="ifK-p0-yeh" firstAttribute="leading" secondItem="NYs-A3-Hgj" secondAttribute="trailing" id="woR-Ah-9xe"/>
                 <constraint firstItem="Sw9-J9-fSW" firstAttribute="centerY" secondItem="UpM-uM-Nbl" secondAttribute="centerY" constant="-35" id="x60-Cd-Cpt"/>
                 <constraint firstItem="Dea-TN-36l" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="xN7-0k-dPa"/>
                 <constraint firstItem="cnl-P4-akn" firstAttribute="leading" secondItem="UpM-uM-Nbl" secondAttribute="trailing" id="ypU-z2-PHS"/>
                 <constraint firstItem="UpM-uM-Nbl" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-20" id="yza-Rl-LzG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="W6M-d5-L5N" secondAttribute="trailing" id="z0t-Q4-6sJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="141.96428571428569"/>
