@@ -202,7 +202,16 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
             resetPreviousViewControllerAnimations()
         }
     }
-    
+
+    public func dvcViewWillAppear(_ dvc: DecodeViewController) {
+        // Reset animations
+        dvc.touchPoints.forEach { tp in
+            if (!tp.isHidden) {
+                tp.setupWith(DotModel.defaultDotModel())
+            }
+        }
+    }
+
     func decodeViewControllerViewWillDisappear(_ dvc: DecodeViewController) {
         resetPreviousViewControllerAnimations()
     }

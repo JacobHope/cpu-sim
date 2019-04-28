@@ -18,6 +18,7 @@ public protocol DecodeViewControllerDelegate: class {
     func decodeViewControllerClearDrawing(_ decodeViewController: DecodeViewController)
     func decodeViewControllerSetup(_ decodeViewController: DecodeViewController)
     func decodeViewControllerViewWillDisappear(_ dvc: DecodeViewController)
+    func dvcViewWillAppear(_ dvc: DecodeViewController)
     
     // MARK: Base Delegate Functions - Swipe Handling
     func decodeViewControllerDidSwipeLeft(_ decodeViewController: DecodeViewController)
@@ -163,6 +164,10 @@ public class DecodeViewController: UIViewController {
     
     public override func viewWillDisappear(_ animated: Bool) {
         delegate?.decodeViewControllerViewWillDisappear(self)
+    }
+
+    public override func viewWillAppear(_ animated: Bool) {
+        self.delegate?.dvcViewWillAppear(self)
     }
 
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
