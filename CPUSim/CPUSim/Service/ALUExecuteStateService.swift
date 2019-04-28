@@ -117,7 +117,7 @@ class ALUExecuteStateService: State {
             // Set correct (change color to green)
             touchPoints.forEach { tp in
                 if (tp.name == TouchPointNames.exIdSignExtendToMuxEnd
-                        || tp.name == TouchPointNames.exIdSignExtendToShiftLeftEnd) {
+                        || tp.name == TouchPointNames.exIdSignExtendToShiftLeftStart) {
                     tp.setCorrect()
                 }
             }

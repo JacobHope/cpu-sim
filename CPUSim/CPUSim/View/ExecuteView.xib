@@ -340,7 +340,7 @@
                             </constraints>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CsZ-Lu-ngL" userLabel="exIdSignExtendToMux3" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="12" y="320" width="45" height="20"/>
+                            <rect key="frame" x="12" y="330" width="45" height="20"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="XYX-iI-bS4" userLabel="IfPcToAlu1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="9" width="25" height="2"/>
@@ -583,7 +583,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="KlZ-nI-hhS"/>
                         </view>
-                        <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRy-tu-DQV" userLabel="exIdSignExtendToShiftLeft1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRy-tu-DQV" userLabel="exIdSignExtendToShiftLeft1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-15" y="455" width="25" height="2"/>
                             <subviews>
                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="cn9-HD-Wad" userLabel="IfMuxToPc1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
@@ -680,7 +680,7 @@
                         <constraint firstItem="g31-SP-GmR" firstAttribute="leading" secondItem="t2k-5g-XxT" secondAttribute="trailing" id="O2e-Ja-zQs"/>
                         <constraint firstItem="g31-SP-GmR" firstAttribute="top" secondItem="dvK-om-2qa" secondAttribute="bottom" constant="-12" id="OSN-15-WCb"/>
                         <constraint firstItem="TRy-tu-DQV" firstAttribute="top" secondItem="lxe-pe-XY4" secondAttribute="bottom" constant="-4" id="Qcv-o1-p0C"/>
-                        <constraint firstItem="g31-SP-GmR" firstAttribute="top" secondItem="CsZ-Lu-ngL" secondAttribute="bottom" id="R1a-wr-wla"/>
+                        <constraint firstItem="g31-SP-GmR" firstAttribute="top" secondItem="CsZ-Lu-ngL" secondAttribute="bottom" constant="-10" id="R1a-wr-wla"/>
                         <constraint firstItem="34i-HK-LlF" firstAttribute="centerY" secondItem="IgQ-pC-fpw" secondAttribute="centerY" constant="-12" id="R7c-xt-wYC"/>
                         <constraint firstItem="IgQ-pC-fpw" firstAttribute="leading" secondItem="cUA-PV-8sr" secondAttribute="trailing" constant="-5" id="SHM-qc-WFA"/>
                         <constraint firstItem="34i-HK-LlF" firstAttribute="centerY" secondItem="koU-GI-VWi" secondAttribute="centerY" id="WJg-7T-Hgh"/>
