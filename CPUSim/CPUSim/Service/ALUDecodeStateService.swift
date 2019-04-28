@@ -64,7 +64,7 @@ class ALUDecodeStateService: State {
         touchStartedInTouchPoint = false
         isDrawing = false
     }
-    
+
     private func onCorrect(
         _ touchPoints: [TouchPointView],
         touchPointName: String,
@@ -158,7 +158,7 @@ class ALUDecodeStateService: State {
             break;
         case TouchPointNames.idMuxToWriteAddressEnd:
             // Set correctnessMap
-            correctnessMap[CorrectnessMapKeys.idIfToMux1] = true
+            correctnessMap[CorrectnessMapKeys.idMuxToWriteAddress] = true
 
             // Set correct (change color to green)
             touchPoints.forEach { tp in
