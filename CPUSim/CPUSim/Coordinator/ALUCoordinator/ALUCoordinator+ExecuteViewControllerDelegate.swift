@@ -56,7 +56,7 @@ extension ALUCoordinator: ExecuteViewControllerDelegate {
         executeViewController.progressView.progressTintColor = UIColor.green
 
         // Setup event subscribers
-        SwiftEventBus.onMainThread(executeViewController, name: Events.aluMemoryAccessOnCorrect) { result in
+        SwiftEventBus.onMainThread(executeViewController, name: Events.aluExecuteOnCorrect) { result in
             let progress: Float = result?.object as! Float
             executeViewController.progressView.setProgress(progress, animated: true)
 
@@ -164,7 +164,7 @@ extension ALUCoordinator: ExecuteViewControllerDelegate {
         // Setup all lines
         for (_, v) in executeViewController.lines {
             v.forEach { line in
-//                line.setup()
+                line.setup()
             }
         }
     }
@@ -183,12 +183,16 @@ extension ALUCoordinator: ExecuteViewControllerDelegate {
     }
 
     func executeViewControllerDidSwipeLeft(_ executeViewController: ExecuteViewController) {
-        self.navigationController.popViewController(animated: true)
-        resetPreviousViewControllerAnimations()
+        if (!executeStateService.isDrawing) {
+            self.navigationController.popViewController(animated: true)
+            resetPreviousViewControllerAnimations()
+        }
     }
 
     func executeViewControllerDidSwipeRight(_ executeViewController: ExecuteViewController) {
-        self.showMemoryAccessViewController()
+        if (!executeStateService.isDrawing) {
+            self.showMemoryAccessViewController()
+        }
     }
 
 

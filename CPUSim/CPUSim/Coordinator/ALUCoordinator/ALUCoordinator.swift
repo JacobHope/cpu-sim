@@ -46,6 +46,7 @@ class ALUCoordinator: RootViewCoordinator {
 
     // MARK: Properties - VCs
 
+    private var evc: ExecuteViewController? = nil
     private var mavc: MemoryAccessViewController? = nil
     private var wbvc: WriteBackViewController? = nil
 
@@ -84,9 +85,14 @@ class ALUCoordinator: RootViewCoordinator {
     }
 
     func showExecuteViewController() {
-        let executeViewController = ExecuteViewController()
-        executeViewController.delegate = self
-        self.navigationController.pushViewController(executeViewController, animated: true)
+        // Lazy init the ExecuteViewController
+        if (evc == nil) {
+            evc = ExecuteViewController()
+            evc?.delegate = self
+        }
+        
+        // Safe bang due to lazy initialization above
+        self.navigationController.pushViewController(evc!, animated: true)
     }
 
     func showMemoryAccessViewController() {
