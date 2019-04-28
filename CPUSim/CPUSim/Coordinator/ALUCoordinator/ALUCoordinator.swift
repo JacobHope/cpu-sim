@@ -46,6 +46,7 @@ class ALUCoordinator: RootViewCoordinator {
 
     // MARK: Properties - VCs
 
+    private var dvc: DecodeViewController? = nil
     private var evc: ExecuteViewController? = nil
     private var mavc: MemoryAccessViewController? = nil
     private var wbvc: WriteBackViewController? = nil
@@ -79,9 +80,14 @@ class ALUCoordinator: RootViewCoordinator {
     }
 
     func showDecodeViewController() {
-        let decodeViewController = DecodeViewController()
-        decodeViewController.delegate = self
-        self.navigationController.pushViewController(decodeViewController, animated: true)
+        // Lazy init the DecodeViewController
+        if (dvc == nil) {
+            dvc = DecodeViewController()
+            dvc?.delegate = self
+        }
+        
+        // Safe bang due to lazy initialization above
+        self.navigationController.pushViewController(dvc!, animated: true)
     }
 
     func showExecuteViewController() {
