@@ -59,22 +59,14 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
 
             // If progress is complete...
             if (progress == 1) {
-                // ...show complete button and animate tab bar after 4 seconds
+                // ...animate tab bars after 4 seconds
                 DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                    // Unhide complete button
-//                    decodeViewController.completeButton.isHidden = false
-//
-//                    // Begin complete button animation
-//                    UIView.beginCompleteButtonAnimation(decodeViewController.completeButton)
 //
 //                    // Begin tab bar animation
 //                    decodeViewController.ifIdTab.setStageFinished()
                 }
             }
         }
-
-        // Setup complete button
-        //decodeViewController.completeButton.isHidden = true
 
         // Setup TouchPointViews
         decodeViewController.idExToWriteDataStart.name = TouchPointNames.idExToWriteDataStart
@@ -119,68 +111,27 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
         ]
 
         // Setup lines
-        decodeViewController.lines[TouchPointNames.idExToWriteDataEnd] = [
-            decodeViewController.idExToWriteData1,
-            decodeViewController.idExToWriteData2,
-            decodeViewController.idExToWriteData3
-        ]
+        decodeViewController.lines[TouchPointNames.idExToWriteDataEnd] = []
 
-        decodeViewController.lines[TouchPointNames.idIfToExEnd] = [
-            decodeViewController.idIfToEx1
-        ]
+        decodeViewController.lines[TouchPointNames.idIfToExEnd] = []
 
-        decodeViewController.lines[TouchPointNames.idIfToReadAddress1End] = [
-            decodeViewController.idIf1,
-            decodeViewController.idIf2,
-            decodeViewController.idIfToReadAddress1_1,
-            decodeViewController.idIfToReadAddress1_2
-        ]
+        decodeViewController.lines[TouchPointNames.idIfToReadAddress1End] = []
 
-        decodeViewController.lines[TouchPointNames.idIfToReadAddress2End] = [
-            decodeViewController.idIf1,
-            decodeViewController.idIf2,
-            decodeViewController.idIfToReadAddress2_1,
-            decodeViewController.idIfToReadAddress2_2
-        ]
+        decodeViewController.lines[TouchPointNames.idIfToReadAddress2End] = []
 
-        decodeViewController.lines[TouchPointNames.idIfToMux0End] = [
-            decodeViewController.idIf1,
-            decodeViewController.idIf2,
-            decodeViewController.idIfToMux0_1,
-            decodeViewController.idIfToMux0_2,
-            decodeViewController.idIfToMux0_3
-        ]
+        decodeViewController.lines[TouchPointNames.idIfToMux0End] = []
 
-        decodeViewController.lines[TouchPointNames.idIfToMux1End] = [
-            decodeViewController.idIf1,
-            decodeViewController.idIf2,
-            decodeViewController.idIfToMux1_1,
-            decodeViewController.idIfToMux1_2
-        ]
+        decodeViewController.lines[TouchPointNames.idIfToMux1End] = []
 
-        decodeViewController.lines[TouchPointNames.idIfToSignExtendEnd] = [
-            decodeViewController.idIf1,
-            decodeViewController.idIf2,
-            decodeViewController.idIfToSignExtend1,
-            decodeViewController.idIfToSignExtend2
-        ]
+        decodeViewController.lines[TouchPointNames.idIfToSignExtendEnd] = []
 
-        decodeViewController.lines[TouchPointNames.idMuxToWriteAddressEnd] = [
-            decodeViewController.idMuxToWriteAddress1,
-            decodeViewController.idMuxToWriteAddress2,
-        ]
+        decodeViewController.lines[TouchPointNames.idMuxToWriteAddressEnd] = []
 
-        decodeViewController.lines[TouchPointNames.idReadData1ToExEnd] = [
-            decodeViewController.idReadData1ToEx1
-        ]
+        decodeViewController.lines[TouchPointNames.idReadData1ToExEnd] = []
 
-        decodeViewController.lines[TouchPointNames.idReadData2ToExEnd] = [
-            decodeViewController.idReadData2ToEx1
-        ]
+        decodeViewController.lines[TouchPointNames.idReadData2ToExEnd] = []
 
-        decodeViewController.lines[TouchPointNames.idSignExtendToExEnd] = [
-            decodeViewController.idSignExtendToEx1
-        ]
+        decodeViewController.lines[TouchPointNames.idSignExtendToExEnd] = []
 
 
         // Setup all touch points
@@ -218,8 +169,6 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
 
     func decodeViewControllerDidSwipeRight(_ decodeViewController: DecodeViewController) {
         if (!decodeStateService.isDrawing) {
-            // Hide complete button
-           // decodeViewController.completeButton.isHidden = true
             self.showExecuteViewController()
         }
     }

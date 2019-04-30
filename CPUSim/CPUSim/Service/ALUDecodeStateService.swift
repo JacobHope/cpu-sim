@@ -480,7 +480,6 @@ class ALUDecodeStateService: State {
         return progress / total
     }
 
-    //TODO implement handle touches began
     func handleTouchesBegan(
         _ touches: Set<UITouch>,
         with event: UIEvent?,
