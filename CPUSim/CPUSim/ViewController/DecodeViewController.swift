@@ -149,7 +149,9 @@ public class DecodeViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swiped(_:)))
+        leftSwipe.cancelsTouchesInView = false
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swiped(_:)))
+        rightSwipe.cancelsTouchesInView = false
         
         leftSwipe.direction = .left
         rightSwipe.direction = .right
