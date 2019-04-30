@@ -23,9 +23,6 @@ public class MenuViewController: UIViewController {
     
     @IBOutlet var MenuView: UIView!
     @IBOutlet weak var ALUButton: UIButton!
-    @IBOutlet weak var loadButton: UIButton!
-    @IBOutlet weak var storeButton: UIButton!
-    @IBOutlet weak var branchButton: UIButton!
     
     // MARK: Init
     public init() {
@@ -47,18 +44,6 @@ public class MenuViewController: UIViewController {
         // Configure ALU Button
         ALUButton.format()
         ALUButton.addTarget(self, action: #selector(didTapALUButton), for: UIControl.Event.touchUpInside)
-        
-        // Configure Load Button
-        loadButton.format()
-        loadButton.addTarget(self, action: #selector(didTapLoadButton), for: UIControl.Event.touchUpInside)
-        
-        // Configure Store Button
-        storeButton.format()
-        storeButton.addTarget(self, action: #selector(didTapStoreButton), for: UIControl.Event.touchUpInside)
-        
-        // Configure Branch Button
-        branchButton.format()
-        branchButton.addTarget(self, action: #selector(didTapBranchButton), for: UIControl.Event.touchUpInside)
     }
     
     public override func viewWillAppear(_ animated: Bool) {
