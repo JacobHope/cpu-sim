@@ -61,9 +61,10 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
             if (progress == 1) {
                 // ...animate tab bars after 4 seconds
                 DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-//
-//                    // Begin tab bar animation
-//                    decodeViewController.ifIdTab.setStageFinished()
+
+                    // Begin tab bar animation
+                    decodeViewController.idIfTab.setStageFinished()
+                    decodeViewController.idExTab.setStageFinished()
                 }
             }
         }
@@ -111,27 +112,59 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
         ]
 
         // Setup lines
-        decodeViewController.lines[TouchPointNames.idExToWriteDataEnd] = []
+        decodeViewController.lines[TouchPointNames.idExToWriteDataEnd] = [
+            decodeViewController.idExToWriteData1,
+            decodeViewController.idExToWriteData2,
+            decodeViewController.idExToWriteData3,
+        ]
 
-        decodeViewController.lines[TouchPointNames.idIfToExEnd] = []
+        decodeViewController.lines[TouchPointNames.idIfToExEnd] = [
+            decodeViewController.idIfToEx1
+        ]
 
-        decodeViewController.lines[TouchPointNames.idIfToReadAddress1End] = []
+        decodeViewController.lines[TouchPointNames.idIfToReadAddress1End] = [
+            decodeViewController.idIfToReadAddress1_1,
+            decodeViewController.idIfToReadAddress1_2,
+            decodeViewController.idIfToReadAddress1_3
+        ]
 
-        decodeViewController.lines[TouchPointNames.idIfToReadAddress2End] = []
+        decodeViewController.lines[TouchPointNames.idIfToReadAddress2End] = [
+            decodeViewController.idIfToReadAddress2_1,
+            decodeViewController.idIfToReadAddress2_2,
+            decodeViewController.IdIfToReadAddress2_3
+        ]
 
-        decodeViewController.lines[TouchPointNames.idIfToMux0End] = []
+        decodeViewController.lines[TouchPointNames.idIfToMux0End] = [
+            decodeViewController.IdIfToMux0_1,
+            decodeViewController.IdIfToMux0_2,
+            decodeViewController.idIfToMux0_3
+        ]
 
-        decodeViewController.lines[TouchPointNames.idIfToMux1End] = []
+        decodeViewController.lines[TouchPointNames.idIfToMux1End] = [
+            decodeViewController.idIfToMux1_1,
+            decodeViewController.idIfToMux1_2,
+            decodeViewController.idIfToMux1_3
+        ]
 
-        decodeViewController.lines[TouchPointNames.idIfToSignExtendEnd] = []
+        decodeViewController.lines[TouchPointNames.idIfToSignExtendEnd] = [
+            decodeViewController.idIfToSignExtend1
+        ]
 
-        decodeViewController.lines[TouchPointNames.idMuxToWriteAddressEnd] = []
+        decodeViewController.lines[TouchPointNames.idMuxToWriteAddressEnd] = [
+            decodeViewController.idMuxToWriteAddress1
+        ]
 
-        decodeViewController.lines[TouchPointNames.idReadData1ToExEnd] = []
+        decodeViewController.lines[TouchPointNames.idReadData1ToExEnd] = [
+            decodeViewController.idReadData1ToEx1
+        ]
 
-        decodeViewController.lines[TouchPointNames.idReadData2ToExEnd] = []
+        decodeViewController.lines[TouchPointNames.idReadData2ToExEnd] = [
+            decodeViewController.idReadData2ToEx1
+        ]
 
-        decodeViewController.lines[TouchPointNames.idSignExtendToExEnd] = []
+        decodeViewController.lines[TouchPointNames.idSignExtendToExEnd] = [
+            decodeViewController.idSignExtendToEx1
+        ]
 
 
         // Setup all touch points
@@ -180,7 +213,7 @@ extension ALUCoordinator: DecodeViewControllerDelegate {
     func decodeViewController(_ decodeViewController: DecodeViewController) {
         self.showDecodeViewController()
     }
-    
+
     private func resetPreviousViewControllerAnimations() {
         // Reset animations
         guard let tvc = self.navigationController.topViewController else {
