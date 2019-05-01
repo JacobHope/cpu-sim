@@ -227,7 +227,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="KfR-LI-NcK"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELX-Eq-etY" userLabel="wbMemToIfWriteAddressStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELX-Eq-etY" userLabel="wbMemToIfWriteAddressStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-3" y="392.5" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -236,7 +236,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="ZWt-BR-ykd"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dk-bz-pDE" userLabel="wbMemToIfWriteAddressEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dk-bz-pDE" userLabel="wbMemToIfWriteAddressEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-23" y="486.5" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -245,7 +245,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="IQF-II-UE6"/>
                         </view>
-                        <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAx-et-yJe" userLabel="wbMemToIfWriteAddress1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <view hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAx-et-yJe" userLabel="wbMemToIfWriteAddress1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-15" y="404" width="50" height="2"/>
                             <subviews>
                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="LtT-AE-7Z4" userLabel="IfMuxToPc1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
@@ -266,7 +266,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="ML2-M6-MZZ"/>
                         </view>
-                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="PCf-eB-vPh" userLabel="wbMemToIfWriteAddress2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <imageView hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="PCf-eB-vPh" userLabel="wbMemToIfWriteAddress2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="33" y="406" width="2" height="92.5"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
@@ -275,7 +275,7 @@
                                 <constraint firstAttribute="width" constant="2" id="H44-Cp-KBz"/>
                             </constraints>
                         </imageView>
-                        <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfh-8c-72P" userLabel="wbMemToIfWriteAddress3" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <view hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfh-8c-72P" userLabel="wbMemToIfWriteAddress3" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-35" y="496.5" width="68" height="2"/>
                             <subviews>
                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="bTs-cQ-sXq" userLabel="IfMuxToPc1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
