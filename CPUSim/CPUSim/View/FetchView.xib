@@ -327,11 +327,21 @@
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Read Address" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Mh-2t-whc" userLabel="Read Address">
-                                    <rect key="frame" x="5" y="25" width="75" height="50"/>
+                                    <rect key="frame" x="0.0" y="25" width="75" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="JES-vx-i2k"/>
                                         <constraint firstAttribute="width" constant="75" id="ZT2-uK-19b"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Instr. [31-0]" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dAl-ef-zmH" userLabel="Instr">
+                                    <rect key="frame" x="55" y="25" width="50" height="50"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="aW8-kF-Pz6"/>
+                                        <constraint firstAttribute="width" constant="50" id="zhG-pH-ATF"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -344,14 +354,16 @@
                             <constraints>
                                 <constraint firstItem="297-tx-QJO" firstAttribute="leading" secondItem="1lh-V5-7BZ" secondAttribute="leading" id="FiL-y8-bdu"/>
                                 <constraint firstItem="1lh-V5-7BZ" firstAttribute="trailing" secondItem="297-tx-QJO" secondAttribute="trailing" id="FnJ-IA-YH4"/>
-                                <constraint firstItem="1lh-V5-7BZ" firstAttribute="leading" secondItem="9Mh-2t-whc" secondAttribute="leading" constant="-5" id="Hfh-mt-dbh"/>
+                                <constraint firstItem="1lh-V5-7BZ" firstAttribute="leading" secondItem="9Mh-2t-whc" secondAttribute="leading" id="Hfh-mt-dbh"/>
                                 <constraint firstItem="297-tx-QJO" firstAttribute="top" secondItem="1lh-V5-7BZ" secondAttribute="top" id="HqH-eI-V0p"/>
                                 <constraint firstItem="9Mh-2t-whc" firstAttribute="centerY" secondItem="1lh-V5-7BZ" secondAttribute="centerY" id="Jtw-AI-Te7"/>
                                 <constraint firstAttribute="height" constant="100" id="M1c-ex-pqn"/>
                                 <constraint firstItem="1lh-V5-7BZ" firstAttribute="bottom" secondItem="297-tx-QJO" secondAttribute="bottom" id="QtW-Ap-Ln9"/>
+                                <constraint firstItem="1lh-V5-7BZ" firstAttribute="trailing" secondItem="dAl-ef-zmH" secondAttribute="trailing" constant="-5" id="V7O-fT-OOy"/>
                                 <constraint firstItem="ZbH-BC-KT5" firstAttribute="centerX" secondItem="1lh-V5-7BZ" secondAttribute="centerX" id="kvk-24-H2L"/>
                                 <constraint firstAttribute="width" constant="100" id="oG8-J6-qTe"/>
                                 <constraint firstItem="1lh-V5-7BZ" firstAttribute="top" secondItem="ZbH-BC-KT5" secondAttribute="top" constant="5" id="sc9-AM-eYr"/>
+                                <constraint firstItem="dAl-ef-zmH" firstAttribute="centerY" secondItem="1lh-V5-7BZ" secondAttribute="centerY" id="wOB-wi-Xbn"/>
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="1lh-V5-7BZ"/>
                         </view>
