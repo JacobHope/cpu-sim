@@ -27,6 +27,8 @@ private enum StartState {
     case exMuxToAluEndStarted
     case exMuxMemToExStartStarted
     case exMuxMemToExEndStarted
+    case exAddToMemStartStarted
+    case exAddToMemEndStarted
     case noneStarted
 }
 
@@ -42,7 +44,8 @@ class ALUExecuteStateService: State {
         CorrectnessMapKeys.exIdReadDataOneToAlu: false,
         CorrectnessMapKeys.exIdReadDataTwoToMux: false,
         CorrectnessMapKeys.exMuxToAlu: false,
-        CorrectnessMapKeys.exMuxMemToEx: false
+        CorrectnessMapKeys.exMuxMemToEx: false,
+        CorrectnessMapKeys.exAddToMem: false
     ]
 
     private var touchStartedInTouchPoint: Bool = false
@@ -173,6 +176,18 @@ class ALUExecuteStateService: State {
                 }
             }
             break;
+        case TouchPointNames.exAddToMemEnd:
+            // Set correctnessMap
+            correctnessMap[CorrectnessMapKeys.exAddToMem] = true
+
+            // Set correct (change color to green)
+            touchPoints.forEach { tp in
+                if (tp.name == TouchPointNames.exAddToMemEnd
+                        || tp.name == TouchPointNames.exAddToMemStart) {
+                    tp.setCorrect()
+                }
+            }
+            break;
         default:
             break;
         }
@@ -278,6 +293,15 @@ class ALUExecuteStateService: State {
                     }
                 }
                 break;
+            case TouchPointNames.exAddToMemEnd:
+                touchPoints.forEach { tp in
+                    // Set hidden
+                    if (tp.name == TouchPointNames.exAddToMemEnd
+                            || tp.name == TouchPointNames.exAddToMemStart) {
+                        tp.isHidden = true
+                    }
+                }
+                break;
             default:
                 break;
             }
@@ -361,6 +385,12 @@ class ALUExecuteStateService: State {
             break;
         case StartState.exMuxMemToExEndStarted:
             startName = TouchPointNames.exMuxMemToExEnd
+            break;
+        case StartState.exAddToMemStartStarted:
+            startName = TouchPointNames.exAddToMemStart
+            break;
+        case StartState.exAddToMemEndStarted:
+            startName = TouchPointNames.exAddToMemEnd
             break;
         default:
             startName = ""
@@ -448,6 +478,12 @@ class ALUExecuteStateService: State {
                         break;
                     case TouchPointNames.exMuxMemToExEnd:
                         self.startState = StartState.exMuxMemToExEndStarted
+                        break;
+                    case TouchPointNames.exAddToMemStart:
+                        self.startState = StartState.exAddToMemStartStarted
+                        break;
+                    case TouchPointNames.exAddToMemEnd:
+                        self.startState = StartState.exAddToMemEndStarted
                         break;
                     default:
                         break;
@@ -666,6 +702,26 @@ class ALUExecuteStateService: State {
                             } else if (startState != StartState.exMuxMemToExEndStarted) {
                                 self.onIncorrect(touchPoints,
                                         touchPointName: TouchPointNames.exMuxMemToExEnd)
+                                handleDrawingOnHitTest = true
+                            }
+                            break;
+                        case TouchPointNames.exAddToMemStart:  // Anything ending at a start point is incorrect
+                            if (startState != StartState.exAddToMemStartStarted) {
+                                self.onIncorrect(touchPoints,
+                                        touchPointName: TouchPointNames.exAddToMemStart)
+                                handleDrawingOnHitTest = true
+                            }
+                            break;
+                        case TouchPointNames.exAddToMemEnd:
+                            if (self.startState == StartState.exAddToMemStartStarted) {
+                                self.onCorrect(
+                                        touchPoints,
+                                        touchPointName: TouchPointNames.exAddToMemEnd,
+                                        linesMap: lines)
+                                handleDrawingOnHitTest = true
+                            } else if (startState != StartState.exAddToMemEndStarted) {
+                                self.onIncorrect(touchPoints,
+                                        touchPointName: TouchPointNames.exAddToMemEnd)
                                 handleDrawingOnHitTest = true
                             }
                             break;

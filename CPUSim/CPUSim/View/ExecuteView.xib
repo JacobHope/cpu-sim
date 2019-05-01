@@ -14,6 +14,9 @@
             <connections>
                 <outlet property="ExecuteView" destination="iN0-l3-epB" id="B9F-hL-LjD"/>
                 <outlet property="drawingImageView" destination="Dea-TN-36l" id="XYP-Jl-1ts"/>
+                <outlet property="exAddToMem1" destination="hrI-TS-j8T" id="9Ks-in-92C"/>
+                <outlet property="exAddToMemEnd" destination="8tL-tC-SFH" id="bJG-Dw-hdw"/>
+                <outlet property="exAddToMemStart" destination="fqK-sG-uLL" id="5w8-UU-bLb"/>
                 <outlet property="exAluToMem1" destination="6Pl-2R-zfb" id="t6h-S9-Obp"/>
                 <outlet property="exAluToMemEnd" destination="dfw-Gh-jAn" id="nBC-2f-sl5"/>
                 <outlet property="exAluToMemStart" destination="Afi-do-dYO" id="qIY-bJ-rBn"/>
@@ -256,6 +259,44 @@
                                 <constraint firstItem="pTO-i4-gTP" firstAttribute="centerY" secondItem="hhr-su-nRY" secondAttribute="centerY" id="iUr-l4-le2"/>
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="hhr-su-nRY"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqK-sG-uLL" userLabel="exAddToMemStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="202" y="116" width="25" height="25"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="Mgv-GH-LoN"/>
+                                <constraint firstAttribute="width" constant="25" id="TEI-un-iol"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="9ZC-ak-weX"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tL-tC-SFH" userLabel="exAddToMemEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="252" y="113" width="25" height="25"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="0uf-xc-TEA"/>
+                                <constraint firstAttribute="width" constant="25" id="bLQ-QG-F3Z"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="jJ8-Ak-BPO"/>
+                        </view>
+                        <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrI-TS-j8T" userLabel="exAddToMem1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="195" y="118.5" width="70" height="2"/>
+                            <subviews>
+                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="knK-qd-bfA" userLabel="IfMuxToPc1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="70" height="2"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                    </accessibility>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="SVV-G9-hOj" firstAttribute="leading" secondItem="knK-qd-bfA" secondAttribute="leading" id="0Q3-LW-wmM"/>
+                                <constraint firstItem="knK-qd-bfA" firstAttribute="top" secondItem="SVV-G9-hOj" secondAttribute="top" id="2Id-0Z-J7l"/>
+                                <constraint firstAttribute="height" constant="2" id="9EY-E6-Gel"/>
+                                <constraint firstItem="SVV-G9-hOj" firstAttribute="trailing" secondItem="knK-qd-bfA" secondAttribute="trailing" id="lhM-Fy-aVC"/>
+                                <constraint firstItem="SVV-G9-hOj" firstAttribute="bottom" secondItem="knK-qd-bfA" secondAttribute="bottom" id="qu1-0c-dDo"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="SVV-G9-hOj"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Afi-do-dYO" userLabel="exAluToMemStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="218.5" y="260" width="25" height="25"/>
@@ -695,6 +736,7 @@
                         <constraint firstItem="t2k-5g-XxT" firstAttribute="centerY" secondItem="1TP-br-0WY" secondAttribute="centerY" constant="-12" id="3nP-C6-Hlf"/>
                         <constraint firstItem="cnl-P4-akn" firstAttribute="centerY" secondItem="Sw9-J9-fSW" secondAttribute="centerY" constant="-12" id="4Tw-vE-dQn"/>
                         <constraint firstItem="6Pl-2R-zfb" firstAttribute="centerY" secondItem="Afi-do-dYO" secondAttribute="centerY" constant="-12" id="4jf-JR-y0W"/>
+                        <constraint firstItem="hrI-TS-j8T" firstAttribute="leading" secondItem="IgQ-pC-fpw" secondAttribute="trailing" constant="5" id="4pD-dQ-qqY"/>
                         <constraint firstItem="XSO-F0-xi7" firstAttribute="leading" secondItem="dvK-om-2qa" secondAttribute="trailing" constant="-20" id="4qq-og-DNj"/>
                         <constraint firstItem="lxe-pe-XY4" firstAttribute="top" secondItem="HaH-Pp-gqG" secondAttribute="bottom" constant="-11" id="5yH-tl-rlW"/>
                         <constraint firstItem="fE8-IE-nX4" firstAttribute="leading" secondItem="blQ-tw-HbO" secondAttribute="trailing" constant="-20" id="8Ej-h7-Z9X"/>
@@ -724,13 +766,16 @@
                         <constraint firstItem="g31-SP-GmR" firstAttribute="top" secondItem="CsZ-Lu-ngL" secondAttribute="bottom" constant="-10" id="R1a-wr-wla"/>
                         <constraint firstItem="34i-HK-LlF" firstAttribute="centerY" secondItem="IgQ-pC-fpw" secondAttribute="centerY" constant="-12" id="R7c-xt-wYC"/>
                         <constraint firstItem="IgQ-pC-fpw" firstAttribute="leading" secondItem="cUA-PV-8sr" secondAttribute="trailing" constant="-5" id="SHM-qc-WFA"/>
+                        <constraint firstItem="hrI-TS-j8T" firstAttribute="centerY" secondItem="IgQ-pC-fpw" secondAttribute="centerY" constant="6" id="Tnn-tZ-bvi"/>
                         <constraint firstItem="34i-HK-LlF" firstAttribute="centerY" secondItem="koU-GI-VWi" secondAttribute="centerY" id="WJg-7T-Hgh"/>
                         <constraint firstItem="AeK-fw-cwD" firstAttribute="leading" secondItem="Y3f-Z2-OEG" secondAttribute="trailing" constant="-25" id="XRo-3l-cnX"/>
                         <constraint firstItem="AeK-fw-cwD" firstAttribute="centerY" secondItem="AD9-7d-Zax" secondAttribute="centerY" constant="-40" id="YnM-sp-OST"/>
                         <constraint firstItem="lxe-pe-XY4" firstAttribute="leading" secondItem="TRy-tu-DQV" secondAttribute="trailing" id="Zqa-yj-xWj"/>
                         <constraint firstItem="kH2-rT-eE2" firstAttribute="centerY" secondItem="XSO-F0-xi7" secondAttribute="centerY" constant="12" id="a7r-fg-HUL"/>
+                        <constraint firstItem="fqK-sG-uLL" firstAttribute="leading" secondItem="IgQ-pC-fpw" secondAttribute="trailing" constant="12" id="aVU-1n-ce8"/>
                         <constraint firstItem="IgQ-pC-fpw" firstAttribute="centerY" secondItem="ZKx-1H-UDH" secondAttribute="centerY" constant="-25" id="cA1-jy-LZL"/>
                         <constraint firstItem="6Pl-2R-zfb" firstAttribute="leading" secondItem="AeK-fw-cwD" secondAttribute="trailing" id="ded-q4-5a0"/>
+                        <constraint firstItem="8tL-tC-SFH" firstAttribute="centerY" secondItem="IgQ-pC-fpw" secondAttribute="centerY" constant="12" id="dfP-h3-MTw"/>
                         <constraint firstItem="Kcx-qN-xRv" firstAttribute="top" secondItem="fE8-IE-nX4" secondAttribute="bottom" constant="-3" id="eXU-qP-y0o"/>
                         <constraint firstItem="CsZ-Lu-ngL" firstAttribute="leading" secondItem="g31-SP-GmR" secondAttribute="trailing" id="fCj-gK-XPK"/>
                         <constraint firstItem="dvK-om-2qa" firstAttribute="centerY" secondItem="XSO-F0-xi7" secondAttribute="centerY" constant="25" id="fs9-7B-vNB"/>
@@ -754,6 +799,7 @@
                         <constraint firstItem="Afi-do-dYO" firstAttribute="centerY" secondItem="AeK-fw-cwD" secondAttribute="centerY" constant="18" id="vgX-FV-vNI"/>
                         <constraint firstItem="ZKx-1H-UDH" firstAttribute="top" secondItem="AD9-7d-Zax" secondAttribute="top" constant="100" id="w84-Ep-Gc2"/>
                         <constraint firstItem="ZKx-1H-UDH" firstAttribute="leading" secondItem="0gH-3Q-akQ" secondAttribute="trailing" constant="-12" id="wzI-V1-FaV"/>
+                        <constraint firstItem="fqK-sG-uLL" firstAttribute="centerY" secondItem="IgQ-pC-fpw" secondAttribute="centerY" constant="15" id="xZh-Ga-YaX"/>
                         <constraint firstItem="t2k-5g-XxT" firstAttribute="top" secondItem="g31-SP-GmR" secondAttribute="bottom" constant="-4" id="xbw-pW-Ba7"/>
                         <constraint firstItem="Ysq-W7-2kJ" firstAttribute="centerY" secondItem="kH2-rT-eE2" secondAttribute="centerY" constant="-12" id="ydD-Mp-MYp"/>
                         <constraint firstItem="cmm-2q-AdV" firstAttribute="centerY" secondItem="mIg-wb-RMs" secondAttribute="centerY" id="zvV-jD-kzm"/>
@@ -832,7 +878,9 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iOV-Nr-q1B" secondAttribute="trailing" id="cf7-Mv-DcG"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qH6-tY-jAZ" secondAttribute="trailing" constant="-12" id="fTy-VK-x4u"/>
                 <constraint firstItem="ifK-p0-yeh" firstAttribute="leading" secondItem="6Pl-2R-zfb" secondAttribute="trailing" id="fb5-dg-pi8"/>
+                <constraint firstItem="ifK-p0-yeh" firstAttribute="leading" secondItem="hrI-TS-j8T" secondAttribute="trailing" id="fee-Xf-3ZL"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="qH6-tY-jAZ" secondAttribute="bottom" constant="25" id="gxO-SG-SUk"/>
+                <constraint firstItem="ifK-p0-yeh" firstAttribute="leading" secondItem="8tL-tC-SFH" secondAttribute="trailing" constant="-12" id="hZR-XJ-RyV"/>
                 <constraint firstItem="mIg-wb-RMs" firstAttribute="centerY" secondItem="UpM-uM-Nbl" secondAttribute="centerY" constant="35" id="iax-mm-akt"/>
                 <constraint firstItem="Dea-TN-36l" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jc8-UW-G4h"/>
                 <constraint firstItem="ifK-p0-yeh" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-20" id="k2y-Jc-91I"/>
