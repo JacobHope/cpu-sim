@@ -47,10 +47,14 @@ public class DecodeViewController: UIViewController {
     // MARK: Properties - idExToWriteData
     @IBOutlet weak var idExToWriteDataEnd: TouchPointView!
     @IBOutlet weak var idExToWriteDataStart: TouchPointView!
+    @IBOutlet weak var idExToWriteData1: LineView!
+    @IBOutlet weak var idExToWriteData2: LineView!
+    @IBOutlet weak var idExToWriteData3: LineView!
     
     // MARK: Properties - idIfToEx
     @IBOutlet weak var idIfToExStart: TouchPointView!
     @IBOutlet weak var idIfToExEnd: TouchPointView!
+    @IBOutlet weak var idIfToEx1: LineView!
     
     // MARK: Properties - idIfStart
     @IBOutlet weak var idIfStart: TouchPointView!
@@ -58,39 +62,56 @@ public class DecodeViewController: UIViewController {
     // MARK: Properties - idIfToReadAddress1
     // idIfStart is start touch point
     @IBOutlet weak var idIfToReadAddress1End: TouchPointView!
+    @IBOutlet weak var idIfToReadAddress1_1: LineView!
+    @IBOutlet weak var idIfToReadAddress1_2: LineView!
+    @IBOutlet weak var idIfToReadAddress1_3: LineView!
     
     // MARK: Properties - idIfToReadAddress2
     // idIfStart is start touch point
     @IBOutlet weak var idIfToReadAddress2End: TouchPointView!
+    @IBOutlet weak var idIfToReadAddress2_1: LineView!
+    @IBOutlet weak var idIfToReadAddress2_2: LineView!
+    @IBOutlet weak var IdIfToReadAddress2_3: LineView!
     
     // MARK: Properties - idIfToMux0
     // idIfStart is start touch point
     @IBOutlet weak var idIfToMux0End: TouchPointView!
+    @IBOutlet weak var IdIfToMux0_1: LineView!
+    @IBOutlet weak var IdIfToMux0_2: LineView!
+    @IBOutlet weak var idIfToMux0_3: LineView!
     
     // MARK: Properties - idIfToMux1
     // idIfStart is start touch point
     @IBOutlet weak var idIfToMux1End: TouchPointView!
+    @IBOutlet weak var idIfToMux1_1: LineView!
+    @IBOutlet weak var idIfToMux1_2: LineView!
+    @IBOutlet weak var idIfToMux1_3: LineView!
     
     // MARK: Properties - idIfToSignExtend
     // idIfStart is start touch point
     @IBOutlet weak var idIfToSignExtendEnd: TouchPointView!
+    @IBOutlet weak var idIfToSignExtend1: LineView!
     
     // MARK: Properties - idMuxToWriteAddress
     @IBOutlet weak var idMuxToWriteAddressStart: TouchPointView!
     @IBOutlet weak var idMuxToWriteAddressEnd: TouchPointView!
-   
+    @IBOutlet weak var idMuxToWriteAddress1: LineView!
+    
     // MARK: Properties - idReadData1ToEx
     @IBOutlet weak var idReadData1ToExStart: TouchPointView!
     @IBOutlet weak var idReadData1ToExEnd: TouchPointView!
+    @IBOutlet weak var idReadData1ToEx1: LineView!
     
     // MARK: Properties - idReadData2ToEx
     @IBOutlet weak var idReadData2ToExStart: TouchPointView!
     @IBOutlet weak var idReadData2ToExEnd: TouchPointView!
+    @IBOutlet weak var idReadData2ToEx1: LineView!
     
     // MARK: Properties - idSignExtendToEx
     @IBOutlet weak var idSignExtendToExStart: TouchPointView!
     @IBOutlet weak var idSignExtendToExEnd: TouchPointView!
-
+    @IBOutlet weak var idSignExtendToEx1: LineView!
+    
     var touchPoints: [TouchPointView] = []
     var lines: [String: [LineView]] = [:]
     
