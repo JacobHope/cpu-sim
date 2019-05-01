@@ -415,7 +415,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="v1Q-B3-z54"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V02-KA-CGe" userLabel="idIfToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V02-KA-CGe" userLabel="idIfToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="32" y="486.5" width="25" height="25"/>
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -424,7 +424,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="2FJ-un-Hjh"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8e-e9-6Xv" userLabel="idIfToExEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8e-e9-6Xv" userLabel="idIfToExEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="287" y="486.5" width="25" height="25"/>
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -433,7 +433,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="4lU-Pb-txe"/>
                         </view>
-                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bq2-rD-MJa" userLabel="idIfToEx1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bq2-rD-MJa" userLabel="idIfToEx1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="20" y="486" width="280" height="2"/>
                             <subviews>
                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="ESg-2Q-fg7" userLabel="IfMuxToPc1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
