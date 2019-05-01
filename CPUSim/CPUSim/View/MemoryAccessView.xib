@@ -283,7 +283,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="jnD-xm-vTY"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qB-0H-dld" userLabel="memRegDstWbToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qB-0H-dld" userLabel="memRegDstWbToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-23" y="493" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -292,7 +292,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="lrw-YB-FfA"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uue-2C-TAR" userLabel="memRegDstWbToExEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uue-2C-TAR" userLabel="memRegDstWbToExEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="272" y="493" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -301,7 +301,7 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="SrL-SU-tve"/>
                         </view>
-                        <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPO-hG-HiI" userLabel="memRegDstWbToEx1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                        <view hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPO-hG-HiI" userLabel="memRegDstWbToEx1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                             <rect key="frame" x="-35" y="492.5" width="320" height="2"/>
                             <subviews>
                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="X0L-Yu-SdM" userLabel="IfMuxToPc1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
