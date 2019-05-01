@@ -41,6 +41,9 @@
                 <outlet property="exIdTab" destination="UpM-uM-Nbl" id="bo3-cm-iNK"/>
                 <outlet property="exIdreadDataOneToAlu1" destination="cnl-P4-akn" id="UUw-fY-w16"/>
                 <outlet property="exMemTab" destination="ifK-p0-yeh" id="oNz-Ip-88O"/>
+                <outlet property="exMuxMemToEx1" destination="iOV-Nr-q1B" id="Y3Z-Yw-XHl"/>
+                <outlet property="exMuxMemToExEnd" destination="JDn-3k-SFZ" id="SC2-6M-xU6"/>
+                <outlet property="exMuxMemToExStart" destination="qH6-tY-jAZ" id="aYC-DR-lWY"/>
                 <outlet property="exMuxToAlu1" destination="Ysq-W7-2kJ" id="Qcv-2G-erf"/>
                 <outlet property="exMuxToAluEnd" destination="Y3f-Z2-OEG" id="4J1-qQ-Ce0"/>
                 <outlet property="exMuxToAluStart" destination="kH2-rT-eE2" id="az8-84-a2C"/>
@@ -310,7 +313,7 @@
                             <viewLayoutGuide key="safeArea" id="KJ2-oX-tLg"/>
                         </view>
                         <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t2k-5g-XxT" userLabel="exIdSignExtendToMux1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="-15" y="455" width="25" height="2"/>
+                            <rect key="frame" x="-15" y="417" width="25" height="2"/>
                             <subviews>
                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="Ofx-8J-eQU" userLabel="IfMuxToPc1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="25" height="2"/>
@@ -331,7 +334,7 @@
                             <viewLayoutGuide key="safeArea" id="faL-km-yOi"/>
                         </view>
                         <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="g31-SP-GmR" userLabel="exIdSignExtendToMux2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="10" y="340" width="2" height="119"/>
+                            <rect key="frame" x="10" y="340" width="2" height="81"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                             </accessibility>
@@ -462,7 +465,7 @@
                             <viewLayoutGuide key="safeArea" id="4Vp-or-fpq"/>
                         </view>
                         <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="fE8-IE-nX4" userLabel="exIdReadDataTwoToMux2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="37" y="290.5" width="2" height="164.5"/>
+                            <rect key="frame" x="37" y="290.5" width="2" height="126.5"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                             </accessibility>
@@ -471,7 +474,7 @@
                             </constraints>
                         </imageView>
                         <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kcx-qN-xRv" userLabel="exIdReadDataTwoToMux3" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="36" y="452" width="204" height="2"/>
+                            <rect key="frame" x="36" y="414" width="204" height="2"/>
                             <subviews>
                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="qlT-hD-1Sk" userLabel="IfMuxToPc1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="204" height="2"/>
@@ -491,7 +494,7 @@
                             <viewLayoutGuide key="safeArea" id="nwp-MQ-m4f"/>
                         </view>
                         <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="jzE-aS-UBa" userLabel="exIdReadDataTwoToMux4" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="238" y="295.5" width="2" height="159.5"/>
+                            <rect key="frame" x="238" y="295.5" width="2" height="121.5"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                             </accessibility>
@@ -566,7 +569,7 @@
                             <viewLayoutGuide key="safeArea" id="AOE-a3-0VS"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1TP-br-0WY" userLabel="exIdSignExtendToShiftLeftStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="-3" y="455.5" width="25" height="25"/>
+                            <rect key="frame" x="-3" y="417.5" width="25" height="25"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="J4W-wF-oL5"/>
@@ -584,7 +587,7 @@
                             <viewLayoutGuide key="safeArea" id="KlZ-nI-hhS"/>
                         </view>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRy-tu-DQV" userLabel="exIdSignExtendToShiftLeft1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="-15" y="455" width="25" height="2"/>
+                            <rect key="frame" x="-15" y="417" width="25" height="2"/>
                             <subviews>
                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="cn9-HD-Wad" userLabel="IfMuxToPc1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="25" height="2"/>
@@ -605,7 +608,7 @@
                             <viewLayoutGuide key="safeArea" id="g22-dB-eId"/>
                         </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verticalLine" translatesAutoresizingMaskIntoConstraints="NO" id="lxe-pe-XY4" userLabel="exIdSignExtendToShiftLeft2" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="10" y="138" width="2" height="321"/>
+                            <rect key="frame" x="10" y="138" width="2" height="283"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
@@ -642,6 +645,44 @@
                             </constraints>
                             <viewLayoutGuide key="safeArea" id="d7o-L4-ngv"/>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qH6-tY-jAZ" userLabel="exMuxMemToExStart" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="272" y="511.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="S0e-pF-5mj"/>
+                                <constraint firstAttribute="height" constant="25" id="dne-OT-2Oq"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="bAz-g1-MzR"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDn-3k-SFZ" userLabel="exMuxMemToExEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="-23" y="511.5" width="25" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="7ft-Kn-QAP"/>
+                                <constraint firstAttribute="width" constant="25" id="o1y-8S-v80"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="RCh-8G-pQk"/>
+                        </view>
+                        <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOV-Nr-q1B" userLabel="exMuxMemToEx1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                            <rect key="frame" x="-35" y="511" width="320" height="2"/>
+                            <subviews>
+                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalLine" translatesAutoresizingMaskIntoConstraints="NO" id="Kif-XJ-Ovn" userLabel="IfMuxToPc1-1" customClass="LineView" customModule="CPUSim" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="2"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                    </accessibility>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Kif-XJ-Ovn" firstAttribute="top" secondItem="IJ9-Sg-IyJ" secondAttribute="top" id="2eV-7t-F2i"/>
+                                <constraint firstAttribute="height" constant="2" id="G7r-gQ-bse"/>
+                                <constraint firstItem="IJ9-Sg-IyJ" firstAttribute="trailing" secondItem="Kif-XJ-Ovn" secondAttribute="trailing" id="s6g-rD-Vfg"/>
+                                <constraint firstItem="IJ9-Sg-IyJ" firstAttribute="leading" secondItem="Kif-XJ-Ovn" secondAttribute="leading" id="tJl-OE-CMs"/>
+                                <constraint firstItem="IJ9-Sg-IyJ" firstAttribute="bottom" secondItem="Kif-XJ-Ovn" secondAttribute="bottom" id="ufU-rL-gCq"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="IJ9-Sg-IyJ"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -649,6 +690,7 @@
                         <constraint firstItem="DUy-s8-P0l" firstAttribute="centerY" secondItem="Sw9-J9-fSW" secondAttribute="centerY" id="26a-h0-tCO"/>
                         <constraint firstItem="IgQ-pC-fpw" firstAttribute="leading" secondItem="ZKx-1H-UDH" secondAttribute="trailing" constant="50" id="2WC-HO-vGe"/>
                         <constraint firstItem="kH2-rT-eE2" firstAttribute="leading" secondItem="XSO-F0-xi7" secondAttribute="trailing" id="2wS-X1-X69"/>
+                        <constraint firstItem="iOV-Nr-q1B" firstAttribute="centerY" secondItem="qH6-tY-jAZ" secondAttribute="centerY" constant="-12" id="3DR-bA-hiT"/>
                         <constraint firstItem="ZKx-1H-UDH" firstAttribute="leading" secondItem="HaH-Pp-gqG" secondAttribute="trailing" constant="2" id="3Sp-v1-dbQ"/>
                         <constraint firstItem="t2k-5g-XxT" firstAttribute="centerY" secondItem="1TP-br-0WY" secondAttribute="centerY" constant="-12" id="3nP-C6-Hlf"/>
                         <constraint firstItem="cnl-P4-akn" firstAttribute="centerY" secondItem="Sw9-J9-fSW" secondAttribute="centerY" constant="-12" id="4Tw-vE-dQn"/>
@@ -703,6 +745,7 @@
                         <constraint firstItem="jzE-aS-UBa" firstAttribute="top" secondItem="NYs-A3-Hgj" secondAttribute="bottom" constant="-1" id="oVd-Av-2rU"/>
                         <constraint firstItem="n3p-Xi-dm5" firstAttribute="centerY" secondItem="LOq-h2-DK0" secondAttribute="centerY" id="pDz-HV-D0i"/>
                         <constraint firstItem="XSO-F0-xi7" firstAttribute="leading" secondItem="AD9-7d-Zax" secondAttribute="leading" constant="50" id="pFe-AK-sZ8"/>
+                        <constraint firstItem="JDn-3k-SFZ" firstAttribute="centerY" secondItem="qH6-tY-jAZ" secondAttribute="centerY" id="pQG-cf-i0a"/>
                         <constraint firstItem="LOq-h2-DK0" firstAttribute="leading" secondItem="ZKx-1H-UDH" secondAttribute="trailing" constant="12" id="r1R-4q-xHS"/>
                         <constraint firstItem="AeK-fw-cwD" firstAttribute="centerX" secondItem="AD9-7d-Zax" secondAttribute="centerX" constant="50" id="rXI-gk-Dxx"/>
                         <constraint firstItem="NYs-A3-Hgj" firstAttribute="leading" secondItem="jzE-aS-UBa" secondAttribute="trailing" constant="-2" id="swn-1r-GoN"/>
@@ -769,13 +812,14 @@
             <constraints>
                 <constraint firstItem="UpM-uM-Nbl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1El-lj-0Zo"/>
                 <constraint firstItem="blQ-tw-HbO" firstAttribute="leading" secondItem="UpM-uM-Nbl" secondAttribute="trailing" id="1g9-2m-Oxx"/>
-                <constraint firstItem="1TP-br-0WY" firstAttribute="top" secondItem="UpM-uM-Nbl" secondAttribute="bottom" constant="-12" id="2Zy-ad-oH5"/>
+                <constraint firstItem="1TP-br-0WY" firstAttribute="top" secondItem="UpM-uM-Nbl" secondAttribute="bottom" constant="-50" id="2Zy-ad-oH5"/>
                 <constraint firstItem="mIg-wb-RMs" firstAttribute="leading" secondItem="UpM-uM-Nbl" secondAttribute="trailing" constant="12" id="3a2-AN-Kkc"/>
                 <constraint firstItem="Op6-pY-wzi" firstAttribute="leading" secondItem="UpM-uM-Nbl" secondAttribute="trailing" id="8Yo-gJ-Rgt"/>
                 <constraint firstItem="t2k-5g-XxT" firstAttribute="leading" secondItem="UpM-uM-Nbl" secondAttribute="trailing" id="BvJ-0d-bMt"/>
                 <constraint firstItem="ifK-p0-yeh" firstAttribute="leading" secondItem="Kcx-qN-xRv" secondAttribute="trailing" constant="25" id="D3A-bz-bi6"/>
                 <constraint firstItem="v6p-O1-9ZS" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="FEf-93-xVv"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ifK-p0-yeh" secondAttribute="trailing" id="FcQ-nw-MQ8"/>
+                <constraint firstItem="iOV-Nr-q1B" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ggx-NS-yZ1"/>
                 <constraint firstItem="koU-GI-VWi" firstAttribute="leading" secondItem="UpM-uM-Nbl" secondAttribute="trailing" constant="12" id="Hlz-bt-9gV"/>
                 <constraint firstItem="Sw9-J9-fSW" firstAttribute="leading" secondItem="UpM-uM-Nbl" secondAttribute="trailing" constant="12" id="IdR-wP-lbd"/>
                 <constraint firstItem="TRy-tu-DQV" firstAttribute="leading" secondItem="UpM-uM-Nbl" secondAttribute="trailing" id="JOi-oZ-D5G"/>
@@ -783,8 +827,12 @@
                 <constraint firstItem="ifK-p0-yeh" firstAttribute="leading" secondItem="dfw-Gh-jAn" secondAttribute="trailing" constant="-12" id="LLD-Za-Xrt"/>
                 <constraint firstItem="Dea-TN-36l" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="OEf-mB-CSk"/>
                 <constraint firstItem="v6p-O1-9ZS" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Tuf-ad-QbG"/>
+                <constraint firstItem="JDn-3k-SFZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="XxM-ZU-bqF"/>
                 <constraint firstItem="Dea-TN-36l" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="abh-73-dLz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iOV-Nr-q1B" secondAttribute="trailing" id="cf7-Mv-DcG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qH6-tY-jAZ" secondAttribute="trailing" constant="-12" id="fTy-VK-x4u"/>
                 <constraint firstItem="ifK-p0-yeh" firstAttribute="leading" secondItem="6Pl-2R-zfb" secondAttribute="trailing" id="fb5-dg-pi8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="qH6-tY-jAZ" secondAttribute="bottom" constant="25" id="gxO-SG-SUk"/>
                 <constraint firstItem="mIg-wb-RMs" firstAttribute="centerY" secondItem="UpM-uM-Nbl" secondAttribute="centerY" constant="35" id="iax-mm-akt"/>
                 <constraint firstItem="Dea-TN-36l" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jc8-UW-G4h"/>
                 <constraint firstItem="ifK-p0-yeh" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-20" id="k2y-Jc-91I"/>
