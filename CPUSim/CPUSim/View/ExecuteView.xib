@@ -178,7 +178,7 @@
                             <viewLayoutGuide key="safeArea" id="j3C-Zi-xOa"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34i-HK-LlF" userLabel="exIdAddToAddEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="137" y="89" width="25" height="25"/>
+                            <rect key="frame" x="145" y="89" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="hKR-sw-nou"/>
@@ -421,7 +421,7 @@
                             <viewLayoutGuide key="safeArea" id="mpq-gb-569"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUy-s8-P0l" userLabel="exIdReadDataOneToAluEnd" customClass="TouchPointView" customModule="CPUSim" customModuleProvider="target">
-                            <rect key="frame" x="132.5" y="220" width="25" height="25"/>
+                            <rect key="frame" x="137.5" y="220" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="Kkt-nc-vgX"/>
@@ -740,7 +740,7 @@
                         <constraint firstItem="XSO-F0-xi7" firstAttribute="leading" secondItem="dvK-om-2qa" secondAttribute="trailing" constant="-20" id="4qq-og-DNj"/>
                         <constraint firstItem="lxe-pe-XY4" firstAttribute="top" secondItem="HaH-Pp-gqG" secondAttribute="bottom" constant="-11" id="5yH-tl-rlW"/>
                         <constraint firstItem="fE8-IE-nX4" firstAttribute="leading" secondItem="blQ-tw-HbO" secondAttribute="trailing" constant="-20" id="8Ej-h7-Z9X"/>
-                        <constraint firstItem="AeK-fw-cwD" firstAttribute="leading" secondItem="DUy-s8-P0l" secondAttribute="trailing" constant="-20" id="8st-vk-XuD"/>
+                        <constraint firstItem="AeK-fw-cwD" firstAttribute="leading" secondItem="DUy-s8-P0l" secondAttribute="trailing" constant="-25" id="8st-vk-XuD"/>
                         <constraint firstItem="cUA-PV-8sr" firstAttribute="centerY" secondItem="LOq-h2-DK0" secondAttribute="centerY" constant="-12" id="Aj6-kY-Yei"/>
                         <constraint firstItem="0gH-3Q-akQ" firstAttribute="centerY" secondItem="ZKx-1H-UDH" secondAttribute="centerY" constant="12" id="Akd-vN-yq4"/>
                         <constraint firstItem="Op6-pY-wzi" firstAttribute="centerY" secondItem="koU-GI-VWi" secondAttribute="centerY" constant="-12" id="C8u-aL-91g"/>
@@ -782,7 +782,7 @@
                         <constraint firstItem="jzE-aS-UBa" firstAttribute="top" secondItem="6Pl-2R-zfb" secondAttribute="bottom" constant="25" id="gb8-Wd-iea"/>
                         <constraint firstItem="fE8-IE-nX4" firstAttribute="top" secondItem="blQ-tw-HbO" secondAttribute="bottom" constant="-10" id="hBc-Y8-rMI"/>
                         <constraint firstItem="jzE-aS-UBa" firstAttribute="leading" secondItem="Kcx-qN-xRv" secondAttribute="trailing" constant="-2" id="hE8-1T-rGI"/>
-                        <constraint firstItem="IgQ-pC-fpw" firstAttribute="leading" secondItem="34i-HK-LlF" secondAttribute="trailing" constant="-12" id="kRj-lx-TBm"/>
+                        <constraint firstItem="IgQ-pC-fpw" firstAttribute="leading" secondItem="34i-HK-LlF" secondAttribute="trailing" constant="-20" id="kRj-lx-TBm"/>
                         <constraint firstItem="TRy-tu-DQV" firstAttribute="centerY" secondItem="1TP-br-0WY" secondAttribute="centerY" constant="-12" id="kbq-zw-KNG"/>
                         <constraint firstItem="t2k-5g-XxT" firstAttribute="top" secondItem="fE8-IE-nX4" secondAttribute="bottom" id="nIl-q4-pPP"/>
                         <constraint firstItem="IgQ-pC-fpw" firstAttribute="leading" secondItem="Op6-pY-wzi" secondAttribute="trailing" constant="-5" id="nrP-Dl-1gt"/>
