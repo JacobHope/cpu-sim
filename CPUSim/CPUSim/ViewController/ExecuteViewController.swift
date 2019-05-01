@@ -80,7 +80,12 @@ public class ExecuteViewController: UIViewController {
     @IBOutlet weak var exMuxToAluStart: TouchPointView!
     @IBOutlet weak var exMuxToAluEnd: TouchPointView!
     @IBOutlet weak var exMuxToAlu1: LineView!
-
+    
+    // MARK: exMuxMemToEx1
+    @IBOutlet weak var exMuxMemToExStart: TouchPointView!
+    @IBOutlet weak var exMuxMemToExEnd: TouchPointView!
+    @IBOutlet weak var exMuxMemToEx1: LineView!
+    
     public weak var delegate: ExecuteViewControllerDelegate?
 
     var touchPoints: [TouchPointView] = []

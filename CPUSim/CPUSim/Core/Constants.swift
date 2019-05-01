@@ -59,6 +59,7 @@ struct CorrectnessMapKeys {
     static let exIdReadDataOneToAlu = "exIdReadDataOneToAlu"
     static let exIdReadDataTwoToMux = "exIdReadDataTwoToMux"
     static let exMuxToAlu = "exMuxToAlu"
+    static let exMuxMemToEx = "exMuxMemToEx"
     
     //MARK: - MEM Correctness Map Keys
     static let memExToAddress = "memExToAddress"
@@ -126,6 +127,9 @@ struct TouchPointNames {
     static let exIdReadDataTwoToMuxEnd = "exIdReadDataTwoToMuxEnd"
     static let exMuxToAluStart = "exMuxToAluStart"
     static let exMuxToAluEnd = "exMuxToAluEnd"
+    static let exMuxMemToExStart = "exMuxMemToExStart"
+    static let exMuxMemToExEnd = "exMuxMemToExEnd"
+    static let exMuxMemToEx1 = "exMuxMemToEx1"
     
     //MARK: - MEM Touch Point Names
     static let memExToAddressStart = "memExToAddressStart"
