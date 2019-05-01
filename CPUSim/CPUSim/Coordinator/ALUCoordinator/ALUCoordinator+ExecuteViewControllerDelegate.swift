@@ -89,6 +89,8 @@ extension ALUCoordinator: ExecuteViewControllerDelegate {
         executeViewController.exMuxToAluEnd.name = TouchPointNames.exMuxToAluEnd
         executeViewController.exMuxMemToExStart.name = TouchPointNames.exMuxMemToExStart
         executeViewController.exMuxMemToExEnd.name = TouchPointNames.exMuxMemToExEnd
+        executeViewController.exAddToMemStart.name = TouchPointNames.exAddToMemStart
+        executeViewController.exAddToMemEnd.name = TouchPointNames.exAddToMemEnd
 
         executeViewController.touchPoints = [
             executeViewController.exIdAddToAddStart,
@@ -107,7 +109,9 @@ extension ALUCoordinator: ExecuteViewControllerDelegate {
             executeViewController.exMuxToAluStart,
             executeViewController.exMuxToAluEnd,
             executeViewController.exMuxMemToExStart,
-            executeViewController.exMuxMemToExEnd
+            executeViewController.exMuxMemToExEnd,
+            executeViewController.exAddToMemStart,
+            executeViewController.exAddToMemEnd
         ]
 
         // Setup lines
@@ -163,6 +167,11 @@ extension ALUCoordinator: ExecuteViewControllerDelegate {
         // MARK: exMuxMemToEx
         executeViewController.lines[TouchPointNames.exMuxMemToExEnd] = [
             executeViewController.exMuxMemToEx1
+        ]
+
+        // MARK: exAddToMem
+        executeViewController.lines[TouchPointNames.exAddToMemEnd] = [
+            executeViewController.exAddToMem1
         ]
 
         // Setup all touch points
