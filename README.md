@@ -1,7 +1,7 @@
 Datapath Sim ![version](https://img.shields.io/badge/version-0.0.1-lightblue.svg)
 ===
 [![Build](https://img.shields.io/badge/build-passing-yellow.svg)](https://github.com/Carthage/Carthage)
-![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Platform](https://img.shields.io/badge/Platform-iOS-lightgray.svg)]()
 [![Swift](https://img.shields.io/badge/Swift-5.0.1-orange.svg)](https://github.com/apple/swift)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
