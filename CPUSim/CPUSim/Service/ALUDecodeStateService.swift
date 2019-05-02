@@ -11,6 +11,8 @@ import Foundation
 import UIKit
 import SwiftEventBus
 
+//TODO: idIfAddToEx and idExToIf
+
 //MARK: - ID Start States
 private enum StartState {
     case idIfStartStarted
@@ -39,7 +41,7 @@ class ALUDecodeStateService: State {
     var isDrawing: Bool = false
     
     var correctnessMap: [String: Bool] = [
-        CorrectnessMapKeys.idIfToEx: false,
+//        CorrectnessMapKeys.idIfToEx: false,
         CorrectnessMapKeys.idIfToReadAddress1: false,
         CorrectnessMapKeys.idIfToReadAddress2: false,
         CorrectnessMapKeys.idIfToMux1: false,
@@ -134,7 +136,7 @@ class ALUDecodeStateService: State {
             break;
         case TouchPointNames.idIfToExEnd:
             // Set correctnessMap
-            correctnessMap[CorrectnessMapKeys.idIfToEx] = true
+//            correctnessMap[CorrectnessMapKeys.idIfToEx] = true
 
             // Set correct (change color to green)
             touchPoints.forEach { tp in
