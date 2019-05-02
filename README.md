@@ -43,7 +43,7 @@ Big thanks to the creators of the frameworks, libraries, online tutorials, and o
 
 ### Images Used
 * [Swipe Left Icon](https://www.flaticon.com/free-icon/swipe-left_617907#term=swipe%20left&page=1&position=25)
-* All other images from Dr. Apan Qasem's lecture slide
+* All other images from Dr. Apan Qasem's lecture slides
 
 ## License
 Datapath Sim is released under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0)
