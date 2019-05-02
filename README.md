@@ -21,12 +21,12 @@ Coming soon free and with no-ads to the App Store!
 [![SwiftEventBus](https://img.shields.io/badge/Swift_Event_Bus-5.0.0-lightblue.svg)](https://github.com/cesarferreira/SwiftEventBus)
 [![EasyAnimation](https://img.shields.io/badge/Easy_Animation-2.2.1-lightblue.svg)](https://github.com/icanzilb/EasyAnimation)
 
+## Contributing
+🤠 If y'all want to git with it please view our [Contribution]() section of our [Wiki]().
+
 ## Team
 * [Connor Reid](https://github.com/creidatx)
 * [Jacob M. Hope](http://www.jacobmhope.com)
-
-## Contributing
-🤠 If y'all want to git with it please view our [Contribution]() section of our [Wiki]().
 
 ## Acknowledgements
 > "If I have seen further than others, it is by standing upon the shoulders of giants." - Isaac Newton
