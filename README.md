@@ -11,30 +11,19 @@ Datapath Sim is an opensource and free educational iOS app available to help com
 
 Coming soon free to the App Store!
 
-## Wiki
-For more detailed information and documentation please view our [Wiki]().
-
-## App Demo
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+*For more detailed information and documentation please view our [Wiki]().*
 
 ## Getting Started
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 ### Requirements
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 ### Installation
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 ### Build
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 ### Run
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-## Kits
-iOS Framework & Library Dependencies
-
+## Dependencies
 [![Pulsator](https://img.shields.io/badge/Pulsator-0.5.3-lightblue.svg)](https://github.com/shu223/Pulsator)
 [![PromiseKit](https://img.shields.io/badge/PromiseKit-6.8.4-lightblue.svg)](https://github.com/mxcl/PromiseKit)
 [![UIKit](https://img.shields.io/badge/PromiseKit_UIKit-3.1.0-lightblue.svg)](https://github.com/PromiseKit/UIKit)
@@ -49,14 +38,14 @@ SemVer
 * [Jacob M. Hope](http://www.jacobmhope.com)
 
 ## Contributing
-> 🤠 If y'all want to git with it please view our [Contribution]() section of our [Wiki]().
+🤠 If y'all want to git with it please view our [Contribution]() section of our [Wiki]().
 
 ## Acknowledgements
 > "If I have seen further than others, it is by standing upon the shoulders of giants." - Isaac Newton
 
 Big thanks to the creators of the frameworks, libraries, online tutorials, and our professor Dr. Apan Qasem that helped us in developing this iOS app.
 
-### Helpful Tutorials
+### References
 * [John Doe](www.google.com) 
 * [John Doe](www.google.com) 
 * [John Doe](www.google.com) 
