@@ -33,7 +33,7 @@ class ALUMemoryAccessStateService: State {
         CorrectnessMapKeys.memExToWriteData: false,
         CorrectnessMapKeys.memReadDataToWb: false,
         CorrectnessMapKeys.memRegDstExToWb: false,
-        CorrectnessMapKeys.memRegDstWbToEx: false,
+//        CorrectnessMapKeys.memRegDstWbToEx: false,
         CorrectnessMapKeys.memMemToRegWbToEx: false
     ]
 
@@ -107,7 +107,7 @@ class ALUMemoryAccessStateService: State {
             break;
         case TouchPointNames.memRegDstWbToExEnd:
             // Set correctnessMap
-            correctnessMap[CorrectnessMapKeys.memRegDstWbToEx] = true
+//            correctnessMap[CorrectnessMapKeys.memRegDstWbToEx] = true
 
             // Set correct (change color to green)
             touchPoints.forEach { tp in
