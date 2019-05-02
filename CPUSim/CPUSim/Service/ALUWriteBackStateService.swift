@@ -27,7 +27,7 @@ class ALUWriteBackStateService: State {
     var correctnessMap: [String : Bool] = [
         CorrectnessMapKeys.wbMemReadDataToMux: false,
         CorrectnessMapKeys.wbMemAddressToMux: false,
-        CorrectnessMapKeys.wbMemToIfWriteAddress: false,
+//        CorrectnessMapKeys.wbMemToIfWriteAddress: false,
         CorrectnessMapKeys.wbMuxToIfWriteData: false
     ]
     
@@ -77,7 +77,7 @@ class ALUWriteBackStateService: State {
             break;
         case TouchPointNames.wbMemToIfWriteAddressEnd:
             // Set correctnessMap
-            correctnessMap[CorrectnessMapKeys.wbMemToIfWriteAddress] = true
+//            correctnessMap[CorrectnessMapKeys.wbMemToIfWriteAddress] = true
             
             // Set correct (change color to green)
             touchPoints.forEach { tp in
