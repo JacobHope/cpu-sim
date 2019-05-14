@@ -1,4 +1,4 @@
-Datapath Sim ![version](https://img.shields.io/badge/version-0.0.1-lightblue.svg)
+Datapath Sim ![version](https://img.shields.io/badge/version-1.0.0-lightblue.svg)
 ===
 [![Build](https://img.shields.io/badge/build-passing-yellow.svg)](https://github.com/Carthage/Carthage)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
