@@ -12,6 +12,8 @@ Datapath Sim is an open-source and free educational iOS app available to help co
 
 Coming soon free and with no-ads to the App Store!
 
+![Demo Animation](./Repo/cpu-sim-fetch-demo.gif?raw=true)
+
 For more detailed information and documentation please view our [Wiki]() (*Coming Soon!*).
 
 ## Dependencies
