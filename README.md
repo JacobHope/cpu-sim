@@ -22,7 +22,7 @@ For more detailed information and documentation please view our [Wiki]() (*Comin
 [![EasyAnimation](https://img.shields.io/badge/Easy_Animation-2.2.1-lightblue.svg)](https://github.com/icanzilb/EasyAnimation)
 
 ## Contributing
-🤠 If y'all want to git with it please view our [Contribution]() section of our [Wiki]()(*Coming Soon!*).
+🤠 If y'all want to git with it please view our [Contribution]() section of our [Wiki]() (*Coming Soon!*).
 
 ## Team
 * [Connor Reid](https://github.com/creidatx)
