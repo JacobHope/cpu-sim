@@ -12,7 +12,7 @@ Datapath Sim is an open-source and free educational iOS app available to help co
 
 Coming soon free and with no-ads to the App Store!
 
-*For more detailed information and documentation please view our [Wiki]().*
+For more detailed information and documentation please view our [Wiki]() (*Coming Soon!*).
 
 ## Dependencies
 [![Pulsator](https://img.shields.io/badge/Pulsator-0.5.3-lightblue.svg)](https://github.com/shu223/Pulsator)
@@ -22,7 +22,7 @@ Coming soon free and with no-ads to the App Store!
 [![EasyAnimation](https://img.shields.io/badge/Easy_Animation-2.2.1-lightblue.svg)](https://github.com/icanzilb/EasyAnimation)
 
 ## Contributing
-🤠 If y'all want to git with it please view our [Contribution]() section of our [Wiki]().
+🤠 If y'all want to git with it please view our [Contribution]() section of our [Wiki]() (*Coming Soon!*).
 
 ## Team
 * [Connor Reid](https://github.com/creidatx)
