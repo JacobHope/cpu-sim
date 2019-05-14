@@ -1,4 +1,4 @@
-Datapath Sim ![version](https://img.shields.io/badge/version-1.0.0-lightblue.svg)
+CPU Sim ![version](https://img.shields.io/badge/version-1.0.0-lightblue.svg)
 ===
 [![Build](https://img.shields.io/badge/build-passing-yellow.svg)](https://github.com/Carthage/Carthage)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -8,7 +8,7 @@ Datapath Sim ![version](https://img.shields.io/badge/version-1.0.0-lightblue.svg
 [![Semver](https://img.shields.io/badge/Semver-2.0.0-lightblue.svg)](https://semver.org)
 <!--[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)-->
 
-Datapath Sim is an open-source and free educational iOS app available to help computer science enthusiasts, students, and professionals gain an intuitive understanding of computer architecture, mainly the CPU datapath. This began as our final project for Texas State University's Computer Architecture CS3339 course taught by Dr. Apan Qasem.
+CPU Sim is an open-source and free educational iOS app available to help computer science enthusiasts, students, and professionals gain an intuitive understanding of computer architecture, mainly the CPU datapath. This began as our final project for Texas State University's Computer Architecture CS3339 course taught by Dr. Apan Qasem.
 
 Coming soon free and with no-ads to the App Store!
 
@@ -48,4 +48,4 @@ Big thanks to the creators of the frameworks, libraries, online tutorials, and o
 * All other images from Dr. Apan Qasem's lecture slides
 
 ## License
-Datapath Sim is released under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0)
+CPU Sim is released under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0)
