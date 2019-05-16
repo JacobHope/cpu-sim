@@ -23,6 +23,33 @@ For more detailed information and documentation please view our [Wiki]() (*Comin
 [![SwiftEventBus](https://img.shields.io/badge/Swift_Event_Bus-5.0.0-lightblue.svg)](https://github.com/cesarferreira/SwiftEventBus)
 [![EasyAnimation](https://img.shields.io/badge/Easy_Animation-2.2.1-lightblue.svg)](https://github.com/icanzilb/EasyAnimation)
 
+## Getting Started
+### Requirements
+* [Xcode](https://developer.apple.com/xcode/)
+* [Carthage](https://github.com/Carthage/Carthage)
+
+### Installation
+**1.** Clone repository to local machine.
+
+```
+git clone https://github.com/JacobMHope/cpu-sim.git
+```
+
+**2.** Install app dependencies from Cartfile using Carthage.
+
+```
+cd cpu-sim/
+cd CPUSim
+carthage update
+```
+**3.** Open project in Xcode.
+
+```
+open CPUSim.xcodeproj
+```
+
+**4.** In Xcode build and run CPU Sim app.
+
 ## Contributing
 🤠 If y'all want to git with it please view our [Contribution]() section of our [Wiki]() (*Coming Soon!*).
 
